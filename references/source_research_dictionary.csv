@@ -1,0 +1,17 @@
+field_name,description,allowed_values_or_example,how_to_use
+source_id,Unique source identifier,SRC_RR_2026_01_A,Use a stable id linked to one event and one source row
+event_id,Event identifier in governor_removal_events.csv,RR_2026_01,Connect each source to a specific rupture event whenever possible
+source_type,Document genre,news official_record court_decision dataset legislation,Prioritize official_record and court_decision for factual coding
+institution,Publishing institution or outlet,TSE STJ Senado FolhaBV ALESC,Record the entity responsible for publication
+domain,Web domain,tse.jus.br,Useful for filtering by reliability and replication
+title,Page title,TSE cassa governador do Amazonas...,Copy the title exactly enough to find it again
+publication_date,Publication date in YYYY-MM-DD,2026-04-30,Use absolute dates only
+url,Direct link to the source,https://...,Prefer canonical URLs
+relevance_level,How central the source is to coding,high medium low,High means the row directly supports a coded fact
+used_for,Purpose of the source,removal_date succession return_date mechanism context,Use one short purpose label per row
+status,Current use state,used candidate replace verify,Mark candidate when a source still needs checking
+notes,Free-text annotation,Confirma posse imediata de Sampaio,Store caveats chronology issues and coding decisions
+search_topic,Planned search axis,RR cassacao 2026,Use in prospecting logs before coding
+search_query,Exact search string used,site:tse.jus.br Claudio Castro cassacao 2026,Keep search trails reproducible
+evidence_rank,Priority of evidence,1_official 2_major_wire 3_local_press 4_reference,Use lower rank numbers first when coding dates and mechanisms
+sample_decision,How the case enters analysis,main extended excluded,Separate factual existence from inclusion in estimation sample

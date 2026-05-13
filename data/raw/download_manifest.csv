@@ -1,0 +1,8 @@
+dataset_id,source_family,series_name,frequency,coverage_unit,source_system,raw_output_path,planned_script,priority,status,notes
+PMC_8880,ibge,retail_sales_index,monthly,state,SIDRA,data/raw/ibge/pmc_retail_index_monthly.csv,code/01_download_data/01_download_ibge_sidra.R,high,ready_to_download,PMC table 8880 for BR and UF
+PMS_5906,ibge,services_index,monthly,state,SIDRA,data/raw/ibge/pms_services_index_monthly.csv,code/01_download_data/01_download_ibge_sidra.R,high,ready_to_download,PMS table 5906 for BR and UF
+IPCA_1737,ibge,ipca_national,monthly,brazil,SIDRA,data/raw/ibge/ipca_national_monthly.csv,code/01_download_data/01_download_ibge_sidra.R,high,ready_to_download,National IPCA deflator series
+CAGED_MIXED,mte,formal_hiring_balance,monthly,state,CAGED,data/raw/mte/caged_formal_hiring_balance_monthly.csv,code/01_download_data/02_download_caged.R,high,planned,Old Caged plus Novo Caged with explicit break handling
+SICONFI_RREO,siconfi,liquidated_expenditures_and_revenue,bimonthly,state,Siconfi,data/raw/siconfi/rreo_state_fiscal_series_bimonthly.csv,code/01_download_data/03_download_siconfi.R,high,planned,RREO block for expenditure revenue and ratios
+POP_IBGE,ibge,population,annual,state,IBGE,data/raw/ibge/population_annual.csv,code/01_download_data/04_download_structural_covariates.R,medium,planned,Structural annual covariate
+GDPPC_IBGE,ibge,gdp_per_capita_real,annual,state,IBGE,data/raw/ibge/gdp_per_capita_real_annual.csv,code/01_download_data/04_download_structural_covariates.R,medium,planned,Structural annual covariate with last available release
