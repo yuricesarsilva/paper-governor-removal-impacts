@@ -18,3 +18,10 @@ _site/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Large raw data and extracted archives
+data/raw/mte/CAGEDMOV*/
+data/raw/mte/CAGEDMOV*.7z
+data/raw/mte/novo_caged_sample/
+data/raw/mte/old_caged_adjusted_sample/
+data/raw/mte/old_caged_adjusted_2009_sample/

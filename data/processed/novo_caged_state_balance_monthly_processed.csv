@@ -1,0 +1,2101 @@
+competencia,year,month,uf,formal_hiring_balance,source_series,period_date,state_abbrev,state_name,macroregion,is_identified_uf,include_in_panel,uf_mapping_status
+202001,2020,1,11,-343,novo_caged_mov,2020-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202001,2020,1,12,130,novo_caged_mov,2020-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202001,2020,1,13,893,novo_caged_mov,2020-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202001,2020,1,14,322,novo_caged_mov,2020-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202001,2020,1,15,459,novo_caged_mov,2020-01-01,PA,Para,North,TRUE,TRUE,mapped
+202001,2020,1,16,-79,novo_caged_mov,2020-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202001,2020,1,17,90,novo_caged_mov,2020-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202001,2020,1,21,-25,novo_caged_mov,2020-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202001,2020,1,22,-486,novo_caged_mov,2020-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202001,2020,1,23,1644,novo_caged_mov,2020-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202001,2020,1,24,-1353,novo_caged_mov,2020-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202001,2020,1,25,-1312,novo_caged_mov,2020-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202001,2020,1,26,-2756,novo_caged_mov,2020-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202001,2020,1,27,-4257,novo_caged_mov,2020-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202001,2020,1,28,257,novo_caged_mov,2020-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202001,2020,1,29,2034,novo_caged_mov,2020-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202001,2020,1,31,4165,novo_caged_mov,2020-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202001,2020,1,32,297,novo_caged_mov,2020-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202001,2020,1,33,-11243,novo_caged_mov,2020-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202001,2020,1,35,33057,novo_caged_mov,2020-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202001,2020,1,41,16139,novo_caged_mov,2020-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202001,2020,1,42,26194,novo_caged_mov,2020-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202001,2020,1,43,11562,novo_caged_mov,2020-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202001,2020,1,50,1350,novo_caged_mov,2020-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202001,2020,1,51,8567,novo_caged_mov,2020-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202001,2020,1,52,6702,novo_caged_mov,2020-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202001,2020,1,53,663,novo_caged_mov,2020-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202001,2020,1,99,7,novo_caged_mov,2020-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202002,2020,2,11,649,novo_caged_mov,2020-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202002,2020,2,12,857,novo_caged_mov,2020-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202002,2020,2,13,1851,novo_caged_mov,2020-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202002,2020,2,14,789,novo_caged_mov,2020-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202002,2020,2,15,3764,novo_caged_mov,2020-02-01,PA,Para,North,TRUE,TRUE,mapped
+202002,2020,2,16,298,novo_caged_mov,2020-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202002,2020,2,17,1260,novo_caged_mov,2020-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202002,2020,2,21,1822,novo_caged_mov,2020-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202002,2020,2,22,839,novo_caged_mov,2020-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202002,2020,2,23,6481,novo_caged_mov,2020-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202002,2020,2,24,-2439,novo_caged_mov,2020-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202002,2020,2,25,-2702,novo_caged_mov,2020-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202002,2020,2,26,-1660,novo_caged_mov,2020-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202002,2020,2,27,-8364,novo_caged_mov,2020-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202002,2020,2,28,-2129,novo_caged_mov,2020-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202002,2020,2,29,6814,novo_caged_mov,2020-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202002,2020,2,31,25404,novo_caged_mov,2020-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202002,2020,2,32,3616,novo_caged_mov,2020-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202002,2020,2,33,4221,novo_caged_mov,2020-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202002,2020,2,35,68441,novo_caged_mov,2020-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202002,2020,2,41,26360,novo_caged_mov,2020-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202002,2020,2,42,18407,novo_caged_mov,2020-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202002,2020,2,43,21193,novo_caged_mov,2020-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202002,2020,2,50,5513,novo_caged_mov,2020-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202002,2020,2,51,2960,novo_caged_mov,2020-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202002,2020,2,52,9477,novo_caged_mov,2020-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202002,2020,2,53,4650,novo_caged_mov,2020-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202002,2020,2,99,-4,novo_caged_mov,2020-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202003,2020,3,11,-764,novo_caged_mov,2020-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202003,2020,3,12,56,novo_caged_mov,2020-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202003,2020,3,13,-2608,novo_caged_mov,2020-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202003,2020,3,14,472,novo_caged_mov,2020-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202003,2020,3,15,-1769,novo_caged_mov,2020-03-01,PA,Para,North,TRUE,TRUE,mapped
+202003,2020,3,16,-242,novo_caged_mov,2020-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202003,2020,3,17,-86,novo_caged_mov,2020-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202003,2020,3,21,-1143,novo_caged_mov,2020-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202003,2020,3,22,86,novo_caged_mov,2020-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202003,2020,3,23,-2684,novo_caged_mov,2020-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202003,2020,3,24,-2053,novo_caged_mov,2020-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202003,2020,3,25,-668,novo_caged_mov,2020-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202003,2020,3,26,-24794,novo_caged_mov,2020-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202003,2020,3,27,-5622,novo_caged_mov,2020-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202003,2020,3,28,-2626,novo_caged_mov,2020-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202003,2020,3,29,-13753,novo_caged_mov,2020-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202003,2020,3,31,-16485,novo_caged_mov,2020-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202003,2020,3,32,-3948,novo_caged_mov,2020-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202003,2020,3,33,-29122,novo_caged_mov,2020-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202003,2020,3,35,-78240,novo_caged_mov,2020-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202003,2020,3,41,-12990,novo_caged_mov,2020-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202003,2020,3,42,-6946,novo_caged_mov,2020-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202003,2020,3,43,-13451,novo_caged_mov,2020-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202003,2020,3,50,-321,novo_caged_mov,2020-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202003,2020,3,51,-2731,novo_caged_mov,2020-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202003,2020,3,52,-1601,novo_caged_mov,2020-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202003,2020,3,53,-8278,novo_caged_mov,2020-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202003,2020,3,99,-5,novo_caged_mov,2020-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202004,2020,4,11,-5043,novo_caged_mov,2020-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202004,2020,4,12,-284,novo_caged_mov,2020-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202004,2020,4,13,-9086,novo_caged_mov,2020-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202004,2020,4,14,-1097,novo_caged_mov,2020-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202004,2020,4,15,-9666,novo_caged_mov,2020-04-01,PA,Para,North,TRUE,TRUE,mapped
+202004,2020,4,16,-858,novo_caged_mov,2020-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202004,2020,4,17,-2686,novo_caged_mov,2020-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202004,2020,4,21,-5953,novo_caged_mov,2020-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202004,2020,4,22,-5612,novo_caged_mov,2020-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202004,2020,4,23,-31085,novo_caged_mov,2020-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202004,2020,4,24,-8778,novo_caged_mov,2020-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202004,2020,4,25,-8693,novo_caged_mov,2020-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202004,2020,4,26,-26212,novo_caged_mov,2020-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202004,2020,4,27,-7690,novo_caged_mov,2020-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202004,2020,4,28,-5113,novo_caged_mov,2020-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202004,2020,4,29,-35098,novo_caged_mov,2020-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202004,2020,4,31,-93863,novo_caged_mov,2020-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202004,2020,4,32,-18741,novo_caged_mov,2020-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202004,2020,4,33,-84490,novo_caged_mov,2020-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202004,2020,4,35,-272471,novo_caged_mov,2020-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202004,2020,4,41,-58685,novo_caged_mov,2020-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202004,2020,4,42,-75426,novo_caged_mov,2020-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202004,2020,4,43,-77576,novo_caged_mov,2020-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202004,2020,4,50,-7577,novo_caged_mov,2020-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202004,2020,4,51,-12773,novo_caged_mov,2020-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202004,2020,4,52,-21434,novo_caged_mov,2020-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202004,2020,4,53,-16327,novo_caged_mov,2020-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202004,2020,4,99,0,novo_caged_mov,2020-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202005,2020,5,11,-1286,novo_caged_mov,2020-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202005,2020,5,12,106,novo_caged_mov,2020-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202005,2020,5,13,-4976,novo_caged_mov,2020-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202005,2020,5,14,-380,novo_caged_mov,2020-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202005,2020,5,15,-2897,novo_caged_mov,2020-05-01,PA,Para,North,TRUE,TRUE,mapped
+202005,2020,5,16,-228,novo_caged_mov,2020-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202005,2020,5,17,-1234,novo_caged_mov,2020-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202005,2020,5,21,-1257,novo_caged_mov,2020-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202005,2020,5,22,-3436,novo_caged_mov,2020-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202005,2020,5,23,-9687,novo_caged_mov,2020-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202005,2020,5,24,-3341,novo_caged_mov,2020-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202005,2020,5,25,-3532,novo_caged_mov,2020-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202005,2020,5,26,-7541,novo_caged_mov,2020-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202005,2020,5,27,-2480,novo_caged_mov,2020-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202005,2020,5,28,-3622,novo_caged_mov,2020-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202005,2020,5,29,-18302,novo_caged_mov,2020-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202005,2020,5,31,-36305,novo_caged_mov,2020-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202005,2020,5,32,-7034,novo_caged_mov,2020-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202005,2020,5,33,-36985,novo_caged_mov,2020-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202005,2020,5,35,-110415,novo_caged_mov,2020-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202005,2020,5,41,-25555,novo_caged_mov,2020-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202005,2020,5,42,-23742,novo_caged_mov,2020-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202005,2020,5,43,-33819,novo_caged_mov,2020-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202005,2020,5,50,-2314,novo_caged_mov,2020-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202005,2020,5,51,-1633,novo_caged_mov,2020-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202005,2020,5,52,-5321,novo_caged_mov,2020-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202005,2020,5,53,-5646,novo_caged_mov,2020-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202005,2020,5,99,72,novo_caged_mov,2020-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202006,2020,6,11,731,novo_caged_mov,2020-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202006,2020,6,12,167,novo_caged_mov,2020-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202006,2020,6,13,-434,novo_caged_mov,2020-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202006,2020,6,14,77,novo_caged_mov,2020-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202006,2020,6,15,4395,novo_caged_mov,2020-06-01,PA,Para,North,TRUE,TRUE,mapped
+202006,2020,6,16,-9,novo_caged_mov,2020-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202006,2020,6,17,1108,novo_caged_mov,2020-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202006,2020,6,21,3716,novo_caged_mov,2020-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202006,2020,6,22,336,novo_caged_mov,2020-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202006,2020,6,23,-1832,novo_caged_mov,2020-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202006,2020,6,24,1695,novo_caged_mov,2020-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202006,2020,6,25,40,novo_caged_mov,2020-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202006,2020,6,26,-3565,novo_caged_mov,2020-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202006,2020,6,27,814,novo_caged_mov,2020-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202006,2020,6,28,-805,novo_caged_mov,2020-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202006,2020,6,29,-2984,novo_caged_mov,2020-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202006,2020,6,31,1078,novo_caged_mov,2020-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202006,2020,6,32,-340,novo_caged_mov,2020-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202006,2020,6,33,-17709,novo_caged_mov,2020-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202006,2020,6,35,-17091,novo_caged_mov,2020-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202006,2020,6,41,1815,novo_caged_mov,2020-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202006,2020,6,42,3252,novo_caged_mov,2020-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202006,2020,6,43,-5888,novo_caged_mov,2020-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202006,2020,6,50,1183,novo_caged_mov,2020-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202006,2020,6,51,6412,novo_caged_mov,2020-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202006,2020,6,52,3579,novo_caged_mov,2020-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202006,2020,6,53,-2985,novo_caged_mov,2020-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202006,2020,6,99,133,novo_caged_mov,2020-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202007,2020,7,11,1434,novo_caged_mov,2020-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202007,2020,7,12,420,novo_caged_mov,2020-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202007,2020,7,13,3403,novo_caged_mov,2020-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202007,2020,7,14,203,novo_caged_mov,2020-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202007,2020,7,15,8501,novo_caged_mov,2020-07-01,PA,Para,North,TRUE,TRUE,mapped
+202007,2020,7,16,-74,novo_caged_mov,2020-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202007,2020,7,17,1745,novo_caged_mov,2020-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202007,2020,7,21,5372,novo_caged_mov,2020-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202007,2020,7,22,1561,novo_caged_mov,2020-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202007,2020,7,23,6956,novo_caged_mov,2020-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202007,2020,7,24,1358,novo_caged_mov,2020-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202007,2020,7,25,2080,novo_caged_mov,2020-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202007,2020,7,26,5741,novo_caged_mov,2020-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202007,2020,7,27,1659,novo_caged_mov,2020-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202007,2020,7,28,-788,novo_caged_mov,2020-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202007,2020,7,29,4170,novo_caged_mov,2020-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202007,2020,7,31,20581,novo_caged_mov,2020-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202007,2020,7,32,1917,novo_caged_mov,2020-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202007,2020,7,33,-5257,novo_caged_mov,2020-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202007,2020,7,35,19109,novo_caged_mov,2020-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202007,2020,7,41,10089,novo_caged_mov,2020-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202007,2020,7,42,11444,novo_caged_mov,2020-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202007,2020,7,43,2402,novo_caged_mov,2020-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202007,2020,7,50,3262,novo_caged_mov,2020-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202007,2020,7,51,6555,novo_caged_mov,2020-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202007,2020,7,52,6259,novo_caged_mov,2020-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202007,2020,7,53,1341,novo_caged_mov,2020-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202007,2020,7,99,1854,novo_caged_mov,2020-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202008,2020,8,11,1461,novo_caged_mov,2020-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202008,2020,8,12,911,novo_caged_mov,2020-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202008,2020,8,13,7209,novo_caged_mov,2020-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202008,2020,8,14,744,novo_caged_mov,2020-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202008,2020,8,15,9762,novo_caged_mov,2020-08-01,PA,Para,North,TRUE,TRUE,mapped
+202008,2020,8,16,417,novo_caged_mov,2020-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202008,2020,8,17,1973,novo_caged_mov,2020-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202008,2020,8,21,5892,novo_caged_mov,2020-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202008,2020,8,22,2073,novo_caged_mov,2020-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202008,2020,8,23,12170,novo_caged_mov,2020-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202008,2020,8,24,5931,novo_caged_mov,2020-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202008,2020,8,25,9716,novo_caged_mov,2020-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202008,2020,8,26,12522,novo_caged_mov,2020-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202008,2020,8,27,3809,novo_caged_mov,2020-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202008,2020,8,28,327,novo_caged_mov,2020-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202008,2020,8,29,8983,novo_caged_mov,2020-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202008,2020,8,31,27823,novo_caged_mov,2020-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202008,2020,8,32,6056,novo_caged_mov,2020-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202008,2020,8,33,661,novo_caged_mov,2020-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202008,2020,8,35,62437,novo_caged_mov,2020-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202008,2020,8,41,16234,novo_caged_mov,2020-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202008,2020,8,42,18055,novo_caged_mov,2020-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202008,2020,8,43,6720,novo_caged_mov,2020-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202008,2020,8,50,2206,novo_caged_mov,2020-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202008,2020,8,51,3553,novo_caged_mov,2020-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202008,2020,8,52,7168,novo_caged_mov,2020-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202008,2020,8,53,3304,novo_caged_mov,2020-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202008,2020,8,99,8,novo_caged_mov,2020-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202009,2020,9,11,1432,novo_caged_mov,2020-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202009,2020,9,12,578,novo_caged_mov,2020-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202009,2020,9,13,5830,novo_caged_mov,2020-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202009,2020,9,14,1111,novo_caged_mov,2020-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202009,2020,9,15,9810,novo_caged_mov,2020-09-01,PA,Para,North,TRUE,TRUE,mapped
+202009,2020,9,16,456,novo_caged_mov,2020-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202009,2020,9,17,1774,novo_caged_mov,2020-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202009,2020,9,21,5088,novo_caged_mov,2020-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202009,2020,9,22,2433,novo_caged_mov,2020-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202009,2020,9,23,12794,novo_caged_mov,2020-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202009,2020,9,24,4427,novo_caged_mov,2020-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202009,2020,9,25,1899,novo_caged_mov,2020-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202009,2020,9,26,22205,novo_caged_mov,2020-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202009,2020,9,27,16673,novo_caged_mov,2020-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202009,2020,9,28,3505,novo_caged_mov,2020-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202009,2020,9,29,16700,novo_caged_mov,2020-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202009,2020,9,31,36671,novo_caged_mov,2020-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202009,2020,9,32,7114,novo_caged_mov,2020-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202009,2020,9,33,9913,novo_caged_mov,2020-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202009,2020,9,35,75105,novo_caged_mov,2020-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202009,2020,9,41,19635,novo_caged_mov,2020-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202009,2020,9,42,24577,novo_caged_mov,2020-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202009,2020,9,43,15297,novo_caged_mov,2020-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202009,2020,9,50,2878,novo_caged_mov,2020-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202009,2020,9,51,5301,novo_caged_mov,2020-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202009,2020,9,52,7906,novo_caged_mov,2020-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202009,2020,9,53,2447,novo_caged_mov,2020-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202009,2020,9,99,5,novo_caged_mov,2020-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202010,2020,10,11,1461,novo_caged_mov,2020-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202010,2020,10,12,805,novo_caged_mov,2020-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202010,2020,10,13,5730,novo_caged_mov,2020-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202010,2020,10,14,709,novo_caged_mov,2020-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202010,2020,10,15,9651,novo_caged_mov,2020-10-01,PA,Para,North,TRUE,TRUE,mapped
+202010,2020,10,16,808,novo_caged_mov,2020-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202010,2020,10,17,1447,novo_caged_mov,2020-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202010,2020,10,21,5937,novo_caged_mov,2020-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202010,2020,10,22,3514,novo_caged_mov,2020-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202010,2020,10,23,16577,novo_caged_mov,2020-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202010,2020,10,24,4685,novo_caged_mov,2020-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202010,2020,10,25,1456,novo_caged_mov,2020-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202010,2020,10,26,13134,novo_caged_mov,2020-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202010,2020,10,27,4631,novo_caged_mov,2020-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202010,2020,10,28,3732,novo_caged_mov,2020-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202010,2020,10,29,16162,novo_caged_mov,2020-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202010,2020,10,31,41604,novo_caged_mov,2020-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202010,2020,10,32,9289,novo_caged_mov,2020-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202010,2020,10,33,16285,novo_caged_mov,2020-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202010,2020,10,35,116764,novo_caged_mov,2020-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202010,2020,10,41,32393,novo_caged_mov,2020-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202010,2020,10,42,32331,novo_caged_mov,2020-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202010,2020,10,43,26226,novo_caged_mov,2020-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202010,2020,10,50,4531,novo_caged_mov,2020-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202010,2020,10,51,6324,novo_caged_mov,2020-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202010,2020,10,52,8201,novo_caged_mov,2020-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202010,2020,10,53,4553,novo_caged_mov,2020-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202010,2020,10,99,-2,novo_caged_mov,2020-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202011,2020,11,11,1047,novo_caged_mov,2020-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202011,2020,11,12,785,novo_caged_mov,2020-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202011,2020,11,13,5412,novo_caged_mov,2020-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202011,2020,11,14,1191,novo_caged_mov,2020-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202011,2020,11,15,6290,novo_caged_mov,2020-11-01,PA,Para,North,TRUE,TRUE,mapped
+202011,2020,11,16,242,novo_caged_mov,2020-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202011,2020,11,17,1041,novo_caged_mov,2020-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202011,2020,11,21,4391,novo_caged_mov,2020-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202011,2020,11,22,2157,novo_caged_mov,2020-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202011,2020,11,23,16463,novo_caged_mov,2020-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202011,2020,11,24,4758,novo_caged_mov,2020-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202011,2020,11,25,10125,novo_caged_mov,2020-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202011,2020,11,26,13724,novo_caged_mov,2020-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202011,2020,11,27,3694,novo_caged_mov,2020-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202011,2020,11,28,2716,novo_caged_mov,2020-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202011,2020,11,29,13854,novo_caged_mov,2020-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202011,2020,11,31,32125,novo_caged_mov,2020-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202011,2020,11,32,11184,novo_caged_mov,2020-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202011,2020,11,33,32699,novo_caged_mov,2020-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202011,2020,11,35,135841,novo_caged_mov,2020-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202011,2020,11,41,29114,novo_caged_mov,2020-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202011,2020,11,42,32809,novo_caged_mov,2020-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202011,2020,11,43,29191,novo_caged_mov,2020-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202011,2020,11,50,5324,novo_caged_mov,2020-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202011,2020,11,51,2635,novo_caged_mov,2020-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202011,2020,11,52,5981,novo_caged_mov,2020-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202011,2020,11,53,4145,novo_caged_mov,2020-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202011,2020,11,99,10,novo_caged_mov,2020-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202012,2020,12,11,287,novo_caged_mov,2020-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202012,2020,12,12,-52,novo_caged_mov,2020-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202012,2020,12,13,-1516,novo_caged_mov,2020-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202012,2020,12,14,343,novo_caged_mov,2020-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202012,2020,12,15,-5597,novo_caged_mov,2020-12-01,PA,Para,North,TRUE,TRUE,mapped
+202012,2020,12,16,280,novo_caged_mov,2020-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202012,2020,12,17,110,novo_caged_mov,2020-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202012,2020,12,21,-3017,novo_caged_mov,2020-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202012,2020,12,22,-210,novo_caged_mov,2020-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202012,2020,12,23,3723,novo_caged_mov,2020-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202012,2020,12,24,-946,novo_caged_mov,2020-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202012,2020,12,25,1210,novo_caged_mov,2020-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202012,2020,12,26,-2433,novo_caged_mov,2020-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202012,2020,12,27,1532,novo_caged_mov,2020-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202012,2020,12,28,610,novo_caged_mov,2020-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202012,2020,12,29,-85,novo_caged_mov,2020-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202012,2020,12,31,-6025,novo_caged_mov,2020-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202012,2020,12,32,-1889,novo_caged_mov,2020-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202012,2020,12,33,6086,novo_caged_mov,2020-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202012,2020,12,35,-40071,novo_caged_mov,2020-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202012,2020,12,41,-9185,novo_caged_mov,2020-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202012,2020,12,42,-13078,novo_caged_mov,2020-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202012,2020,12,43,-1244,novo_caged_mov,2020-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202012,2020,12,50,-2584,novo_caged_mov,2020-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202012,2020,12,51,-4042,novo_caged_mov,2020-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202012,2020,12,52,-1204,novo_caged_mov,2020-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202012,2020,12,53,-958,novo_caged_mov,2020-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202012,2020,12,99,-2163,novo_caged_mov,2020-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202101,2021,1,11,353,novo_caged_mov,2021-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202101,2021,1,12,456,novo_caged_mov,2021-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202101,2021,1,13,1912,novo_caged_mov,2021-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202101,2021,1,14,452,novo_caged_mov,2021-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202101,2021,1,15,2056,novo_caged_mov,2021-01-01,PA,Para,North,TRUE,TRUE,mapped
+202101,2021,1,16,31,novo_caged_mov,2021-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202101,2021,1,17,1428,novo_caged_mov,2021-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202101,2021,1,21,28,novo_caged_mov,2021-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202101,2021,1,22,1659,novo_caged_mov,2021-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202101,2021,1,23,8011,novo_caged_mov,2021-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202101,2021,1,24,2212,novo_caged_mov,2021-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202101,2021,1,25,-185,novo_caged_mov,2021-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202101,2021,1,26,1411,novo_caged_mov,2021-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202101,2021,1,27,-192,novo_caged_mov,2021-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202101,2021,1,28,467,novo_caged_mov,2021-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202101,2021,1,29,14920,novo_caged_mov,2021-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202101,2021,1,31,24645,novo_caged_mov,2021-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202101,2021,1,32,5006,novo_caged_mov,2021-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202101,2021,1,33,-678,novo_caged_mov,2021-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202101,2021,1,35,74920,novo_caged_mov,2021-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202101,2021,1,41,23905,novo_caged_mov,2021-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202101,2021,1,42,32028,novo_caged_mov,2021-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202101,2021,1,43,26692,novo_caged_mov,2021-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202101,2021,1,50,3385,novo_caged_mov,2021-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202101,2021,1,51,12321,novo_caged_mov,2021-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202101,2021,1,52,16009,novo_caged_mov,2021-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202101,2021,1,53,3790,novo_caged_mov,2021-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202101,2021,1,99,17,novo_caged_mov,2021-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202102,2021,2,11,1735,novo_caged_mov,2021-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202102,2021,2,12,1059,novo_caged_mov,2021-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202102,2021,2,13,-742,novo_caged_mov,2021-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202102,2021,2,14,359,novo_caged_mov,2021-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202102,2021,2,15,6926,novo_caged_mov,2021-02-01,PA,Para,North,TRUE,TRUE,mapped
+202102,2021,2,16,294,novo_caged_mov,2021-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202102,2021,2,17,2573,novo_caged_mov,2021-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202102,2021,2,21,3309,novo_caged_mov,2021-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202102,2021,2,22,2840,novo_caged_mov,2021-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202102,2021,2,23,12410,novo_caged_mov,2021-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202102,2021,2,24,1842,novo_caged_mov,2021-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202102,2021,2,25,-76,novo_caged_mov,2021-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202102,2021,2,26,1829,novo_caged_mov,2021-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202102,2021,2,27,-552,novo_caged_mov,2021-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202102,2021,2,28,194,novo_caged_mov,2021-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202102,2021,2,29,18806,novo_caged_mov,2021-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202102,2021,2,31,51373,novo_caged_mov,2021-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202102,2021,2,32,7200,novo_caged_mov,2021-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202102,2021,2,33,15713,novo_caged_mov,2021-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202102,2021,2,35,127460,novo_caged_mov,2021-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202102,2021,2,41,40938,novo_caged_mov,2021-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202102,2021,2,42,33777,novo_caged_mov,2021-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202102,2021,2,43,28841,novo_caged_mov,2021-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202102,2021,2,50,7015,novo_caged_mov,2021-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202102,2021,2,51,11507,novo_caged_mov,2021-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202102,2021,2,52,17910,novo_caged_mov,2021-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202102,2021,2,53,3320,novo_caged_mov,2021-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202102,2021,2,99,55,novo_caged_mov,2021-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202103,2021,3,11,604,novo_caged_mov,2021-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202103,2021,3,12,282,novo_caged_mov,2021-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202103,2021,3,13,1824,novo_caged_mov,2021-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202103,2021,3,14,266,novo_caged_mov,2021-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202103,2021,3,15,4291,novo_caged_mov,2021-03-01,PA,Para,North,TRUE,TRUE,mapped
+202103,2021,3,16,255,novo_caged_mov,2021-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202103,2021,3,17,1287,novo_caged_mov,2021-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202103,2021,3,21,3662,novo_caged_mov,2021-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202103,2021,3,22,1293,novo_caged_mov,2021-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202103,2021,3,23,-1294,novo_caged_mov,2021-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202103,2021,3,24,2081,novo_caged_mov,2021-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202103,2021,3,25,2063,novo_caged_mov,2021-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202103,2021,3,26,-2593,novo_caged_mov,2021-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202103,2021,3,27,-8426,novo_caged_mov,2021-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202103,2021,3,28,-1482,novo_caged_mov,2021-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202103,2021,3,29,9422,novo_caged_mov,2021-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202103,2021,3,31,34990,novo_caged_mov,2021-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202103,2021,3,32,4330,novo_caged_mov,2021-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202103,2021,3,33,12722,novo_caged_mov,2021-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202103,2021,3,35,48046,novo_caged_mov,2021-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202103,2021,3,41,10288,novo_caged_mov,2021-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202103,2021,3,42,20500,novo_caged_mov,2021-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202103,2021,3,43,16744,novo_caged_mov,2021-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202103,2021,3,50,5086,novo_caged_mov,2021-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202103,2021,3,51,3772,novo_caged_mov,2021-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202103,2021,3,52,4186,novo_caged_mov,2021-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202103,2021,3,53,2113,novo_caged_mov,2021-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202103,2021,3,99,18,novo_caged_mov,2021-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202104,2021,4,11,717,novo_caged_mov,2021-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202104,2021,4,12,571,novo_caged_mov,2021-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202104,2021,4,13,2042,novo_caged_mov,2021-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202104,2021,4,14,294,novo_caged_mov,2021-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202104,2021,4,15,4398,novo_caged_mov,2021-04-01,PA,Para,North,TRUE,TRUE,mapped
+202104,2021,4,16,-64,novo_caged_mov,2021-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202104,2021,4,17,1271,novo_caged_mov,2021-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202104,2021,4,21,3100,novo_caged_mov,2021-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202104,2021,4,22,2077,novo_caged_mov,2021-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202104,2021,4,23,3408,novo_caged_mov,2021-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202104,2021,4,24,-97,novo_caged_mov,2021-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202104,2021,4,25,532,novo_caged_mov,2021-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202104,2021,4,26,5071,novo_caged_mov,2021-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202104,2021,4,27,-3253,novo_caged_mov,2021-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202104,2021,4,28,-362,novo_caged_mov,2021-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202104,2021,4,29,9951,novo_caged_mov,2021-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202104,2021,4,31,14674,novo_caged_mov,2021-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202104,2021,4,32,2123,novo_caged_mov,2021-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202104,2021,4,33,4418,novo_caged_mov,2021-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202104,2021,4,35,23032,novo_caged_mov,2021-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202104,2021,4,41,9266,novo_caged_mov,2021-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202104,2021,4,42,10370,novo_caged_mov,2021-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202104,2021,4,43,-941,novo_caged_mov,2021-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202104,2021,4,50,4491,novo_caged_mov,2021-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202104,2021,4,51,1663,novo_caged_mov,2021-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202104,2021,4,52,11314,novo_caged_mov,2021-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202104,2021,4,53,3575,novo_caged_mov,2021-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202104,2021,4,99,281,novo_caged_mov,2021-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202105,2021,5,11,1452,novo_caged_mov,2021-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202105,2021,5,12,1614,novo_caged_mov,2021-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202105,2021,5,13,3875,novo_caged_mov,2021-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202105,2021,5,14,281,novo_caged_mov,2021-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202105,2021,5,15,8972,novo_caged_mov,2021-05-01,PA,Para,North,TRUE,TRUE,mapped
+202105,2021,5,16,473,novo_caged_mov,2021-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202105,2021,5,17,1748,novo_caged_mov,2021-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202105,2021,5,21,3701,novo_caged_mov,2021-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202105,2021,5,22,3419,novo_caged_mov,2021-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202105,2021,5,23,4575,novo_caged_mov,2021-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202105,2021,5,24,2171,novo_caged_mov,2021-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202105,2021,5,25,2982,novo_caged_mov,2021-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202105,2021,5,26,8250,novo_caged_mov,2021-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202105,2021,5,27,3233,novo_caged_mov,2021-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202105,2021,5,28,525,novo_caged_mov,2021-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202105,2021,5,29,11118,novo_caged_mov,2021-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202105,2021,5,31,36581,novo_caged_mov,2021-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202105,2021,5,32,10672,novo_caged_mov,2021-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202105,2021,5,33,17768,novo_caged_mov,2021-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202105,2021,5,35,84243,novo_caged_mov,2021-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202105,2021,5,41,16367,novo_caged_mov,2021-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202105,2021,5,42,13328,novo_caged_mov,2021-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202105,2021,5,43,6922,novo_caged_mov,2021-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202105,2021,5,50,4946,novo_caged_mov,2021-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202105,2021,5,51,8173,novo_caged_mov,2021-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202105,2021,5,52,12948,novo_caged_mov,2021-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202105,2021,5,53,3556,novo_caged_mov,2021-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202105,2021,5,99,4812,novo_caged_mov,2021-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202106,2021,6,11,2975,novo_caged_mov,2021-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202106,2021,6,12,1027,novo_caged_mov,2021-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202106,2021,6,13,5445,novo_caged_mov,2021-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202106,2021,6,14,783,novo_caged_mov,2021-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202106,2021,6,15,10359,novo_caged_mov,2021-06-01,PA,Para,North,TRUE,TRUE,mapped
+202106,2021,6,16,381,novo_caged_mov,2021-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202106,2021,6,17,1965,novo_caged_mov,2021-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202106,2021,6,21,7043,novo_caged_mov,2021-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202106,2021,6,22,5107,novo_caged_mov,2021-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202106,2021,6,23,9929,novo_caged_mov,2021-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202106,2021,6,24,4882,novo_caged_mov,2021-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202106,2021,6,25,3390,novo_caged_mov,2021-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202106,2021,6,26,6927,novo_caged_mov,2021-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202106,2021,6,27,4987,novo_caged_mov,2021-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202106,2021,6,28,1112,novo_caged_mov,2021-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202106,2021,6,29,8530,novo_caged_mov,2021-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202106,2021,6,31,39234,novo_caged_mov,2021-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202106,2021,6,32,4710,novo_caged_mov,2021-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202106,2021,6,33,16054,novo_caged_mov,2021-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202106,2021,6,35,88536,novo_caged_mov,2021-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202106,2021,6,41,15976,novo_caged_mov,2021-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202106,2021,6,42,15552,novo_caged_mov,2021-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202106,2021,6,43,11529,novo_caged_mov,2021-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202106,2021,6,50,4196,novo_caged_mov,2021-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202106,2021,6,51,14265,novo_caged_mov,2021-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202106,2021,6,52,16489,novo_caged_mov,2021-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202106,2021,6,53,4750,novo_caged_mov,2021-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202106,2021,6,99,3903,novo_caged_mov,2021-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202107,2021,7,11,2504,novo_caged_mov,2021-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202107,2021,7,12,872,novo_caged_mov,2021-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202107,2021,7,13,7497,novo_caged_mov,2021-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202107,2021,7,14,364,novo_caged_mov,2021-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202107,2021,7,15,9589,novo_caged_mov,2021-07-01,PA,Para,North,TRUE,TRUE,mapped
+202107,2021,7,16,843,novo_caged_mov,2021-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202107,2021,7,17,1822,novo_caged_mov,2021-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202107,2021,7,21,5121,novo_caged_mov,2021-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202107,2021,7,22,2842,novo_caged_mov,2021-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202107,2021,7,23,13678,novo_caged_mov,2021-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202107,2021,7,24,4627,novo_caged_mov,2021-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202107,2021,7,25,3447,novo_caged_mov,2021-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202107,2021,7,26,9177,novo_caged_mov,2021-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202107,2021,7,27,4094,novo_caged_mov,2021-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202107,2021,7,28,1516,novo_caged_mov,2021-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202107,2021,7,29,10955,novo_caged_mov,2021-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202107,2021,7,31,37059,novo_caged_mov,2021-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202107,2021,7,32,2494,novo_caged_mov,2021-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202107,2021,7,33,19056,novo_caged_mov,2021-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202107,2021,7,35,96235,novo_caged_mov,2021-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202107,2021,7,41,14286,novo_caged_mov,2021-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202107,2021,7,42,13410,novo_caged_mov,2021-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202107,2021,7,43,14854,novo_caged_mov,2021-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202107,2021,7,50,4282,novo_caged_mov,2021-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202107,2021,7,51,12632,novo_caged_mov,2021-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202107,2021,7,52,13679,novo_caged_mov,2021-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202107,2021,7,53,7734,novo_caged_mov,2021-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202107,2021,7,99,2056,novo_caged_mov,2021-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202108,2021,8,11,2286,novo_caged_mov,2021-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202108,2021,8,12,387,novo_caged_mov,2021-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202108,2021,8,13,5900,novo_caged_mov,2021-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202108,2021,8,14,601,novo_caged_mov,2021-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202108,2021,8,15,9174,novo_caged_mov,2021-08-01,PA,Para,North,TRUE,TRUE,mapped
+202108,2021,8,16,870,novo_caged_mov,2021-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202108,2021,8,17,1519,novo_caged_mov,2021-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202108,2021,8,21,4675,novo_caged_mov,2021-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202108,2021,8,22,2979,novo_caged_mov,2021-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202108,2021,8,23,16773,novo_caged_mov,2021-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202108,2021,8,24,7550,novo_caged_mov,2021-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202108,2021,8,25,10555,novo_caged_mov,2021-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202108,2021,8,26,17391,novo_caged_mov,2021-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202108,2021,8,27,5487,novo_caged_mov,2021-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202108,2021,8,28,1748,novo_caged_mov,2021-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202108,2021,8,29,18305,novo_caged_mov,2021-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202108,2021,8,31,41328,novo_caged_mov,2021-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202108,2021,8,32,5084,novo_caged_mov,2021-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202108,2021,8,33,23195,novo_caged_mov,2021-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202108,2021,8,35,112903,novo_caged_mov,2021-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202108,2021,8,41,22156,novo_caged_mov,2021-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202108,2021,8,42,20371,novo_caged_mov,2021-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202108,2021,8,43,12403,novo_caged_mov,2021-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202108,2021,8,50,2959,novo_caged_mov,2021-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202108,2021,8,51,6023,novo_caged_mov,2021-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202108,2021,8,52,11923,novo_caged_mov,2021-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202108,2021,8,53,9354,novo_caged_mov,2021-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202108,2021,8,99,-555,novo_caged_mov,2021-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202109,2021,9,11,429,novo_caged_mov,2021-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202109,2021,9,12,1117,novo_caged_mov,2021-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202109,2021,9,13,4300,novo_caged_mov,2021-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202109,2021,9,14,552,novo_caged_mov,2021-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202109,2021,9,15,7852,novo_caged_mov,2021-09-01,PA,Para,North,TRUE,TRUE,mapped
+202109,2021,9,16,290,novo_caged_mov,2021-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202109,2021,9,17,1917,novo_caged_mov,2021-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202109,2021,9,21,3266,novo_caged_mov,2021-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202109,2021,9,22,3377,novo_caged_mov,2021-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202109,2021,9,23,14104,novo_caged_mov,2021-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202109,2021,9,24,6386,novo_caged_mov,2021-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202109,2021,9,25,5137,novo_caged_mov,2021-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202109,2021,9,26,27157,novo_caged_mov,2021-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202109,2021,9,27,16978,novo_caged_mov,2021-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202109,2021,9,28,6388,novo_caged_mov,2021-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202109,2021,9,29,11478,novo_caged_mov,2021-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202109,2021,9,31,25896,novo_caged_mov,2021-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202109,2021,9,32,6067,novo_caged_mov,2021-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202109,2021,9,33,20617,novo_caged_mov,2021-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202109,2021,9,35,83575,novo_caged_mov,2021-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202109,2021,9,41,15144,novo_caged_mov,2021-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202109,2021,9,42,18316,novo_caged_mov,2021-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202109,2021,9,43,14408,novo_caged_mov,2021-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202109,2021,9,50,2959,novo_caged_mov,2021-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202109,2021,9,51,5918,novo_caged_mov,2021-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202109,2021,9,52,6909,novo_caged_mov,2021-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202109,2021,9,53,6546,novo_caged_mov,2021-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202109,2021,9,99,-90,novo_caged_mov,2021-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202110,2021,10,11,854,novo_caged_mov,2021-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202110,2021,10,12,1045,novo_caged_mov,2021-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202110,2021,10,13,2099,novo_caged_mov,2021-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202110,2021,10,14,476,novo_caged_mov,2021-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202110,2021,10,15,2810,novo_caged_mov,2021-10-01,PA,Para,North,TRUE,TRUE,mapped
+202110,2021,10,16,-99,novo_caged_mov,2021-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202110,2021,10,17,1794,novo_caged_mov,2021-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202110,2021,10,21,5188,novo_caged_mov,2021-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202110,2021,10,22,1538,novo_caged_mov,2021-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202110,2021,10,23,7962,novo_caged_mov,2021-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202110,2021,10,24,3885,novo_caged_mov,2021-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202110,2021,10,25,4278,novo_caged_mov,2021-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202110,2021,10,26,11556,novo_caged_mov,2021-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202110,2021,10,27,3556,novo_caged_mov,2021-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202110,2021,10,28,2322,novo_caged_mov,2021-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202110,2021,10,29,12592,novo_caged_mov,2021-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202110,2021,10,31,19117,novo_caged_mov,2021-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202110,2021,10,32,3335,novo_caged_mov,2021-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202110,2021,10,33,19538,novo_caged_mov,2021-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202110,2021,10,35,78770,novo_caged_mov,2021-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202110,2021,10,41,15869,novo_caged_mov,2021-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202110,2021,10,42,18083,novo_caged_mov,2021-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202110,2021,10,43,20312,novo_caged_mov,2021-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202110,2021,10,50,3407,novo_caged_mov,2021-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202110,2021,10,51,3742,novo_caged_mov,2021-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202110,2021,10,52,3641,novo_caged_mov,2021-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202110,2021,10,53,5401,novo_caged_mov,2021-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202110,2021,10,99,12,novo_caged_mov,2021-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202111,2021,11,11,1504,novo_caged_mov,2021-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202111,2021,11,12,965,novo_caged_mov,2021-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202111,2021,11,13,4787,novo_caged_mov,2021-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202111,2021,11,14,422,novo_caged_mov,2021-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202111,2021,11,15,6053,novo_caged_mov,2021-11-01,PA,Para,North,TRUE,TRUE,mapped
+202111,2021,11,16,972,novo_caged_mov,2021-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202111,2021,11,17,1276,novo_caged_mov,2021-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202111,2021,11,21,2846,novo_caged_mov,2021-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202111,2021,11,22,1616,novo_caged_mov,2021-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202111,2021,11,23,12593,novo_caged_mov,2021-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202111,2021,11,24,3209,novo_caged_mov,2021-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202111,2021,11,25,4398,novo_caged_mov,2021-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202111,2021,11,26,11025,novo_caged_mov,2021-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202111,2021,11,27,3727,novo_caged_mov,2021-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202111,2021,11,28,1828,novo_caged_mov,2021-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202111,2021,11,29,15990,novo_caged_mov,2021-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202111,2021,11,31,22878,novo_caged_mov,2021-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202111,2021,11,32,8495,novo_caged_mov,2021-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202111,2021,11,33,35534,novo_caged_mov,2021-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202111,2021,11,35,117087,novo_caged_mov,2021-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202111,2021,11,41,17506,novo_caged_mov,2021-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202111,2021,11,42,18054,novo_caged_mov,2021-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202111,2021,11,43,18773,novo_caged_mov,2021-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202111,2021,11,50,2050,novo_caged_mov,2021-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202111,2021,11,51,1416,novo_caged_mov,2021-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202111,2021,11,52,2830,novo_caged_mov,2021-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202111,2021,11,53,7902,novo_caged_mov,2021-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202111,2021,11,99,-1624,novo_caged_mov,2021-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202112,2021,12,11,-1016,novo_caged_mov,2021-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202112,2021,12,12,-247,novo_caged_mov,2021-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202112,2021,12,13,-3155,novo_caged_mov,2021-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202112,2021,12,14,-89,novo_caged_mov,2021-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202112,2021,12,15,-7222,novo_caged_mov,2021-12-01,PA,Para,North,TRUE,TRUE,mapped
+202112,2021,12,16,-325,novo_caged_mov,2021-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202112,2021,12,17,-1732,novo_caged_mov,2021-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202112,2021,12,21,-1087,novo_caged_mov,2021-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202112,2021,12,22,-1896,novo_caged_mov,2021-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202112,2021,12,23,-1487,novo_caged_mov,2021-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202112,2021,12,24,-1022,novo_caged_mov,2021-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202112,2021,12,25,-222,novo_caged_mov,2021-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202112,2021,12,26,-6151,novo_caged_mov,2021-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202112,2021,12,27,622,novo_caged_mov,2021-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202112,2021,12,28,-588,novo_caged_mov,2021-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202112,2021,12,29,-5635,novo_caged_mov,2021-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202112,2021,12,31,-25244,novo_caged_mov,2021-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202112,2021,12,32,-4980,novo_caged_mov,2021-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202112,2021,12,33,-4735,novo_caged_mov,2021-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202112,2021,12,35,-93374,novo_caged_mov,2021-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202112,2021,12,41,-24479,novo_caged_mov,2021-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202112,2021,12,42,-37353,novo_caged_mov,2021-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202112,2021,12,43,-18032,novo_caged_mov,2021-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202112,2021,12,50,-4794,novo_caged_mov,2021-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202112,2021,12,51,-7954,novo_caged_mov,2021-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202112,2021,12,52,-7460,novo_caged_mov,2021-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202112,2021,12,53,-3201,novo_caged_mov,2021-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202112,2021,12,99,-2953,novo_caged_mov,2021-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202201,2022,1,11,741,novo_caged_mov,2022-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202201,2022,1,12,231,novo_caged_mov,2022-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202201,2022,1,13,625,novo_caged_mov,2022-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202201,2022,1,14,337,novo_caged_mov,2022-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202201,2022,1,15,-796,novo_caged_mov,2022-01-01,PA,Para,North,TRUE,TRUE,mapped
+202201,2022,1,16,480,novo_caged_mov,2022-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202201,2022,1,17,817,novo_caged_mov,2022-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202201,2022,1,21,591,novo_caged_mov,2022-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202201,2022,1,22,-520,novo_caged_mov,2022-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202201,2022,1,23,-1508,novo_caged_mov,2022-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202201,2022,1,24,-2430,novo_caged_mov,2022-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202201,2022,1,25,-984,novo_caged_mov,2022-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202201,2022,1,26,537,novo_caged_mov,2022-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202201,2022,1,27,-324,novo_caged_mov,2022-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202201,2022,1,28,-1253,novo_caged_mov,2022-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202201,2022,1,29,11279,novo_caged_mov,2022-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202201,2022,1,31,-1083,novo_caged_mov,2022-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202201,2022,1,32,3680,novo_caged_mov,2022-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202201,2022,1,33,1699,novo_caged_mov,2022-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202201,2022,1,35,48355,novo_caged_mov,2022-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202201,2022,1,41,18351,novo_caged_mov,2022-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202201,2022,1,42,23358,novo_caged_mov,2022-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202201,2022,1,43,17064,novo_caged_mov,2022-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202201,2022,1,50,3483,novo_caged_mov,2022-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202201,2022,1,51,14747,novo_caged_mov,2022-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202201,2022,1,52,12521,novo_caged_mov,2022-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202201,2022,1,53,3107,novo_caged_mov,2022-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202201,2022,1,99,2073,novo_caged_mov,2022-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202202,2022,2,11,2728,novo_caged_mov,2022-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202202,2022,2,12,713,novo_caged_mov,2022-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202202,2022,2,13,3219,novo_caged_mov,2022-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202202,2022,2,14,1058,novo_caged_mov,2022-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202202,2022,2,15,3277,novo_caged_mov,2022-02-01,PA,Para,North,TRUE,TRUE,mapped
+202202,2022,2,16,155,novo_caged_mov,2022-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202202,2022,2,17,1727,novo_caged_mov,2022-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202202,2022,2,21,3524,novo_caged_mov,2022-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202202,2022,2,22,1794,novo_caged_mov,2022-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202202,2022,2,23,8053,novo_caged_mov,2022-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202202,2022,2,24,1589,novo_caged_mov,2022-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202202,2022,2,25,-1537,novo_caged_mov,2022-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202202,2022,2,26,534,novo_caged_mov,2022-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202202,2022,2,27,-533,novo_caged_mov,2022-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202202,2022,2,28,1720,novo_caged_mov,2022-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202202,2022,2,29,12613,novo_caged_mov,2022-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202202,2022,2,31,37196,novo_caged_mov,2022-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202202,2022,2,32,7079,novo_caged_mov,2022-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202202,2022,2,33,20428,novo_caged_mov,2022-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202202,2022,2,35,98193,novo_caged_mov,2022-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202202,2022,2,41,28389,novo_caged_mov,2022-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202202,2022,2,42,28606,novo_caged_mov,2022-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202202,2022,2,43,26208,novo_caged_mov,2022-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202202,2022,2,50,7425,novo_caged_mov,2022-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202202,2022,2,51,8531,novo_caged_mov,2022-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202202,2022,2,52,17679,novo_caged_mov,2022-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202202,2022,2,53,7200,novo_caged_mov,2022-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202202,2022,2,99,939,novo_caged_mov,2022-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202203,2022,3,11,1465,novo_caged_mov,2022-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202203,2022,3,12,766,novo_caged_mov,2022-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202203,2022,3,13,1673,novo_caged_mov,2022-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202203,2022,3,14,387,novo_caged_mov,2022-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202203,2022,3,15,2349,novo_caged_mov,2022-03-01,PA,Para,North,TRUE,TRUE,mapped
+202203,2022,3,16,1225,novo_caged_mov,2022-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202203,2022,3,17,1525,novo_caged_mov,2022-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202203,2022,3,21,1611,novo_caged_mov,2022-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202203,2022,3,22,848,novo_caged_mov,2022-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202203,2022,3,23,3386,novo_caged_mov,2022-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202203,2022,3,24,-1061,novo_caged_mov,2022-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202203,2022,3,25,872,novo_caged_mov,2022-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202203,2022,3,26,-6250,novo_caged_mov,2022-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202203,2022,3,27,-10079,novo_caged_mov,2022-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202203,2022,3,28,-2527,novo_caged_mov,2022-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202203,2022,3,29,7952,novo_caged_mov,2022-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202203,2022,3,31,28368,novo_caged_mov,2022-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202203,2022,3,32,2947,novo_caged_mov,2022-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202203,2022,3,33,11410,novo_caged_mov,2022-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202203,2022,3,35,39265,novo_caged_mov,2022-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202203,2022,3,41,8636,novo_caged_mov,2022-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202203,2022,3,42,11155,novo_caged_mov,2022-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202203,2022,3,43,13463,novo_caged_mov,2022-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202203,2022,3,50,6000,novo_caged_mov,2022-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202203,2022,3,51,644,novo_caged_mov,2022-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202203,2022,3,52,8410,novo_caged_mov,2022-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202203,2022,3,53,4578,novo_caged_mov,2022-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202203,2022,3,99,-2829,novo_caged_mov,2022-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202204,2022,4,11,1321,novo_caged_mov,2022-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202204,2022,4,12,800,novo_caged_mov,2022-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202204,2022,4,13,3700,novo_caged_mov,2022-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202204,2022,4,14,440,novo_caged_mov,2022-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202204,2022,4,15,4526,novo_caged_mov,2022-04-01,PA,Para,North,TRUE,TRUE,mapped
+202204,2022,4,16,755,novo_caged_mov,2022-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202204,2022,4,17,601,novo_caged_mov,2022-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202204,2022,4,21,3412,novo_caged_mov,2022-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202204,2022,4,22,1014,novo_caged_mov,2022-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202204,2022,4,23,5313,novo_caged_mov,2022-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202204,2022,4,24,1622,novo_caged_mov,2022-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202204,2022,4,25,2412,novo_caged_mov,2022-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202204,2022,4,26,-880,novo_caged_mov,2022-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202204,2022,4,27,-234,novo_caged_mov,2022-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202204,2022,4,28,1685,novo_caged_mov,2022-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202204,2022,4,29,15907,novo_caged_mov,2022-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202204,2022,4,31,20895,novo_caged_mov,2022-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202204,2022,4,32,5427,novo_caged_mov,2022-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202204,2022,4,33,22473,novo_caged_mov,2022-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202204,2022,4,35,56852,novo_caged_mov,2022-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202204,2022,4,41,9098,novo_caged_mov,2022-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202204,2022,4,42,7181,novo_caged_mov,2022-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202204,2022,4,43,8564,novo_caged_mov,2022-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202204,2022,4,50,2660,novo_caged_mov,2022-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202204,2022,4,51,4338,novo_caged_mov,2022-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202204,2022,4,52,13314,novo_caged_mov,2022-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202204,2022,4,53,5486,novo_caged_mov,2022-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202204,2022,4,99,-1716,novo_caged_mov,2022-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202205,2022,5,11,1987,novo_caged_mov,2022-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202205,2022,5,12,889,novo_caged_mov,2022-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202205,2022,5,13,4159,novo_caged_mov,2022-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202205,2022,5,14,494,novo_caged_mov,2022-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202205,2022,5,15,6382,novo_caged_mov,2022-05-01,PA,Para,North,TRUE,TRUE,mapped
+202205,2022,5,16,334,novo_caged_mov,2022-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202205,2022,5,17,1846,novo_caged_mov,2022-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202205,2022,5,21,4910,novo_caged_mov,2022-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202205,2022,5,22,2678,novo_caged_mov,2022-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202205,2022,5,23,7472,novo_caged_mov,2022-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202205,2022,5,24,3519,novo_caged_mov,2022-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202205,2022,5,25,3128,novo_caged_mov,2022-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202205,2022,5,26,6508,novo_caged_mov,2022-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202205,2022,5,27,3435,novo_caged_mov,2022-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202205,2022,5,28,855,novo_caged_mov,2022-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202205,2022,5,29,16342,novo_caged_mov,2022-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202205,2022,5,31,29970,novo_caged_mov,2022-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202205,2022,5,32,11991,novo_caged_mov,2022-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202205,2022,5,33,20226,novo_caged_mov,2022-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202205,2022,5,35,85659,novo_caged_mov,2022-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202205,2022,5,41,13894,novo_caged_mov,2022-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202205,2022,5,42,7416,novo_caged_mov,2022-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202205,2022,5,43,4275,novo_caged_mov,2022-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202205,2022,5,50,6644,novo_caged_mov,2022-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202205,2022,5,51,8280,novo_caged_mov,2022-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202205,2022,5,52,14634,novo_caged_mov,2022-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202205,2022,5,53,4420,novo_caged_mov,2022-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202205,2022,5,99,4671,novo_caged_mov,2022-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202206,2022,6,11,2499,novo_caged_mov,2022-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202206,2022,6,12,1184,novo_caged_mov,2022-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202206,2022,6,13,5237,novo_caged_mov,2022-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202206,2022,6,14,538,novo_caged_mov,2022-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202206,2022,6,15,9834,novo_caged_mov,2022-06-01,PA,Para,North,TRUE,TRUE,mapped
+202206,2022,6,16,866,novo_caged_mov,2022-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202206,2022,6,17,1650,novo_caged_mov,2022-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202206,2022,6,21,6733,novo_caged_mov,2022-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202206,2022,6,22,4194,novo_caged_mov,2022-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202206,2022,6,23,9597,novo_caged_mov,2022-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202206,2022,6,24,3729,novo_caged_mov,2022-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202206,2022,6,25,3633,novo_caged_mov,2022-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202206,2022,6,26,7134,novo_caged_mov,2022-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202206,2022,6,27,3504,novo_caged_mov,2022-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202206,2022,6,28,836,novo_caged_mov,2022-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202206,2022,6,29,13359,novo_caged_mov,2022-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202206,2022,6,31,33372,novo_caged_mov,2022-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202206,2022,6,32,2318,novo_caged_mov,2022-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202206,2022,6,33,23032,novo_caged_mov,2022-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202206,2022,6,35,75021,novo_caged_mov,2022-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202206,2022,6,41,14045,novo_caged_mov,2022-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202206,2022,6,42,9664,novo_caged_mov,2022-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202206,2022,6,43,7893,novo_caged_mov,2022-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202206,2022,6,50,4318,novo_caged_mov,2022-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202206,2022,6,51,14006,novo_caged_mov,2022-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202206,2022,6,52,12357,novo_caged_mov,2022-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202206,2022,6,53,4341,novo_caged_mov,2022-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202206,2022,6,99,3050,novo_caged_mov,2022-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202207,2022,7,11,1557,novo_caged_mov,2022-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202207,2022,7,12,1026,novo_caged_mov,2022-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202207,2022,7,13,3622,novo_caged_mov,2022-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202207,2022,7,14,591,novo_caged_mov,2022-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202207,2022,7,15,6033,novo_caged_mov,2022-07-01,PA,Para,North,TRUE,TRUE,mapped
+202207,2022,7,16,763,novo_caged_mov,2022-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202207,2022,7,17,2503,novo_caged_mov,2022-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202207,2022,7,21,5308,novo_caged_mov,2022-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202207,2022,7,22,2030,novo_caged_mov,2022-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202207,2022,7,23,10097,novo_caged_mov,2022-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202207,2022,7,24,2516,novo_caged_mov,2022-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202207,2022,7,25,4144,novo_caged_mov,2022-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202207,2022,7,26,9084,novo_caged_mov,2022-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202207,2022,7,27,1918,novo_caged_mov,2022-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202207,2022,7,28,820,novo_caged_mov,2022-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202207,2022,7,29,13111,novo_caged_mov,2022-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202207,2022,7,31,19540,novo_caged_mov,2022-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202207,2022,7,32,-514,novo_caged_mov,2022-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202207,2022,7,33,13348,novo_caged_mov,2022-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202207,2022,7,35,68165,novo_caged_mov,2022-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202207,2022,7,41,16050,novo_caged_mov,2022-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202207,2022,7,42,4593,novo_caged_mov,2022-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202207,2022,7,43,7493,novo_caged_mov,2022-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202207,2022,7,50,3972,novo_caged_mov,2022-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202207,2022,7,51,8039,novo_caged_mov,2022-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202207,2022,7,52,9072,novo_caged_mov,2022-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202207,2022,7,53,4216,novo_caged_mov,2022-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202207,2022,7,99,-195,novo_caged_mov,2022-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202208,2022,8,11,1883,novo_caged_mov,2022-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202208,2022,8,12,858,novo_caged_mov,2022-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202208,2022,8,13,4088,novo_caged_mov,2022-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202208,2022,8,14,1081,novo_caged_mov,2022-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202208,2022,8,15,7098,novo_caged_mov,2022-08-01,PA,Para,North,TRUE,TRUE,mapped
+202208,2022,8,16,1016,novo_caged_mov,2022-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202208,2022,8,17,2147,novo_caged_mov,2022-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202208,2022,8,21,5472,novo_caged_mov,2022-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202208,2022,8,22,831,novo_caged_mov,2022-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202208,2022,8,23,8713,novo_caged_mov,2022-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202208,2022,8,24,6338,novo_caged_mov,2022-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202208,2022,8,25,5913,novo_caged_mov,2022-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202208,2022,8,26,15119,novo_caged_mov,2022-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202208,2022,8,27,4335,novo_caged_mov,2022-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202208,2022,8,28,1872,novo_caged_mov,2022-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202208,2022,8,29,17416,novo_caged_mov,2022-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202208,2022,8,31,27381,novo_caged_mov,2022-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202208,2022,8,32,4567,novo_caged_mov,2022-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202208,2022,8,33,30838,novo_caged_mov,2022-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202208,2022,8,35,74973,novo_caged_mov,2022-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202208,2022,8,41,15118,novo_caged_mov,2022-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202208,2022,8,42,10223,novo_caged_mov,2022-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202208,2022,8,43,9691,novo_caged_mov,2022-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202208,2022,8,50,4439,novo_caged_mov,2022-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202208,2022,8,51,4143,novo_caged_mov,2022-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202208,2022,8,52,7587,novo_caged_mov,2022-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202208,2022,8,53,5346,novo_caged_mov,2022-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202208,2022,8,99,153,novo_caged_mov,2022-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202209,2022,9,11,1745,novo_caged_mov,2022-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202209,2022,9,12,761,novo_caged_mov,2022-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202209,2022,9,13,5211,novo_caged_mov,2022-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202209,2022,9,14,1087,novo_caged_mov,2022-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202209,2022,9,15,7849,novo_caged_mov,2022-09-01,PA,Para,North,TRUE,TRUE,mapped
+202209,2022,9,16,738,novo_caged_mov,2022-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202209,2022,9,17,2019,novo_caged_mov,2022-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202209,2022,9,21,7082,novo_caged_mov,2022-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202209,2022,9,22,2781,novo_caged_mov,2022-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202209,2022,9,23,12091,novo_caged_mov,2022-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202209,2022,9,24,4232,novo_caged_mov,2022-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202209,2022,9,25,3819,novo_caged_mov,2022-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202209,2022,9,26,20743,novo_caged_mov,2022-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202209,2022,9,27,15639,novo_caged_mov,2022-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202209,2022,9,28,5278,novo_caged_mov,2022-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202209,2022,9,29,15600,novo_caged_mov,2022-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202209,2022,9,31,22525,novo_caged_mov,2022-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202209,2022,9,32,7735,novo_caged_mov,2022-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202209,2022,9,33,15100,novo_caged_mov,2022-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202209,2022,9,35,62244,novo_caged_mov,2022-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202209,2022,9,41,12988,novo_caged_mov,2022-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202209,2022,9,42,15024,novo_caged_mov,2022-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202209,2022,9,43,10340,novo_caged_mov,2022-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202209,2022,9,50,4057,novo_caged_mov,2022-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202209,2022,9,51,6332,novo_caged_mov,2022-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202209,2022,9,52,8377,novo_caged_mov,2022-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202209,2022,9,53,6808,novo_caged_mov,2022-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202209,2022,9,99,-120,novo_caged_mov,2022-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202210,2022,10,11,599,novo_caged_mov,2022-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202210,2022,10,12,675,novo_caged_mov,2022-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202210,2022,10,13,3482,novo_caged_mov,2022-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202210,2022,10,14,509,novo_caged_mov,2022-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202210,2022,10,15,1451,novo_caged_mov,2022-10-01,PA,Para,North,TRUE,TRUE,mapped
+202210,2022,10,16,-499,novo_caged_mov,2022-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202210,2022,10,17,1038,novo_caged_mov,2022-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202210,2022,10,21,3127,novo_caged_mov,2022-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202210,2022,10,22,919,novo_caged_mov,2022-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202210,2022,10,23,5010,novo_caged_mov,2022-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202210,2022,10,24,1953,novo_caged_mov,2022-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202210,2022,10,25,1245,novo_caged_mov,2022-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202210,2022,10,26,8296,novo_caged_mov,2022-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202210,2022,10,27,4364,novo_caged_mov,2022-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202210,2022,10,28,983,novo_caged_mov,2022-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202210,2022,10,29,6731,novo_caged_mov,2022-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202210,2022,10,31,7329,novo_caged_mov,2022-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202210,2022,10,32,3172,novo_caged_mov,2022-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202210,2022,10,33,8592,novo_caged_mov,2022-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202210,2022,10,35,61539,novo_caged_mov,2022-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202210,2022,10,41,10436,novo_caged_mov,2022-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202210,2022,10,42,7017,novo_caged_mov,2022-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202210,2022,10,43,13850,novo_caged_mov,2022-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202210,2022,10,50,1657,novo_caged_mov,2022-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202210,2022,10,51,809,novo_caged_mov,2022-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202210,2022,10,52,946,novo_caged_mov,2022-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202210,2022,10,53,4800,novo_caged_mov,2022-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202210,2022,10,99,-576,novo_caged_mov,2022-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202211,2022,11,11,226,novo_caged_mov,2022-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202211,2022,11,12,461,novo_caged_mov,2022-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202211,2022,11,13,2114,novo_caged_mov,2022-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202211,2022,11,14,717,novo_caged_mov,2022-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202211,2022,11,15,-1178,novo_caged_mov,2022-11-01,PA,Para,North,TRUE,TRUE,mapped
+202211,2022,11,16,-131,novo_caged_mov,2022-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202211,2022,11,17,808,novo_caged_mov,2022-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202211,2022,11,21,1735,novo_caged_mov,2022-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202211,2022,11,22,-49,novo_caged_mov,2022-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202211,2022,11,23,6557,novo_caged_mov,2022-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202211,2022,11,24,1805,novo_caged_mov,2022-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202211,2022,11,25,2552,novo_caged_mov,2022-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202211,2022,11,26,8253,novo_caged_mov,2022-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202211,2022,11,27,2664,novo_caged_mov,2022-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202211,2022,11,28,1243,novo_caged_mov,2022-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202211,2022,11,29,4243,novo_caged_mov,2022-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202211,2022,11,31,3284,novo_caged_mov,2022-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202211,2022,11,32,3701,novo_caged_mov,2022-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202211,2022,11,33,25176,novo_caged_mov,2022-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202211,2022,11,35,54340,novo_caged_mov,2022-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202211,2022,11,41,4890,novo_caged_mov,2022-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202211,2022,11,42,4248,novo_caged_mov,2022-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202211,2022,11,43,11635,novo_caged_mov,2022-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202211,2022,11,50,1632,novo_caged_mov,2022-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202211,2022,11,51,-4459,novo_caged_mov,2022-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202211,2022,11,52,-2512,novo_caged_mov,2022-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202211,2022,11,53,4134,novo_caged_mov,2022-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202211,2022,11,99,-2594,novo_caged_mov,2022-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202212,2022,12,11,-1353,novo_caged_mov,2022-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202212,2022,12,12,-801,novo_caged_mov,2022-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202212,2022,12,13,-5403,novo_caged_mov,2022-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202212,2022,12,14,-966,novo_caged_mov,2022-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202212,2022,12,15,-15266,novo_caged_mov,2022-12-01,PA,Para,North,TRUE,TRUE,mapped
+202212,2022,12,16,-979,novo_caged_mov,2022-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202212,2022,12,17,-2533,novo_caged_mov,2022-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202212,2022,12,21,-4911,novo_caged_mov,2022-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202212,2022,12,22,-4030,novo_caged_mov,2022-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202212,2022,12,23,-6969,novo_caged_mov,2022-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202212,2022,12,24,-3018,novo_caged_mov,2022-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202212,2022,12,25,-2388,novo_caged_mov,2022-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202212,2022,12,26,-9395,novo_caged_mov,2022-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202212,2022,12,27,-3910,novo_caged_mov,2022-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202212,2022,12,28,-1290,novo_caged_mov,2022-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202212,2022,12,29,-16259,novo_caged_mov,2022-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202212,2022,12,31,-46951,novo_caged_mov,2022-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202212,2022,12,32,-7083,novo_caged_mov,2022-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202212,2022,12,33,-8224,novo_caged_mov,2022-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202212,2022,12,35,-146666,novo_caged_mov,2022-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202212,2022,12,41,-36244,novo_caged_mov,2022-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202212,2022,12,42,-39297,novo_caged_mov,2022-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202212,2022,12,43,-27927,novo_caged_mov,2022-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202212,2022,12,50,-6744,novo_caged_mov,2022-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202212,2022,12,51,-8864,novo_caged_mov,2022-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202212,2022,12,52,-12222,novo_caged_mov,2022-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202212,2022,12,53,-8262,novo_caged_mov,2022-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202212,2022,12,99,-3056,novo_caged_mov,2022-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202301,2023,1,11,-497,novo_caged_mov,2023-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202301,2023,1,12,-648,novo_caged_mov,2023-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202301,2023,1,13,436,novo_caged_mov,2023-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202301,2023,1,14,969,novo_caged_mov,2023-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202301,2023,1,15,-1893,novo_caged_mov,2023-01-01,PA,Para,North,TRUE,TRUE,mapped
+202301,2023,1,16,66,novo_caged_mov,2023-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202301,2023,1,17,1098,novo_caged_mov,2023-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202301,2023,1,21,1057,novo_caged_mov,2023-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202301,2023,1,22,276,novo_caged_mov,2023-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202301,2023,1,23,-2981,novo_caged_mov,2023-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202301,2023,1,24,-37,novo_caged_mov,2023-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202301,2023,1,25,-1723,novo_caged_mov,2023-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202301,2023,1,26,327,novo_caged_mov,2023-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202301,2023,1,27,-133,novo_caged_mov,2023-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202301,2023,1,28,-417,novo_caged_mov,2023-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202301,2023,1,29,3644,novo_caged_mov,2023-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202301,2023,1,31,-1654,novo_caged_mov,2023-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202301,2023,1,32,1635,novo_caged_mov,2023-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202301,2023,1,33,-558,novo_caged_mov,2023-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202301,2023,1,35,18547,novo_caged_mov,2023-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202301,2023,1,41,6301,novo_caged_mov,2023-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202301,2023,1,42,15696,novo_caged_mov,2023-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202301,2023,1,43,10389,novo_caged_mov,2023-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202301,2023,1,50,4789,novo_caged_mov,2023-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202301,2023,1,51,15127,novo_caged_mov,2023-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202301,2023,1,52,10614,novo_caged_mov,2023-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202301,2023,1,53,-1069,novo_caged_mov,2023-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202301,2023,1,99,3936,novo_caged_mov,2023-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202302,2023,2,11,2398,novo_caged_mov,2023-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202302,2023,2,12,812,novo_caged_mov,2023-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202302,2023,2,13,1566,novo_caged_mov,2023-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202302,2023,2,14,214,novo_caged_mov,2023-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202302,2023,2,15,5559,novo_caged_mov,2023-02-01,PA,Para,North,TRUE,TRUE,mapped
+202302,2023,2,16,149,novo_caged_mov,2023-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202302,2023,2,17,1914,novo_caged_mov,2023-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202302,2023,2,21,831,novo_caged_mov,2023-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202302,2023,2,22,922,novo_caged_mov,2023-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202302,2023,2,23,4348,novo_caged_mov,2023-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202302,2023,2,24,427,novo_caged_mov,2023-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202302,2023,2,25,514,novo_caged_mov,2023-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202302,2023,2,26,6761,novo_caged_mov,2023-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202302,2023,2,27,169,novo_caged_mov,2023-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202302,2023,2,28,1298,novo_caged_mov,2023-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202302,2023,2,29,8101,novo_caged_mov,2023-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202302,2023,2,31,27266,novo_caged_mov,2023-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202302,2023,2,32,3566,novo_caged_mov,2023-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202302,2023,2,33,14630,novo_caged_mov,2023-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202302,2023,2,35,64877,novo_caged_mov,2023-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202302,2023,2,41,24125,novo_caged_mov,2023-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202302,2023,2,42,19676,novo_caged_mov,2023-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202302,2023,2,43,20139,novo_caged_mov,2023-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202302,2023,2,50,5925,novo_caged_mov,2023-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202302,2023,2,51,5069,novo_caged_mov,2023-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202302,2023,2,52,11535,novo_caged_mov,2023-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202302,2023,2,53,7517,novo_caged_mov,2023-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202302,2023,2,99,1477,novo_caged_mov,2023-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202303,2023,3,11,1091,novo_caged_mov,2023-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202303,2023,3,12,566,novo_caged_mov,2023-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202303,2023,3,13,1547,novo_caged_mov,2023-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202303,2023,3,14,1057,novo_caged_mov,2023-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202303,2023,3,15,4031,novo_caged_mov,2023-03-01,PA,Para,North,TRUE,TRUE,mapped
+202303,2023,3,16,-41,novo_caged_mov,2023-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202303,2023,3,17,1822,novo_caged_mov,2023-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202303,2023,3,21,2758,novo_caged_mov,2023-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202303,2023,3,22,1930,novo_caged_mov,2023-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202303,2023,3,23,4745,novo_caged_mov,2023-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202303,2023,3,24,-78,novo_caged_mov,2023-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202303,2023,3,25,-815,novo_caged_mov,2023-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202303,2023,3,26,-5265,novo_caged_mov,2023-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202303,2023,3,27,127,novo_caged_mov,2023-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202303,2023,3,28,1389,novo_caged_mov,2023-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202303,2023,3,29,9328,novo_caged_mov,2023-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202303,2023,3,31,38690,novo_caged_mov,2023-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202303,2023,3,32,4448,novo_caged_mov,2023-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202303,2023,3,33,19427,novo_caged_mov,2023-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202303,2023,3,35,51628,novo_caged_mov,2023-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202303,2023,3,41,13392,novo_caged_mov,2023-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202303,2023,3,42,11883,novo_caged_mov,2023-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202303,2023,3,43,12177,novo_caged_mov,2023-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202303,2023,3,50,3668,novo_caged_mov,2023-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202303,2023,3,51,-20,novo_caged_mov,2023-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202303,2023,3,52,13670,novo_caged_mov,2023-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202303,2023,3,53,5099,novo_caged_mov,2023-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202303,2023,3,99,-3083,novo_caged_mov,2023-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202304,2023,4,11,808,novo_caged_mov,2023-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202304,2023,4,12,156,novo_caged_mov,2023-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202304,2023,4,13,1964,novo_caged_mov,2023-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202304,2023,4,14,604,novo_caged_mov,2023-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202304,2023,4,15,6042,novo_caged_mov,2023-04-01,PA,Para,North,TRUE,TRUE,mapped
+202304,2023,4,16,394,novo_caged_mov,2023-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202304,2023,4,17,882,novo_caged_mov,2023-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202304,2023,4,21,2201,novo_caged_mov,2023-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202304,2023,4,22,1883,novo_caged_mov,2023-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202304,2023,4,23,4488,novo_caged_mov,2023-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202304,2023,4,24,1577,novo_caged_mov,2023-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202304,2023,4,25,-3181,novo_caged_mov,2023-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202304,2023,4,26,-2425,novo_caged_mov,2023-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202304,2023,4,27,-4063,novo_caged_mov,2023-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202304,2023,4,28,-569,novo_caged_mov,2023-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202304,2023,4,29,11252,novo_caged_mov,2023-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202304,2023,4,31,27430,novo_caged_mov,2023-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202304,2023,4,32,5789,novo_caged_mov,2023-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202304,2023,4,33,18114,novo_caged_mov,2023-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202304,2023,4,35,55037,novo_caged_mov,2023-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202304,2023,4,41,9427,novo_caged_mov,2023-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202304,2023,4,42,7012,novo_caged_mov,2023-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202304,2023,4,43,11490,novo_caged_mov,2023-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202304,2023,4,50,3632,novo_caged_mov,2023-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202304,2023,4,51,3671,novo_caged_mov,2023-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202304,2023,4,52,11925,novo_caged_mov,2023-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202304,2023,4,53,5768,novo_caged_mov,2023-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202304,2023,4,99,-1303,novo_caged_mov,2023-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202305,2023,5,11,1712,novo_caged_mov,2023-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202305,2023,5,12,562,novo_caged_mov,2023-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202305,2023,5,13,1887,novo_caged_mov,2023-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202305,2023,5,14,-30,novo_caged_mov,2023-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202305,2023,5,15,7270,novo_caged_mov,2023-05-01,PA,Para,North,TRUE,TRUE,mapped
+202305,2023,5,16,58,novo_caged_mov,2023-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202305,2023,5,17,1165,novo_caged_mov,2023-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202305,2023,5,21,2422,novo_caged_mov,2023-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202305,2023,5,22,2668,novo_caged_mov,2023-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202305,2023,5,23,3435,novo_caged_mov,2023-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202305,2023,5,24,1758,novo_caged_mov,2023-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202305,2023,5,25,2868,novo_caged_mov,2023-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202305,2023,5,26,464,novo_caged_mov,2023-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202305,2023,5,27,-8188,novo_caged_mov,2023-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202305,2023,5,28,-172,novo_caged_mov,2023-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202305,2023,5,29,9428,novo_caged_mov,2023-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202305,2023,5,31,26626,novo_caged_mov,2023-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202305,2023,5,32,13593,novo_caged_mov,2023-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202305,2023,5,33,12418,novo_caged_mov,2023-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202305,2023,5,35,50112,novo_caged_mov,2023-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202305,2023,5,41,7785,novo_caged_mov,2023-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202305,2023,5,42,3596,novo_caged_mov,2023-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202305,2023,5,43,-2511,novo_caged_mov,2023-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202305,2023,5,50,3250,novo_caged_mov,2023-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202305,2023,5,51,3350,novo_caged_mov,2023-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202305,2023,5,52,6297,novo_caged_mov,2023-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202305,2023,5,53,1576,novo_caged_mov,2023-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202305,2023,5,99,1871,novo_caged_mov,2023-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202306,2023,6,11,2050,novo_caged_mov,2023-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202306,2023,6,12,1018,novo_caged_mov,2023-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202306,2023,6,13,2181,novo_caged_mov,2023-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202306,2023,6,14,-121,novo_caged_mov,2023-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202306,2023,6,15,6852,novo_caged_mov,2023-06-01,PA,Para,North,TRUE,TRUE,mapped
+202306,2023,6,16,501,novo_caged_mov,2023-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202306,2023,6,17,1624,novo_caged_mov,2023-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202306,2023,6,21,4889,novo_caged_mov,2023-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202306,2023,6,22,4170,novo_caged_mov,2023-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202306,2023,6,23,6571,novo_caged_mov,2023-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202306,2023,6,24,2474,novo_caged_mov,2023-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202306,2023,6,25,-223,novo_caged_mov,2023-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202306,2023,6,26,5327,novo_caged_mov,2023-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202306,2023,6,27,1465,novo_caged_mov,2023-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202306,2023,6,28,632,novo_caged_mov,2023-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202306,2023,6,29,8319,novo_caged_mov,2023-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202306,2023,6,31,25537,novo_caged_mov,2023-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202306,2023,6,32,636,novo_caged_mov,2023-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202306,2023,6,33,13490,novo_caged_mov,2023-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202306,2023,6,35,36418,novo_caged_mov,2023-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202306,2023,6,41,7899,novo_caged_mov,2023-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202306,2023,6,42,1899,novo_caged_mov,2023-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202306,2023,6,43,-211,novo_caged_mov,2023-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202306,2023,6,50,3030,novo_caged_mov,2023-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202306,2023,6,51,10683,novo_caged_mov,2023-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202306,2023,6,52,5091,novo_caged_mov,2023-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202306,2023,6,53,2743,novo_caged_mov,2023-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202306,2023,6,99,2254,novo_caged_mov,2023-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202307,2023,7,11,972,novo_caged_mov,2023-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202307,2023,7,12,741,novo_caged_mov,2023-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202307,2023,7,13,3723,novo_caged_mov,2023-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202307,2023,7,14,228,novo_caged_mov,2023-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202307,2023,7,15,6938,novo_caged_mov,2023-07-01,PA,Para,North,TRUE,TRUE,mapped
+202307,2023,7,16,991,novo_caged_mov,2023-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202307,2023,7,17,1163,novo_caged_mov,2023-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202307,2023,7,21,2586,novo_caged_mov,2023-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202307,2023,7,22,3729,novo_caged_mov,2023-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202307,2023,7,23,6490,novo_caged_mov,2023-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202307,2023,7,24,3531,novo_caged_mov,2023-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202307,2023,7,25,3477,novo_caged_mov,2023-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202307,2023,7,26,4401,novo_caged_mov,2023-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202307,2023,7,27,2169,novo_caged_mov,2023-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202307,2023,7,28,492,novo_caged_mov,2023-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202307,2023,7,29,5180,novo_caged_mov,2023-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202307,2023,7,31,12353,novo_caged_mov,2023-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202307,2023,7,32,1811,novo_caged_mov,2023-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202307,2023,7,33,12710,novo_caged_mov,2023-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202307,2023,7,35,43331,novo_caged_mov,2023-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202307,2023,7,41,7184,novo_caged_mov,2023-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202307,2023,7,42,2220,novo_caged_mov,2023-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202307,2023,7,43,-2129,novo_caged_mov,2023-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202307,2023,7,50,2386,novo_caged_mov,2023-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202307,2023,7,51,6214,novo_caged_mov,2023-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202307,2023,7,52,5435,novo_caged_mov,2023-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202307,2023,7,53,4275,novo_caged_mov,2023-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202307,2023,7,99,101,novo_caged_mov,2023-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202308,2023,8,11,1939,novo_caged_mov,2023-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202308,2023,8,12,448,novo_caged_mov,2023-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202308,2023,8,13,4553,novo_caged_mov,2023-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202308,2023,8,14,689,novo_caged_mov,2023-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202308,2023,8,15,6903,novo_caged_mov,2023-08-01,PA,Para,North,TRUE,TRUE,mapped
+202308,2023,8,16,989,novo_caged_mov,2023-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202308,2023,8,17,2331,novo_caged_mov,2023-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202308,2023,8,21,2409,novo_caged_mov,2023-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202308,2023,8,22,2764,novo_caged_mov,2023-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202308,2023,8,23,10932,novo_caged_mov,2023-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202308,2023,8,24,5975,novo_caged_mov,2023-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202308,2023,8,25,8782,novo_caged_mov,2023-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202308,2023,8,26,15566,novo_caged_mov,2023-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202308,2023,8,27,3383,novo_caged_mov,2023-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202308,2023,8,28,2445,novo_caged_mov,2023-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202308,2023,8,29,11518,novo_caged_mov,2023-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202308,2023,8,31,15237,novo_caged_mov,2023-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202308,2023,8,32,315,novo_caged_mov,2023-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202308,2023,8,33,18992,novo_caged_mov,2023-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202308,2023,8,35,65462,novo_caged_mov,2023-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202308,2023,8,41,13568,novo_caged_mov,2023-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202308,2023,8,42,6702,novo_caged_mov,2023-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202308,2023,8,43,2561,novo_caged_mov,2023-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202308,2023,8,50,3226,novo_caged_mov,2023-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202308,2023,8,51,4633,novo_caged_mov,2023-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202308,2023,8,52,6151,novo_caged_mov,2023-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202308,2023,8,53,3867,novo_caged_mov,2023-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202308,2023,8,99,-1496,novo_caged_mov,2023-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202309,2023,9,11,1365,novo_caged_mov,2023-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202309,2023,9,12,360,novo_caged_mov,2023-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202309,2023,9,13,2973,novo_caged_mov,2023-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202309,2023,9,14,763,novo_caged_mov,2023-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202309,2023,9,15,9041,novo_caged_mov,2023-09-01,PA,Para,North,TRUE,TRUE,mapped
+202309,2023,9,16,1027,novo_caged_mov,2023-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202309,2023,9,17,1321,novo_caged_mov,2023-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202309,2023,9,21,2850,novo_caged_mov,2023-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202309,2023,9,22,2494,novo_caged_mov,2023-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202309,2023,9,23,10483,novo_caged_mov,2023-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202309,2023,9,24,4254,novo_caged_mov,2023-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202309,2023,9,25,4193,novo_caged_mov,2023-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202309,2023,9,26,18864,novo_caged_mov,2023-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202309,2023,9,27,16160,novo_caged_mov,2023-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202309,2023,9,28,5956,novo_caged_mov,2023-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202309,2023,9,29,9854,novo_caged_mov,2023-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202309,2023,9,31,12631,novo_caged_mov,2023-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202309,2023,9,32,4415,novo_caged_mov,2023-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202309,2023,9,33,17998,novo_caged_mov,2023-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202309,2023,9,35,47306,novo_caged_mov,2023-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202309,2023,9,41,9046,novo_caged_mov,2023-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202309,2023,9,42,12017,novo_caged_mov,2023-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202309,2023,9,43,1267,novo_caged_mov,2023-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202309,2023,9,50,1801,novo_caged_mov,2023-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202309,2023,9,51,4410,novo_caged_mov,2023-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202309,2023,9,52,4489,novo_caged_mov,2023-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202309,2023,9,53,4093,novo_caged_mov,2023-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202309,2023,9,99,333,novo_caged_mov,2023-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202310,2023,10,11,404,novo_caged_mov,2023-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202310,2023,10,12,127,novo_caged_mov,2023-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202310,2023,10,13,2733,novo_caged_mov,2023-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202310,2023,10,14,-115,novo_caged_mov,2023-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202310,2023,10,15,4863,novo_caged_mov,2023-10-01,PA,Para,North,TRUE,TRUE,mapped
+202310,2023,10,16,453,novo_caged_mov,2023-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202310,2023,10,17,1758,novo_caged_mov,2023-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202310,2023,10,21,2357,novo_caged_mov,2023-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202310,2023,10,22,2187,novo_caged_mov,2023-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202310,2023,10,23,6130,novo_caged_mov,2023-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202310,2023,10,24,2257,novo_caged_mov,2023-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202310,2023,10,25,3773,novo_caged_mov,2023-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202310,2023,10,26,8272,novo_caged_mov,2023-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202310,2023,10,27,4163,novo_caged_mov,2023-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202310,2023,10,28,1603,novo_caged_mov,2023-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202310,2023,10,29,5905,novo_caged_mov,2023-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202310,2023,10,31,4907,novo_caged_mov,2023-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202310,2023,10,32,3424,novo_caged_mov,2023-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202310,2023,10,33,18803,novo_caged_mov,2023-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202310,2023,10,35,69442,novo_caged_mov,2023-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202310,2023,10,41,14945,novo_caged_mov,2023-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202310,2023,10,42,12031,novo_caged_mov,2023-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202310,2023,10,43,10766,novo_caged_mov,2023-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202310,2023,10,50,2265,novo_caged_mov,2023-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202310,2023,10,51,1887,novo_caged_mov,2023-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202310,2023,10,52,682,novo_caged_mov,2023-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202310,2023,10,53,5179,novo_caged_mov,2023-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202310,2023,10,99,-835,novo_caged_mov,2023-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202311,2023,11,11,516,novo_caged_mov,2023-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202311,2023,11,12,243,novo_caged_mov,2023-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202311,2023,11,13,2584,novo_caged_mov,2023-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202311,2023,11,14,417,novo_caged_mov,2023-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202311,2023,11,15,-51,novo_caged_mov,2023-11-01,PA,Para,North,TRUE,TRUE,mapped
+202311,2023,11,16,414,novo_caged_mov,2023-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202311,2023,11,17,482,novo_caged_mov,2023-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202311,2023,11,21,1429,novo_caged_mov,2023-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202311,2023,11,22,-124,novo_caged_mov,2023-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202311,2023,11,23,4674,novo_caged_mov,2023-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202311,2023,11,24,3342,novo_caged_mov,2023-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202311,2023,11,25,3657,novo_caged_mov,2023-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202311,2023,11,26,7664,novo_caged_mov,2023-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202311,2023,11,27,2834,novo_caged_mov,2023-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202311,2023,11,28,1739,novo_caged_mov,2023-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202311,2023,11,29,7374,novo_caged_mov,2023-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202311,2023,11,31,808,novo_caged_mov,2023-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202311,2023,11,32,1772,novo_caged_mov,2023-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202311,2023,11,33,23514,novo_caged_mov,2023-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202311,2023,11,35,47273,novo_caged_mov,2023-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202311,2023,11,41,7842,novo_caged_mov,2023-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202311,2023,11,42,6672,novo_caged_mov,2023-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202311,2023,11,43,11799,novo_caged_mov,2023-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202311,2023,11,50,1918,novo_caged_mov,2023-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202311,2023,11,51,-4178,novo_caged_mov,2023-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202311,2023,11,52,-7073,novo_caged_mov,2023-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202311,2023,11,53,4052,novo_caged_mov,2023-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202311,2023,11,99,-1496,novo_caged_mov,2023-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202312,2023,12,11,-2206,novo_caged_mov,2023-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202312,2023,12,12,-364,novo_caged_mov,2023-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202312,2023,12,13,-2836,novo_caged_mov,2023-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202312,2023,12,14,-852,novo_caged_mov,2023-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202312,2023,12,15,-10760,novo_caged_mov,2023-12-01,PA,Para,North,TRUE,TRUE,mapped
+202312,2023,12,16,-787,novo_caged_mov,2023-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202312,2023,12,17,-1999,novo_caged_mov,2023-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202312,2023,12,21,-3686,novo_caged_mov,2023-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202312,2023,12,22,-3479,novo_caged_mov,2023-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202312,2023,12,23,-3725,novo_caged_mov,2023-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202312,2023,12,24,-2567,novo_caged_mov,2023-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202312,2023,12,25,-1504,novo_caged_mov,2023-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202312,2023,12,26,-8635,novo_caged_mov,2023-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202312,2023,12,27,101,novo_caged_mov,2023-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202312,2023,12,28,-744,novo_caged_mov,2023-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202312,2023,12,29,-17299,novo_caged_mov,2023-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202312,2023,12,31,-46510,novo_caged_mov,2023-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202312,2023,12,32,-6870,novo_caged_mov,2023-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202312,2023,12,33,-3611,novo_caged_mov,2023-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202312,2023,12,35,-163937,novo_caged_mov,2023-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202312,2023,12,41,-34894,novo_caged_mov,2023-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202312,2023,12,42,-38478,novo_caged_mov,2023-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202312,2023,12,43,-28832,novo_caged_mov,2023-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202312,2023,12,50,-8401,novo_caged_mov,2023-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202312,2023,12,51,-12251,novo_caged_mov,2023-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202312,2023,12,52,-16228,novo_caged_mov,2023-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202312,2023,12,53,-5731,novo_caged_mov,2023-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202312,2023,12,99,-3074,novo_caged_mov,2023-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202401,2024,1,11,189,novo_caged_mov,2024-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202401,2024,1,12,-33,novo_caged_mov,2024-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202401,2024,1,13,1056,novo_caged_mov,2024-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202401,2024,1,14,323,novo_caged_mov,2024-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202401,2024,1,15,111,novo_caged_mov,2024-01-01,PA,Para,North,TRUE,TRUE,mapped
+202401,2024,1,16,1203,novo_caged_mov,2024-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202401,2024,1,17,1447,novo_caged_mov,2024-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202401,2024,1,21,-831,novo_caged_mov,2024-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202401,2024,1,22,721,novo_caged_mov,2024-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202401,2024,1,23,1264,novo_caged_mov,2024-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202401,2024,1,24,1457,novo_caged_mov,2024-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202401,2024,1,25,332,novo_caged_mov,2024-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202401,2024,1,26,2292,novo_caged_mov,2024-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202401,2024,1,27,773,novo_caged_mov,2024-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202401,2024,1,28,777,novo_caged_mov,2024-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202401,2024,1,29,4821,novo_caged_mov,2024-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202401,2024,1,31,13784,novo_caged_mov,2024-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202401,2024,1,32,3616,novo_caged_mov,2024-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202401,2024,1,33,1344,novo_caged_mov,2024-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202401,2024,1,35,38499,novo_caged_mov,2024-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202401,2024,1,41,20198,novo_caged_mov,2024-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202401,2024,1,42,26210,novo_caged_mov,2024-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202401,2024,1,43,20810,novo_caged_mov,2024-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202401,2024,1,50,4989,novo_caged_mov,2024-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202401,2024,1,51,17253,novo_caged_mov,2024-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202401,2024,1,52,14926,novo_caged_mov,2024-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202401,2024,1,53,2858,novo_caged_mov,2024-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202401,2024,1,99,6,novo_caged_mov,2024-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202402,2024,2,11,2537,novo_caged_mov,2024-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202402,2024,2,12,853,novo_caged_mov,2024-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202402,2024,2,13,3383,novo_caged_mov,2024-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202402,2024,2,14,785,novo_caged_mov,2024-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202402,2024,2,15,7079,novo_caged_mov,2024-02-01,PA,Para,North,TRUE,TRUE,mapped
+202402,2024,2,16,152,novo_caged_mov,2024-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202402,2024,2,17,2273,novo_caged_mov,2024-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202402,2024,2,21,-1220,novo_caged_mov,2024-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202402,2024,2,22,533,novo_caged_mov,2024-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202402,2024,2,23,3897,novo_caged_mov,2024-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202402,2024,2,24,283,novo_caged_mov,2024-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202402,2024,2,25,-9,novo_caged_mov,2024-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202402,2024,2,26,2145,novo_caged_mov,2024-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202402,2024,2,27,-2886,novo_caged_mov,2024-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202402,2024,2,28,1579,novo_caged_mov,2024-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202402,2024,2,29,6249,novo_caged_mov,2024-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202402,2024,2,31,35980,novo_caged_mov,2024-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202402,2024,2,32,4754,novo_caged_mov,2024-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202402,2024,2,33,17672,novo_caged_mov,2024-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202402,2024,2,35,101163,novo_caged_mov,2024-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202402,2024,2,41,33043,novo_caged_mov,2024-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202402,2024,2,42,26367,novo_caged_mov,2024-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202402,2024,2,43,25452,novo_caged_mov,2024-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202402,2024,2,50,5998,novo_caged_mov,2024-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202402,2024,2,51,7429,novo_caged_mov,2024-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202402,2024,2,52,14106,novo_caged_mov,2024-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202402,2024,2,53,6511,novo_caged_mov,2024-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202402,2024,2,99,3,novo_caged_mov,2024-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202403,2024,3,11,1395,novo_caged_mov,2024-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202403,2024,3,12,1183,novo_caged_mov,2024-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202403,2024,3,13,3200,novo_caged_mov,2024-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202403,2024,3,14,632,novo_caged_mov,2024-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202403,2024,3,15,2006,novo_caged_mov,2024-03-01,PA,Para,North,TRUE,TRUE,mapped
+202403,2024,3,16,277,novo_caged_mov,2024-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202403,2024,3,17,977,novo_caged_mov,2024-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202403,2024,3,21,2777,novo_caged_mov,2024-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202403,2024,3,22,3015,novo_caged_mov,2024-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202403,2024,3,23,6185,novo_caged_mov,2024-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202403,2024,3,24,1415,novo_caged_mov,2024-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202403,2024,3,25,263,novo_caged_mov,2024-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202403,2024,3,26,1364,novo_caged_mov,2024-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202403,2024,3,27,-9589,novo_caged_mov,2024-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202403,2024,3,28,-1875,novo_caged_mov,2024-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202403,2024,3,29,12482,novo_caged_mov,2024-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202403,2024,3,31,40796,novo_caged_mov,2024-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202403,2024,3,32,6101,novo_caged_mov,2024-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202403,2024,3,33,24466,novo_caged_mov,2024-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202403,2024,3,35,76941,novo_caged_mov,2024-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202403,2024,3,41,17858,novo_caged_mov,2024-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202403,2024,3,42,13892,novo_caged_mov,2024-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202403,2024,3,43,10490,novo_caged_mov,2024-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202403,2024,3,50,4197,novo_caged_mov,2024-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202403,2024,3,51,1085,novo_caged_mov,2024-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202403,2024,3,52,15742,novo_caged_mov,2024-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202403,2024,3,53,7023,novo_caged_mov,2024-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202403,2024,3,99,17,novo_caged_mov,2024-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202404,2024,4,11,724,novo_caged_mov,2024-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202404,2024,4,12,1267,novo_caged_mov,2024-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202404,2024,4,13,3576,novo_caged_mov,2024-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202404,2024,4,14,480,novo_caged_mov,2024-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202404,2024,4,15,7332,novo_caged_mov,2024-04-01,PA,Para,North,TRUE,TRUE,mapped
+202404,2024,4,16,902,novo_caged_mov,2024-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202404,2024,4,17,1464,novo_caged_mov,2024-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202404,2024,4,21,2978,novo_caged_mov,2024-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202404,2024,4,22,2072,novo_caged_mov,2024-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202404,2024,4,23,5678,novo_caged_mov,2024-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202404,2024,4,24,2691,novo_caged_mov,2024-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202404,2024,4,25,739,novo_caged_mov,2024-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202404,2024,4,26,-1103,novo_caged_mov,2024-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202404,2024,4,27,-1607,novo_caged_mov,2024-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202404,2024,4,28,1570,novo_caged_mov,2024-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202404,2024,4,29,10649,novo_caged_mov,2024-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202404,2024,4,31,25868,novo_caged_mov,2024-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202404,2024,4,32,8167,novo_caged_mov,2024-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202404,2024,4,33,16077,novo_caged_mov,2024-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202404,2024,4,35,76299,novo_caged_mov,2024-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202404,2024,4,41,18032,novo_caged_mov,2024-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202404,2024,4,42,13457,novo_caged_mov,2024-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202404,2024,4,43,13512,novo_caged_mov,2024-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202404,2024,4,50,2567,novo_caged_mov,2024-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202404,2024,4,51,2999,novo_caged_mov,2024-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202404,2024,4,52,13584,novo_caged_mov,2024-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202404,2024,4,53,5258,novo_caged_mov,2024-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202404,2024,4,99,4801,novo_caged_mov,2024-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202405,2024,5,11,758,novo_caged_mov,2024-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202405,2024,5,12,924,novo_caged_mov,2024-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202405,2024,5,13,3467,novo_caged_mov,2024-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202405,2024,5,14,535,novo_caged_mov,2024-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202405,2024,5,15,3385,novo_caged_mov,2024-05-01,PA,Para,North,TRUE,TRUE,mapped
+202405,2024,5,16,316,novo_caged_mov,2024-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202405,2024,5,17,527,novo_caged_mov,2024-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202405,2024,5,21,2416,novo_caged_mov,2024-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202405,2024,5,22,2134,novo_caged_mov,2024-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202405,2024,5,23,6956,novo_caged_mov,2024-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202405,2024,5,24,2736,novo_caged_mov,2024-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202405,2024,5,25,1776,novo_caged_mov,2024-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202405,2024,5,26,3992,novo_caged_mov,2024-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202405,2024,5,27,2224,novo_caged_mov,2024-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202405,2024,5,28,723,novo_caged_mov,2024-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202405,2024,5,29,8785,novo_caged_mov,2024-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202405,2024,5,31,19430,novo_caged_mov,2024-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202405,2024,5,32,7277,novo_caged_mov,2024-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202405,2024,5,33,15627,novo_caged_mov,2024-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202405,2024,5,35,42355,novo_caged_mov,2024-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202405,2024,5,41,8082,novo_caged_mov,2024-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202405,2024,5,42,4274,novo_caged_mov,2024-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202405,2024,5,43,-22180,novo_caged_mov,2024-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202405,2024,5,50,1932,novo_caged_mov,2024-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202405,2024,5,51,3100,novo_caged_mov,2024-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202405,2024,5,52,1752,novo_caged_mov,2024-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202405,2024,5,53,2493,novo_caged_mov,2024-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202405,2024,5,99,6015,novo_caged_mov,2024-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202406,2024,6,11,1424,novo_caged_mov,2024-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202406,2024,6,12,914,novo_caged_mov,2024-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202406,2024,6,13,5036,novo_caged_mov,2024-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202406,2024,6,14,315,novo_caged_mov,2024-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202406,2024,6,15,7893,novo_caged_mov,2024-06-01,PA,Para,North,TRUE,TRUE,mapped
+202406,2024,6,16,1974,novo_caged_mov,2024-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202406,2024,6,17,705,novo_caged_mov,2024-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202406,2024,6,21,6025,novo_caged_mov,2024-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202406,2024,6,22,2914,novo_caged_mov,2024-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202406,2024,6,23,7620,novo_caged_mov,2024-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202406,2024,6,24,4533,novo_caged_mov,2024-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202406,2024,6,25,3420,novo_caged_mov,2024-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202406,2024,6,26,8022,novo_caged_mov,2024-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202406,2024,6,27,2686,novo_caged_mov,2024-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202406,2024,6,28,1821,novo_caged_mov,2024-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202406,2024,6,29,8899,novo_caged_mov,2024-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202406,2024,6,31,28354,novo_caged_mov,2024-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202406,2024,6,32,141,novo_caged_mov,2024-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202406,2024,6,33,17229,novo_caged_mov,2024-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202406,2024,6,35,47957,novo_caged_mov,2024-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202406,2024,6,41,13572,novo_caged_mov,2024-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202406,2024,6,42,10284,novo_caged_mov,2024-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202406,2024,6,43,-8569,novo_caged_mov,2024-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202406,2024,6,50,1645,novo_caged_mov,2024-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202406,2024,6,51,9674,novo_caged_mov,2024-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202406,2024,6,52,8605,novo_caged_mov,2024-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202406,2024,6,53,3176,novo_caged_mov,2024-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202406,2024,6,99,5436,novo_caged_mov,2024-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202407,2024,7,11,2311,novo_caged_mov,2024-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202407,2024,7,12,544,novo_caged_mov,2024-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202407,2024,7,13,4739,novo_caged_mov,2024-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202407,2024,7,14,137,novo_caged_mov,2024-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202407,2024,7,15,5092,novo_caged_mov,2024-07-01,PA,Para,North,TRUE,TRUE,mapped
+202407,2024,7,16,472,novo_caged_mov,2024-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202407,2024,7,17,205,novo_caged_mov,2024-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202407,2024,7,21,2573,novo_caged_mov,2024-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202407,2024,7,22,1715,novo_caged_mov,2024-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202407,2024,7,23,3488,novo_caged_mov,2024-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202407,2024,7,24,5774,novo_caged_mov,2024-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202407,2024,7,25,4389,novo_caged_mov,2024-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202407,2024,7,26,7578,novo_caged_mov,2024-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202407,2024,7,27,2946,novo_caged_mov,2024-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202407,2024,7,28,1264,novo_caged_mov,2024-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202407,2024,7,29,9614,novo_caged_mov,2024-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202407,2024,7,31,11133,novo_caged_mov,2024-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202407,2024,7,32,-1029,novo_caged_mov,2024-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202407,2024,7,33,10598,novo_caged_mov,2024-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202407,2024,7,35,61847,novo_caged_mov,2024-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202407,2024,7,41,14185,novo_caged_mov,2024-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202407,2024,7,42,12150,novo_caged_mov,2024-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202407,2024,7,43,6690,novo_caged_mov,2024-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202407,2024,7,50,1013,novo_caged_mov,2024-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202407,2024,7,51,5812,novo_caged_mov,2024-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202407,2024,7,52,5541,novo_caged_mov,2024-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202407,2024,7,53,2981,novo_caged_mov,2024-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202407,2024,7,99,4259,novo_caged_mov,2024-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202408,2024,8,11,1208,novo_caged_mov,2024-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202408,2024,8,12,352,novo_caged_mov,2024-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202408,2024,8,13,5354,novo_caged_mov,2024-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202408,2024,8,14,795,novo_caged_mov,2024-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202408,2024,8,15,4688,novo_caged_mov,2024-08-01,PA,Para,North,TRUE,TRUE,mapped
+202408,2024,8,16,1350,novo_caged_mov,2024-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202408,2024,8,17,1139,novo_caged_mov,2024-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202408,2024,8,21,2516,novo_caged_mov,2024-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202408,2024,8,22,2065,novo_caged_mov,2024-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202408,2024,8,23,9294,novo_caged_mov,2024-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202408,2024,8,24,7239,novo_caged_mov,2024-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202408,2024,8,25,9014,novo_caged_mov,2024-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202408,2024,8,26,18112,novo_caged_mov,2024-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202408,2024,8,27,5171,novo_caged_mov,2024-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202408,2024,8,28,2812,novo_caged_mov,2024-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202408,2024,8,29,16149,novo_caged_mov,2024-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202408,2024,8,31,14356,novo_caged_mov,2024-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202408,2024,8,32,2515,novo_caged_mov,2024-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202408,2024,8,33,18600,novo_caged_mov,2024-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202408,2024,8,35,60770,novo_caged_mov,2024-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202408,2024,8,41,12803,novo_caged_mov,2024-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202408,2024,8,42,7641,novo_caged_mov,2024-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202408,2024,8,43,10413,novo_caged_mov,2024-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202408,2024,8,50,1975,novo_caged_mov,2024-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202408,2024,8,51,3733,novo_caged_mov,2024-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202408,2024,8,52,4735,novo_caged_mov,2024-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202408,2024,8,53,4096,novo_caged_mov,2024-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202408,2024,8,99,3618,novo_caged_mov,2024-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202409,2024,9,11,599,novo_caged_mov,2024-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202409,2024,9,12,955,novo_caged_mov,2024-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202409,2024,9,13,2663,novo_caged_mov,2024-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202409,2024,9,14,729,novo_caged_mov,2024-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202409,2024,9,15,8569,novo_caged_mov,2024-09-01,PA,Para,North,TRUE,TRUE,mapped
+202409,2024,9,16,956,novo_caged_mov,2024-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202409,2024,9,17,1138,novo_caged_mov,2024-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202409,2024,9,21,4237,novo_caged_mov,2024-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202409,2024,9,22,989,novo_caged_mov,2024-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202409,2024,9,23,9522,novo_caged_mov,2024-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202409,2024,9,24,4981,novo_caged_mov,2024-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202409,2024,9,25,3631,novo_caged_mov,2024-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202409,2024,9,26,17851,novo_caged_mov,2024-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202409,2024,9,27,15420,novo_caged_mov,2024-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202409,2024,9,28,5658,novo_caged_mov,2024-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202409,2024,9,29,14886,novo_caged_mov,2024-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202409,2024,9,31,15840,novo_caged_mov,2024-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202409,2024,9,32,5635,novo_caged_mov,2024-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202409,2024,9,33,19740,novo_caged_mov,2024-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202409,2024,9,35,57067,novo_caged_mov,2024-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202409,2024,9,41,14828,novo_caged_mov,2024-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202409,2024,9,42,13074,novo_caged_mov,2024-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202409,2024,9,43,10238,novo_caged_mov,2024-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202409,2024,9,50,1912,novo_caged_mov,2024-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202409,2024,9,51,1723,novo_caged_mov,2024-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202409,2024,9,52,5516,novo_caged_mov,2024-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202409,2024,9,53,6211,novo_caged_mov,2024-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202409,2024,9,99,3250,novo_caged_mov,2024-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202410,2024,10,11,157,novo_caged_mov,2024-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202410,2024,10,12,147,novo_caged_mov,2024-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202410,2024,10,13,2600,novo_caged_mov,2024-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202410,2024,10,14,196,novo_caged_mov,2024-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202410,2024,10,15,2536,novo_caged_mov,2024-10-01,PA,Para,North,TRUE,TRUE,mapped
+202410,2024,10,16,397,novo_caged_mov,2024-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202410,2024,10,17,1316,novo_caged_mov,2024-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202410,2024,10,21,423,novo_caged_mov,2024-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202410,2024,10,22,1317,novo_caged_mov,2024-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202410,2024,10,23,3187,novo_caged_mov,2024-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202410,2024,10,24,2847,novo_caged_mov,2024-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202410,2024,10,25,1606,novo_caged_mov,2024-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202410,2024,10,26,5010,novo_caged_mov,2024-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202410,2024,10,27,3445,novo_caged_mov,2024-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202410,2024,10,28,1089,novo_caged_mov,2024-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202410,2024,10,29,-579,novo_caged_mov,2024-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202410,2024,10,31,3176,novo_caged_mov,2024-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202410,2024,10,32,4296,novo_caged_mov,2024-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202410,2024,10,33,10731,novo_caged_mov,2024-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202410,2024,10,35,47255,novo_caged_mov,2024-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202410,2024,10,41,10132,novo_caged_mov,2024-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202410,2024,10,42,10125,novo_caged_mov,2024-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202410,2024,10,43,14115,novo_caged_mov,2024-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202410,2024,10,50,835,novo_caged_mov,2024-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202410,2024,10,51,-172,novo_caged_mov,2024-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202410,2024,10,52,-45,novo_caged_mov,2024-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202410,2024,10,53,3839,novo_caged_mov,2024-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202410,2024,10,99,2733,novo_caged_mov,2024-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202411,2024,11,11,-315,novo_caged_mov,2024-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202411,2024,11,12,-372,novo_caged_mov,2024-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202411,2024,11,13,5433,novo_caged_mov,2024-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202411,2024,11,14,848,novo_caged_mov,2024-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202411,2024,11,15,1301,novo_caged_mov,2024-11-01,PA,Para,North,TRUE,TRUE,mapped
+202411,2024,11,16,224,novo_caged_mov,2024-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202411,2024,11,17,155,novo_caged_mov,2024-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202411,2024,11,21,1419,novo_caged_mov,2024-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202411,2024,11,22,-1378,novo_caged_mov,2024-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202411,2024,11,23,4443,novo_caged_mov,2024-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202411,2024,11,24,2361,novo_caged_mov,2024-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202411,2024,11,25,2720,novo_caged_mov,2024-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202411,2024,11,26,5526,novo_caged_mov,2024-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202411,2024,11,27,1773,novo_caged_mov,2024-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202411,2024,11,28,1502,novo_caged_mov,2024-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202411,2024,11,29,7191,novo_caged_mov,2024-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202411,2024,11,31,1110,novo_caged_mov,2024-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202411,2024,11,32,195,novo_caged_mov,2024-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202411,2024,11,33,13810,novo_caged_mov,2024-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202411,2024,11,35,38562,novo_caged_mov,2024-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202411,2024,11,41,4121,novo_caged_mov,2024-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202411,2024,11,42,8966,novo_caged_mov,2024-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202411,2024,11,43,11865,novo_caged_mov,2024-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202411,2024,11,50,-179,novo_caged_mov,2024-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202411,2024,11,51,-7852,novo_caged_mov,2024-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202411,2024,11,52,-3145,novo_caged_mov,2024-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202411,2024,11,53,3216,novo_caged_mov,2024-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202411,2024,11,99,3125,novo_caged_mov,2024-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202412,2024,12,11,-2300,novo_caged_mov,2024-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202412,2024,12,12,-735,novo_caged_mov,2024-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202412,2024,12,13,-4300,novo_caged_mov,2024-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202412,2024,12,14,-566,novo_caged_mov,2024-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202412,2024,12,15,-11375,novo_caged_mov,2024-12-01,PA,Para,North,TRUE,TRUE,mapped
+202412,2024,12,16,-1087,novo_caged_mov,2024-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202412,2024,12,17,-2930,novo_caged_mov,2024-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202412,2024,12,21,-7003,novo_caged_mov,2024-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202412,2024,12,22,-2717,novo_caged_mov,2024-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202412,2024,12,23,-6222,novo_caged_mov,2024-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202412,2024,12,24,-2617,novo_caged_mov,2024-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202412,2024,12,25,-886,novo_caged_mov,2024-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202412,2024,12,26,-10455,novo_caged_mov,2024-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202412,2024,12,27,-3569,novo_caged_mov,2024-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202412,2024,12,28,-1797,novo_caged_mov,2024-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202412,2024,12,29,-18661,novo_caged_mov,2024-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202412,2024,12,31,-68617,novo_caged_mov,2024-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202412,2024,12,32,-7090,novo_caged_mov,2024-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202412,2024,12,33,-17125,novo_caged_mov,2024-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202412,2024,12,35,-190569,novo_caged_mov,2024-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202412,2024,12,41,-39785,novo_caged_mov,2024-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202412,2024,12,42,-43017,novo_caged_mov,2024-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202412,2024,12,43,-28384,novo_caged_mov,2024-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202412,2024,12,50,-14465,novo_caged_mov,2024-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202412,2024,12,51,-19516,novo_caged_mov,2024-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202412,2024,12,52,-22337,novo_caged_mov,2024-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202412,2024,12,53,-5868,novo_caged_mov,2024-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202412,2024,12,99,-1554,novo_caged_mov,2024-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202501,2025,1,11,28,novo_caged_mov,2025-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202501,2025,1,12,-645,novo_caged_mov,2025-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202501,2025,1,13,2400,novo_caged_mov,2025-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202501,2025,1,14,222,novo_caged_mov,2025-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202501,2025,1,15,-2203,novo_caged_mov,2025-01-01,PA,Para,North,TRUE,TRUE,mapped
+202501,2025,1,16,566,novo_caged_mov,2025-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202501,2025,1,17,1564,novo_caged_mov,2025-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202501,2025,1,21,1019,novo_caged_mov,2025-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202501,2025,1,22,-966,novo_caged_mov,2025-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202501,2025,1,23,-1225,novo_caged_mov,2025-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202501,2025,1,24,-628,novo_caged_mov,2025-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202501,2025,1,25,-720,novo_caged_mov,2025-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202501,2025,1,26,-5230,novo_caged_mov,2025-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202501,2025,1,27,-940,novo_caged_mov,2025-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202501,2025,1,28,-913,novo_caged_mov,2025-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202501,2025,1,29,6932,novo_caged_mov,2025-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202501,2025,1,31,4040,novo_caged_mov,2025-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202501,2025,1,32,551,novo_caged_mov,2025-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202501,2025,1,33,-12960,novo_caged_mov,2025-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202501,2025,1,35,36125,novo_caged_mov,2025-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202501,2025,1,41,15918,novo_caged_mov,2025-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202501,2025,1,42,23062,novo_caged_mov,2025-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202501,2025,1,43,26732,novo_caged_mov,2025-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202501,2025,1,50,3176,novo_caged_mov,2025-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202501,2025,1,51,19507,novo_caged_mov,2025-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202501,2025,1,52,14195,novo_caged_mov,2025-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202501,2025,1,53,7485,novo_caged_mov,2025-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202501,2025,1,99,211,novo_caged_mov,2025-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202502,2025,2,11,3146,novo_caged_mov,2025-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202502,2025,2,12,429,novo_caged_mov,2025-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202502,2025,2,13,3303,novo_caged_mov,2025-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202502,2025,2,14,954,novo_caged_mov,2025-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202502,2025,2,15,8990,novo_caged_mov,2025-02-01,PA,Para,North,TRUE,TRUE,mapped
+202502,2025,2,16,687,novo_caged_mov,2025-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202502,2025,2,17,3257,novo_caged_mov,2025-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202502,2025,2,21,1470,novo_caged_mov,2025-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202502,2025,2,22,2994,novo_caged_mov,2025-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202502,2025,2,23,6488,novo_caged_mov,2025-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202502,2025,2,24,2495,novo_caged_mov,2025-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202502,2025,2,25,525,novo_caged_mov,2025-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202502,2025,2,26,7588,novo_caged_mov,2025-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202502,2025,2,27,-5471,novo_caged_mov,2025-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202502,2025,2,28,869,novo_caged_mov,2025-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202502,2025,2,29,20132,novo_caged_mov,2025-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202502,2025,2,31,52603,novo_caged_mov,2025-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202502,2025,2,32,6274,novo_caged_mov,2025-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202502,2025,2,33,31974,novo_caged_mov,2025-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202502,2025,2,35,137581,novo_caged_mov,2025-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202502,2025,2,41,39176,novo_caged_mov,2025-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202502,2025,2,42,30097,novo_caged_mov,2025-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202502,2025,2,43,30693,novo_caged_mov,2025-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202502,2025,2,50,8333,novo_caged_mov,2025-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202502,2025,2,51,9710,novo_caged_mov,2025-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202502,2025,2,52,20584,novo_caged_mov,2025-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202502,2025,2,53,7030,novo_caged_mov,2025-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202502,2025,2,99,84,novo_caged_mov,2025-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202503,2025,3,11,1102,novo_caged_mov,2025-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202503,2025,3,12,354,novo_caged_mov,2025-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202503,2025,3,13,852,novo_caged_mov,2025-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202503,2025,3,14,51,novo_caged_mov,2025-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202503,2025,3,15,1489,novo_caged_mov,2025-03-01,PA,Para,North,TRUE,TRUE,mapped
+202503,2025,3,16,389,novo_caged_mov,2025-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202503,2025,3,17,933,novo_caged_mov,2025-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202503,2025,3,21,1106,novo_caged_mov,2025-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202503,2025,3,22,1730,novo_caged_mov,2025-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202503,2025,3,23,-2621,novo_caged_mov,2025-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202503,2025,3,24,-1918,novo_caged_mov,2025-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202503,2025,3,25,-916,novo_caged_mov,2025-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202503,2025,3,26,-3478,novo_caged_mov,2025-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202503,2025,3,27,-8492,novo_caged_mov,2025-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202503,2025,3,28,-1608,novo_caged_mov,2025-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202503,2025,3,29,2998,novo_caged_mov,2025-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202503,2025,3,31,18169,novo_caged_mov,2025-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202503,2025,3,32,1811,novo_caged_mov,2025-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202503,2025,3,33,-6758,novo_caged_mov,2025-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202503,2025,3,35,34864,novo_caged_mov,2025-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202503,2025,3,41,5752,novo_caged_mov,2025-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202503,2025,3,42,9841,novo_caged_mov,2025-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202503,2025,3,43,8960,novo_caged_mov,2025-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202503,2025,3,50,1114,novo_caged_mov,2025-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202503,2025,3,51,-3544,novo_caged_mov,2025-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202503,2025,3,52,6340,novo_caged_mov,2025-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202503,2025,3,53,3052,novo_caged_mov,2025-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202503,2025,3,99,4,novo_caged_mov,2025-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202504,2025,4,11,1117,novo_caged_mov,2025-04-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202504,2025,4,12,760,novo_caged_mov,2025-04-01,AC,Acre,North,TRUE,TRUE,mapped
+202504,2025,4,13,2678,novo_caged_mov,2025-04-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202504,2025,4,14,669,novo_caged_mov,2025-04-01,RR,Roraima,North,TRUE,TRUE,mapped
+202504,2025,4,15,5120,novo_caged_mov,2025-04-01,PA,Para,North,TRUE,TRUE,mapped
+202504,2025,4,16,775,novo_caged_mov,2025-04-01,AP,Amapa,North,TRUE,TRUE,mapped
+202504,2025,4,17,1708,novo_caged_mov,2025-04-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202504,2025,4,21,3582,novo_caged_mov,2025-04-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202504,2025,4,22,3218,novo_caged_mov,2025-04-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202504,2025,4,23,9221,novo_caged_mov,2025-04-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202504,2025,4,24,2927,novo_caged_mov,2025-04-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202504,2025,4,25,1577,novo_caged_mov,2025-04-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202504,2025,4,26,7501,novo_caged_mov,2025-04-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202504,2025,4,27,414,novo_caged_mov,2025-04-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202504,2025,4,28,2849,novo_caged_mov,2025-04-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202504,2025,4,29,14353,novo_caged_mov,2025-04-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202504,2025,4,31,29083,novo_caged_mov,2025-04-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202504,2025,4,32,8553,novo_caged_mov,2025-04-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202504,2025,4,33,20031,novo_caged_mov,2025-04-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202504,2025,4,35,72283,novo_caged_mov,2025-04-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202504,2025,4,41,18606,novo_caged_mov,2025-04-01,PR,Parana,South,TRUE,TRUE,mapped
+202504,2025,4,42,10460,novo_caged_mov,2025-04-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202504,2025,4,43,8678,novo_caged_mov,2025-04-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202504,2025,4,50,5701,novo_caged_mov,2025-04-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202504,2025,4,51,4142,novo_caged_mov,2025-04-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202504,2025,4,52,14780,novo_caged_mov,2025-04-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202504,2025,4,53,6738,novo_caged_mov,2025-04-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202504,2025,4,99,4,novo_caged_mov,2025-04-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202505,2025,5,11,882,novo_caged_mov,2025-05-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202505,2025,5,12,1385,novo_caged_mov,2025-05-01,AC,Acre,North,TRUE,TRUE,mapped
+202505,2025,5,13,2059,novo_caged_mov,2025-05-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202505,2025,5,14,306,novo_caged_mov,2025-05-01,RR,Roraima,North,TRUE,TRUE,mapped
+202505,2025,5,15,5058,novo_caged_mov,2025-05-01,PA,Para,North,TRUE,TRUE,mapped
+202505,2025,5,16,179,novo_caged_mov,2025-05-01,AP,Amapa,North,TRUE,TRUE,mapped
+202505,2025,5,17,967,novo_caged_mov,2025-05-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202505,2025,5,21,3560,novo_caged_mov,2025-05-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202505,2025,5,22,3559,novo_caged_mov,2025-05-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202505,2025,5,23,5769,novo_caged_mov,2025-05-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202505,2025,5,24,2220,novo_caged_mov,2025-05-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202505,2025,5,25,5905,novo_caged_mov,2025-05-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202505,2025,5,26,9754,novo_caged_mov,2025-05-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202505,2025,5,27,324,novo_caged_mov,2025-05-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202505,2025,5,28,1939,novo_caged_mov,2025-05-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202505,2025,5,29,12858,novo_caged_mov,2025-05-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202505,2025,5,31,20287,novo_caged_mov,2025-05-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202505,2025,5,32,7294,novo_caged_mov,2025-05-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202505,2025,5,33,13642,novo_caged_mov,2025-05-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202505,2025,5,35,33313,novo_caged_mov,2025-05-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202505,2025,5,41,6866,novo_caged_mov,2025-05-01,PR,Parana,South,TRUE,TRUE,mapped
+202505,2025,5,42,366,novo_caged_mov,2025-05-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202505,2025,5,43,-115,novo_caged_mov,2025-05-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202505,2025,5,50,3087,novo_caged_mov,2025-05-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202505,2025,5,51,3013,novo_caged_mov,2025-05-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202505,2025,5,52,1447,novo_caged_mov,2025-05-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202505,2025,5,53,2957,novo_caged_mov,2025-05-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202505,2025,5,99,111,novo_caged_mov,2025-05-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202506,2025,6,11,1125,novo_caged_mov,2025-06-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202506,2025,6,12,605,novo_caged_mov,2025-06-01,AC,Acre,North,TRUE,TRUE,mapped
+202506,2025,6,13,2622,novo_caged_mov,2025-06-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202506,2025,6,14,44,novo_caged_mov,2025-06-01,RR,Roraima,North,TRUE,TRUE,mapped
+202506,2025,6,15,5501,novo_caged_mov,2025-06-01,PA,Para,North,TRUE,TRUE,mapped
+202506,2025,6,16,1273,novo_caged_mov,2025-06-01,AP,Amapa,North,TRUE,TRUE,mapped
+202506,2025,6,17,513,novo_caged_mov,2025-06-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202506,2025,6,21,6247,novo_caged_mov,2025-06-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202506,2025,6,22,2745,novo_caged_mov,2025-06-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202506,2025,6,23,7320,novo_caged_mov,2025-06-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202506,2025,6,24,1763,novo_caged_mov,2025-06-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202506,2025,6,25,515,novo_caged_mov,2025-06-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202506,2025,6,26,5179,novo_caged_mov,2025-06-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202506,2025,6,27,2245,novo_caged_mov,2025-06-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202506,2025,6,28,2407,novo_caged_mov,2025-06-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202506,2025,6,29,7984,novo_caged_mov,2025-06-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202506,2025,6,31,24228,novo_caged_mov,2025-06-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202506,2025,6,32,-3348,novo_caged_mov,2025-06-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202506,2025,6,33,15363,novo_caged_mov,2025-06-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202506,2025,6,35,40089,novo_caged_mov,2025-06-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202506,2025,6,41,9377,novo_caged_mov,2025-06-01,PR,Parana,South,TRUE,TRUE,mapped
+202506,2025,6,42,6538,novo_caged_mov,2025-06-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202506,2025,6,43,2443,novo_caged_mov,2025-06-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202506,2025,6,50,2709,novo_caged_mov,2025-06-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202506,2025,6,51,9388,novo_caged_mov,2025-06-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202506,2025,6,52,7914,novo_caged_mov,2025-06-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202506,2025,6,53,3865,novo_caged_mov,2025-06-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202506,2025,6,99,-33,novo_caged_mov,2025-06-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202507,2025,7,11,1267,novo_caged_mov,2025-07-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202507,2025,7,12,112,novo_caged_mov,2025-07-01,AC,Acre,North,TRUE,TRUE,mapped
+202507,2025,7,13,1011,novo_caged_mov,2025-07-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202507,2025,7,14,125,novo_caged_mov,2025-07-01,RR,Roraima,North,TRUE,TRUE,mapped
+202507,2025,7,15,4882,novo_caged_mov,2025-07-01,PA,Para,North,TRUE,TRUE,mapped
+202507,2025,7,16,792,novo_caged_mov,2025-07-01,AP,Amapa,North,TRUE,TRUE,mapped
+202507,2025,7,17,-61,novo_caged_mov,2025-07-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202507,2025,7,21,2898,novo_caged_mov,2025-07-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202507,2025,7,22,2985,novo_caged_mov,2025-07-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202507,2025,7,23,7424,novo_caged_mov,2025-07-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202507,2025,7,24,3438,novo_caged_mov,2025-07-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202507,2025,7,25,2247,novo_caged_mov,2025-07-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202507,2025,7,26,7377,novo_caged_mov,2025-07-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202507,2025,7,27,3112,novo_caged_mov,2025-07-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202507,2025,7,28,121,novo_caged_mov,2025-07-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202507,2025,7,29,9436,novo_caged_mov,2025-07-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202507,2025,7,31,3497,novo_caged_mov,2025-07-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202507,2025,7,32,-2381,novo_caged_mov,2025-07-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202507,2025,7,33,6119,novo_caged_mov,2025-07-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202507,2025,7,35,42798,novo_caged_mov,2025-07-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202507,2025,7,41,8140,novo_caged_mov,2025-07-01,PR,Parana,South,TRUE,TRUE,mapped
+202507,2025,7,42,2773,novo_caged_mov,2025-07-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202507,2025,7,43,424,novo_caged_mov,2025-07-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202507,2025,7,50,3023,novo_caged_mov,2025-07-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202507,2025,7,51,9540,novo_caged_mov,2025-07-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202507,2025,7,52,6951,novo_caged_mov,2025-07-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202507,2025,7,53,1749,novo_caged_mov,2025-07-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202507,2025,7,99,-24,novo_caged_mov,2025-07-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202508,2025,8,11,1277,novo_caged_mov,2025-08-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202508,2025,8,12,839,novo_caged_mov,2025-08-01,AC,Acre,North,TRUE,TRUE,mapped
+202508,2025,8,13,2637,novo_caged_mov,2025-08-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202508,2025,8,14,-262,novo_caged_mov,2025-08-01,RR,Roraima,North,TRUE,TRUE,mapped
+202508,2025,8,15,5505,novo_caged_mov,2025-08-01,PA,Para,North,TRUE,TRUE,mapped
+202508,2025,8,16,790,novo_caged_mov,2025-08-01,AP,Amapa,North,TRUE,TRUE,mapped
+202508,2025,8,17,1298,novo_caged_mov,2025-08-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202508,2025,8,21,3149,novo_caged_mov,2025-08-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202508,2025,8,22,2591,novo_caged_mov,2025-08-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202508,2025,8,23,6933,novo_caged_mov,2025-08-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202508,2025,8,24,5339,novo_caged_mov,2025-08-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202508,2025,8,25,8492,novo_caged_mov,2025-08-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202508,2025,8,26,12692,novo_caged_mov,2025-08-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202508,2025,8,27,2803,novo_caged_mov,2025-08-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202508,2025,8,28,2330,novo_caged_mov,2025-08-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202508,2025,8,29,11015,novo_caged_mov,2025-08-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202508,2025,8,31,1214,novo_caged_mov,2025-08-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202508,2025,8,32,906,novo_caged_mov,2025-08-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202508,2025,8,33,16128,novo_caged_mov,2025-08-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202508,2025,8,35,45450,novo_caged_mov,2025-08-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202508,2025,8,41,6079,novo_caged_mov,2025-08-01,PR,Parana,South,TRUE,TRUE,mapped
+202508,2025,8,42,315,novo_caged_mov,2025-08-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202508,2025,8,43,-1648,novo_caged_mov,2025-08-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202508,2025,8,50,2718,novo_caged_mov,2025-08-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202508,2025,8,51,2817,novo_caged_mov,2025-08-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202508,2025,8,52,2949,novo_caged_mov,2025-08-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202508,2025,8,53,3045,novo_caged_mov,2025-08-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202508,2025,8,99,-43,novo_caged_mov,2025-08-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202509,2025,9,11,1171,novo_caged_mov,2025-09-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202509,2025,9,12,845,novo_caged_mov,2025-09-01,AC,Acre,North,TRUE,TRUE,mapped
+202509,2025,9,13,3736,novo_caged_mov,2025-09-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202509,2025,9,14,295,novo_caged_mov,2025-09-01,RR,Roraima,North,TRUE,TRUE,mapped
+202509,2025,9,15,9775,novo_caged_mov,2025-09-01,PA,Para,North,TRUE,TRUE,mapped
+202509,2025,9,16,735,novo_caged_mov,2025-09-01,AP,Amapa,North,TRUE,TRUE,mapped
+202509,2025,9,17,1594,novo_caged_mov,2025-09-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202509,2025,9,21,3270,novo_caged_mov,2025-09-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202509,2025,9,22,2404,novo_caged_mov,2025-09-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202509,2025,9,23,10561,novo_caged_mov,2025-09-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202509,2025,9,24,3231,novo_caged_mov,2025-09-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202509,2025,9,25,6084,novo_caged_mov,2025-09-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202509,2025,9,26,15602,novo_caged_mov,2025-09-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202509,2025,9,27,13883,novo_caged_mov,2025-09-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202509,2025,9,28,5962,novo_caged_mov,2025-09-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202509,2025,9,29,11350,novo_caged_mov,2025-09-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202509,2025,9,31,11785,novo_caged_mov,2025-09-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202509,2025,9,32,3793,novo_caged_mov,2025-09-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202509,2025,9,33,16009,novo_caged_mov,2025-09-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202509,2025,9,35,49052,novo_caged_mov,2025-09-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202509,2025,9,41,12046,novo_caged_mov,2025-09-01,PR,Parana,South,TRUE,TRUE,mapped
+202509,2025,9,42,11366,novo_caged_mov,2025-09-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202509,2025,9,43,3890,novo_caged_mov,2025-09-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202509,2025,9,50,1379,novo_caged_mov,2025-09-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202509,2025,9,51,3737,novo_caged_mov,2025-09-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202509,2025,9,52,5737,novo_caged_mov,2025-09-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202509,2025,9,53,3716,novo_caged_mov,2025-09-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202509,2025,9,99,-6,novo_caged_mov,2025-09-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202510,2025,10,11,524,novo_caged_mov,2025-10-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202510,2025,10,12,-172,novo_caged_mov,2025-10-01,AC,Acre,North,TRUE,TRUE,mapped
+202510,2025,10,13,1198,novo_caged_mov,2025-10-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202510,2025,10,14,21,novo_caged_mov,2025-10-01,RR,Roraima,North,TRUE,TRUE,mapped
+202510,2025,10,15,2128,novo_caged_mov,2025-10-01,PA,Para,North,TRUE,TRUE,mapped
+202510,2025,10,16,744,novo_caged_mov,2025-10-01,AP,Amapa,North,TRUE,TRUE,mapped
+202510,2025,10,17,43,novo_caged_mov,2025-10-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202510,2025,10,21,3293,novo_caged_mov,2025-10-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202510,2025,10,22,2693,novo_caged_mov,2025-10-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202510,2025,10,23,3379,novo_caged_mov,2025-10-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202510,2025,10,24,954,novo_caged_mov,2025-10-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202510,2025,10,25,2734,novo_caged_mov,2025-10-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202510,2025,10,26,10596,novo_caged_mov,2025-10-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202510,2025,10,27,4657,novo_caged_mov,2025-10-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202510,2025,10,28,1076,novo_caged_mov,2025-10-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202510,2025,10,29,4449,novo_caged_mov,2025-10-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202510,2025,10,31,-4802,novo_caged_mov,2025-10-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202510,2025,10,32,-296,novo_caged_mov,2025-10-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202510,2025,10,33,7437,novo_caged_mov,2025-10-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202510,2025,10,35,18456,novo_caged_mov,2025-10-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202510,2025,10,41,7961,novo_caged_mov,2025-10-01,PR,Parana,South,TRUE,TRUE,mapped
+202510,2025,10,42,6142,novo_caged_mov,2025-10-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202510,2025,10,43,-256,novo_caged_mov,2025-10-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202510,2025,10,50,880,novo_caged_mov,2025-10-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202510,2025,10,51,-1851,novo_caged_mov,2025-10-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202510,2025,10,52,-2327,novo_caged_mov,2025-10-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202510,2025,10,53,15467,novo_caged_mov,2025-10-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202510,2025,10,99,19,novo_caged_mov,2025-10-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202511,2025,11,11,168,novo_caged_mov,2025-11-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202511,2025,11,12,-74,novo_caged_mov,2025-11-01,AC,Acre,North,TRUE,TRUE,mapped
+202511,2025,11,13,3802,novo_caged_mov,2025-11-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202511,2025,11,14,216,novo_caged_mov,2025-11-01,RR,Roraima,North,TRUE,TRUE,mapped
+202511,2025,11,15,1951,novo_caged_mov,2025-11-01,PA,Para,North,TRUE,TRUE,mapped
+202511,2025,11,16,376,novo_caged_mov,2025-11-01,AP,Amapa,North,TRUE,TRUE,mapped
+202511,2025,11,17,-361,novo_caged_mov,2025-11-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202511,2025,11,21,2414,novo_caged_mov,2025-11-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202511,2025,11,22,-1048,novo_caged_mov,2025-11-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202511,2025,11,23,5874,novo_caged_mov,2025-11-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202511,2025,11,24,1548,novo_caged_mov,2025-11-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202511,2025,11,25,4078,novo_caged_mov,2025-11-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202511,2025,11,26,8996,novo_caged_mov,2025-11-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202511,2025,11,27,3046,novo_caged_mov,2025-11-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202511,2025,11,28,1974,novo_caged_mov,2025-11-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202511,2025,11,29,8763,novo_caged_mov,2025-11-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202511,2025,11,31,-8740,novo_caged_mov,2025-11-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202511,2025,11,32,1009,novo_caged_mov,2025-11-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202511,2025,11,33,19961,novo_caged_mov,2025-11-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202511,2025,11,35,31104,novo_caged_mov,2025-11-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202511,2025,11,41,1753,novo_caged_mov,2025-11-01,PR,Parana,South,TRUE,TRUE,mapped
+202511,2025,11,42,5188,novo_caged_mov,2025-11-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202511,2025,11,43,4635,novo_caged_mov,2025-11-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202511,2025,11,50,-941,novo_caged_mov,2025-11-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202511,2025,11,51,-5802,novo_caged_mov,2025-11-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202511,2025,11,52,-8413,novo_caged_mov,2025-11-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202511,2025,11,53,4337,novo_caged_mov,2025-11-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202511,2025,11,99,50,novo_caged_mov,2025-11-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202512,2025,12,11,-2340,novo_caged_mov,2025-12-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202512,2025,12,12,-461,novo_caged_mov,2025-12-01,AC,Acre,North,TRUE,TRUE,mapped
+202512,2025,12,13,-6670,novo_caged_mov,2025-12-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202512,2025,12,14,-988,novo_caged_mov,2025-12-01,RR,Roraima,North,TRUE,TRUE,mapped
+202512,2025,12,15,-15470,novo_caged_mov,2025-12-01,PA,Para,North,TRUE,TRUE,mapped
+202512,2025,12,16,-1137,novo_caged_mov,2025-12-01,AP,Amapa,North,TRUE,TRUE,mapped
+202512,2025,12,17,-4407,novo_caged_mov,2025-12-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202512,2025,12,21,-4084,novo_caged_mov,2025-12-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202512,2025,12,22,-2470,novo_caged_mov,2025-12-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202512,2025,12,23,-10800,novo_caged_mov,2025-12-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202512,2025,12,24,-5306,novo_caged_mov,2025-12-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202512,2025,12,25,-2684,novo_caged_mov,2025-12-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202512,2025,12,26,-9462,novo_caged_mov,2025-12-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202512,2025,12,27,-2949,novo_caged_mov,2025-12-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202512,2025,12,28,-2481,novo_caged_mov,2025-12-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202512,2025,12,29,-19498,novo_caged_mov,2025-12-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202512,2025,12,31,-72755,novo_caged_mov,2025-12-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202512,2025,12,32,-9972,novo_caged_mov,2025-12-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202512,2025,12,33,-23591,novo_caged_mov,2025-12-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202512,2025,12,35,-224282,novo_caged_mov,2025-12-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202512,2025,12,41,-51087,novo_caged_mov,2025-12-01,PR,Parana,South,TRUE,TRUE,mapped
+202512,2025,12,42,-47948,novo_caged_mov,2025-12-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202512,2025,12,43,-36707,novo_caged_mov,2025-12-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202512,2025,12,50,-11281,novo_caged_mov,2025-12-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202512,2025,12,51,-19030,novo_caged_mov,2025-12-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202512,2025,12,52,-22840,novo_caged_mov,2025-12-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202512,2025,12,53,-7381,novo_caged_mov,2025-12-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202512,2025,12,99,-83,novo_caged_mov,2025-12-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202601,2026,1,11,-336,novo_caged_mov,2026-01-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202601,2026,1,12,-892,novo_caged_mov,2026-01-01,AC,Acre,North,TRUE,TRUE,mapped
+202601,2026,1,13,1311,novo_caged_mov,2026-01-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202601,2026,1,14,-31,novo_caged_mov,2026-01-01,RR,Roraima,North,TRUE,TRUE,mapped
+202601,2026,1,15,-270,novo_caged_mov,2026-01-01,PA,Para,North,TRUE,TRUE,mapped
+202601,2026,1,16,459,novo_caged_mov,2026-01-01,AP,Amapa,North,TRUE,TRUE,mapped
+202601,2026,1,17,1497,novo_caged_mov,2026-01-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202601,2026,1,21,2516,novo_caged_mov,2026-01-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202601,2026,1,22,-337,novo_caged_mov,2026-01-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202601,2026,1,23,-1291,novo_caged_mov,2026-01-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202601,2026,1,24,1164,novo_caged_mov,2026-01-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202601,2026,1,25,-302,novo_caged_mov,2026-01-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202601,2026,1,26,889,novo_caged_mov,2026-01-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202601,2026,1,27,-2922,novo_caged_mov,2026-01-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202601,2026,1,28,293,novo_caged_mov,2026-01-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202601,2026,1,29,6124,novo_caged_mov,2026-01-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202601,2026,1,31,7425,novo_caged_mov,2026-01-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202601,2026,1,32,2434,novo_caged_mov,2026-01-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202601,2026,1,33,-13009,novo_caged_mov,2026-01-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202601,2026,1,35,16451,novo_caged_mov,2026-01-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202601,2026,1,41,18306,novo_caged_mov,2026-01-01,PR,Parana,South,TRUE,TRUE,mapped
+202601,2026,1,42,19000,novo_caged_mov,2026-01-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202601,2026,1,43,18421,novo_caged_mov,2026-01-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202601,2026,1,50,3936,novo_caged_mov,2026-01-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202601,2026,1,51,18731,novo_caged_mov,2026-01-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202601,2026,1,52,10733,novo_caged_mov,2026-01-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202601,2026,1,53,2012,novo_caged_mov,2026-01-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202601,2026,1,99,22,novo_caged_mov,2026-01-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202602,2026,2,11,1790,novo_caged_mov,2026-02-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202602,2026,2,12,276,novo_caged_mov,2026-02-01,AC,Acre,North,TRUE,TRUE,mapped
+202602,2026,2,13,2060,novo_caged_mov,2026-02-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202602,2026,2,14,256,novo_caged_mov,2026-02-01,RR,Roraima,North,TRUE,TRUE,mapped
+202602,2026,2,15,4701,novo_caged_mov,2026-02-01,PA,Para,North,TRUE,TRUE,mapped
+202602,2026,2,16,238,novo_caged_mov,2026-02-01,AP,Amapa,North,TRUE,TRUE,mapped
+202602,2026,2,17,1314,novo_caged_mov,2026-02-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202602,2026,2,21,2041,novo_caged_mov,2026-02-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202602,2026,2,22,1275,novo_caged_mov,2026-02-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202602,2026,2,23,4316,novo_caged_mov,2026-02-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202602,2026,2,24,-2221,novo_caged_mov,2026-02-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202602,2026,2,25,-1186,novo_caged_mov,2026-02-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202602,2026,2,26,1143,novo_caged_mov,2026-02-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202602,2026,2,27,-3023,novo_caged_mov,2026-02-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202602,2026,2,28,2394,novo_caged_mov,2026-02-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202602,2026,2,29,6890,novo_caged_mov,2026-02-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202602,2026,2,31,22874,novo_caged_mov,2026-02-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202602,2026,2,32,2846,novo_caged_mov,2026-02-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202602,2026,2,33,11436,novo_caged_mov,2026-02-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202602,2026,2,35,95896,novo_caged_mov,2026-02-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202602,2026,2,41,21599,novo_caged_mov,2026-02-01,PR,Parana,South,TRUE,TRUE,mapped
+202602,2026,2,42,21727,novo_caged_mov,2026-02-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202602,2026,2,43,24392,novo_caged_mov,2026-02-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202602,2026,2,50,6157,novo_caged_mov,2026-02-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202602,2026,2,51,4749,novo_caged_mov,2026-02-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202602,2026,2,52,14557,novo_caged_mov,2026-02-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202602,2026,2,53,6864,novo_caged_mov,2026-02-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202602,2026,2,99,-40,novo_caged_mov,2026-02-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped
+202603,2026,3,11,554,novo_caged_mov,2026-03-01,RO,Rondonia,North,TRUE,TRUE,mapped
+202603,2026,3,12,1066,novo_caged_mov,2026-03-01,AC,Acre,North,TRUE,TRUE,mapped
+202603,2026,3,13,2076,novo_caged_mov,2026-03-01,AM,Amazonas,North,TRUE,TRUE,mapped
+202603,2026,3,14,751,novo_caged_mov,2026-03-01,RR,Roraima,North,TRUE,TRUE,mapped
+202603,2026,3,15,1995,novo_caged_mov,2026-03-01,PA,Para,North,TRUE,TRUE,mapped
+202603,2026,3,16,818,novo_caged_mov,2026-03-01,AP,Amapa,North,TRUE,TRUE,mapped
+202603,2026,3,17,626,novo_caged_mov,2026-03-01,TO,Tocantins,North,TRUE,TRUE,mapped
+202603,2026,3,21,1430,novo_caged_mov,2026-03-01,MA,Maranhao,Northeast,TRUE,TRUE,mapped
+202603,2026,3,22,3308,novo_caged_mov,2026-03-01,PI,Piaui,Northeast,TRUE,TRUE,mapped
+202603,2026,3,23,6629,novo_caged_mov,2026-03-01,CE,Ceara,Northeast,TRUE,TRUE,mapped
+202603,2026,3,24,1127,novo_caged_mov,2026-03-01,RN,Rio Grande do Norte,Northeast,TRUE,TRUE,mapped
+202603,2026,3,25,930,novo_caged_mov,2026-03-01,PB,Paraiba,Northeast,TRUE,TRUE,mapped
+202603,2026,3,26,3287,novo_caged_mov,2026-03-01,PE,Pernambuco,Northeast,TRUE,TRUE,mapped
+202603,2026,3,27,-5243,novo_caged_mov,2026-03-01,AL,Alagoas,Northeast,TRUE,TRUE,mapped
+202603,2026,3,28,-338,novo_caged_mov,2026-03-01,SE,Sergipe,Northeast,TRUE,TRUE,mapped
+202603,2026,3,29,14008,novo_caged_mov,2026-03-01,BA,Bahia,Northeast,TRUE,TRUE,mapped
+202603,2026,3,31,38845,novo_caged_mov,2026-03-01,MG,Minas Gerais,Southeast,TRUE,TRUE,mapped
+202603,2026,3,32,7392,novo_caged_mov,2026-03-01,ES,Espirito Santo,Southeast,TRUE,TRUE,mapped
+202603,2026,3,33,23914,novo_caged_mov,2026-03-01,RJ,Rio de Janeiro,Southeast,TRUE,TRUE,mapped
+202603,2026,3,35,67876,novo_caged_mov,2026-03-01,SP,Sao Paulo,Southeast,TRUE,TRUE,mapped
+202603,2026,3,41,15823,novo_caged_mov,2026-03-01,PR,Parana,South,TRUE,TRUE,mapped
+202603,2026,3,42,16868,novo_caged_mov,2026-03-01,SC,Santa Catarina,South,TRUE,TRUE,mapped
+202603,2026,3,43,4054,novo_caged_mov,2026-03-01,RS,Rio Grande do Sul,South,TRUE,TRUE,mapped
+202603,2026,3,50,3554,novo_caged_mov,2026-03-01,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE,mapped
+202603,2026,3,51,-1716,novo_caged_mov,2026-03-01,MT,Mato Grosso,Center-West,TRUE,TRUE,mapped
+202603,2026,3,52,11681,novo_caged_mov,2026-03-01,GO,Goias,Center-West,TRUE,TRUE,mapped
+202603,2026,3,53,6711,novo_caged_mov,2026-03-01,DF,Distrito Federal,Center-West,TRUE,TRUE,mapped
+202603,2026,3,99,182,novo_caged_mov,2026-03-01,NI,Nao identificado,Not identified,FALSE,FALSE,mapped

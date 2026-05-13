@@ -1,0 +1,29 @@
+uf,state_abbrev,state_name,macroregion,is_identified_uf,include_in_panel
+11,RO,Rondonia,North,TRUE,TRUE
+12,AC,Acre,North,TRUE,TRUE
+13,AM,Amazonas,North,TRUE,TRUE
+14,RR,Roraima,North,TRUE,TRUE
+15,PA,Para,North,TRUE,TRUE
+16,AP,Amapa,North,TRUE,TRUE
+17,TO,Tocantins,North,TRUE,TRUE
+21,MA,Maranhao,Northeast,TRUE,TRUE
+22,PI,Piaui,Northeast,TRUE,TRUE
+23,CE,Ceara,Northeast,TRUE,TRUE
+24,RN,Rio Grande do Norte,Northeast,TRUE,TRUE
+25,PB,Paraiba,Northeast,TRUE,TRUE
+26,PE,Pernambuco,Northeast,TRUE,TRUE
+27,AL,Alagoas,Northeast,TRUE,TRUE
+28,SE,Sergipe,Northeast,TRUE,TRUE
+29,BA,Bahia,Northeast,TRUE,TRUE
+31,MG,Minas Gerais,Southeast,TRUE,TRUE
+32,ES,Espirito Santo,Southeast,TRUE,TRUE
+33,RJ,Rio de Janeiro,Southeast,TRUE,TRUE
+35,SP,Sao Paulo,Southeast,TRUE,TRUE
+41,PR,Parana,South,TRUE,TRUE
+42,SC,Santa Catarina,South,TRUE,TRUE
+43,RS,Rio Grande do Sul,South,TRUE,TRUE
+50,MS,Mato Grosso do Sul,Center-West,TRUE,TRUE
+51,MT,Mato Grosso,Center-West,TRUE,TRUE
+52,GO,Goias,Center-West,TRUE,TRUE
+53,DF,Distrito Federal,Center-West,TRUE,TRUE
+99,NI,Nao identificado,Not identified,FALSE,FALSE

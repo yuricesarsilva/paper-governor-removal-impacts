@@ -4,7 +4,10 @@ required_packages <- c(
   "dplyr",
   "lubridate",
   "stringr",
-  "janitor"
+  "janitor",
+  "purrr",
+  "tibble",
+  "archive"
 )
 
 missing_packages <- required_packages[!vapply(
