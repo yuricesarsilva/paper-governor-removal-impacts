@@ -1,10 +1,14 @@
 source(file.path("code", "01_download_data", "00_download_config.R"))
 
-archive_paths <- list.files(
-  path = path_data_raw_mte,
-  pattern = "^CAGEDEST_AJUSTES_.*\\.7z$",
-  full.names = TRUE
+expected_archive_names <- c(
+  paste0("CAGEDEST_AJUSTES_", 2007:2009, ".7z"),
+  unlist(lapply(2010:2019, function(year_value) {
+    sprintf("CAGEDEST_AJUSTES_%02d%d.7z", 1:12, year_value)
+  }))
 )
+
+archive_paths <- file.path(path_data_raw_mte, expected_archive_names)
+archive_paths <- archive_paths[file.exists(archive_paths)]
 
 if (length(archive_paths) == 0) {
   stop("No old adjusted Caged archives were found in ", path_data_raw_mte)
@@ -21,7 +25,8 @@ extract_single_archive <- function(archive_path) {
   txt_files <- list.files(
     path = extract_dir,
     pattern = "\\.txt$",
-    full.names = TRUE
+    full.names = TRUE,
+    ignore.case = TRUE
   )
 
   if (length(txt_files) == 1) {
@@ -33,7 +38,8 @@ extract_single_archive <- function(archive_path) {
   txt_files <- list.files(
     path = extract_dir,
     pattern = "\\.txt$",
-    full.names = TRUE
+    full.names = TRUE,
+    ignore.case = TRUE
   )
 
   if (length(txt_files) != 1) {
@@ -80,6 +86,7 @@ parse_single_txt <- function(txt_path) {
 }
 
 parsed_list <- lapply(archive_paths, function(archive_path) {
+  message("Parsing archive: ", basename(archive_path))
   txt_path <- extract_single_archive(archive_path)
   parse_single_txt(txt_path)
 })

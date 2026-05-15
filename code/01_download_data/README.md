@@ -38,4 +38,8 @@ This folder contains the scripts used to collect the raw series for the project.
 - The old adjusted Caged parsing script can:
   - extract the raw txt files
   - aggregate `formal_hiring_balance` by `UF` and `competencia`
+- The old adjusted Caged block has produced:
+  - `data/raw/mte/old_caged_state_balance_monthly.csv`
+  - `data/processed/old_caged_state_balance_monthly_processed.csv`
+  - `data/processed/old_caged_state_balance_monthly_panel_ready.csv`
 - The remaining scripts are listed in `data/raw/download_manifest.csv` and should be created next.

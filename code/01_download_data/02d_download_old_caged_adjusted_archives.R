@@ -31,9 +31,9 @@ download_with_curl <- function(source_url, target_path) {
       "--disable-epsv",
       "--ftp-method", "nocwd",
       "-L",
-      source_url,
+      shQuote(source_url),
       "--output",
-      target_path
+      shQuote(target_path)
     ),
     stdout = TRUE,
     stderr = TRUE
