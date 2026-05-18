@@ -22,10 +22,17 @@ Thumbs.db
 # Large raw data and extracted archives
 data/raw/mte/CAGEDMOV*/
 data/raw/mte/CAGEDMOV*.7z
+data/raw/mte/CAGEDFOR*.7z
+data/raw/mte/CAGEDEXC*.7z
 data/raw/mte/CAGEDEST*/
 data/raw/mte/CAGEDEST*.7z
 data/raw/mte/CAGEDEST_AJUSTES*/
 data/raw/mte/CAGEDEST_AJUSTES*.7z
+data/raw/mte/novo_caged_adjusted_download_results.csv
+data/raw/mte/novo_caged_adjusted_state_balance_monthly*.csv
+data/raw/mte/old_caged_complete_download_results.csv
+data/raw/mte/old_caged_complete_state_balance_monthly*.csv
+data/raw/mte/saldomunicipioajustado_dez2019.xls
 data/raw/mte/novo_caged_sample/
 data/raw/mte/old_caged_adjusted_sample/
 data/raw/mte/old_caged_adjusted_2009_sample/

@@ -40,6 +40,15 @@ Inspection of `CAGEDEST_122019.7z` confirmed fields including:
 
 For RR in December 2019, this complete file gives a state balance of `-171`, while the parsed `CAGED_AJUSTES` file for the closest currently available month is a small adjustment component, not the complete series.
 
+Update from 2026-05-18:
+
+- the complete Old Caged downloader was created and the expected 156 monthly files for `2007-01` to `2019-12` were downloaded
+- integrity testing revealed that several official `.7z` files fail during decompression
+- the issue was reproduced with both the R `archive` package and external `7z.exe t`
+- `CAGEDEST_012013.7z` failed again after re-download despite matching the size listed by the FTP
+- see `notes/session_handoff_2026-05-18.md` for the full list of failing archives
+- this means the complete microdata path is not yet enough to finalize the pre-2020 series; an alternative source or aggregation path may be needed
+
 ## Old Caged adjustment files
 
 The previously parsed files are under:

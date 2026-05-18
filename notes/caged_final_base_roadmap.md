@@ -6,6 +6,13 @@ Este documento organiza os achados sobre `Old Caged`, `CAGED_AJUSTES` e `Novo Ca
 
 A base Caged do projeto ainda nao deve ser considerada final.
 
+Atualizacao de 2026-05-18:
+
+- o downloader do Old Caged completo foi criado e o lote `2007-01` a `2019-12` foi baixado
+- existem 156 arquivos `CAGEDEST_MMYYYY.7z`, isto e, a cobertura mensal esperada
+- porem, a etapa de integridade revelou que varios arquivos oficiais falham ao descompactar
+- portanto, o gargalo atual nao e mais localizar a pasta do Old Caged, mas obter uma serie pre-2020 confiavel apesar desses arquivos corrompidos
+
 O problema nao e uma diferenca de unidade do tipo `1 pessoa` versus `1000 pessoas`. Os campos observados em `Old Caged`, `CAGED_AJUSTES` e `Novo Caged` parecem estar em contagem de vinculos/movimentos, isto e, pessoas/vinculos. O problema e de escopo da fonte:
 
 - os arquivos `CAGED_AJUSTES` nao parecem ser o Caged antigo completo
@@ -61,6 +68,19 @@ Interpretação operacional:
 
 - Esta e a fonte que deve ser usada para reconstruir o saldo mensal total do Caged antigo por `UF x competencia`.
 - Para esses arquivos completos, a competencia mensal observada no layout e `Competencia Declarada`.
+
+Alerta de integridade encontrado em 2026-05-18:
+
+- alguns arquivos `CAGEDEST_MMYYYY.7z` baixam com tamanho positivo, e em alguns casos com tamanho igual ao listado no FTP, mas falham na descompressao
+- o problema foi reproduzido com `archive` no R e tambem com `7z.exe t`
+- dois arquivos aparecem claramente truncados: `CAGEDEST_092007.7z` e `CAGEDEST_102013.7z`
+- varios outros acusam `Data Error`, incluindo `CAGEDEST_012013.7z`, que continuou falhando mesmo apos re-download
+- ver lista completa em `notes/session_handoff_2026-05-18.md`
+
+Consequencia:
+
+- o parse completo do Old Caged microdados ainda nao pode ser concluido de forma confiavel
+- a planilha oficial agregada `data/raw/mte/saldomunicipioajustado_dez2019.xls` foi baixada como fonte de validacao e possivel alternativa agregada
 
 ## CAGED_AJUSTES
 
@@ -302,8 +322,11 @@ Ate a base final ser criada:
 
 Quando houver tempo para continuar:
 
-1. Criar downloader do Old Caged completo (`CAGED/CAGEDEST_MMYYYY.7z`).
-2. Baixar uma pequena amostra de anos ou meses.
-3. Parsear e validar contra a planilha consolidada.
-4. So depois baixar o lote completo.
-5. Em paralelo, revisar Novo Caged para incorporar `CAGEDFOR` e `CAGEDEXC`.
+1. Ler `notes/session_handoff_2026-05-18.md`.
+2. Resolver a fonte pre-2020:
+   - encontrar espelho integro dos microdados, ou
+   - usar planilhas oficiais agregadas, ou
+   - usar fonte harmonizada externa confiavel e reproduzivel.
+3. Validar a regra Old Caged contra a planilha consolidada.
+4. Baixar e parsear Novo Caged completo, incorporando `CAGEDMOV`, `CAGEDFOR` e `CAGEDEXC`.
+5. Rodar `code/01_build_panel/05_process_caged_state_balance_final.R` somente depois das validacoes acima.
