@@ -19,6 +19,9 @@ Atualizacao de 2026-05-19:
 - resultado inicial: `120` arquivos integros e `36` com falha
 - depois de rebaixar os `36` arquivos com falha, apenas `CAGEDEST_092007.7z` passou a abrir corretamente; o inventario final ficou com `121` arquivos integros e `35` com falha
 - foi tentado salvamento parcial dos `.txt` dos `35` arquivos restantes; todos geraram registros parciais, mas nenhum recuperou as `27` UFs completas, entao o salvamento nao resolve sozinho a serie mensal estadual
+- foi identificada a tabela `basedosdados.br_me_caged.microdados_antigos` como alternativa para preencher os meses corrompidos via BigQuery, com consulta agregada por `ano x mes x sigla_uf`
+- foi criado `code/01_download_data/02m_query_old_caged_basedosdados_state_balance.R`
+- a consulta da Base dos Dados foi executada para os `35` meses corrompidos e retornou cobertura completa: `945` linhas, isto e, `35` meses x `27` UFs
 - foi criada a nota `notes/caged_pre2020_source_diagnostic_2026-05-19.md`
 - a planilha `saldomunicipioajustado_dez2019.xls` foi inspecionada: ela oferece agregados anuais e acumulados mensais para `2017-01` a `2019-09`, mas nao substitui integralmente os microdados mensais de `2007-01` a `2016-12`
 

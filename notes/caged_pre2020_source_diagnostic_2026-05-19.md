@@ -144,6 +144,73 @@ Saidas esperadas do script:
 
 O caminho "usar somente a planilha oficial agregada como plano B mensal pre-2020" nao resolve todo o periodo necessario para um painel mensal estadual desde 2007.
 
+## Alternativa Base dos Dados
+
+Foi identificada uma alternativa reproduzivel na Base dos Dados:
+
+- dataset: `Cadastro Geral de Empregados e Desempregados (CAGED)`
+- tabela: `Microdados Antigos`
+- ID BigQuery: `basedosdados.br_me_caged.microdados_antigos`
+- cobertura informada pela BD: `2007` a `2019`
+- particoes informadas pela BD: `ano`, `mes`, `sigla_uf`
+- linhas informadas pela BD: `442,039,172`
+- tamanho descompactado informado pela BD: aproximadamente `63.9 GB`
+
+Colunas relevantes para a base estadual mensal:
+
+- `ano`
+- `mes`
+- `sigla_uf`
+- `saldo_movimentacao`
+
+Foi criado o script:
+
+- `code/01_download_data/02m_query_old_caged_basedosdados_state_balance.R`
+
+Por padrao, o script consulta somente os meses que permanecem com falha em `data/raw/mte/old_caged_complete_integrity_7z.csv`. A consulta e agregada no BigQuery, sem baixar os microdados linha a linha:
+
+```sql
+SELECT
+  ano,
+  mes,
+  sigla_uf,
+  SUM(saldo_movimentacao) AS formal_hiring_balance,
+  COUNT(*) AS n_records
+FROM `basedosdados.br_me_caged.microdados_antigos`
+WHERE (ano = <ano_1> AND mes = <mes_1>)
+   OR (ano = <ano_2> AND mes = <mes_2>)
+   OR ...
+GROUP BY ano, mes, sigla_uf
+ORDER BY ano, mes, sigla_uf
+```
+
+Para rodar, e necessario ter o pacote `basedosdados` instalado e um projeto Google Cloud configurado para faturamento/BigQuery. O projeto pode ser definido por:
+
+- variavel de ambiente `BD_BILLING_PROJECT_ID`; ou
+- `basedosdados::set_billing_id("<PROJECT_ID>")`.
+
+Saidas esperadas:
+
+- `data/raw/mte/old_caged_basedosdados_state_balance_monthly_failed_months.csv`
+- `data/raw/mte/old_caged_basedosdados_state_balance_coverage_failed_months.csv`
+- `data/raw/mte/old_caged_basedosdados_state_balance_query_failed_months.sql`
+
+Resultado da execucao em 2026-05-19:
+
+- billing project usado: `teste-ufrr`
+- email autenticado: `yuricesar15silva@gmail.com`
+- consulta executada com sucesso para `query_scope = failed_months`
+- linhas retornadas: `945`
+- cobertura: `35` meses com `27` UFs cada
+- arquivo de dados salvo em `data/raw/mte/old_caged_basedosdados_state_balance_monthly_failed_months.csv`
+- arquivo de cobertura salvo em `data/raw/mte/old_caged_basedosdados_state_balance_coverage_failed_months.csv`
+
+Regra metodologica candidata:
+
+- usar microdados oficiais do FTP quando o `.7z` passa no teste de integridade;
+- usar Base dos Dados somente para meses cujo `.7z` oficial permanece corrompido;
+- validar os meses da Base dos Dados contra meses integros do FTP e contra agregados oficiais antes de incorporar na base final.
+
 No estado atual, ha tres caminhos tecnicamente defensaveis:
 
 1. localizar outra fonte dos microdados mensais completos do Old Caged com arquivos integros;
