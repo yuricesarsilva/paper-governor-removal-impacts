@@ -13,6 +13,15 @@ Atualizacao de 2026-05-18:
 - porem, a etapa de integridade revelou que varios arquivos oficiais falham ao descompactar
 - portanto, o gargalo atual nao e mais localizar a pasta do Old Caged, mas obter uma serie pre-2020 confiavel apesar desses arquivos corrompidos
 
+Atualizacao de 2026-05-19:
+
+- o inventario de integridade foi reproduzido e salvo em `data/raw/mte/old_caged_complete_integrity_7z.csv`
+- resultado inicial: `120` arquivos integros e `36` com falha
+- depois de rebaixar os `36` arquivos com falha, apenas `CAGEDEST_092007.7z` passou a abrir corretamente; o inventario final ficou com `121` arquivos integros e `35` com falha
+- foi tentado salvamento parcial dos `.txt` dos `35` arquivos restantes; todos geraram registros parciais, mas nenhum recuperou as `27` UFs completas, entao o salvamento nao resolve sozinho a serie mensal estadual
+- foi criada a nota `notes/caged_pre2020_source_diagnostic_2026-05-19.md`
+- a planilha `saldomunicipioajustado_dez2019.xls` foi inspecionada: ela oferece agregados anuais e acumulados mensais para `2017-01` a `2019-09`, mas nao substitui integralmente os microdados mensais de `2007-01` a `2016-12`
+
 O problema nao e uma diferenca de unidade do tipo `1 pessoa` versus `1000 pessoas`. Os campos observados em `Old Caged`, `CAGED_AJUSTES` e `Novo Caged` parecem estar em contagem de vinculos/movimentos, isto e, pessoas/vinculos. O problema e de escopo da fonte:
 
 - os arquivos `CAGED_AJUSTES` nao parecem ser o Caged antigo completo

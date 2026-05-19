@@ -26,6 +26,7 @@ data/raw/mte/CAGEDFOR*.7z
 data/raw/mte/CAGEDEXC*.7z
 data/raw/mte/CAGEDEST*/
 data/raw/mte/CAGEDEST*.7z
+data/raw/mte/**/*.7z
 data/raw/mte/CAGEDEST_AJUSTES*/
 data/raw/mte/CAGEDEST_AJUSTES*.7z
 data/raw/mte/novo_caged_adjusted_download_results.csv
@@ -36,3 +37,7 @@ data/raw/mte/saldomunicipioajustado_dez2019.xls
 data/raw/mte/novo_caged_sample/
 data/raw/mte/old_caged_adjusted_sample/
 data/raw/mte/old_caged_adjusted_2009_sample/
+data/raw/mte/old_caged_complete_salvage/
+data/raw/mte/salvage_tests_*/
+data/raw/mte/redownload_attempts_*/redownload_all_failed_results.csv
+data/raw/mte/redownload_attempts_*/redownload_sample_results.csv
