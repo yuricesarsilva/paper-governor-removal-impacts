@@ -61,6 +61,9 @@ This file records the main methodological decisions adopted for the project so f
 - When the combined series is used, the empirical design should include a methodological-break control such as a `post_2020_caged_dummy`.
 - Employment results based on mixed `Old Caged` plus `Novo Caged` should be interpreted with caution and clearly distinguished from specifications that use only post-2020 data.
 - For some recent cases, a pure `Novo Caged` specification may still be estimated as a robustness exercise.
+- After reconstructing the final monthly CAGED series with Old CAGED plus adjusted Novo CAGED, the project will not adopt a normalization rule for formal employment at this stage.
+- The higher variance observed in some states after incorporating the corrected series reinforces the decision to keep explicit break indicators in models that require the combined Old/Novo CAGED series.
+- Models that use the combined employment series should retain the available break controls, especially `post_2020_caged_dummy` and `caged_method_break_dummy`, whenever the estimation window crosses January 2020 or otherwise depends on comparability between the two CAGED regimes.
 
 ## Frequency of analysis
 
@@ -79,6 +82,8 @@ This file records the main methodological decisions adopted for the project so f
 - `formal_hiring_balance`
 - `retail_volume_index`
 - `services_volume_index`
+- `unemployment_rate_pnadc`
+- `formalization_rate_pnadc`
 - `liquidated_expenditure_total_real`
 - `public_investment_liquidated_real`
 - `liquidated_expenditure_health_real`
@@ -92,15 +97,25 @@ This file records the main methodological decisions adopted for the project so f
 
 ### Structural covariates currently retained
 
-- `population`
+- `pnadc_population`
+- `household_income_per_capita_pnadc`
 - `gdp_per_capita_real`
 
 ### Annual structural covariates rule
 
 - Annual variables may be used even when the main SCM design is monthly or bimonthly.
 - They should not be treated as the primary dynamic predictors of the path of the outcome.
+- The preferred income covariate candidate is now `household_income_per_capita_pnadc`, rather than GDP per capita, when PNADc coverage and frequency are adequate for the case.
+- The preferred population concept for new covariate construction is `pnadc_population`, using the same PNADc source/concept as the selected PNADc income and labor-market variables.
 - `gdp_per_capita_real` may be used with the latest available pre-treatment value when the treatment occurs after the last available annual release.
 - When useful, structural annual covariates may also be averaged over the last few available pre-treatment years.
+
+### PNADc covariates rule
+
+- The project will add a PNADc block of candidate covariates to be built alongside the Siconfi/RREO block.
+- The PNADc block should include household income per capita, PNADc population, unemployment rate, and formalization rate.
+- These variables should preserve the source frequency at the collection stage and only be harmonized to the analytical design after coverage and case-specific timing are evaluated.
+- The formalization rate will be constructed from PNADcIBGE/survey design objects, using occupied people as the denominator and the formal/informal classification documented in `notes/pnadc_processing_note.md`.
 
 ## Preferred time windows
 

@@ -1,0 +1,15 @@
+metric,value
+panel_ready_rows,6237
+panel_ready_months,231
+first_competencia,200701
+last_competencia,202603
+min_states_per_month,27
+max_states_per_month,27
+old_caged_rows_panel_ready,4212
+novo_caged_rows_panel_ready,2025
+full_processed_rows,6312
+full_processed_non_panel_rows,75
+duplicate_keys,0
+missing_competencias,0
+extra_competencias,0
+break_dummy_errors,0

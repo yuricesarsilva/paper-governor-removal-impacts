@@ -27,6 +27,15 @@ This note defines the current scope of data collection for the project.
 - `liquidated_expenditure_education_real`
 - `liquidated_expenditure_public_security_real`
 
+### PNADc frequency to preserve
+
+- `household_income_per_capita_pnadc`
+- `pnadc_population`
+- `unemployment_rate_pnadc`
+- `formalization_rate_pnadc`
+
+These PNADc variables should be stored at the original frequency provided by the selected IBGE/PNADc tables. The project should not force them into monthly frequency at the collection stage.
+
 ## Covariates to collect
 
 ### Dynamic covariates
@@ -39,18 +48,30 @@ This note defines the current scope of data collection for the project.
 - `federal_transfers_real`
 - `transfer_dependency_ratio`
 - `own_revenue_ratio`
+- `unemployment_rate_pnadc`
+- `formalization_rate_pnadc`
 
 ### Structural covariates
 
-- `population`
+- `pnadc_population`
+- `household_income_per_capita_pnadc`
 - `gdp_per_capita_real`
 
 ## Special note on annual covariates
 
-- `population` and `gdp_per_capita_real` are annual.
+- `pnadc_population`, `household_income_per_capita_pnadc`, and `gdp_per_capita_real` may enter as lower-frequency covariates depending on source availability.
 - They are retained because they help characterize states structurally.
 - They should not dominate the dynamic matching block in monthly or bimonthly SCM designs.
 - For post-2023 treatments, `gdp_per_capita_real` may use the last available pre-treatment value.
+- The preferred population concept for new covariate construction is the population concept used in the PNADc tables selected for the project.
+
+## Special note on PNADc variables
+
+- `household_income_per_capita_pnadc` is now preferred over GDP per capita as the main income covariate candidate.
+- `pnadc_population` should be collected using the same PNADc source/concept used to construct the PNADc income and labor-market variables.
+- `unemployment_rate_pnadc` should be retained as a candidate labor-market covariate.
+- `formalization_rate_pnadc` should be constructed with PNADcIBGE/survey design objects using occupied people as the denominator and the formal/informal classification documented in `notes/pnadc_processing_note.md`.
+- These variables should be developed alongside the Siconfi/RREO block before final model assembly.
 
 ## Special note on employment data
 

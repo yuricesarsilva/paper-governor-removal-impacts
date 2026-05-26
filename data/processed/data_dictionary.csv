@@ -15,6 +15,10 @@ governor_name,event,string,Governor name,TSE official records,high
 formal_employment_stock,state_year_or_month,numeric,Number of formal employment ties when available for compatible designs,RAIS CAGED Novo CAGED,low
 formal_hiring_balance,state_year_or_month,numeric,Net formal hiring flow using Old Caged before 2020 and Novo Caged from 2020 onward when needed,MTE CAGED Novo CAGED,high
 post_2020_caged_dummy,state_year_or_month,binary,Indicator for observations in the Novo Caged methodological regime from 2020 onward,constructed,high
+caged_method_break_dummy,state_year_or_month,binary,Indicator for the January 2020 methodological break between Old CAGED and Novo CAGED,constructed,high
+source_regime,state_year_or_month,string,Source regime for the CAGED observation such as old_caged or novo_caged,constructed,medium
+source_component,state_year_or_month,string,Component rule used for the CAGED observation such as complete or mov_for_exc,constructed,medium
+series_version,state_year_or_month,string,Version label documenting the CAGED combination rule used in the processed panel,constructed,medium
 period_date,state_year_or_month,date,First day of the reference month used to index monthly administrative series,constructed,high
 macroregion,state_year_or_month,string,Brazilian macroregion associated with the UF code,constructed from IBGE coding,medium
 uf_mapping_status,state_year_or_month,string,Flag indicating whether the UF code was successfully mapped to a federative unit,constructed,medium
@@ -23,6 +27,11 @@ retail_volume_index,state_year_or_month,numeric,Retail sales volume index at sta
 retail_nominal_revenue_index,state_year_or_month,numeric,Retail sales nominal revenue index at state level,IBGE PMC,medium
 services_volume_index,state_year_or_month,numeric,Services volume index at state level,IBGE PMS,high
 services_nominal_revenue_index,state_year_or_month,numeric,Nominal services revenue index at state level,IBGE PMS,medium
+household_income_per_capita_pnadc,state_quarter_or_year,numeric,Household income per capita from PNAD Continua at state level,IBGE PNAD Continua,high
+labor_income_real_pnadc,state_quarter,numeric,Average real effective labor income from PNAD Continua constructed as VD4020 multiplied by Efetivo and estimated with the survey design,IBGE PNAD Continua via PNADcIBGE,high
+pnadc_population,state_quarter_or_year,numeric,Population measure from the same PNAD Continua source or concept used for PNADc covariates,IBGE PNAD Continua,high
+unemployment_rate_pnadc,state_quarter_or_year,numeric,Unemployment rate from PNAD Continua at state level,IBGE PNAD Continua,high
+formalization_rate_pnadc,state_quarter_or_year,numeric,Formalization rate constructed from PNAD Continua survey design objects as formal occupied workers divided by total occupied workers,IBGE PNAD Continua via PNADcIBGE,medium
 public_investment_liquidated_real,state_year_or_bimester,numeric,Liquidated public investment expenditure,STN Siconfi RREO,high
 liquidated_expenditure_total_real,state_year_or_bimester,numeric,Total liquidated expenditure,STN Siconfi RREO,high
 liquidated_expenditure_health_real,state_year_or_bimester,numeric,Liquidated expenditure in health function,STN Siconfi RREO,high

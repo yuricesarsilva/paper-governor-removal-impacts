@@ -41,3 +41,6 @@ data/raw/mte/old_caged_complete_salvage/
 data/raw/mte/salvage_tests_*/
 data/raw/mte/redownload_attempts_*/redownload_all_failed_results.csv
 data/raw/mte/redownload_attempts_*/redownload_sample_results.csv
+
+# Large PNADc raw microdata cache
+data/raw/ibge/pnadc/
