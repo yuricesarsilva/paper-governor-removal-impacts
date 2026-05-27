@@ -22,6 +22,8 @@ This folder contains the scripts used to collect the raw series for the project.
 16. `02n_build_old_caged_complete_with_bd_patch.R`
 17. `03_download_siconfi.R`
 18. `04_download_structural_covariates.R`
+19. `04_download_pnadc_sidra_quarterly.R`
+20. `04a_download_pnad_legacy_sidra_annual.R`
 
 ## Current status
 
@@ -63,3 +65,16 @@ This folder contains the scripts used to collect the raw series for the project.
   - `data/processed/old_caged_state_balance_monthly_processed.csv`
   - `data/processed/old_caged_state_balance_monthly_panel_ready.csv`
 - The remaining scripts are listed in `data/raw/download_manifest.csv` and should be created next.
+- The active PNADc quarterly script collects official SIDRA/PNADCT state-quarter covariates:
+  - population 14+ from table `6463`, variable `1641`, category `32385`
+  - unemployment rate from table `6468`, variable `4099`
+  - real labor income from table `6469`, variable `5935`
+  - informality rate from table `8529`, variable `12466`
+  - formalization rate as `1 - informality_rate_pnadc`
+- The PNADc microdata route through `04_download_pnadc_quarterly.R` is suspended for now.
+- The PNAD legacy annual script collects SIDRA/PNAD Pesquisa Basica covariates for the four pre-PNADc cases:
+  - `PB_2009_01`
+  - `MA_2009_01`
+  - `TO_2009_01`
+  - `DF_2010_01`
+- The 2010 PNAD legacy rows are imputed from 2009 and 2011 and are flagged in the processed output.

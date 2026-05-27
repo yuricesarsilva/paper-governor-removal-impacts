@@ -1,70 +1,76 @@
 # PNADc Quarterly Roadmap
 
-This note opens the quarterly PNADc block after the CAGED block was closed.
+This note records the active quarterly PNADc block after the decision to migrate from microdata to SIDRA.
 
 ## Objective
 
 Build quarterly state-level PNADc covariates for use in event-specific synthetic-control designs.
 
-## Variables to construct
+## Active variables
 
-- `household_income_per_capita_pnadc`
 - `labor_income_real_pnadc`
 - `pnadc_population`
 - `unemployment_rate_pnadc`
+- `informality_rate_pnadc`
 - `formalization_rate_pnadc`
-
-Supporting validation variables should also be kept:
-
-- `formal_occupied_pnadc`
-- `informal_occupied_pnadc`
-- `classified_occupied_pnadc`
-- `unemployed_pnadc`
-- `labor_force_pnadc`
-- standard errors for estimated totals, rates, and means when available
 
 ## Source and frequency
 
-- Source: PNAD Continua quarterly microdata through `PNADcIBGE`.
+- Source: SIDRA/PNAD Continua Trimestral (`PNADCT`).
 - Frequency: quarterly.
 - Unit: UF.
-- Survey design: all estimates must use the survey design object returned by `PNADcIBGE::get_pnadc()` or created by `PNADcIBGE::pnadc_design()`.
+- Geography: 27 Brazilian federative units.
 
-## Initial script
+The microdata path through `PNADcIBGE` is suspended for now. The project will use official published SIDRA estimates unless a later specification requires custom microdata definitions.
 
-The initial script is:
+## SIDRA selection
 
-- `code/01_download_data/04_download_pnadc_quarterly.R`
+| Variable | Table | Variable code | Notes |
+| --- | ---: | ---: | --- |
+| `pnadc_population` | `6463` | `1641` | Persons aged 14 or more, total; category `32385`; SIDRA unit is thousand persons |
+| `unemployment_rate_pnadc` | `6468` | `4099` | Official unemployment rate; stored as proportion |
+| `labor_income_real_pnadc` | `6469` | `5935` | Real average monthly labor income effectively received in all jobs; stored in Reais |
+| `informality_rate_pnadc` | `8529` | `12466` | Official informality rate; stored as proportion |
+| `formalization_rate_pnadc` | `8529` | `12466` | Computed as `1 - informality_rate_pnadc` |
 
-It is designed to run one or multiple quarters using environment variables:
+## Active script
 
-- `PNADC_START_YEAR`
-- `PNADC_START_QUARTER`
-- `PNADC_END_YEAR`
-- `PNADC_END_QUARTER`
-- `PNADC_RELOAD`
+The active script is:
 
-The first recommended smoke test is `2025` quarter `4`.
+```text
+code/01_download_data/04_download_pnadc_sidra_quarterly.R
+```
+
+The suspended microdata script is:
+
+```text
+code/01_download_data/04_download_pnadc_quarterly.R
+```
 
 ## Expected outputs
 
-Raw/cache directory:
+Raw files:
 
-- `data/raw/ibge/pnadc/`
+- `data/raw/ibge/pnadc_sidra_population_14_plus_quarterly.csv`
+- `data/raw/ibge/pnadc_sidra_unemployment_rate_quarterly.csv`
+- `data/raw/ibge/pnadc_sidra_labor_income_real_quarterly.csv`
+- `data/raw/ibge/pnadc_sidra_informality_rate_quarterly.csv`
 
 Processed outputs:
 
-- `data/processed/pnadc_quarterly_state_covariates_processed.csv`
-- `data/processed/pnadc_quarterly_state_covariates_panel_ready.csv`
+- `data/processed/pnadc_sidra_quarterly_state_covariates_processed.csv`
+- `data/processed/pnadc_sidra_quarterly_state_covariates_panel_ready.csv`
 
-Download/process registry:
+Download registry:
 
-- `data/raw/ibge/pnadc_quarterly_download_registry.csv`
+- `data/raw/ibge/pnadc_sidra_quarterly_download_registry.csv`
 
 ## Implementation notes
 
-- `formalization_rate_pnadc` follows the rule documented in `notes/pnadc_processing_note.md`.
-- `unemployment_rate_pnadc` is computed as unemployed divided by labor force, with both totals estimated from the survey design.
-- `pnadc_population` is computed as the state-level total person count from the PNADc survey design.
-- `labor_income_real_pnadc` is constructed as `VD4020 * Efetivo` after downloading with `deflator = TRUE`.
-- `household_income_per_capita_pnadc` uses the first available variable among the income-per-capita candidate variables defined in the processing script. The chosen source variable is saved in `income_variable_used`.
+- SIDRA percentage variables are stored as proportions in processed files.
+- `pnadc_population` is multiplied by 1000 because table `6463` reports values in thousand persons.
+- `period_date` is the first day of the quarter.
+- Raw SIDRA outputs are preserved before processing.
+- The processed and panel-ready files are currently identical because the source is already state-quarter.
+- Population, unemployment, and real labor income currently cover 2012Q1 to 2026Q1.
+- Informality and formalization currently cover 2015Q4 to 2026Q1; values before 2015Q4 are intentionally missing because SIDRA table `8529` starts later.

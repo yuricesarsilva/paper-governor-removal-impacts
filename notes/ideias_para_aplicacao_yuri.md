@@ -8,8 +8,8 @@ Ideias a serem implementadas
 
 Atualizacao de 2026-05-26:
 
-- A renda domiciliar per capita da PNADc foi incorporada ao escopo como `household_income_per_capita_pnadc`.
-- A populacao da PNADc foi incorporada ao escopo como `pnadc_population`, usando o mesmo conceito/fonte das demais variaveis PNADc.
+- A renda PNADc ativa foi redefinida como `labor_income_real_pnadc`, obtida do SIDRA/PNADCT.
+- A populacao da PNADc foi incorporada ao escopo como `pnadc_population`, usando pessoas de 14 anos ou mais no SIDRA/PNADCT.
 - A taxa de desocupacao da PNADc foi incorporada ao escopo como `unemployment_rate_pnadc`.
-- A taxa de formalizacao da PNADc foi incorporada ao escopo como `formalization_rate_pnadc`, usando objetos de desenho amostral do PNADcIBGE e a classificacao formal/informal documentada em `notes/pnadc_processing_note.md`.
+- A taxa de formalizacao da PNADc foi incorporada ao escopo como `formalization_rate_pnadc`, calculada como complemento da taxa oficial de informalidade do SIDRA.
 - Essas variaveis devem ser construidas junto com o bloco Siconfi/RREO antes da montagem final dos modelos.

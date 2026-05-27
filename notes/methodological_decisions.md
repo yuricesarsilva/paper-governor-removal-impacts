@@ -98,24 +98,37 @@ This file records the main methodological decisions adopted for the project so f
 ### Structural covariates currently retained
 
 - `pnadc_population`
-- `household_income_per_capita_pnadc`
+- `labor_income_real_pnadc`
 - `gdp_per_capita_real`
 
 ### Annual structural covariates rule
 
 - Annual variables may be used even when the main SCM design is monthly or bimonthly.
 - They should not be treated as the primary dynamic predictors of the path of the outcome.
-- The preferred income covariate candidate is now `household_income_per_capita_pnadc`, rather than GDP per capita, when PNADc coverage and frequency are adequate for the case.
-- The preferred population concept for new covariate construction is `pnadc_population`, using the same PNADc source/concept as the selected PNADc income and labor-market variables.
+- The preferred income covariate candidate is now `labor_income_real_pnadc`, rather than GDP per capita, when PNADc coverage and frequency are adequate for the case.
+- The preferred population concept for new covariate construction is `pnadc_population`, using SIDRA/PNADCT table `6463`, variable `1641`, category `32385`: persons aged 14 or more.
 - `gdp_per_capita_real` may be used with the latest available pre-treatment value when the treatment occurs after the last available annual release.
 - When useful, structural annual covariates may also be averaged over the last few available pre-treatment years.
 
 ### PNADc covariates rule
 
 - The project will add a PNADc block of candidate covariates to be built alongside the Siconfi/RREO block.
-- The PNADc block should include household income per capita, PNADc population, unemployment rate, and formalization rate.
+- The PNADc block should include real labor income, PNADc population, unemployment rate, informality rate, and formalization rate.
 - These variables should preserve the source frequency at the collection stage and only be harmonized to the analytical design after coverage and case-specific timing are evaluated.
-- The formalization rate will be constructed from PNADcIBGE/survey design objects, using occupied people as the denominator and the formal/informal classification documented in `notes/pnadc_processing_note.md`.
+- The active PNADc source is SIDRA/PNADCT, not microdata.
+- The active SIDRA selections are: table `6463` variable `1641` for `pnadc_population`; table `6468` variable `4099` for `unemployment_rate_pnadc`; table `6469` variable `5935` for `labor_income_real_pnadc`; table `8529` variable `12466` for `informality_rate_pnadc`.
+- `formalization_rate_pnadc` is computed as `1 - informality_rate_pnadc`.
+- The PNADc microdata route through `PNADcIBGE` is suspended for now and should be revisited only if the project later needs custom definitions unavailable from SIDRA.
+
+### PNAD legacy covariates rule
+
+- Early cases before the start of PNADc quarterly coverage should use a separate annual PNAD legacy block, not the PNADc quarterly block.
+- The legacy block applies to `PB_2009_01`, `MA_2009_01`, `TO_2009_01`, and `DF_2010_01`.
+- The active source is SIDRA/PNAD Pesquisa Basica, documented in `notes/pnad_legacy_processing_note.md`.
+- The active script is `code/01_download_data/04a_download_pnad_legacy_sidra_annual.R`.
+- The legacy block includes population aged 10 or more, labor force, unemployment rate, real labor income, and a formalization proxy based on contribution to social security in any work.
+- Legacy PNAD is annual and should not be appended to PNADc as a continuous comparable series.
+- The missing 2010 PNAD year is imputed by linear interpolation between 2009 and 2011, but this imputed value should not be the default pre-treatment SCM predictor for `DF_2010_01` because it uses post-treatment information. The default clean value for that case should be the latest observed pre-treatment year, 2009.
 
 ## Preferred time windows
 

@@ -29,9 +29,10 @@ This note defines the current scope of data collection for the project.
 
 ### PNADc frequency to preserve
 
-- `household_income_per_capita_pnadc`
+- `labor_income_real_pnadc`
 - `pnadc_population`
 - `unemployment_rate_pnadc`
+- `informality_rate_pnadc`
 - `formalization_rate_pnadc`
 
 These PNADc variables should be stored at the original frequency provided by the selected IBGE/PNADc tables. The project should not force them into monthly frequency at the collection stage.
@@ -49,17 +50,18 @@ These PNADc variables should be stored at the original frequency provided by the
 - `transfer_dependency_ratio`
 - `own_revenue_ratio`
 - `unemployment_rate_pnadc`
+- `informality_rate_pnadc`
 - `formalization_rate_pnadc`
 
 ### Structural covariates
 
 - `pnadc_population`
-- `household_income_per_capita_pnadc`
+- `labor_income_real_pnadc`
 - `gdp_per_capita_real`
 
 ## Special note on annual covariates
 
-- `pnadc_population`, `household_income_per_capita_pnadc`, and `gdp_per_capita_real` may enter as lower-frequency covariates depending on source availability.
+- `pnadc_population`, `labor_income_real_pnadc`, and `gdp_per_capita_real` may enter as lower-frequency covariates depending on source availability.
 - They are retained because they help characterize states structurally.
 - They should not dominate the dynamic matching block in monthly or bimonthly SCM designs.
 - For post-2023 treatments, `gdp_per_capita_real` may use the last available pre-treatment value.
@@ -67,11 +69,24 @@ These PNADc variables should be stored at the original frequency provided by the
 
 ## Special note on PNADc variables
 
-- `household_income_per_capita_pnadc` is now preferred over GDP per capita as the main income covariate candidate.
-- `pnadc_population` should be collected using the same PNADc source/concept used to construct the PNADc income and labor-market variables.
-- `unemployment_rate_pnadc` should be retained as a candidate labor-market covariate.
-- `formalization_rate_pnadc` should be constructed with PNADcIBGE/survey design objects using occupied people as the denominator and the formal/informal classification documented in `notes/pnadc_processing_note.md`.
+- `labor_income_real_pnadc` is now preferred over GDP per capita as the main PNADc income covariate candidate.
+- The active PNADc source is SIDRA/PNADCT, collected with `code/01_download_data/04_download_pnadc_sidra_quarterly.R`.
+- `pnadc_population` should use SIDRA table `6463`, variable `1641`, category `32385`, which is persons aged 14 or more.
+- `unemployment_rate_pnadc` should use SIDRA table `6468`, variable `4099`.
+- `labor_income_real_pnadc` should use SIDRA table `6469`, variable `5935`.
+- `informality_rate_pnadc` should use SIDRA table `8529`, variable `12466`.
+- `formalization_rate_pnadc` should be constructed as `1 - informality_rate_pnadc`.
+- The PNADc microdata route is suspended for now.
 - These variables should be developed alongside the Siconfi/RREO block before final model assembly.
+
+## Special note on legacy PNAD variables
+
+- Cases `PB_2009_01`, `MA_2009_01`, `TO_2009_01`, and `DF_2010_01` should use annual PNAD legacy covariates instead of PNADc covariates.
+- The active legacy source is SIDRA/PNAD Pesquisa Basica.
+- The active script is `code/01_download_data/04a_download_pnad_legacy_sidra_annual.R`.
+- Legacy PNAD covariates should remain annual and separate from PNADc quarterly covariates.
+- The 2010 values are imputed from 2009 and 2011 and must retain the imputation flag.
+- For `DF_2010_01`, the default SCM pre-treatment PNAD legacy covariate should use observed 2009 values rather than the imputed 2010 row.
 
 ## Special note on employment data
 

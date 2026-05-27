@@ -1,5 +1,10 @@
 source(file.path("code", "00_setup", "00_project_paths.R"))
 
+stop(
+  "The PNADc microdata route is suspended for now. ",
+  "Use code/01_download_data/04_download_pnadc_sidra_quarterly.R instead."
+)
+
 required_packages <- c("PNADcIBGE", "survey", "readr", "dplyr", "purrr", "tibble", "tidyr", "stringr")
 
 missing_packages <- required_packages[!vapply(
@@ -50,16 +55,8 @@ base_vars <- c(
   "VD4002",
   "VD4009",
   "V4019",
-  "VD4020",
-  "VD5008",
-  "VD5007",
-  "VD5004A",
-  "VD5004",
-  "VD5002",
-  "VD5001"
+  "VD4020"
 )
-
-income_candidates <- c("VD5008", "VD5007", "VD5004A", "VD5004", "VD5002", "VD5001")
 
 as_numeric_safely <- function(x) {
   if (is.factor(x)) {
@@ -96,7 +93,6 @@ process_one_quarter <- function(year, quarter) {
   )
 
   available_vars <- names(pnadc_design$variables)
-  income_var <- income_candidates[income_candidates %in% available_vars][1]
 
   required_vars <- c("UF", "VD4002", "VD4009", "V4019")
   missing_vars <- setdiff(required_vars, available_vars)
@@ -119,16 +115,7 @@ process_one_quarter <- function(year, quarter) {
       VD4020_real = as.numeric(VD4020) * as.numeric(Efetivo)
     )
   } else {
-    warning("VD4020 and/or Efetivo not found in ", year, " Q", quarter)
-    pnadc_design$variables$VD4020_real <- NA_real_
-  }
-
-  if (is.na(income_var)) {
-    warning("No income-per-capita candidate variable found in ", year, " Q", quarter)
-    pnadc_design$variables$household_income_per_capita_source <- NA_real_
-  } else {
-    pnadc_design$variables$household_income_per_capita_source <-
-      as_numeric_safely(pnadc_design$variables[[income_var]])
+    stop("VD4020 and/or Efetivo not found in ", year, " Q", quarter)
   }
 
   pnadc_design <- update(
@@ -171,16 +158,12 @@ process_one_quarter <- function(year, quarter) {
   ) |>
     clean_svyby()
 
-  income_mean <- survey::svyby(
-    ~household_income_per_capita_source,
-    ~UF,
-    pnadc_design,
-    survey::svymean,
-    na.rm = TRUE,
-    vartype = "se",
-    keep.names = FALSE
-  ) |>
-    clean_svyby()
+  income_mean <- totals |>
+    dplyr::transmute(
+      uf_label,
+      household_income_per_capita_source = NA_real_,
+      se_household_income_per_capita_source = NA_real_
+    )
 
   labor_income_mean <- survey::svyby(
     ~VD4020_real,
@@ -219,7 +202,7 @@ process_one_quarter <- function(year, quarter) {
       ),
       household_income_per_capita_pnadc = household_income_per_capita_source,
       labor_income_real_pnadc = VD4020_real,
-      income_variable_used = ifelse(is.na(income_var), NA_character_, income_var)
+      income_variable_used = "VD4020_real"
     ) |>
     dplyr::select(
       period,
@@ -247,7 +230,7 @@ process_one_quarter <- function(year, quarter) {
     period = paste0(year, "Q", quarter),
     status = "processed",
     rows = nrow(result),
-    income_variable_used = ifelse(is.na(income_var), NA_character_, income_var),
+    income_variable_used = "VD4020_real",
     error_message = NA_character_
   )
 

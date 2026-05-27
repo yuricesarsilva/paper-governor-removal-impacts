@@ -1,2 +1,2 @@
 year,quarter,period,status,rows,income_variable_used,error_message
-2025,4,2025Q4,failed,0,,'update' is not an exported object from 'namespace:survey'
+2026,1,2026Q1,processed,27,,
