@@ -78,3 +78,9 @@ This folder contains the scripts used to collect the raw series for the project.
   - `TO_2009_01`
   - `DF_2010_01`
 - The 2010 PNAD legacy rows are imputed from 2009 and 2011 and are flagged in the processed output.
+- The Siconfi/RREO script collects state-bimester fiscal data from the official Tesouro API:
+  - `RREO-Anexo 01` for revenue variables
+  - `RREO-Anexo 02` for liquidated expenditure by function
+  - `RREO-Anexo 06` for investment, with bimonthly flow derived from cumulative liquidated investment
+- The Siconfi/RREO chunk combiner can merge annual chunk outputs after long downloads:
+  - `code/01_download_data/03a_combine_siconfi_chunks.R`
