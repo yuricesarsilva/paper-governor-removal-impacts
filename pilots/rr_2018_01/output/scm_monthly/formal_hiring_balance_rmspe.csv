@@ -1,0 +1,3 @@
+analysis_period,rmspe,mean_gap,outcome,treated_state
+post,3103.560836294783,-638.8377541210957,formal_hiring_balance,RR
+pre,1685.1407805859913,319.637866701659,formal_hiring_balance,RR

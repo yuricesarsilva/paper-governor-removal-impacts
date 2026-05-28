@@ -1,0 +1,2 @@
+rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,base_outcome,outcome,moving_average_window,post_pre_rmspe_ratio
+3.449716579700767,3.3879193244453196,-2.6793378439249023,-0.578657781113794,retail_volume_index,retail_volume_index_ma6,6,1.0182404742667728

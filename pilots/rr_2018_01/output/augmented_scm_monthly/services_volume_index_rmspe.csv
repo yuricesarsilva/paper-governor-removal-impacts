@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,outcome,scm_post_pre_rmspe_ratio,augmented_post_pre_rmspe_ratio
+7.280620054098982,6.2080660745734635,8.922600154547034,2.136764235436669,-5.669607594231091,-2.369778351299096,-5.623759925655336,0.0018251463351536552,services_volume_index,1.172767809917231,4.175753228443385

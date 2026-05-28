@@ -1,0 +1,2 @@
+post,pre,post_pre_rmspe_ratio,outcome,treated_state,robustness_window
+4.329634837433655,5.09572828323612,0.8496596750806451,retail_volume_index,RR,post_2019_01_to_2019_12

@@ -1,0 +1,5 @@
+rmspe_pre,mean_gap_pre,rmspe_post,mean_gap_post,post_pre_rmspe_ratio,spec_id,outcome,outcome_predictor_mode,description
+1685.1407805859913,,3103.560836294783,,1.8417219926370485,baseline_monthly_lags,formal_hiring_balance,monthly_lags,Monthly CAGED level outcome with full monthly pre-treatment outcome path
+2460.6051045984786,143.54468557488596,3690.161545973592,-850.3565861161344,1.4996967774622871,level_semester_predictors,formal_hiring_balance,semester_means,Monthly CAGED level outcome with semester-mean pre-treatment outcome predictors
+3382.1520673746018,439.04511147211826,11098.110755322998,-4460.025862365978,3.2813754480110986,six_month_sum,formal_hiring_balance_6m_sum,monthly_lags,Trailing 6-month accumulated CAGED balance
+5714.500636464948,3652.725036961159,15669.500504343856,-14958.547355226006,2.742059455616262,cumulative_since_2016,formal_hiring_balance_cumulative,monthly_lags,Cumulative CAGED balance since the start of the pilot panel

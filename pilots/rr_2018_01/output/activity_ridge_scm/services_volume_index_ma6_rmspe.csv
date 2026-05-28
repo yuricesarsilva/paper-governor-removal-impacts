@@ -1,0 +1,2 @@
+rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,outcome,lambda,cv_rmse,post_pre_rmspe_ratio
+4.623382693449493,0.18004147611117713,-2.563269967087575,0,services_volume_index_ma6,0.014187266741165962,0.13515973867011236,25.679542254999703

@@ -1,0 +1,2 @@
+post,pre,post_pre_rmspe_ratio,outcome,treated_state,robustness_window
+2238.6247125271943,1685.1407805859913,1.3284496692013674,formal_hiring_balance,RR,post_2019_01_to_2019_12

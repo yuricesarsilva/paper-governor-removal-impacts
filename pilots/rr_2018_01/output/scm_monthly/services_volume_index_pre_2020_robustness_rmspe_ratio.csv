@@ -1,0 +1,2 @@
+post,pre,post_pre_rmspe_ratio,outcome,treated_state,robustness_window
+6.868010707057841,6.19669472701684,1.1083345250354424,services_volume_index,RR,post_2019_01_to_2019_12

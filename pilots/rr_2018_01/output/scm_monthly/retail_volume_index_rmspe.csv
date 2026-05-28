@@ -1,0 +1,3 @@
+analysis_period,rmspe,mean_gap,outcome,treated_state
+post,4.434284960791602,-2.7916574913024355,retail_volume_index,RR
+pre,5.09572828323612,-0.8179984238105188,retail_volume_index,RR

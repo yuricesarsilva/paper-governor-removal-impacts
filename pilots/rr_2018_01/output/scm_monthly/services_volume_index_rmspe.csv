@@ -1,0 +1,3 @@
+analysis_period,rmspe,mean_gap,outcome,treated_state
+post,7.619967745479259,-6.137587375431006,services_volume_index,RR
+pre,6.19669472701684,-2.6640050895173917,services_volume_index,RR
