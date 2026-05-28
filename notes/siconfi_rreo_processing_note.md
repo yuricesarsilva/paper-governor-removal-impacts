@@ -322,3 +322,54 @@ The smoke test confirmed:
 - First-bimester investment flow equals cumulative liquidated investment.
 
 The next step is to run the full downloader for all 27 UFs, all six bimesters, from 2015 through the latest available year.
+
+## Full collection result
+
+Full collection was executed in annual chunks and then combined with:
+
+```text
+code/01_download_data/03a_combine_siconfi_chunks.R
+```
+
+Final combined outputs:
+
+- `data/processed/siconfi_rreo_state_fiscal_bimonthly_processed.csv`
+- `data/processed/siconfi_rreo_state_fiscal_bimonthly_panel_ready.csv`
+- `data/raw/siconfi/siconfi_rreo_state_fiscal_bimonthly_download_registry.csv`
+
+The raw annex extracts are large local cache files and are intentionally ignored by Git. Annual processed chunk files are also treated as intermediates; the combined panel-ready file is the analysis input.
+
+Validation script:
+
+```text
+code/01_build_panel/07_validate_siconfi_final.R
+```
+
+Validation outputs:
+
+- `output/validation/siconfi_rreo_validation_summary.csv`
+- `output/validation/siconfi_rreo_period_coverage.csv`
+- `output/validation/siconfi_rreo_incomplete_periods.csv`
+- `output/validation/siconfi_rreo_missing_value_summary.csv`
+- `output/validation/siconfi_rreo_missing_investment_by_year.csv`
+- `output/validation/siconfi_rreo_negative_investment_flows.csv`
+- `output/validation/siconfi_rreo_registry_status.csv`
+- `output/validation/siconfi_rreo_failed_registry.csv`
+
+Current validation result:
+
+- Final panel rows: 1,811.
+- Coverage: 2015B1 through 2026B2.
+- Complete coverage for 2015-2025: 27 UFs in every bimester.
+- 2026B1 has 27 UFs; 2026B2 has only 2 UFs as of the collection date, so the current-year endpoint is incomplete and should be filtered or refreshed before final estimation.
+- Duplicate `year x bimester x state_abbrev` keys: 0.
+- Download registry: 5,832 successful requests and 0 failed requests.
+- Total revenue is complete in the panel.
+- Total liquidated expenditure is missing in 5 UF-bimesters.
+- Investment is unavailable for all UF-bimesters in 2015-2017 under the current Anexo 06 mapping, and has a few later gaps. The validation found 493 missing investment rows. This should be treated as source coverage rather than imputed mechanically.
+- One negative derived investment flow is flagged: Mato Grosso do Sul in 2020B6. It is retained and flagged because the flow is computed from a cumulative accounting series and can reflect revisions or reversals.
+
+Practical use rule:
+
+- Use the combined panel-ready file for analysis.
+- For final models, prefer the balanced 2015B1-2025B6 window unless the current-year endpoint is refreshed after all 2026 bimesters become available.

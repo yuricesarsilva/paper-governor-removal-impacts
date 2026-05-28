@@ -325,6 +325,26 @@ investment_cumulative <- standardized |>
   ) |>
   dplyr::ungroup()
 
+ensure_numeric_columns <- function(data, column_names) {
+  missing_columns <- setdiff(column_names, names(data))
+
+  for (column_name in missing_columns) {
+    data[[column_name]] <- NA_real_
+  }
+
+  data
+}
+
+ensure_logical_columns <- function(data, column_names) {
+  missing_columns <- setdiff(column_names, names(data))
+
+  for (column_name in missing_columns) {
+    data[[column_name]] <- NA
+  }
+
+  data
+}
+
 ipca_path <- file.path(path_data_raw_ibge, "ipca_national_monthly.csv")
 
 if (!file.exists(ipca_path)) {
@@ -349,6 +369,22 @@ base_ipca <- ipca |>
 nominal_panel <- revenue |>
   dplyr::full_join(expenditure, by = c("uf", "year", "bimester", "period", "period_date")) |>
   dplyr::full_join(investment_cumulative, by = c("uf", "year", "bimester", "period", "period_date")) |>
+  ensure_numeric_columns(c(
+    "total_revenue_nominal",
+    "state_tax_revenue_nominal",
+    "federal_current_transfers_nominal",
+    "federal_capital_transfers_nominal",
+    "liquidated_expenditure_total_nominal",
+    "liquidated_expenditure_health_nominal",
+    "liquidated_expenditure_education_nominal",
+    "liquidated_expenditure_public_security_nominal",
+    "public_investment_liquidated_cumulative_nominal",
+    "public_investment_liquidated_nominal"
+  )) |>
+  ensure_logical_columns(c(
+    "public_investment_flow_is_derived",
+    "public_investment_negative_flow_flag"
+  )) |>
   dplyr::mutate(
     federal_transfers_nominal =
       dplyr::coalesce(federal_current_transfers_nominal, 0) +

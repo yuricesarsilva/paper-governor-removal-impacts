@@ -1,0 +1,15 @@
+metric,value
+panel_ready_rows,1811
+periods,68
+first_period,2015B1
+last_period,2026B2
+min_states_per_period,2
+max_states_per_period,27
+duplicate_keys,0
+incomplete_periods,1
+registry_requests,5832
+registry_failed_requests,0
+missing_total_revenue_rows,0
+missing_total_expenditure_rows,5
+missing_investment_rows,493
+negative_investment_flow_flags,1

@@ -71,6 +71,19 @@ This file records the main methodological decisions adopted for the project so f
 - `RREO/Siconfi` fiscal variables will be treated as bimonthly series when needed.
 - Mixed-frequency designs are acceptable if handled case by case.
 
+## Fiscal data caveats
+
+- The active Siconfi/RREO fiscal panel is built from the official Tesouro API and covers `2015B1` through `2026B2` in the current local extraction.
+- The balanced and preferred estimation window for fiscal variables is `2015B1-2025B6`, with 27 UFs in every bimester.
+- The current-year endpoint is incomplete: `2026B1` has 27 UFs, but `2026B2` has only 2 UFs in the extraction run on `2026-05-28`. Unless refreshed after broader reporting, `2026B2` should be excluded from final fiscal specifications.
+- Siconfi/RREO via the current API route does not provide the pre-2015 dynamic fiscal covariates needed for the early `2009/2010` cases. Those cases require either non-Siconfi fiscal sources or specifications without dynamic Siconfi fiscal predictors.
+- Total revenue and fiscal ratio variables are complete in the validated panel.
+- Total liquidated expenditure and function-level expenditure variables have 5 missing UF-bimesters: `RN/2015B6`, `RR/2016B2`, `BA/2016B6`, `SC/2017B1`, and `RR/2019B1`.
+- Public investment from `RREO-Anexo 06` is not available for all UF-bimesters in `2015-2017` under the current mapping, and the validated panel has 493 missing investment rows overall. These missing values should be treated as source coverage limitations rather than mechanically imputed.
+- The main investment flow variable is derived from the cumulative liquidated investment series by differencing within `UF x year`; first bimesters use the cumulative value directly.
+- One negative derived investment flow is flagged in the validated panel: `MS/2020B6`. It is retained with `public_investment_negative_flow_flag` because negative differences can reflect revisions or reversals in cumulative accounting data.
+- Final fiscal models should either use variables with adequate pre-treatment coverage for the case-specific window or explicitly document why a fiscal predictor/outcome is omitted.
+
 ## Covariates for synthetic control
 
 - The project will distinguish between `dynamic covariates` and `slow-moving structural covariates`.

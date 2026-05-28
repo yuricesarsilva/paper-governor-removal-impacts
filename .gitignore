@@ -44,3 +44,11 @@ data/raw/mte/redownload_attempts_*/redownload_sample_results.csv
 
 # Large PNADc raw microdata cache
 data/raw/ibge/pnadc/
+
+# Large Siconfi/RREO raw API extracts and annual chunk intermediates
+data/raw/siconfi/*_annex01_raw.csv
+data/raw/siconfi/*_annex02_raw.csv
+data/raw/siconfi/*_annex06_raw.csv
+data/raw/siconfi/siconfi_rreo_state_fiscal_bimonthly_????_download_registry.csv
+data/processed/siconfi_rreo_state_fiscal_bimonthly_????_processed.csv
+data/processed/siconfi_rreo_state_fiscal_bimonthly_????_panel_ready.csv
