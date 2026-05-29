@@ -14,6 +14,8 @@ Output folder:
 - `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean/`
 - `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean_ma12/`
 - `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean_full_window/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_per_1000/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_per_1000_full_window/`
 
 ## Method
 
@@ -46,6 +48,14 @@ The `augmented_scm_monthly_post_clean_full_window` output keeps the same pre-tre
 
 - `formal_hiring_balance_ma6`: post period starts in `2019-06`.
 - `formal_hiring_balance_ma12`: post period starts in `2019-12`.
+
+An additional scale robustness check normalizes formal employment by PNADc population:
+
+- `formal_hiring_balance_per_1000`
+- `formal_hiring_balance_per_1000_ma6`
+- `formal_hiring_balance_per_1000_ma12`
+
+This directly addresses the concern that the synthetic donor path in employment levels may be influenced by larger donor-state labor markets.
 
 ## Fit Summary
 
@@ -95,6 +105,34 @@ When the post-treatment evaluation is restricted to full moving-average windows,
 | `formal_hiring_balance_ma12` | `2019-12` | 11.3 |
 
 This confirms that much of the large smoothed negative gap comes from the ramp-up months before the moving-average window is complete.
+
+## Per-1000 Employment Robustness
+
+Normalizing the formal hiring balance by population improves the scale interpretation of the employment result. The outcome becomes formal hiring balance per 1,000 inhabitants, so differences across donor-state labor market size no longer enter mechanically through the outcome level.
+
+Fit summary:
+
+| Outcome | SCM pre RMSPE | Augmented pre RMSPE | SCM post RMSPE | Augmented post RMSPE | Augmented post mean gap |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `formal_hiring_balance_per_1000` | 0.524 | 0.291 | 1.078 | 1.107 | 0.295 |
+| `formal_hiring_balance_per_1000_ma6` | 0.287 | 0.056 | 0.770 | 0.594 | 0.060 |
+| `formal_hiring_balance_per_1000_ma12` | 0.179 | 0.045 | 0.663 | 0.535 | 0.167 |
+
+For the post-clean MA12 specification, the year-specific augmented mean gaps are:
+
+| Year | Augmented mean gap |
+| --- | ---: |
+| 2019 | -0.250 |
+| 2020 | 0.585 |
+
+When evaluation is restricted to full moving-average windows, the post-period augmented mean gaps are:
+
+| Outcome | First full post window | Augmented post mean gap |
+| --- | --- | ---: |
+| `formal_hiring_balance_per_1000_ma6` | `2019-06` | 0.313 |
+| `formal_hiring_balance_per_1000_ma12` | `2019-12` | 0.562 |
+
+Interpretation: the per-1,000 transformation is useful as a scale diagnostic and reduces the concern that the January 2019 visual jump is simply a donor-size artifact. However, it does not produce a clean negative employment effect. Instead, it reinforces that the employment result is sensitive to scale and smoothing choices, while the large negative smoothed gaps are concentrated in the partial-window months.
 
 ## Recommendation
 

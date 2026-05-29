@@ -2,13 +2,17 @@
 
 This note records the current empirical hierarchy for the `RR_2018_01` pilot after reviewing classic SCM, moving-average specifications, ridge diagnostics, Augmented SCM, and Nonlinear SCM.
 
-## Main Economic Outcome
+## Selected Economic Short-Run Outcomes
 
-The active economic outcome is:
+The active economic short-run package now has three outcomes:
 
-- `formal_hiring_balance`.
+- Main outcome: `formal_hiring_balance`.
+- Secondary income outcome: `labor_income_real_pnadc`.
+- Secondary labor-market composition outcome: `formalization_rate_pnadc`.
 
-The pilot will focus on formal employment rather than carrying retail and services as coequal economic outcomes.
+The pilot will focus on short-run economic disruption rather than persistent post-treatment effects over the entire 2019-2020 period. For monthly employment, the main short-run window is the first six months after treatment, January to June 2019, with the first post-treatment year retained as a complementary window. For quarterly PNADc outcomes, the main short-run window is 2019.
+
+Formal employment remains the primary economic outcome because it is monthly and closest to the immediate labor-market adjustment. Real labor income and formalization rate are secondary PNADc extensions.
 
 ## Preferred Monthly Specification
 
@@ -25,6 +29,7 @@ Main specification:
 Main robustness:
 
 - Augmented SCM with post-treatment-clean 6-month moving average.
+- Augmented SCM with the post-treatment-clean 6-month moving average normalized per 1,000 inhabitants, used as a scale diagnostic.
 
 Baseline/diagnostic:
 
@@ -54,12 +59,17 @@ Retail and services are no longer active main economic outcomes:
 
 They may remain in appendix/exploratory material if useful, but the main pilot story should not be organized around them.
 
-## PNADc Outcomes Still To Test
+## PNADc Outcomes
 
-The next labor-market extension is quarterly PNADc:
+The PNADc extension is now narrowed to:
 
 - real labor income from all jobs;
-- possibly unemployment rate;
-- possibly formalization rate.
+- formalization rate.
 
-These outcomes have now been tested preliminarily with Augmented SCM. The first results are promising for unemployment and formalization, but the short quarterly pre-treatment path is fitted almost perfectly by the augmented correction. They should therefore remain pending secondary extensions until classic SCM diagnostics, placebo checks, and sensitivity to the augmented correction are reviewed.
+Real labor income is used with a post-treatment-clean 4-quarter moving average. Formalization rate is used in levels. Both remain secondary to formal employment because the quarterly pre-treatment path is shorter and the augmented correction can fit it very tightly.
+
+Unemployment remains available as an exploratory PNADc outcome, but it is not part of the current three-variable economic short-run package.
+
+The consolidated selected-output folder is:
+
+- `pilots/rr_2018_01/output/economic_short_run_selected/`

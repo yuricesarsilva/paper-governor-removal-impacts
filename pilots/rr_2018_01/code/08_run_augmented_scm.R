@@ -23,10 +23,18 @@ output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly")
 post_clean_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean")
 post_clean_ma12_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean_ma12")
 post_clean_full_window_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean_full_window")
+per_1000_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_per_1000")
+per_1000_full_window_output_dir <- file.path(
+  pilot_root,
+  "output",
+  "augmented_scm_monthly_per_1000_full_window"
+)
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(post_clean_output_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(post_clean_ma12_output_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(post_clean_full_window_output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(per_1000_output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(per_1000_full_window_output_dir, recursive = TRUE, showWarnings = FALSE)
 
 trailing_partial_mean <- function(x, window) {
   purrr::map_dbl(
@@ -57,6 +65,32 @@ add_ma6_columns <- function(data, reset_at_treatment = FALSE) {
     dplyr::ungroup()
 }
 
+add_per_1000_columns <- function(data, reset_at_treatment = FALSE) {
+  grouping_vars <- if (reset_at_treatment) {
+    c("state_abbrev", "analysis_period")
+  } else {
+    "state_abbrev"
+  }
+
+  data |>
+    dplyr::mutate(
+      formal_hiring_balance_per_1000 = 1000 * formal_hiring_balance / pnadc_population
+    ) |>
+    dplyr::group_by(dplyr::across(dplyr::all_of(grouping_vars))) |>
+    dplyr::arrange(period_date, .by_group = TRUE) |>
+    dplyr::mutate(
+      formal_hiring_balance_per_1000_ma6 = trailing_partial_mean(
+        formal_hiring_balance_per_1000,
+        6
+      ),
+      formal_hiring_balance_per_1000_ma12 = trailing_partial_mean(
+        formal_hiring_balance_per_1000,
+        12
+      )
+    ) |>
+    dplyr::ungroup()
+}
+
 panel_base <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
   dplyr::mutate(
     period_date = as.Date(period_date),
@@ -70,6 +104,7 @@ panel_base <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
 
 panel <- add_ma6_columns(panel_base, reset_at_treatment = FALSE)
 panel_post_clean <- add_ma6_columns(panel_base, reset_at_treatment = TRUE)
+panel_per_1000 <- add_per_1000_columns(panel_base, reset_at_treatment = TRUE)
 
 lambda_grid <- 10^seq(-4, 5, length.out = 60)
 
@@ -469,6 +504,48 @@ post_clean_full_window_summary <- dplyr::bind_rows(
   )
 )
 
+per_1000_outcomes <- c(
+  "formal_hiring_balance_per_1000",
+  "formal_hiring_balance_per_1000_ma6",
+  "formal_hiring_balance_per_1000_ma12"
+)
+
+per_1000_summary <- purrr::map_dfr(
+  per_1000_outcomes,
+  ~run_outcome(panel_per_1000, per_1000_output_dir, .x)
+)
+
+panel_per_1000_ma6_full_window <- panel_per_1000 |>
+  dplyr::mutate(
+    analysis_period = dplyr::case_when(
+      analysis_period == "post" &
+        period_date < as.Date("2019-06-01") ~ "post_partial_window_ma6",
+      TRUE ~ analysis_period
+    )
+  )
+
+panel_per_1000_ma12_full_window <- panel_per_1000 |>
+  dplyr::mutate(
+    analysis_period = dplyr::case_when(
+      analysis_period == "post" &
+        period_date < as.Date("2019-12-01") ~ "post_partial_window_ma12",
+      TRUE ~ analysis_period
+    )
+  )
+
+per_1000_full_window_summary <- dplyr::bind_rows(
+  run_outcome(
+    panel_per_1000_ma6_full_window,
+    per_1000_full_window_output_dir,
+    "formal_hiring_balance_per_1000_ma6"
+  ),
+  run_outcome(
+    panel_per_1000_ma12_full_window,
+    per_1000_full_window_output_dir,
+    "formal_hiring_balance_per_1000_ma12"
+  )
+)
+
 readr::write_csv(
   summary,
   file.path(output_dir, "augmented_scm_monthly_summary.csv"),
@@ -493,8 +570,22 @@ readr::write_csv(
   na = ""
 )
 
+readr::write_csv(
+  per_1000_summary,
+  file.path(per_1000_output_dir, "augmented_scm_monthly_summary.csv"),
+  na = ""
+)
+
+readr::write_csv(
+  per_1000_full_window_summary,
+  file.path(per_1000_full_window_output_dir, "augmented_scm_monthly_summary.csv"),
+  na = ""
+)
+
 message("RR 2018 augmented SCM monthly models completed.")
 message("Saved outputs to: ", output_dir)
 message("Saved post-clean outputs to: ", post_clean_output_dir)
 message("Saved post-clean MA12 outputs to: ", post_clean_ma12_output_dir)
 message("Saved post-clean full-window outputs to: ", post_clean_full_window_output_dir)
+message("Saved per-1000 outputs to: ", per_1000_output_dir)
+message("Saved per-1000 full-window outputs to: ", per_1000_full_window_output_dir)
