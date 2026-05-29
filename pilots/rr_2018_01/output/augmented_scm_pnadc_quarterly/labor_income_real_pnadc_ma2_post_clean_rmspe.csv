@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,outcome,scm_post_pre_rmspe_ratio,augmented_post_pre_rmspe_ratio
+129.5995642188584,55.30491143091438,132.30337936935825,2.611333557900328,-5.516092814914828,0.4556650213720042,25.892837625334153,-0.12534846619184298,labor_income_real_pnadc_ma2_post_clean,2.3433644655728485,50.66506305526831

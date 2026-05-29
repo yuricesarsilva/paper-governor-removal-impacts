@@ -20,7 +20,13 @@ monthly_panel_path <- file.path(
 )
 
 output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly")
+post_clean_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean")
+post_clean_ma12_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean_ma12")
+post_clean_full_window_output_dir <- file.path(pilot_root, "output", "augmented_scm_monthly_post_clean_full_window")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(post_clean_output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(post_clean_ma12_output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(post_clean_full_window_output_dir, recursive = TRUE, showWarnings = FALSE)
 
 trailing_partial_mean <- function(x, window) {
   purrr::map_dbl(
@@ -32,7 +38,26 @@ trailing_partial_mean <- function(x, window) {
   )
 }
 
-panel <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
+add_ma6_columns <- function(data, reset_at_treatment = FALSE) {
+  grouping_vars <- if (reset_at_treatment) {
+    c("state_abbrev", "analysis_period")
+  } else {
+    "state_abbrev"
+  }
+
+  data |>
+    dplyr::group_by(dplyr::across(dplyr::all_of(grouping_vars))) |>
+    dplyr::arrange(period_date, .by_group = TRUE) |>
+    dplyr::mutate(
+      formal_hiring_balance_ma6 = trailing_partial_mean(formal_hiring_balance, 6),
+      formal_hiring_balance_ma12 = trailing_partial_mean(formal_hiring_balance, 12),
+      retail_volume_index_ma6 = trailing_partial_mean(retail_volume_index, 6),
+      services_volume_index_ma6 = trailing_partial_mean(services_volume_index, 6)
+    ) |>
+    dplyr::ungroup()
+}
+
+panel_base <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
   dplyr::mutate(
     period_date = as.Date(period_date),
     state_abbrev = as.character(state_abbrev),
@@ -41,14 +66,10 @@ panel <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
     pnadc_predictor_valid = as.logical(pnadc_predictor_valid)
   ) |>
   dplyr::filter(monthly_main_window) |>
-  dplyr::arrange(state_abbrev, period_date) |>
-  dplyr::group_by(state_abbrev) |>
-  dplyr::mutate(
-    formal_hiring_balance_ma6 = trailing_partial_mean(formal_hiring_balance, 6),
-    retail_volume_index_ma6 = trailing_partial_mean(retail_volume_index, 6),
-    services_volume_index_ma6 = trailing_partial_mean(services_volume_index, 6)
-  ) |>
-  dplyr::ungroup()
+  dplyr::arrange(state_abbrev, period_date)
+
+panel <- add_ma6_columns(panel_base, reset_at_treatment = FALSE)
+panel_post_clean <- add_ma6_columns(panel_base, reset_at_treatment = TRUE)
 
 lambda_grid <- 10^seq(-4, 5, length.out = 60)
 
@@ -304,25 +325,25 @@ fit_augmented_scm <- function(data, outcome) {
   )
 }
 
-run_outcome <- function(outcome) {
+run_outcome <- function(data, output_path, outcome) {
   outcome_slug <- make_slug(outcome)
-  fit <- fit_augmented_scm(panel, outcome)
+  fit <- fit_augmented_scm(data, outcome)
 
   readr::write_csv(
     fit$path,
-    file.path(output_dir, paste0(outcome_slug, "_path.csv")),
+    file.path(output_path, paste0(outcome_slug, "_path.csv")),
     na = ""
   )
 
   readr::write_csv(
     fit$weights,
-    file.path(output_dir, paste0(outcome_slug, "_scm_weights.csv")),
+    file.path(output_path, paste0(outcome_slug, "_scm_weights.csv")),
     na = ""
   )
 
   readr::write_csv(
     fit$rmspe,
-    file.path(output_dir, paste0(outcome_slug, "_rmspe.csv")),
+    file.path(output_path, paste0(outcome_slug, "_rmspe.csv")),
     na = ""
   )
 
@@ -342,7 +363,7 @@ run_outcome <- function(outcome) {
     ggplot2::theme(legend.position = "bottom")
 
   ggplot2::ggsave(
-    file.path(output_dir, paste0(outcome_slug, "_treated_scm_augmented.png")),
+    file.path(output_path, paste0(outcome_slug, "_treated_scm_augmented.png")),
     path_plot,
     width = 9,
     height = 5,
@@ -375,7 +396,7 @@ run_outcome <- function(outcome) {
     ggplot2::theme(legend.position = "bottom")
 
   ggplot2::ggsave(
-    file.path(output_dir, paste0(outcome_slug, "_gaps.png")),
+    file.path(output_path, paste0(outcome_slug, "_gaps.png")),
     gap_plot,
     width = 9,
     height = 5,
@@ -395,7 +416,58 @@ outcomes <- c(
   "services_volume_index_ma6"
 )
 
-summary <- purrr::map_dfr(outcomes, run_outcome)
+summary <- purrr::map_dfr(outcomes, ~run_outcome(panel, output_dir, .x))
+
+post_clean_outcomes <- c(
+  "formal_hiring_balance_ma6",
+  "retail_volume_index_ma6",
+  "services_volume_index_ma6"
+)
+
+post_clean_summary <- purrr::map_dfr(
+  post_clean_outcomes,
+  ~run_outcome(panel_post_clean, post_clean_output_dir, .x)
+)
+
+post_clean_ma12_outcomes <- c(
+  "formal_hiring_balance_ma12"
+)
+
+post_clean_ma12_summary <- purrr::map_dfr(
+  post_clean_ma12_outcomes,
+  ~run_outcome(panel_post_clean, post_clean_ma12_output_dir, .x)
+)
+
+panel_post_clean_full_window <- panel_post_clean |>
+  dplyr::mutate(
+    analysis_period = dplyr::case_when(
+      analysis_period == "post" &
+        period_date < as.Date("2019-06-01") ~ "post_partial_window_ma6",
+      TRUE ~ analysis_period
+    )
+  )
+
+panel_post_clean_ma12_full_window <- panel_post_clean |>
+  dplyr::mutate(
+    analysis_period = dplyr::case_when(
+      analysis_period == "post" &
+        period_date < as.Date("2019-12-01") ~ "post_partial_window_ma12",
+      TRUE ~ analysis_period
+    )
+  )
+
+post_clean_full_window_summary <- dplyr::bind_rows(
+  run_outcome(
+    panel_post_clean_full_window,
+    post_clean_full_window_output_dir,
+    "formal_hiring_balance_ma6"
+  ),
+  run_outcome(
+    panel_post_clean_ma12_full_window,
+    post_clean_full_window_output_dir,
+    "formal_hiring_balance_ma12"
+  )
+)
 
 readr::write_csv(
   summary,
@@ -403,5 +475,26 @@ readr::write_csv(
   na = ""
 )
 
+readr::write_csv(
+  post_clean_summary,
+  file.path(post_clean_output_dir, "augmented_scm_monthly_summary.csv"),
+  na = ""
+)
+
+readr::write_csv(
+  post_clean_ma12_summary,
+  file.path(post_clean_ma12_output_dir, "augmented_scm_monthly_summary.csv"),
+  na = ""
+)
+
+readr::write_csv(
+  post_clean_full_window_summary,
+  file.path(post_clean_full_window_output_dir, "augmented_scm_monthly_summary.csv"),
+  na = ""
+)
+
 message("RR 2018 augmented SCM monthly models completed.")
 message("Saved outputs to: ", output_dir)
+message("Saved post-clean outputs to: ", post_clean_output_dir)
+message("Saved post-clean MA12 outputs to: ", post_clean_ma12_output_dir)
+message("Saved post-clean full-window outputs to: ", post_clean_full_window_output_dir)

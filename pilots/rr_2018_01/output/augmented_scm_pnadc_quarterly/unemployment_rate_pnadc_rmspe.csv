@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,outcome,scm_post_pre_rmspe_ratio,augmented_post_pre_rmspe_ratio
+0.05040745021517979,0.010284041423372848,0.04893663961243718,5.8442631326894245e-06,0.04934583143796972,6.988384697308674e-5,0.04785266693656154,4.830399297974595e-8,unemployment_rate_pnadc,4.901521506964886,8373.449056171676

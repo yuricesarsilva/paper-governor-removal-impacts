@@ -1,2 +1,2 @@
-rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,base_outcome,outcome,moving_average_window,post_pre_rmspe_ratio
-6.463903492195959,4.5090836194742066,-6.104690329126512,-2.242912100718204,services_volume_index,services_volume_index_ma3,3,1.4335293016698811
+rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,base_outcome,outcome,moving_average_window,moving_average_variant,post_pre_rmspe_ratio
+6.463903492195959,4.5090836194742066,-6.104690329126512,-2.242912100718204,services_volume_index,services_volume_index_ma3,3,standard_trailing,1.4335293016698811

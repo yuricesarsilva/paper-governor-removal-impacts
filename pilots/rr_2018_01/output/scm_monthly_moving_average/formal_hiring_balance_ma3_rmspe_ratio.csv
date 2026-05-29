@@ -1,2 +1,2 @@
-rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,base_outcome,outcome,moving_average_window,post_pre_rmspe_ratio
-2414.9872293420253,979.3700301954907,-815.9816957680505,160.75403732579207,formal_hiring_balance,formal_hiring_balance_ma3,3,2.465857801325586
+rmspe_post,rmspe_pre,mean_gap_post,mean_gap_pre,base_outcome,outcome,moving_average_window,moving_average_variant,post_pre_rmspe_ratio
+2414.9872293420253,979.3700301954907,-815.9816957680505,160.75403732579207,formal_hiring_balance,formal_hiring_balance_ma3,3,standard_trailing,2.465857801325586

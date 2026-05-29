@@ -289,21 +289,45 @@ Padroes menos confiaveis:
 - Ridge puro em varejo parece extrapolar.
 - Medias moveis com ridge produzem ajuste pre quase perfeito, mas isso aumenta mecanicamente os ratios pos/pre e reduz interpretabilidade.
 
-## 8. Melhor Especificacao Candidata
+## 8. Hierarquia Empirica Atual
 
-Para o piloto mensal, a especificacao mais promissora e:
+A hierarquia atual do piloto passa a priorizar uma narrativa economica mais concentrada em mercado de trabalho formal.
 
-- Augmented SCM;
-- outcomes em nivel como referencia principal;
-- versoes MM 6 meses como robustez visual/metodologica;
-- SCM classico mantido como baseline transparente.
+Outcome economico principal:
 
-Proposta de hierarquia:
+- `formal_hiring_balance`.
 
-1. SCM classico: baseline transparente.
-2. Augmented SCM em nivel: especificacao principal candidata.
-3. Augmented SCM com MM 6 meses: robustez para ruido mensal.
-4. Ridge puro: diagnostico de ajuste, nao resultado principal.
+Especificacao principal:
+
+- Augmented SCM em nivel.
+
+Robustez principal de suavizacao:
+
+- Augmented SCM com media movel de 6 meses pos-tratamento limpa, reiniciando a janela em `2019-01`.
+
+Baseline/diagnostico transparente:
+
+- SCM classico.
+
+Outcomes economicos secundarios:
+
+- `retail_volume_index` e `services_volume_index` deixam de fazer parte da hierarquia principal.
+- Podem permanecer como material exploratorio ou apendice, mas nao devem organizar a narrativa central do piloto.
+
+Metodos abandonados como rotas ativas:
+
+- Ridge diagnostics.
+- Nonlinear SCM.
+
+Esses metodos foram uteis para diagnostico, mas adicionam complexidade interpretativa. No caso do Nonlinear SCM, os resultados para emprego formal foram sensiveis a escala e nao fortaleceram a evidencia principal. No caso do ridge, a extrapolacao e os pesos com sinais mistos reduzem a interpretabilidade.
+
+Extensoes PNADc ainda pendentes:
+
+- renda real de todos os trabalhos;
+- possivelmente taxa de desemprego;
+- possivelmente taxa de formalizacao.
+
+Esses outcomes trimestrais ainda precisam ser testados antes de qualquer decisao sobre inclusao no corpo principal do artigo.
 
 ## 9. Proximos Passos
 
@@ -313,9 +337,10 @@ Antes de transformar o piloto em resultado de artigo:
    - `*_treated_scm_augmented.png`
    - `*_gaps.png`
 2. Rodar placebos adaptados para Augmented SCM.
-3. Produzir tabelas compactas de gaps por ano.
-4. Repetir o desenho para outcomes fiscais bimestrais.
-5. Decidir se o caso `RR_2018_01` sera apresentado como piloto exploratorio ou como parte do conjunto principal/extendido de resultados.
+3. Produzir tabelas compactas de gaps por ano para emprego formal.
+4. Testar outcomes trimestrais PNADc, especialmente renda real de todos os trabalhos.
+5. Repetir o desenho para outcomes fiscais bimestrais, se a narrativa fiscal permanecer no escopo.
+6. Decidir se o caso `RR_2018_01` sera apresentado como piloto exploratorio ou como parte do conjunto principal/extendido de resultados.
 
 ## 10. Arquivos Principais de Saida
 
@@ -336,6 +361,14 @@ Ridge diagnostico:
 - `pilots/rr_2018_01/output/employment_ridge_scm/`
 - `pilots/rr_2018_01/output/activity_ridge_scm/`
 
+Nonlinear SCM:
+
+- `pilots/rr_2018_01/output/nonlinear_scm_monthly/`
+- `pilots/rr_2018_01/output/nonlinear_scm_monthly_employment_per_100k/`
+
+These outputs are retained as exploratory diagnostics but are no longer active routes in the preferred hierarchy.
+
 Augmented SCM:
 
 - `pilots/rr_2018_01/output/augmented_scm_monthly/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean/`

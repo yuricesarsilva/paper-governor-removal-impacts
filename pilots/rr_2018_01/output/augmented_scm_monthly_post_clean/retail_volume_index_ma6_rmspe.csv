@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,outcome,scm_post_pre_rmspe_ratio,augmented_post_pre_rmspe_ratio
+3.3974413684626774,3.3593595590292016,3.6372705228013076,0.36627514310611975,-2.6790608270073206,-0.5087469739578199,0.4576399142742377,-0.004139032454719427,retail_volume_index_ma6,1.0113360325872591,9.930432330068035

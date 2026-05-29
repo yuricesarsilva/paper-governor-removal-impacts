@@ -11,6 +11,7 @@ Script:
 Output folder:
 
 - `pilots/rr_2018_01/output/scm_monthly_moving_average/`
+- `pilots/rr_2018_01/output/scm_monthly_moving_average_post_clean/`
 
 ## Smoothing Rule
 
@@ -26,6 +27,13 @@ Windows tested:
 - 6-month trailing moving average.
 
 At the beginning of each state series, the script uses partial trailing windows so that early 2016 observations are not dropped.
+
+The `scm_monthly_moving_average_post_clean` outputs use the same trailing-window rule in the pre-treatment period, but restart the trailing window at the beginning of the post-treatment period. This avoids carrying pre-treatment months into the first post-treatment moving averages:
+
+- January 2019 uses only January 2019.
+- February 2019 uses January-February 2019.
+- March 2019 is the first full 3-month post-treatment moving average.
+- June 2019 is the first full 6-month post-treatment moving average.
 
 ## RMSPE Comparison
 

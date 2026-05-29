@@ -5,6 +5,10 @@ if (!requireNamespace("quadprog", quietly = TRUE)) {
   stop("Missing required package: quadprog")
 }
 
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  stop("Missing required package: ggplot2")
+}
+
 pilot_id <- "rr_2018_01"
 treated_state <- "RR"
 pilot_root <- file.path(root_dir, "pilots", pilot_id)
@@ -16,7 +20,9 @@ monthly_panel_path <- file.path(
 )
 
 output_dir <- file.path(pilot_root, "output", "scm_monthly_moving_average")
+post_clean_output_dir <- file.path(pilot_root, "output", "scm_monthly_moving_average_post_clean")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+dir.create(post_clean_output_dir, recursive = TRUE, showWarnings = FALSE)
 
 panel <- readr::read_csv(monthly_panel_path, show_col_types = FALSE) |>
   dplyr::mutate(
@@ -39,25 +45,38 @@ trailing_partial_mean <- function(x, window) {
   )
 }
 
+add_moving_average_columns <- function(data, reset_at_treatment = FALSE) {
+  grouping_vars <- if (reset_at_treatment) {
+    c("state_abbrev", "analysis_period")
+  } else {
+    "state_abbrev"
+  }
+
+  for (window in c(3, 6)) {
+    data <- data |>
+      dplyr::group_by(dplyr::across(dplyr::all_of(grouping_vars))) |>
+      dplyr::arrange(period_date, .by_group = TRUE) |>
+      dplyr::mutate(
+        dplyr::across(
+          dplyr::all_of(base_outcomes),
+          ~trailing_partial_mean(.x, window),
+          .names = "{.col}_ma{window}"
+        )
+      ) |>
+      dplyr::ungroup()
+  }
+
+  data
+}
+
 base_outcomes <- c(
   "formal_hiring_balance",
   "retail_volume_index",
   "services_volume_index"
 )
 
-for (window in c(3, 6)) {
-  panel <- panel |>
-    dplyr::group_by(state_abbrev) |>
-    dplyr::arrange(period_date, .by_group = TRUE) |>
-    dplyr::mutate(
-      dplyr::across(
-        dplyr::all_of(base_outcomes),
-        ~trailing_partial_mean(.x, window),
-        .names = "{.col}_ma{window}"
-      )
-    ) |>
-    dplyr::ungroup()
-}
+panel_standard_ma <- add_moving_average_columns(panel, reset_at_treatment = FALSE)
+panel_post_clean_ma <- add_moving_average_columns(panel, reset_at_treatment = TRUE)
 
 make_slug <- function(x) {
   x |>
@@ -239,20 +258,20 @@ fit_scm <- function(data, outcome, covariates, treated_state_code, donor_states)
   )
 }
 
-run_one_smoothed_outcome <- function(base_outcome, window) {
+run_one_smoothed_outcome <- function(data, output_path, base_outcome, window, moving_average_variant) {
   suffix <- paste0("_ma", window)
   outcome <- paste0(base_outcome, suffix)
   covariates <- paste0(base_outcomes, suffix)
   outcome_slug <- make_slug(outcome)
 
-  donor_states <- panel |>
+  donor_states <- data |>
     dplyr::filter(donor_pool_main) |>
     dplyr::distinct(state_abbrev) |>
     dplyr::arrange(state_abbrev) |>
     dplyr::pull(state_abbrev)
 
   fit <- fit_scm(
-    data = panel,
+    data = data,
     outcome = outcome,
     covariates = covariates,
     treated_state_code = treated_state,
@@ -269,25 +288,69 @@ run_one_smoothed_outcome <- function(base_outcome, window) {
       base_outcome = base_outcome,
       outcome = outcome,
       moving_average_window = window,
+      moving_average_variant = moving_average_variant,
       post_pre_rmspe_ratio = rmspe_post / rmspe_pre
     )
 
   readr::write_csv(
     fit$path,
-    file.path(output_dir, paste0(outcome_slug, "_treated_synthetic_path.csv")),
+    file.path(output_path, paste0(outcome_slug, "_treated_synthetic_path.csv")),
     na = ""
   )
 
   readr::write_csv(
     fit$weights,
-    file.path(output_dir, paste0(outcome_slug, "_weights.csv")),
+    file.path(output_path, paste0(outcome_slug, "_weights.csv")),
     na = ""
   )
 
   readr::write_csv(
     rmspe_wide,
-    file.path(output_dir, paste0(outcome_slug, "_rmspe_ratio.csv")),
+    file.path(output_path, paste0(outcome_slug, "_rmspe_ratio.csv")),
     na = ""
+  )
+
+  path_plot <- ggplot2::ggplot(fit$path, ggplot2::aes(x = period_date)) +
+    ggplot2::geom_line(ggplot2::aes(y = treated_value, color = "RR"), linewidth = 0.8) +
+    ggplot2::geom_line(ggplot2::aes(y = synthetic_value, color = "Synthetic RR"), linewidth = 0.8) +
+    ggplot2::geom_vline(xintercept = as.Date("2019-01-01"), linetype = "dashed", color = "gray35") +
+    ggplot2::scale_color_manual(values = c("RR" = "#1f6f8b", "Synthetic RR" = "#c65a2e")) +
+    ggplot2::labs(
+      title = paste0("RR 2018 SCM: ", outcome),
+      x = NULL,
+      y = outcome,
+      color = NULL
+    ) +
+    ggplot2::theme_minimal(base_size = 11) +
+    ggplot2::theme(legend.position = "bottom")
+
+  ggplot2::ggsave(
+    file.path(output_path, paste0(outcome_slug, "_treated_vs_synthetic.png")),
+    path_plot,
+    width = 9,
+    height = 5,
+    dpi = 300,
+    bg = "white"
+  )
+
+  gap_plot <- ggplot2::ggplot(fit$path, ggplot2::aes(x = period_date, y = gap)) +
+    ggplot2::geom_hline(yintercept = 0, color = "gray70", linewidth = 0.3) +
+    ggplot2::geom_line(color = "#1f6f8b", linewidth = 0.8) +
+    ggplot2::geom_vline(xintercept = as.Date("2019-01-01"), linetype = "dashed", color = "gray35") +
+    ggplot2::labs(
+      title = paste0("RR 2018 SCM gap: ", outcome),
+      x = NULL,
+      y = "RR - Synthetic RR"
+    ) +
+    ggplot2::theme_minimal(base_size = 11)
+
+  ggplot2::ggsave(
+    file.path(output_path, paste0(outcome_slug, "_gap.png")),
+    gap_plot,
+    width = 9,
+    height = 5,
+    dpi = 300,
+    bg = "white"
   )
 
   rmspe_wide
@@ -296,7 +359,32 @@ run_one_smoothed_outcome <- function(base_outcome, window) {
 moving_average_summary <- purrr::map_dfr(
   base_outcomes,
   function(base_outcome) {
-    purrr::map_dfr(c(3, 6), ~run_one_smoothed_outcome(base_outcome, .x))
+    purrr::map_dfr(
+      c(3, 6),
+      ~run_one_smoothed_outcome(
+        data = panel_standard_ma,
+        output_path = output_dir,
+        base_outcome = base_outcome,
+        window = .x,
+        moving_average_variant = "standard_trailing"
+      )
+    )
+  }
+)
+
+post_clean_moving_average_summary <- purrr::map_dfr(
+  base_outcomes,
+  function(base_outcome) {
+    purrr::map_dfr(
+      c(3, 6),
+      ~run_one_smoothed_outcome(
+        data = panel_post_clean_ma,
+        output_path = post_clean_output_dir,
+        base_outcome = base_outcome,
+        window = .x,
+        moving_average_variant = "post_clean_trailing"
+      )
+    )
   }
 )
 
@@ -316,6 +404,7 @@ original_rmspe <- purrr::map_dfr(
         base_outcome = base_outcome,
         outcome = base_outcome,
         moving_average_window = 1L,
+        moving_average_variant = "level",
         rmspe_pre = pre,
         rmspe_post = post,
         mean_gap_pre = NA_real_,
@@ -331,11 +420,24 @@ comparison <- dplyr::bind_rows(
 ) |>
   dplyr::arrange(base_outcome, moving_average_window)
 
+post_clean_comparison <- dplyr::bind_rows(
+  original_rmspe,
+  post_clean_moving_average_summary
+) |>
+  dplyr::arrange(base_outcome, moving_average_window)
+
 readr::write_csv(
   comparison,
   file.path(output_dir, "moving_average_rmspe_comparison.csv"),
   na = ""
 )
 
+readr::write_csv(
+  post_clean_comparison,
+  file.path(post_clean_output_dir, "moving_average_rmspe_comparison.csv"),
+  na = ""
+)
+
 message("RR 2018 monthly moving-average SCM completed.")
 message("Saved outputs to: ", output_dir)
+message("Saved post-clean outputs to: ", post_clean_output_dir)

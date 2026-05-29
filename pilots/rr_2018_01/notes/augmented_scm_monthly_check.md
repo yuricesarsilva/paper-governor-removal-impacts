@@ -11,6 +11,9 @@ Script:
 Output folder:
 
 - `pilots/rr_2018_01/output/augmented_scm_monthly/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean_ma12/`
+- `pilots/rr_2018_01/output/augmented_scm_monthly_post_clean_full_window/`
 
 ## Method
 
@@ -35,6 +38,15 @@ Level outcomes:
 - `retail_volume_index_ma6`
 - `services_volume_index_ma6`
 
+The `augmented_scm_monthly_post_clean` output reruns only the 6-month moving-average outcomes with the moving-average window restarted in the post-treatment period. This avoids carrying pre-treatment months into the first post-treatment smoothed outcomes.
+
+An additional annual-smoothing check uses `formal_hiring_balance_ma12`, also with the moving-average window restarted in the post-treatment period.
+
+The `augmented_scm_monthly_post_clean_full_window` output keeps the same pre-treatment fit but evaluates the post-treatment period only after the moving-average window is complete:
+
+- `formal_hiring_balance_ma6`: post period starts in `2019-06`.
+- `formal_hiring_balance_ma12`: post period starts in `2019-12`.
+
 ## Fit Summary
 
 | Outcome | SCM pre RMSPE | Augmented pre RMSPE | SCM post RMSPE | Augmented post RMSPE |
@@ -58,6 +70,7 @@ Average augmented gaps by year:
 | `retail_volume_index_ma6` | 2.08 | -2.64 |
 | `services_volume_index` | -1.57 | -9.68 |
 | `services_volume_index_ma6` | -2.23 | -6.34 |
+| `formal_hiring_balance_ma12` post-clean | -721.4 | 28.1 |
 
 ## Interpretation
 
@@ -71,6 +84,17 @@ Compared with the pure ridge diagnostic, the retail result is less suspicious:
 Services remains consistently negative across specifications.
 
 Employment in levels remains negative in both 2019 and 2020 under Augmented SCM, while the 6-month moving-average employment outcome is negative in 2019 and positive in 2020. This suggests the employment result is sensitive to smoothing and should be inspected visually.
+
+The post-clean 12-month moving average sharpens this pattern: it is strongly negative in 2019 and close to zero in 2020. This should be treated as an annual-smoothing robustness check rather than the main smoothed specification, because the monthly hierarchy uses the 6-month moving average as the main smoothing analogue to the quarterly PNADc MA2.
+
+When the post-treatment evaluation is restricted to full moving-average windows, the smoothed employment gaps are much smaller:
+
+| Outcome | First full post window | Augmented post mean gap |
+| --- | --- | ---: |
+| `formal_hiring_balance_ma6` | `2019-06` | 4.6 |
+| `formal_hiring_balance_ma12` | `2019-12` | 11.3 |
+
+This confirms that much of the large smoothed negative gap comes from the ramp-up months before the moving-average window is complete.
 
 ## Recommendation
 
@@ -86,3 +110,5 @@ The next step should be visual inspection of:
 - `*_gaps.png`;
 
 followed by deciding which outcome transformation is credible enough for the first polished pilot result.
+
+For the moving-average robustness, prefer the post-clean Augmented SCM outputs when discussing short-run post-treatment dynamics.

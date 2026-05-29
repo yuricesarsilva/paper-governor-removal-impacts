@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,outcome,scm_post_pre_rmspe_ratio,augmented_post_pre_rmspe_ratio
+1678.3804663713302,828.5044612258185,531.7205134001745,273.61305776880994,113.83226772673278,232.140474418202,-116.4668248560548,28.48807629830736,formal_hiring_balance,2.0257953275086447,1.9433301821781221

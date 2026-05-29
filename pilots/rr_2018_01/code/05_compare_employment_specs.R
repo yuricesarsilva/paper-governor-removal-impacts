@@ -33,6 +33,23 @@ trailing_partial_sum <- function(x, window) {
   )
 }
 
+add_employment_moving_averages <- function(data, reset_at_treatment = FALSE, suffix = "") {
+  grouping_vars <- if (reset_at_treatment) {
+    c("state_abbrev", "analysis_period")
+  } else {
+    "state_abbrev"
+  }
+
+  data |>
+    dplyr::group_by(dplyr::across(dplyr::all_of(grouping_vars))) |>
+    dplyr::arrange(period_date, .by_group = TRUE) |>
+    dplyr::mutate(
+      "{paste0('formal_hiring_balance_ma3', suffix)}" := trailing_partial_mean(formal_hiring_balance, 3),
+      "{paste0('formal_hiring_balance_ma6', suffix)}" := trailing_partial_mean(formal_hiring_balance, 6)
+    ) |>
+    dplyr::ungroup()
+}
+
 panel <- readr::read_csv(panel_path, show_col_types = FALSE) |>
   dplyr::mutate(
     period_date = as.Date(period_date),
@@ -40,10 +57,10 @@ panel <- readr::read_csv(panel_path, show_col_types = FALSE) |>
   ) |>
   dplyr::filter(monthly_main_window) |>
   dplyr::arrange(state_abbrev, period_date) |>
+  add_employment_moving_averages(reset_at_treatment = FALSE) |>
+  add_employment_moving_averages(reset_at_treatment = TRUE, suffix = "_post_clean") |>
   dplyr::group_by(state_abbrev) |>
   dplyr::mutate(
-    formal_hiring_balance_ma3 = trailing_partial_mean(formal_hiring_balance, 3),
-    formal_hiring_balance_ma6 = trailing_partial_mean(formal_hiring_balance, 6),
     formal_hiring_balance_6m_sum = trailing_partial_sum(formal_hiring_balance, 6),
     formal_hiring_balance_cumulative = cumsum(formal_hiring_balance)
   ) |>
@@ -55,6 +72,8 @@ spec_paths <- tibble::tribble(
   "level_semester_predictors", "formal_hiring_balance", file.path(pilot_root, "output", "employment_alternative_specs", "level_semester_predictors", "treated_synthetic_path.csv"),
   "moving_average_3m", "formal_hiring_balance_ma3", file.path(pilot_root, "output", "scm_monthly_moving_average", "formal_hiring_balance_ma3_treated_synthetic_path.csv"),
   "moving_average_6m", "formal_hiring_balance_ma6", file.path(pilot_root, "output", "scm_monthly_moving_average", "formal_hiring_balance_ma6_treated_synthetic_path.csv"),
+  "moving_average_3m_post_clean", "formal_hiring_balance_ma3_post_clean", file.path(pilot_root, "output", "scm_monthly_moving_average_post_clean", "formal_hiring_balance_ma3_treated_synthetic_path.csv"),
+  "moving_average_6m_post_clean", "formal_hiring_balance_ma6_post_clean", file.path(pilot_root, "output", "scm_monthly_moving_average_post_clean", "formal_hiring_balance_ma6_treated_synthetic_path.csv"),
   "six_month_sum", "formal_hiring_balance_6m_sum", file.path(pilot_root, "output", "employment_alternative_specs", "six_month_sum", "treated_synthetic_path.csv"),
   "cumulative_since_2016", "formal_hiring_balance_cumulative", file.path(pilot_root, "output", "employment_alternative_specs", "cumulative_since_2016", "treated_synthetic_path.csv")
 )

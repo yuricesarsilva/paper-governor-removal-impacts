@@ -29,15 +29,40 @@ Quarterly PNADc series:
 - Transition quarter excluded from the main specification: `2018Q4`
 - Monthly rows from `2018-10` and `2018-11` remain in the monthly pre-treatment window, but PNADc covariates from `2018Q4` are flagged with `pnadc_predictor_valid = FALSE` so they can be excluded from predictor construction.
 
-## Outcomes
+## Current Outcome Hierarchy
 
-The pilot will estimate several outcome families in parallel.
+The pilot will focus on formal employment as the main economic outcome.
 
-Monthly outcomes:
+Main monthly economic outcome:
 
 - `formal_hiring_balance` from CAGED
+
+Main specification:
+
+- Augmented SCM in levels.
+
+Main smoothing robustness:
+
+- Augmented SCM with the post-treatment-clean 6-month moving average.
+
+Baseline diagnostic:
+
+- Classic SCM, kept as a transparent benchmark for the preferred Augmented SCM results.
+
+Secondary outcomes not kept as active main economic outcomes:
+
 - `retail_volume_index` from PMC
 - `services_volume_index` from PMS
+
+These activity outcomes may remain as appendix material or exploratory diagnostics, but they are no longer part of the main pilot hierarchy.
+
+Quarterly labor outcomes to test next:
+
+- PNADc real labor income from all jobs.
+- Possibly PNADc unemployment rate.
+- Possibly PNADc formalization rate.
+
+These PNADc outcomes have not yet been tested under the preferred hierarchy and should be treated as pending extensions.
 
 Bimonthly fiscal outcomes:
 
@@ -113,14 +138,23 @@ Open implementation choice:
 
 Main method:
 
-- Classic Synthetic Control Method.
+- Augmented Synthetic Control Method for the monthly formal-employment outcome in levels.
 
 Diagnostics and robustness:
 
+- Augmented SCM with post-treatment-clean 6-month moving average;
+- Classic SCM as transparent baseline;
 - placebo tests by donor UF;
 - leave-one-out donor sensitivity;
 - alternative treatment timing;
 - alternative post-treatment window.
+
+Methods no longer kept as active routes:
+
+- Ridge diagnostics.
+- Nonlinear SCM.
+
+These were useful exploratory checks, but they are not part of the preferred empirical hierarchy because they add interpretive complexity and, in this pilot, do not strengthen the formal-employment result enough to justify inclusion.
 
 ## CAGED Break Handling
 
