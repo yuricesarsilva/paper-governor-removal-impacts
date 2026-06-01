@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,n_periods_post,n_periods_pre,outcome,donor_count
+17.852028109712734,13.770109082936075,18.657619725332125,2.768762800131817,-13.905597723795378,-1.7516243991872993,-14.384319538557756,0.14953737224439861,9,20,public_investment_liquidated_real_pc_ma4_clean,26

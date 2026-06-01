@@ -305,7 +305,9 @@ investment_cumulative <- standardized |>
   dplyr::filter(
     source_annex_name == "annex06",
     cod_conta == "RREO6Investimentos",
-    column_norm == "despesas liquidadas"
+    stringr::str_detect(column_norm, "despesas liquidadas"),
+    column_norm == "despesas liquidadas" |
+      stringr::str_detect(column_norm, paste0("/ ", year, "$"))
   ) |>
   dplyr::transmute(
     uf,

@@ -1,0 +1,2 @@
+scm_rmspe_crisis,scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_crisis,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_crisis,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_crisis,augmented_mean_gap_post,augmented_mean_gap_pre,n_periods_crisis,n_periods_post,n_periods_pre,outcome,donor_count
+8.6015917881955275,9.578446776044933,5.571919301385907,8.051935239953899,8.554306152198597,2.8056117493393473,-8.514731772543776,-6.937989896900849,-0.40995035451673484,5.0864114538708805,-5.148646824251993,0.25887304437967945,2,24,36,retail_volume_index,26

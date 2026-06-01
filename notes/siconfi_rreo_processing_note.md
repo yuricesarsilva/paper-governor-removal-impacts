@@ -366,8 +366,10 @@ Current validation result:
 - Download registry: 5,832 successful requests and 0 failed requests.
 - Total revenue is complete in the panel.
 - Total liquidated expenditure is missing in 5 UF-bimesters.
-- Investment is unavailable for all UF-bimesters in 2015-2017 under the current Anexo 06 mapping, and has a few later gaps. The validation found 493 missing investment rows. This should be treated as source coverage rather than imputed mechanically.
-- One negative derived investment flow is flagged: Mato Grosso do Sul in 2020B6. It is retained and flagged because the flow is computed from a cumulative accounting series and can reflect revisions or reversals.
+- The initial investment parser missed most 2015-2017 values because earlier Anexo 06 layouts label the current-year investment column as `DESPESAS LIQUIDADAS ATE O BIMESTRE / YYYY`, rather than simply `DESPESAS LIQUIDADAS`.
+- The repair script `code/01_build_panel/08_repair_siconfi_investment_from_raw.R` recovers investment from the raw Anexo 06 files using a broader current-year liquidated-investment column rule.
+- After raw repair, missing investment rows fell from 493 to 10. Internal gaps are then corrected with adjacent-period interpolation, flagged in the data. After this step, only `RR/2026B1` remains missing because the current 2026 endpoint has no following observed Roraima bimester.
+- Four negative derived investment flows are flagged after repair: `CE/2015B1`, `MT/2015B2`, `CE/2015B5`, and `MS/2020B6`. They are retained and flagged because the flow is computed from cumulative accounting data and can reflect revisions, reversals, or reporting corrections.
 
 Practical use rule:
 

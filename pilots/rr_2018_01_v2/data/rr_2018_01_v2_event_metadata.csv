@@ -1,0 +1,2 @@
+event_id,state_abbrev,state_name,governor_name,removal_date,instability_start_date,instability_start_type,instability_start_confidence,instability_duration_days,instability_coding_notes
+RR_2018_01,RR,Roraima,Suely Campos,2018-12-10,2018-11-07,pgr_intervention_request_public,medium,33,PGR request is coded as public instability onset; decree/removal occurred on 2018-12-10 and this is not an individual legal process against Suely.

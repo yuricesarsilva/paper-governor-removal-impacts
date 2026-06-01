@@ -13,6 +13,7 @@ This file records the main methodological decisions adopted for the project so f
 - `Institutional rupture` means an event that removed the sitting governor from the exercise of power before the legal end of the mandate.
 - The concept includes electoral cassation, impeachment, federal intervention, and judicial suspension.
 - The treatment date is the date on which the governor effectively left power.
+- The project will now also track a pre-removal crisis period when source evidence permits. The main treatment date remains `removal_date`, but `instability_start_date` identifies the first formal, public, procedurally relevant process that threatened the governor's tenure.
 
 ## Event inventory
 
@@ -39,6 +40,7 @@ This file records the main methodological decisions adopted for the project so f
 - The preferred paper design is economic and public-finance oriented.
 - Annual GDP is not the main outcome because it is too low-frequency for the expected timing of the effects.
 - The project prioritizes monthly or bimonthly outcomes whenever feasible.
+- The preferred interpretation distinguishes three possible mechanisms: firm uncertainty and private investment; household precaution and consumption; and public-sector paralysis or adjustment by the incoming administration. The detailed mapping of variables to these channels is documented in `notes/channels_and_instability_design.md`.
 
 ## Preferred outcomes
 
@@ -79,9 +81,9 @@ This file records the main methodological decisions adopted for the project so f
 - Siconfi/RREO via the current API route does not provide the pre-2015 dynamic fiscal covariates needed for the early `2009/2010` cases. Those cases require either non-Siconfi fiscal sources or specifications without dynamic Siconfi fiscal predictors.
 - Total revenue and fiscal ratio variables are complete in the validated panel.
 - Total liquidated expenditure and function-level expenditure variables have 5 missing UF-bimesters: `RN/2015B6`, `RR/2016B2`, `BA/2016B6`, `SC/2017B1`, and `RR/2019B1`.
-- Public investment from `RREO-Anexo 06` is not available for all UF-bimesters in `2015-2017` under the current mapping, and the validated panel has 493 missing investment rows overall. These missing values should be treated as source coverage limitations rather than mechanically imputed.
+- Public investment from `RREO-Anexo 06` was repaired after identifying a parsing issue in the 2015-2017 column labels. Remaining internal gaps are corrected with adjacent-period interpolation and flagged. The validated panel now has 1 missing investment row overall (`RR/2026B1`), because the current 2026 endpoint has no following observed Roraima bimester.
 - The main investment flow variable is derived from the cumulative liquidated investment series by differencing within `UF x year`; first bimesters use the cumulative value directly.
-- One negative derived investment flow is flagged in the validated panel: `MS/2020B6`. It is retained with `public_investment_negative_flow_flag` because negative differences can reflect revisions or reversals in cumulative accounting data.
+- Four negative derived investment flows are flagged in the validated panel: `CE/2015B1`, `MT/2015B2`, `CE/2015B5`, and `MS/2020B6`. They are retained with `public_investment_negative_flow_flag` because negative differences can reflect revisions or reversals in cumulative accounting data.
 - Final fiscal models should either use variables with adequate pre-treatment coverage for the case-specific window or explicitly document why a fiscal predictor/outcome is omitted.
 
 ## Covariates for synthetic control

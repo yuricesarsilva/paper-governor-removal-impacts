@@ -59,3 +59,20 @@ This note documents the first pass used to populate `data/raw/governor_removal_e
 - Whether Suely Campos should be analytically treated as a removal case or as a special end-of-term federal intervention episode.
 - Whether the temporary removals should remain in the main dataset or migrate to an extended sample only.
 - Whether the file should split some sequences into two events, especially when a temporary suspension later became a definitive loss of office.
+
+## Instability onset coding pass
+
+The event file now includes onset fields for the pre-removal instability window. The rule used in this pass is intentionally conservative and source-driven:
+
+- Electoral cassations: code the first public adverse collegial decision that materially threatened the mandate, usually a TRE or TSE cassation decision.
+- Impeachment cases: code the formal public start inside the legislature, such as reading, receipt, or notification of the impeachment request.
+- Judicial/criminal suspensions: code the first public operation or judicial measure that made the sitting governor a target, unless the first observable measure was already the removal.
+- Federal intervention: code the presidential decree/signature or official announcement because there is no case process against the governor in the same sense as impeachment or electoral cassation.
+
+Two cases need extra caution in downstream designs:
+
+- `RR_2018_01`: the coded onset is the PGR's public request for federal intervention on 2018-11-07, not the decree date. The decree was signed on 2018-12-08 and took effect with removal on 2018-12-10, but a two-day window would miss the observable pre-removal crisis.
+- `RR_2026_01`: the coded onset is the TSE merits-stage judgment of the Denarium-Damiao ticket on 2025-08-26. Damião was not yet governor then; he became governor on 2026-03-27 and was cassed on 2026-04-30. This is suitable for a broad political-instability window but should be flagged in designs centered on sitting-governor exposure.
+- `TO_2021_01`: the investigations were not coded before the public STJ/PF operation. For observability, the instability start equals the removal date.
+
+All onset source ids are recorded in `references/source_inventory.csv` with `used_for = instability_start`.

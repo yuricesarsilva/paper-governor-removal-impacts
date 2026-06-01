@@ -1,0 +1,2 @@
+scm_rmspe_crisis,scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_crisis,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_crisis,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_crisis,augmented_mean_gap_post,augmented_mean_gap_pre,n_periods_crisis,n_periods_post,n_periods_pre,outcome,donor_count
+77.84357365397591,80.13984007591404,63.114656570208076,42.87313072798875,86.03079193210795,41.56676842735014,77.45178394235717,31.0889724674623,22.158868699923584,36.08041585460413,25.068131402421155,5.586528175068141,2,24,36,formal_hiring_balance_per_100k_wap,26

@@ -12,6 +12,14 @@ sample_note,event,string,Short justification for analytical classification,const
 removal_date,event,date,Date when the governor left office before legal term end,TSE TRE Assembleia Legislativa official records,high
 legal_term_end_date,event,date,Original legal end date of the term,TSE official records,high
 governor_name,event,string,Governor name,TSE official records,high
+instability_start_date,event,date,Date when the formal public process or crisis phase threatening the governor's tenure begins,court legislative executive or press source,high
+instability_start_type,event,string,Operational marker used to define the start of instability such as petition filed impeachment request accepted or public investigation operation,constructed,high
+instability_process_type,event,string,Type of pre-removal process such as electoral judicial process state impeachment criminal investigation federal intervention or mixed process,constructed,high
+instability_initiating_actor,event,string,Institution or actor that initiated the process or crisis phase,TSE STJ Assembleia Legislativa Presidency prosecutor party or petitioner,medium
+instability_start_source_id,event,string,Source identifier in references/source_inventory.csv supporting the instability start date,constructed,high
+instability_start_confidence,event,string,Confidence label for the instability start coding based on source quality and date ambiguity,constructed,medium
+instability_duration_days,event,integer,Number of days between instability_start_date and removal_date,constructed,high
+instability_coding_notes,event,string,Short note documenting ambiguity escalation dates or why the start date is provisional,constructed,medium
 formal_employment_stock,state_year_or_month,numeric,Number of formal employment ties when available for compatible designs,RAIS CAGED Novo CAGED,low
 formal_hiring_balance,state_year_or_month,numeric,Net formal hiring flow using Old Caged before 2020 and Novo Caged from 2020 onward when needed,MTE CAGED Novo CAGED,high
 post_2020_caged_dummy,state_year_or_month,binary,Indicator for observations in the Novo Caged methodological regime from 2020 onward,constructed,high
@@ -27,12 +35,22 @@ retail_volume_index,state_year_or_month,numeric,Retail sales volume index at sta
 retail_nominal_revenue_index,state_year_or_month,numeric,Retail sales nominal revenue index at state level,IBGE PMC,medium
 services_volume_index,state_year_or_month,numeric,Services volume index at state level,IBGE PMS,high
 services_nominal_revenue_index,state_year_or_month,numeric,Nominal services revenue index at state level,IBGE PMS,medium
+firm_openings,state_month,numeric,Number of newly opened firms by state and month,Mapa de Empresas Redesim,medium
+firm_closures,state_month,numeric,Number of closed firms by state and month,Mapa de Empresas Redesim,medium
+active_firms,state_month,numeric,Number of active firms by state and month when extractable from Mapa de Empresas,Mapa de Empresas Redesim,low
+business_opening_requests,state_month,numeric,Successful business opening requests by state and month from Redesim opening-time endpoints,Redesim Mapa de Empresas,medium
+business_opening_time_days,state_month,numeric,Average business opening time days by state and month from Redesim,Redesim Mapa de Empresas,medium
+business_opening_time_hours,state_month,numeric,Residual average business opening time hours by state and month from Redesim,Redesim Mapa de Empresas,medium
 household_income_per_capita_pnadc,state_quarter_or_year,numeric,Household income per capita from PNAD Continua at state level,IBGE PNAD Continua,high
 labor_income_real_pnadc,state_quarter,numeric,Average real effective labor income from PNAD Continua constructed as VD4020 multiplied by Efetivo and estimated with the survey design,IBGE PNAD Continua via PNADcIBGE,high
 pnadc_population,state_quarter_or_year,numeric,Population measure from the same PNAD Continua source or concept used for PNADc covariates,IBGE PNAD Continua,high
 unemployment_rate_pnadc,state_quarter_or_year,numeric,Unemployment rate from PNAD Continua at state level,IBGE PNAD Continua,high
 formalization_rate_pnadc,state_quarter_or_year,numeric,Formalization rate constructed from PNAD Continua survey design objects as formal occupied workers divided by total occupied workers,IBGE PNAD Continua via PNADcIBGE,medium
 public_investment_liquidated_real,state_year_or_bimester,numeric,Liquidated public investment expenditure,STN Siconfi RREO,high
+investment_recovered_from_raw,state_year_or_bimester,binary,Flag indicating public investment was recovered from raw RREO Anexo 06 after broadening the liquidated-investment column parser,constructed,medium
+original_public_investment_missing,state_year_or_bimester,binary,Flag indicating public investment was missing before the raw investment repair step,constructed,medium
+public_investment_imputed_adjacent_mean,state_year_or_bimester,binary,Flag indicating public investment was imputed using adjacent observed bimesters,constructed,medium
+public_investment_imputation_method,state_year_or_bimester,string,Method used to impute public investment when source value was missing,constructed,medium
 liquidated_expenditure_total_real,state_year_or_bimester,numeric,Total liquidated expenditure,STN Siconfi RREO,high
 liquidated_expenditure_health_real,state_year_or_bimester,numeric,Liquidated expenditure in health function,STN Siconfi RREO,high
 liquidated_expenditure_education_real,state_year_or_bimester,numeric,Liquidated expenditure in education function,STN Siconfi RREO,high
@@ -40,6 +58,7 @@ liquidated_expenditure_public_security_real,state_year_or_bimester,numeric,Liqui
 ibcr_index,state_month,numeric,Regional economic activity index for the 13 covered federative units,BCB IBCR,low
 unemployment_rate_metro,state_year,numeric,Metro unemployment rate where available,PNAD PME PNADC,low
 state_tax_revenue_real,state_year,numeric,Real state tax revenue or own-source revenue,STN Finbra Siconfi,high
+state_tax_revenue_real_pc,state_year_or_bimester,numeric,Real state tax revenue divided by population; current operational proxy for ICMS-linked taxable activity until ICMS-specific data are built,STN Siconfi RREO plus population denominator,high
 total_revenue_real,state_year,numeric,Real total state revenue,STN Finbra Siconfi,high
 personnel_expenditure_real,state_year,numeric,Real personnel expenditure,STN Finbra Siconfi,medium
 debt_stock_real,state_year,numeric,Real stock of state debt,STN Finbra Siconfi,medium
