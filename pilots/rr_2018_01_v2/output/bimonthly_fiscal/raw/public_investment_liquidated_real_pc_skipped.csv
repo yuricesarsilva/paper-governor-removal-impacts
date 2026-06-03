@@ -1,2 +1,0 @@
-outcome,family,specification,status,skip_reason
-public_investment_liquidated_real_pc,bimonthly_fiscal,raw,skipped,Treated state has incomplete pre-treatment data for outcome: public_investment_liquidated_real_pc
