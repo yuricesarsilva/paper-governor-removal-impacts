@@ -11,6 +11,7 @@ invisible(lapply(extra_packages, library, character.only = TRUE))
 pilot_id <- "rr_2018_01_v2"
 event_id <- "RR_2018_01"
 treated_state <- "RR"
+excluded_donor_states <- c("RR", "AM", "TO")
 pilot_root <- file.path(root_dir, "pilots", pilot_id)
 pilot_data_dir <- file.path(pilot_root, "data")
 dir.create(pilot_data_dir, recursive = TRUE, showWarnings = FALSE)
@@ -108,6 +109,101 @@ add_visual_ma <- function(data, vars, window) {
     dplyr::ungroup()
 }
 
+rebase_to_first_period <- function(data, vars) {
+  data |>
+    dplyr::group_by(.data$state_abbrev) |>
+    dplyr::arrange(.data$period_date, .by_group = TRUE) |>
+    dplyr::mutate(
+      dplyr::across(
+        dplyr::all_of(vars),
+        function(x) {
+          base_value <- x[which(is.finite(x))[1]]
+          if (!is.finite(base_value) || base_value == 0) {
+            return(rep(NA_real_, length(x)))
+          }
+          100 * x / base_value
+        }
+      )
+    ) |>
+    dplyr::ungroup()
+}
+
+parse_siconfi_value <- function(x) {
+  if (is.numeric(x)) {
+    return(as.numeric(x))
+  }
+
+  x_chr <- stringr::str_trim(as.character(x))
+  output <- rep(NA_real_, length(x_chr))
+  has_comma_decimal <- stringr::str_detect(x_chr, ",")
+
+  output[has_comma_decimal] <- readr::parse_number(
+    x_chr[has_comma_decimal],
+    locale = readr::locale(decimal_mark = ",", grouping_mark = "."),
+    na = c("", "NA", "null")
+  )
+  output[!has_comma_decimal] <- suppressWarnings(as.numeric(x_chr[!has_comma_decimal]))
+
+  fallback <- is.na(output) & nzchar(x_chr)
+
+  if (any(fallback)) {
+    output[fallback] <- readr::parse_number(
+      x_chr[fallback],
+      locale = readr::locale(decimal_mark = ".", grouping_mark = ","),
+      na = c("", "NA", "null")
+    )
+  }
+
+  output
+}
+
+read_icms_annex06 <- function(start_year, end_year) {
+  annex06_files <- file.path(
+    root_dir,
+    "data",
+    "raw",
+    "siconfi",
+    sprintf("siconfi_rreo_state_fiscal_bimonthly_%d_annex06_raw.csv", start_year:end_year)
+  )
+
+  missing_files <- annex06_files[!file.exists(annex06_files)]
+  if (length(missing_files) > 0) {
+    stop("Missing Siconfi/RREO Annex 06 files for ICMS extraction: ", paste(missing_files, collapse = ", "))
+  }
+
+  purrr::map_dfr(
+    annex06_files,
+    function(path) {
+      readr::read_csv(path, show_col_types = FALSE, col_types = readr::cols(.default = "c")) |>
+        dplyr::filter(.data$cod_conta == "RREO6ICMS") |>
+        dplyr::mutate(
+          year = as.integer(.data$exercicio),
+          bimester = as.integer(.data$periodo),
+          uf = as.integer(.data$cod_ibge),
+          value = parse_siconfi_value(.data$valor),
+          realized_current_year = .data$coluna == "RECEITAS REALIZADAS (a)" |
+            stringr::str_detect(.data$coluna, paste0("Até o Bimestre / ", .data$year))
+        ) |>
+        dplyr::filter(.data$realized_current_year) |>
+        dplyr::group_by(.data$uf, .data$year, .data$bimester) |>
+        dplyr::summarise(
+          icms_revenue_cumulative_nominal = dplyr::first(.data$value[is.finite(.data$value)]),
+          .groups = "drop"
+        )
+    }
+  ) |>
+    dplyr::arrange(.data$uf, .data$year, .data$bimester) |>
+    dplyr::group_by(.data$uf, .data$year) |>
+    dplyr::mutate(
+      icms_revenue_nominal =
+        .data$icms_revenue_cumulative_nominal -
+        dplyr::lag(.data$icms_revenue_cumulative_nominal, default = 0),
+      icms_revenue_flow_is_derived = TRUE,
+      icms_revenue_negative_flow_flag = .data$icms_revenue_nominal < 0
+    ) |>
+    dplyr::ungroup()
+}
+
 pnadc <- readr::read_csv(
   file.path(root_dir, "data", "processed", "pnadc_sidra_quarterly_state_covariates_panel_ready.csv"),
   show_col_types = FALSE
@@ -184,6 +280,14 @@ monthly_panel <- caged |>
   ) |>
   dplyr::mutate(
     treated_unit = .data$state_abbrev == treated_state,
+    donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
+    excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
+    donor_pool_exclusion_reason = dplyr::case_when(
+      .data$state_abbrev == "RR" ~ "treated_unit",
+      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
+      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
+      TRUE ~ NA_character_
+    ),
     analysis_period = assign_period_monthly(.data$period_date),
     formal_hiring_balance_per_100k_wap = 100000 * .data$formal_hiring_balance / .data$pnadc_population,
     instability_start_date = instability_start_date,
@@ -192,6 +296,12 @@ monthly_panel <- caged |>
   dplyr::filter(
     .data$period_date >= monthly_window_start,
     .data$period_date <= monthly_window_end
+  ) |>
+  rebase_to_first_period(
+    vars = c(
+      "retail_volume_index",
+      "services_volume_index"
+    )
   ) |>
   add_clean_ma(
     vars = c(
@@ -221,7 +331,16 @@ fiscal_raw <- readr::read_csv(
     quarter = lubridate::quarter(period_date)
   )
 
+icms_revenue <- read_icms_annex06(
+  start_year = lubridate::year(bimonthly_window_start),
+  end_year = lubridate::year(bimonthly_window_end)
+)
+
 fiscal_panel <- fiscal_raw |>
+  dplyr::left_join(
+    icms_revenue,
+    by = c("uf", "year", "bimester")
+  ) |>
   dplyr::left_join(
     pnadc |>
       dplyr::select(state_abbrev, year, quarter, pnadc_population),
@@ -229,13 +348,42 @@ fiscal_panel <- fiscal_raw |>
   ) |>
   dplyr::mutate(
     treated_unit = .data$state_abbrev == treated_state,
+    donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
+    excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
+    donor_pool_exclusion_reason = dplyr::case_when(
+      .data$state_abbrev == "RR" ~ "treated_unit",
+      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
+      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
+      TRUE ~ NA_character_
+    ),
     analysis_period = assign_period_bimonthly(.data$year, .data$bimester),
+    fiscal_deflator_factor = dplyr::if_else(
+      .data$state_tax_revenue_nominal > 0,
+      .data$state_tax_revenue_real / .data$state_tax_revenue_nominal,
+      NA_real_
+    ),
+    icms_revenue_real = .data$icms_revenue_nominal * .data$fiscal_deflator_factor,
+    icms_revenue_real_pc = .data$icms_revenue_real / .data$pnadc_population,
     state_tax_revenue_real_pc = .data$state_tax_revenue_real / .data$pnadc_population,
     public_investment_liquidated_real_pc = .data$public_investment_liquidated_real / .data$pnadc_population,
     liquidated_expenditure_total_real_pc = .data$liquidated_expenditure_total_real / .data$pnadc_population,
     liquidated_expenditure_health_real_pc = .data$liquidated_expenditure_health_real / .data$pnadc_population,
     liquidated_expenditure_education_real_pc = .data$liquidated_expenditure_education_real / .data$pnadc_population,
     liquidated_expenditure_public_security_real_pc = .data$liquidated_expenditure_public_security_real / .data$pnadc_population,
+    public_investment_share_total = dplyr::if_else(
+      .data$liquidated_expenditure_total_real > 0,
+      .data$public_investment_liquidated_real / .data$liquidated_expenditure_total_real,
+      NA_real_
+    ),
+    priority_expenditure_share_total = dplyr::if_else(
+      .data$liquidated_expenditure_total_real > 0,
+      (
+        .data$liquidated_expenditure_health_real +
+          .data$liquidated_expenditure_education_real +
+          .data$liquidated_expenditure_public_security_real
+      ) / .data$liquidated_expenditure_total_real,
+      NA_real_
+    ),
     instability_start_date = instability_start_date,
     removal_date = removal_date
   ) |>
@@ -245,17 +393,17 @@ fiscal_panel <- fiscal_raw |>
   ) |>
   add_clean_ma(
     vars = c(
-      "state_tax_revenue_real_pc",
-      "public_investment_liquidated_real_pc",
-      "liquidated_expenditure_total_real_pc"
+      "icms_revenue_real_pc",
+      "public_investment_share_total",
+      "priority_expenditure_share_total"
     ),
     window = 4
   ) |>
   add_visual_ma(
     vars = c(
-      "state_tax_revenue_real_pc",
-      "public_investment_liquidated_real_pc",
-      "liquidated_expenditure_total_real_pc"
+      "icms_revenue_real_pc",
+      "public_investment_share_total",
+      "priority_expenditure_share_total"
     ),
     window = 4
   )
@@ -263,6 +411,14 @@ fiscal_panel <- fiscal_raw |>
 quarterly_panel <- pnadc |>
   dplyr::mutate(
     treated_unit = .data$state_abbrev == treated_state,
+    donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
+    excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
+    donor_pool_exclusion_reason = dplyr::case_when(
+      .data$state_abbrev == "RR" ~ "treated_unit",
+      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
+      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
+      TRUE ~ NA_character_
+    ),
     analysis_period = assign_period_quarterly(.data$year, .data$quarter),
     instability_start_date = instability_start_date,
     removal_date = removal_date
@@ -293,7 +449,17 @@ fiscal_covariates <- fiscal_panel |>
   )
 
 covariate_panel <- pnadc_covariates |>
-  dplyr::left_join(fiscal_covariates, by = "state_abbrev")
+  dplyr::left_join(fiscal_covariates, by = "state_abbrev") |>
+  dplyr::mutate(
+    donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
+    excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
+    donor_pool_exclusion_reason = dplyr::case_when(
+      .data$state_abbrev == "RR" ~ "treated_unit",
+      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
+      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
+      TRUE ~ NA_character_
+    )
+  )
 
 event_metadata <- event |>
   dplyr::select(

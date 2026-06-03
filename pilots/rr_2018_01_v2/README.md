@@ -37,6 +37,14 @@ Covariates:
 - education expenditure per capita;
 - public-security expenditure per capita.
 
+Donor pool:
+
+- Main donor pool excludes `RR`, `AM`, and `TO`.
+- `RR` is the treated state.
+- `AM` is excluded because of nearby treated event `AM_2017_01`.
+- `TO` is excluded because of nearby/repeated treated events, especially `TO_2018_01`.
+- The resulting main donor pool has 24 eligible UFs before outcome-specific missingness filters.
+
 ## Scripts
 
 1. `code/01_build_rr_2018_01_v2_panels.R`

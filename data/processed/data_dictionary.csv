@@ -55,10 +55,14 @@ liquidated_expenditure_total_real,state_year_or_bimester,numeric,Total liquidate
 liquidated_expenditure_health_real,state_year_or_bimester,numeric,Liquidated expenditure in health function,STN Siconfi RREO,high
 liquidated_expenditure_education_real,state_year_or_bimester,numeric,Liquidated expenditure in education function,STN Siconfi RREO,high
 liquidated_expenditure_public_security_real,state_year_or_bimester,numeric,Liquidated expenditure in public security function,STN Siconfi RREO,high
+icms_revenue_real,state_bimester,numeric,Real ICMS revenue derived from Siconfi RREO Annex 06 cumulative realized revenue by within-year differencing,STN Siconfi RREO Annex 06,high
+icms_revenue_real_pc,state_bimester,numeric,Real ICMS revenue divided by PNADc population,STN Siconfi RREO Annex 06 plus IBGE PNAD Continua,high
+public_investment_share_total,state_bimester,numeric,Liquidated public investment divided by total liquidated expenditure,STN Siconfi RREO,high
+priority_expenditure_share_total,state_bimester,numeric,Liquidated health plus education plus public security expenditure divided by total liquidated expenditure,STN Siconfi RREO,high
 ibcr_index,state_month,numeric,Regional economic activity index for the 13 covered federative units,BCB IBCR,low
 unemployment_rate_metro,state_year,numeric,Metro unemployment rate where available,PNAD PME PNADC,low
 state_tax_revenue_real,state_year,numeric,Real state tax revenue or own-source revenue,STN Finbra Siconfi,high
-state_tax_revenue_real_pc,state_year_or_bimester,numeric,Real state tax revenue divided by population; current operational proxy for ICMS-linked taxable activity until ICMS-specific data are built,STN Siconfi RREO plus population denominator,high
+state_tax_revenue_real_pc,state_year_or_bimester,numeric,Real state tax revenue divided by population; retained as a broad tax revenue measure after ICMS-specific series was built for the pilot models,STN Siconfi RREO plus population denominator,high
 total_revenue_real,state_year,numeric,Real total state revenue,STN Finbra Siconfi,high
 personnel_expenditure_real,state_year,numeric,Real personnel expenditure,STN Finbra Siconfi,medium
 debt_stock_real,state_year,numeric,Real stock of state debt,STN Finbra Siconfi,medium

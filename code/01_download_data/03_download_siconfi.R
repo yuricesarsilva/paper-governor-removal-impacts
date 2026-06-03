@@ -327,6 +327,31 @@ investment_cumulative <- standardized |>
   ) |>
   dplyr::ungroup()
 
+icms_cumulative <- standardized |>
+  dplyr::filter(
+    source_annex_name == "annex06",
+    cod_conta == "RREO6ICMS",
+    column_norm == "receitas realizadas a" |
+      stringr::str_detect(column_norm, paste0("ate o bimestre ", year, "$"))
+  ) |>
+  dplyr::transmute(
+    uf,
+    year,
+    bimester,
+    period,
+    period_date,
+    icms_revenue_cumulative_nominal = value
+  ) |>
+  dplyr::arrange(uf, year, bimester) |>
+  dplyr::group_by(uf, year) |>
+  dplyr::mutate(
+    icms_revenue_nominal = icms_revenue_cumulative_nominal -
+      dplyr::lag(icms_revenue_cumulative_nominal, default = 0),
+    icms_revenue_flow_is_derived = TRUE,
+    icms_revenue_negative_flow_flag = icms_revenue_nominal < 0
+  ) |>
+  dplyr::ungroup()
+
 ensure_numeric_columns <- function(data, column_names) {
   missing_columns <- setdiff(column_names, names(data))
 
@@ -371,9 +396,12 @@ base_ipca <- ipca |>
 nominal_panel <- revenue |>
   dplyr::full_join(expenditure, by = c("uf", "year", "bimester", "period", "period_date")) |>
   dplyr::full_join(investment_cumulative, by = c("uf", "year", "bimester", "period", "period_date")) |>
+  dplyr::full_join(icms_cumulative, by = c("uf", "year", "bimester", "period", "period_date")) |>
   ensure_numeric_columns(c(
     "total_revenue_nominal",
     "state_tax_revenue_nominal",
+    "icms_revenue_cumulative_nominal",
+    "icms_revenue_nominal",
     "federal_current_transfers_nominal",
     "federal_capital_transfers_nominal",
     "liquidated_expenditure_total_nominal",
@@ -384,6 +412,8 @@ nominal_panel <- revenue |>
     "public_investment_liquidated_nominal"
   )) |>
   ensure_logical_columns(c(
+    "icms_revenue_flow_is_derived",
+    "icms_revenue_negative_flow_flag",
     "public_investment_flow_is_derived",
     "public_investment_negative_flow_flag"
   )) |>
@@ -408,6 +438,7 @@ nominal_panel <- revenue |>
     deflator_base_month = base_ipca$base_ipca_month_code,
     total_revenue_real = total_revenue_nominal * base_ipca$base_ipca_index / ipca_index,
     state_tax_revenue_real = state_tax_revenue_nominal * base_ipca$base_ipca_index / ipca_index,
+    icms_revenue_real = icms_revenue_nominal * base_ipca$base_ipca_index / ipca_index,
     federal_transfers_real = federal_transfers_nominal * base_ipca$base_ipca_index / ipca_index,
     liquidated_expenditure_total_real = liquidated_expenditure_total_nominal * base_ipca$base_ipca_index / ipca_index,
     liquidated_expenditure_health_real = liquidated_expenditure_health_nominal * base_ipca$base_ipca_index / ipca_index,
@@ -435,6 +466,11 @@ nominal_panel <- revenue |>
     total_revenue_real,
     state_tax_revenue_nominal,
     state_tax_revenue_real,
+    icms_revenue_cumulative_nominal,
+    icms_revenue_nominal,
+    icms_revenue_real,
+    icms_revenue_flow_is_derived,
+    icms_revenue_negative_flow_flag,
     federal_current_transfers_nominal,
     federal_capital_transfers_nominal,
     federal_transfers_nominal,

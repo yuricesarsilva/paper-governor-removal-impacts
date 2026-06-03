@@ -1,6 +1,6 @@
 # RR 2018-01 V2 Run Summary
 
-Run date: 2026-06-01
+Run date: 2026-06-03
 
 ## Case Timing
 
@@ -36,9 +36,19 @@ Rows created:
 - quarterly PNADc panel: 648
 - covariate panel: 27
 
+Donor-pool coding:
+
+- main donor-pool UFs: 24
+- excluded UFs: `RR`, `AM`, and `TO`
+- `RR` is excluded because it is the treated unit.
+- `AM` is excluded because of nearby treated event `AM_2017_01`.
+- `TO` is excluded because of nearby/repeated treated events, especially `TO_2018_01`.
+
 ## SCM Outputs
 
 The script `code/02_run_rr_2018_01_v2_scm.R` estimated Classic SCM and Augmented SCM together.
+
+All estimated outcomes use 24 eligible donor states after excluding `RR`, `AM`, and `TO`.
 
 Estimated successfully:
 

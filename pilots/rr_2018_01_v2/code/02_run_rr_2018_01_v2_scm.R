@@ -10,15 +10,38 @@ invisible(lapply(extra_packages, library, character.only = TRUE))
 
 pilot_id <- "rr_2018_01_v2"
 treated_state <- "RR"
+excluded_donor_states <- c("RR", "AM", "TO")
 pilot_root <- file.path(root_dir, "pilots", pilot_id)
 data_dir <- file.path(pilot_root, "data")
 output_root <- file.path(pilot_root, "output")
 dir.create(output_root, recursive = TRUE, showWarnings = FALSE)
 
-covariates <- readr::read_csv(
+covariates_raw <- readr::read_csv(
   file.path(data_dir, "rr_2018_01_v2_covariates.csv"),
   show_col_types = FALSE
 )
+
+donor_pool <- covariates_raw |>
+  dplyr::select(
+    "state_abbrev",
+    "donor_pool_main",
+    "excluded_from_main_donor_pool",
+    "donor_pool_exclusion_reason"
+  )
+
+main_donor_states <- donor_pool |>
+  dplyr::filter(.data$donor_pool_main) |>
+  dplyr::pull(.data$state_abbrev) |>
+  sort()
+
+covariates <- covariates_raw |>
+  dplyr::select(
+    -dplyr::any_of(c(
+      "donor_pool_main",
+      "excluded_from_main_donor_pool",
+      "donor_pool_exclusion_reason"
+    ))
+  )
 
 event <- readr::read_csv(
   file.path(data_dir, "rr_2018_01_v2_event_metadata.csv"),
@@ -180,7 +203,7 @@ build_predictor_matrix <- function(data, outcome, states, covariate_data) {
 
 fit_augmented_scm <- function(data, outcome, covariate_data) {
   complete_states <- get_complete_states(data, outcome, covariate_data)
-  donor_states <- setdiff(sort(complete_states), treated_state)
+  donor_states <- intersect(sort(complete_states), main_donor_states)
 
   if (!(treated_state %in% complete_states)) {
     stop("Treated state has incomplete pre-treatment data for outcome: ", outcome)
@@ -549,9 +572,9 @@ specs <- list(
     family = "bimonthly_fiscal",
     specification = "raw",
     outcomes = c(
-      "state_tax_revenue_real_pc",
-      "public_investment_liquidated_real_pc",
-      "liquidated_expenditure_total_real_pc"
+      "icms_revenue_real_pc",
+      "public_investment_share_total",
+      "priority_expenditure_share_total"
     )
   ),
   list(
@@ -559,9 +582,9 @@ specs <- list(
     family = "bimonthly_fiscal",
     specification = "ma4_clean",
     outcomes = c(
-      "state_tax_revenue_real_pc_ma4_clean",
-      "public_investment_liquidated_real_pc_ma4_clean",
-      "liquidated_expenditure_total_real_pc_ma4_clean"
+      "icms_revenue_real_pc_ma4_clean",
+      "public_investment_share_total_ma4_clean",
+      "priority_expenditure_share_total_ma4_clean"
     )
   )
 )
@@ -601,9 +624,9 @@ visual_specs <- list(
     specification = "ma4_clean",
     clean_visual_pairs = tibble::tribble(
       ~clean_outcome, ~visual_outcome,
-      "state_tax_revenue_real_pc_ma4_clean", "state_tax_revenue_real_pc_ma4_visual",
-      "public_investment_liquidated_real_pc_ma4_clean", "public_investment_liquidated_real_pc_ma4_visual",
-      "liquidated_expenditure_total_real_pc_ma4_clean", "liquidated_expenditure_total_real_pc_ma4_visual"
+      "icms_revenue_real_pc_ma4_clean", "icms_revenue_real_pc_ma4_visual",
+      "public_investment_share_total_ma4_clean", "public_investment_share_total_ma4_visual",
+      "priority_expenditure_share_total_ma4_clean", "priority_expenditure_share_total_ma4_visual"
     )
   )
 )
