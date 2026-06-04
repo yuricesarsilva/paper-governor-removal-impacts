@@ -1,0 +1,9 @@
+outcome,short_label,channel_slug,post_pre_rmspe_ratio,donor_placebo_count,ratio_p_value,abs_gap_p_value
+formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6",labor_market,3.8358498242065955,24,0.5,1
+formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6",labor_market,3.0144900692202894,24,0.625,1
+retail_volume_index_ma6_v5,"Retail, MA6",consumption,38.837691935639434,24,0.4166666666666667,0.08333333333333333
+services_volume_index_ma6_v5,"Services, MA6",consumption,21.834747086859856,24,0.16666666666666666,0.4166666666666667
+state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4",public_sector,210.22927359597205,24,0.16666666666666666,0.4166666666666667
+icms_revenue_real_pc_ma4_v5,"ICMS, MA4",public_sector,533.5674144759366,24,0,0.375
+public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4",public_sector,4550.151307688014,24,0.25,0.9166666666666666
+liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4",public_sector,455.0007770738475,24,0.375,0.7083333333333334

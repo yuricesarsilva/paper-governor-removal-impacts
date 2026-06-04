@@ -1,0 +1,7 @@
+Outcome,Gap post,LOO rank,p-value (2-sided),Note
+Formal hiring (MA6),21.74,24 / 25,0.08,Unusually large positive gap
+Retail index (MA6),7.91,24 / 25,0.08,Unusually large positive gap
+Services index (MA6),3.54,2 / 25,0.08,Unusually small positive gap (most LOO estimates are larger)
+ICMS revenue (MA4),31.64,24 / 25,0.08,Unusually large positive gap
+Public investment (MA4),-9.43,14 / 25,0.48,Not extreme relative to LOO distribution
+Total expenditure (MA4),-183.6,24 / 25,0.08,Unusually large negative gap (extreme)
