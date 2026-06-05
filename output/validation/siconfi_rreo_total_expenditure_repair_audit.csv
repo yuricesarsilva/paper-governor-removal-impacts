@@ -1,0 +1,13 @@
+year,rows,total_expenditure_missing_after_repair,total_expenditure_recovered_from_raw,total_expenditure_imputed_adjacent_mean,negative_total_expenditure_flows
+2015,162,0,0,1,0
+2016,162,0,0,2,0
+2017,162,0,0,1,0
+2018,162,0,0,0,0
+2019,162,0,1,0,0
+2020,162,0,0,0,0
+2021,162,0,0,0,0
+2022,162,0,0,0,0
+2023,162,0,0,0,0
+2024,162,0,0,0,0
+2025,162,0,0,0,0
+2026,29,0,0,0,0

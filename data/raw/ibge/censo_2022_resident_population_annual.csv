@@ -1,0 +1,82 @@
+nivel_territorial_codigo,nivel_territorial,unidade_de_medida_codigo,unidade_de_medida,valor,unidade_da_federacao_codigo,unidade_da_federacao,ano_codigo,ano,variavel_codigo,variavel,downloaded_at
+3,Unidade da Federação,45,Pessoas,1581196,11,Rondônia,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,18787,11,Rondônia,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.1,11,Rondônia,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,830018,12,Acre,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,96459,12,Acre,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,1.03,12,Acre,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3941613,13,Amazonas,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,457628,13,Amazonas,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,1.03,13,Amazonas,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,636707,14,Roraima,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,186228,14,Roraima,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,2.93,14,Roraima,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,8120131,15,Pará,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,539080,15,Pará,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.57,15,Pará,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,733759,16,Amapá,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,64233,16,Amapá,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.77,16,Amapá,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,1511460,17,Tocantins,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,128015,17,Tocantins,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.74,17,Tocantins,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,6776699,21,Maranhão,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,201910,21,Maranhão,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.25,21,Maranhão,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3271199,22,Piauí,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,152102,22,Piauí,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.4,22,Piauí,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,8794957,23,Ceará,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,343313,23,Ceará,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.33,23,Ceará,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3302729,24,Rio Grande do Norte,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,134702,24,Rio Grande do Norte,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.35,24,Rio Grande do Norte,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3974687,25,Paraíba,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,208159,25,Paraíba,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.45,25,Paraíba,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,9058931,26,Pernambuco,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,262876,26,Pernambuco,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.25,26,Pernambuco,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3127683,27,Alagoas,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,6796,27,Alagoas,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.02,27,Alagoas,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,2210004,28,Sergipe,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,142152,28,Sergipe,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.56,28,Sergipe,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,14141626,29,Bahia,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,124555,29,Bahia,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.07,29,Bahia,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,20539989,31,Minas Gerais,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,942659,31,Minas Gerais,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.39,31,Minas Gerais,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3833712,32,Espírito Santo,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,318760,32,Espírito Santo,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.73,32,Espírito Santo,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,16055174,33,Rio de Janeiro,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,65245,33,Rio de Janeiro,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.03,33,Rio de Janeiro,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,44411238,35,São Paulo,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,3149039,35,São Paulo,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.61,35,São Paulo,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,11444380,41,Paraná,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,999854,41,Paraná,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.76,41,Paraná,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,7610361,42,Santa Catarina,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,1361925,42,Santa Catarina,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,1.66,42,Santa Catarina,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,10882965,43,Rio Grande do Sul,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,189036,43,Rio Grande do Sul,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.15,43,Rio Grande do Sul,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,2757013,50,Mato Grosso do Sul,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,307989,50,Mato Grosso do Sul,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.99,50,Mato Grosso do Sul,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,3658649,51,Mato Grosso,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,623527,51,Mato Grosso,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,1.57,51,Mato Grosso,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,7056495,52,Goiás,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,1054706,52,Goiás,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,1.36,52,Goiás,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03
+3,Unidade da Federação,45,Pessoas,2817381,53,Distrito Federal,2022,2022,93,População residente,2026-06-03
+3,Unidade da Federação,45,Pessoas,245222,53,Distrito Federal,2022,2022,5936,Variação absoluta da população residente 2010 compatibilizada,2026-06-03
+3,Unidade da Federação,2,%,0.76,53,Distrito Federal,2022,2022,10605,Taxa de crescimento geométrico,2026-06-03

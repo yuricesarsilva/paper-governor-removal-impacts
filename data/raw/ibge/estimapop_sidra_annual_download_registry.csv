@@ -1,0 +1,2 @@
+source_name,table_id,description,api,raw_output_path,raw_rows,processed_rows,first_year,last_year,status,downloaded_at
+estimapop_resident_population,6579,"Populacao residente estimada para Brasil, grandes regioes, UFs e municipios",/t/6579/n3/all/p/all,C:/Users/Usuario/OneDrive/paper-governor-removal-impacts/data/raw/ibge/estimapop_resident_population_annual.csv,567,567,2001,2025,downloaded,2026-06-03

@@ -1,0 +1,6 @@
+source_name,table_id,description,api,raw_output_path,raw_rows,processed_rows,first_year,last_year,status,downloaded_at
+estimapop,6579,Populacao residente estimada,/t/6579/n3/all/p/all,C:/Users/Usuario/OneDrive/paper-governor-removal-impacts/data/raw/ibge/estimapop_resident_population_annual.csv,567,567,2001,2025,downloaded,2026-06-03
+contagem_2007,793,Populacao residente - Contagem 2007,/t/793/n3/all/p/2007,C:/Users/Usuario/OneDrive/paper-governor-removal-impacts/data/raw/ibge/contagem_2007_resident_population_annual.csv,27,27,2007,2007,downloaded,2026-06-03
+censo_2010,202,"Populacao residente, por sexo e situacao do domicilio - Censo 2010",/t/202/n3/all/p/2010,C:/Users/Usuario/OneDrive/paper-governor-removal-impacts/data/raw/ibge/censo_2010_resident_population_annual.csv,27,27,2010,2010,downloaded,2026-06-03
+censo_2022,4709,Populacao residente - Primeiros resultados do Censo 2022,/t/4709/n3/all/p/2022,C:/Users/Usuario/OneDrive/paper-governor-removal-impacts/data/raw/ibge/censo_2022_resident_population_annual.csv,81,27,2022,2022,downloaded,2026-06-03
+resident_population_2023_interpolation,4709|6579,2023 resident population interpolated as mean of 2022 and 2024,,,,27,2023,2023,derived,2026-06-03
