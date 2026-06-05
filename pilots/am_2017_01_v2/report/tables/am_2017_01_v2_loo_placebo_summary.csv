@@ -1,0 +1,7 @@
+Outcome,Gap post,LOO rank,p-value (2-sided),Note
+Formal hiring SA,2.38,24 / 25,0.08,Unusually large positive gap
+Retail SA,11.98,25 / 25,0.04,Unusually large positive gap
+Services SA,3.21,25 / 25,0.04,Unusually large positive gap
+ICMS SA,86.45,23 / 25,0.12,Not extreme vs LOO distribution
+Public investment SA,-1.29,21 / 25,0.2,Not extreme vs LOO distribution
+Total expenditure SA,13.06,23 / 25,0.12,Not extreme vs LOO distribution

@@ -1,0 +1,9 @@
+outcome,short_label,channel_slug,post_pre_rmspe_ratio,donor_placebo_count,ratio_p_value,abs_gap_p_value
+formal_hiring_balance_sa_per_100k_wap,Formal hiring SA,labor_market,0.6923973857125254,24,0.9583333333333334,1
+formal_hiring_balance_construction_sa_per_100k_wap,Construction SA,labor_market,0.9572665150179527,24,0.5833333333333334,0.9583333333333334
+retail_volume_index_sa,Retail SA,consumption,9.298638435911837,24,0.125,0.125
+services_volume_index_sa,Services SA,consumption,2.393750610241554,24,0.7083333333333334,0.75
+state_tax_revenue_real_pc_sa,Own tax revenue SA,public_sector,2631.6201776820017,24,0.3333333333333333,0.4166666666666667
+icms_revenue_real_pc_sa,ICMS SA,public_sector,2116.3140832069057,24,0.20833333333333334,0.20833333333333334
+public_investment_liquidated_real_pc_sa,Public investment SA,public_sector,19845.735642346415,24,0.08333333333333333,1
+liquidated_expenditure_total_real_pc_sa,Total expenditure SA,public_sector,3199.4307854037056,24,0.625,1
