@@ -17,6 +17,7 @@ _site/
 # OS / editors
 .DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
 
 # Large raw data and extracted archives
