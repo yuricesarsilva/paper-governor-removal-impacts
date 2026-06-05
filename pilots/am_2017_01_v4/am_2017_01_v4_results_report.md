@@ -12,8 +12,11 @@ V4 standardizes the whole pilot to a single frequency. Starting from V2 (account
 
 ## Window design
 
-- All outcomes bimonthly: `2015-01-01` to `2018-10-01`. Pre-treatment = 14 bimesters (2015B1-2017B2, limited at the start by Siconfi 2015); post-removal = 9 bimesters.
-- The labor and consumption outcomes, which had 36-52 monthly pre-periods in V2/V3, now share the fiscal 14-bimester pre-window. This standardizes the design but shortens their pre-window; the tight pre-fit (low RMSPE_pre) should be read with the placebo inference, not on its own.
+- All outcomes bimonthly: `2013-06-01` to `2018-10-01`. Target pre-treatment = 24 bimesters (2013B3-2017B2); post-removal = 9 bimesters.
+- **Pre-window availability differs by outcome** and is handled per-outcome by the SCM (complete-case pre-window):
+  - Labor (CAGED) and consumption (PMC/PMS): data from 2007, so the full **24-bimester** pre-window is used.
+  - Fiscal (Siconfi/RREO) starts only at 2015B1, so the fiscal pre-window is the **maximum available = 14 bimesters** (2015B1-2017B2), not 24. It cannot be extended without pre-2015 fiscal data.
+- Extending labor/consumption to 24 bimesters removes the overfitting seen at 14 bimesters: their pre-fit RMSPE is now honest (e.g. formal hiring ~45, retail ~1.1) rather than near-zero. The fiscal block still has the tight 14-period pre-fit; read it with the placebo inference.
 
 ## Bimonthly aggregation and seasonal adjustment
 
@@ -44,10 +47,10 @@ The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 
 
 | Outcome | Treated | Synthetic | RMSPE pre |
 | --- | --- | --- | --- |
-| Formal hiring | -170.35 | -170.36 | 0.02 |
-| Construction | -19.26 | -19.26 | 0.01 |
-| Retail | 90.65 | 90.65 | 0.00 |
-| Services | 83.97 | 83.97 | 0.01 |
+| Formal hiring | -102.91 | -106.16 | 44.65 |
+| Construction | -26.00 | -26.69 | 19.07 |
+| Retail | 94.08 | 94.23 | 1.14 |
+| Services | 90.93 | 90.82 | 1.01 |
 | Own tax revenue | 491.63 | 491.63 | 0.08 |
 | ICMS | 430.97 | 430.90 | 0.55 |
 | Public investment | 50.22 | 50.22 | 0.01 |
@@ -57,25 +60,25 @@ The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 
 
 | Covariate | Treated | Formal hiring | Construction |
 | --- | --- | --- | --- |
-| Unemployment rate (SA) |     0.104 |     0.085 |     0.087 |
-| Formalization rate (SA) |     0.434 |     0.563 |     0.510 |
-| Labor income (SA, R$) | 2,711.134 | 2,735.977 | 2,630.347 |
-| Transfer dependency ratio (SA) |    -0.002 |    -0.001 |    -0.002 |
-| Health expenditure pc (SA, R$) |   175.427 |   131.080 |   137.257 |
-| Education expenditure pc (SA, R$) |   153.268 |   113.266 |   159.566 |
-| Public security expenditure pc (SA, R$) |    96.182 |   103.311 |    98.439 |
+| Unemployment rate (SA) |     0.104 |     0.091 |     0.094 |
+| Formalization rate (SA) |     0.434 |     0.588 |     0.526 |
+| Labor income (SA, R$) | 2,711.134 | 2,981.909 | 2,797.837 |
+| Transfer dependency ratio (SA) |    -0.002 |    -0.001 |    -0.001 |
+| Health expenditure pc (SA, R$) |   175.427 |   117.392 |   139.163 |
+| Education expenditure pc (SA, R$) |   153.268 |   130.298 |   149.886 |
+| Public security expenditure pc (SA, R$) |    96.182 |   110.114 |    77.675 |
 
 ### Covariate balance: household consumption
 
 | Covariate | Treated | Retail | Services |
 | --- | --- | --- | --- |
-| Unemployment rate (SA) |     0.104 |     0.101 |     0.109 |
-| Formalization rate (SA) |     0.434 |     0.467 |     0.445 |
-| Labor income (SA, R$) | 2,711.134 | 2,515.367 | 2,374.091 |
-| Transfer dependency ratio (SA) |    -0.002 |    -0.002 |    -0.002 |
-| Health expenditure pc (SA, R$) |   175.427 |   143.085 |   142.469 |
-| Education expenditure pc (SA, R$) |   153.268 |   179.639 |   195.353 |
-| Public security expenditure pc (SA, R$) |    96.182 |    96.731 |   105.281 |
+| Unemployment rate (SA) |     0.104 |     0.089 |     0.104 |
+| Formalization rate (SA) |     0.434 |     0.526 |     0.463 |
+| Labor income (SA, R$) | 2,711.134 | 2,768.459 | 2,364.875 |
+| Transfer dependency ratio (SA) |    -0.002 |    -0.001 |    -0.002 |
+| Health expenditure pc (SA, R$) |   175.427 |   128.460 |   136.083 |
+| Education expenditure pc (SA, R$) |   153.268 |   128.806 |   187.958 |
+| Public security expenditure pc (SA, R$) |    96.182 |    89.946 |   100.872 |
 
 ### Covariate balance: state public finances
 
@@ -93,14 +96,14 @@ The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 
 
 | Channel | Outcome | Mean gap post | RMSPE pre | RMSPE post | Donors |
 | --- | --- | --- | --- | --- | --- |
-| Formal labor market | Formal hiring balance per 100k WAP |   7.34 | 0.02 | 47.79 | 24 |
-| Formal labor market | Construction hiring per 100k WAP | -10.63 | 0.01 | 19.10 | 24 |
-| Household consumption | Retail volume index |   4.74 | 0.00 |  4.89 | 24 |
-| Household consumption | Services volume index |   7.47 | 0.01 |  7.97 | 24 |
-| State public finances | Own tax revenue, real per capita |  46.95 | 0.08 | 50.43 | 24 |
-| State public finances | ICMS revenue, real per capita |  47.98 | 0.55 | 52.16 | 24 |
-| State public finances | Public investment, real per capita |  -4.83 | 0.01 | 18.27 | 24 |
-| State public finances | Total liquidated expenditure, real pc | -22.08 | 0.11 | 85.47 | 24 |
+| Formal labor market | Formal hiring balance per 100k WAP |  -2.33 | 44.65 | 36.10 | 24 |
+| Formal labor market | Construction hiring per 100k WAP |  -3.43 | 19.07 | 11.83 | 24 |
+| Household consumption | Retail volume index |   5.15 |  1.14 |  6.58 | 24 |
+| Household consumption | Services volume index |   5.68 |  1.01 |  6.47 | 24 |
+| State public finances | Own tax revenue, real per capita |  46.95 |  0.08 | 50.43 | 24 |
+| State public finances | ICMS revenue, real per capita |  47.98 |  0.55 | 52.16 | 24 |
+| State public finances | Public investment, real per capita |  -4.83 |  0.01 | 18.27 | 24 |
+| State public finances | Total liquidated expenditure, real pc | -22.08 |  0.11 | 85.47 | 24 |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -136,10 +139,10 @@ Each eligible donor is treated as pseudo-treated at the same dates; gaps are nor
 
 | Outcome | RMSPE ratio (post/pre) | p-value (ratio) | p-value (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Formal hiring | 2,134.35 | 0.458 | 1.000 | 24 |
-| Construction | 3,120.72 | 0.250 | 0.750 | 24 |
-| Retail | 1,135.54 | 0.750 | 0.542 | 24 |
-| Services | 1,155.96 | 0.667 | 0.167 | 24 |
+| Formal hiring |     0.81 | 0.958 | 1.000 | 24 |
+| Construction |     0.62 | 1.000 | 1.000 | 24 |
+| Retail |     5.75 | 0.167 | 0.250 | 24 |
+| Services |     6.40 | 0.042 | 0.208 | 24 |
 | Own tax revenue |   603.26 | 0.125 | 0.458 | 24 |
 | ICMS |    94.27 | 0.000 | 0.333 | 24 |
 | Public investment | 1,300.69 | 0.250 | 1.000 | 24 |
@@ -161,16 +164,16 @@ Each eligible donor is treated as pseudo-treated at the same dates; gaps are nor
 
 | Outcome | Gap post | LOO rank | p-value (2-sided) | Note |
 | --- | --- | --- | --- | --- |
-| Formal hiring | 7.34 | 25 / 25 | 0.04 | Unusually large positive gap |
-| Retail | 4.74 | 4 / 25 | 0.16 | Not extreme vs LOO distribution |
-| Services | 7.47 | 3 / 25 | 0.12 | Not extreme vs LOO distribution |
+| Formal hiring | -2.33 | 24 / 25 | 0.08 | Unusually large negative gap |
+| Retail | 5.15 | 20 / 25 | 0.24 | Not extreme vs LOO distribution |
+| Services | 5.68 | 2 / 25 | 0.08 | Unusually small positive gap |
 | ICMS | 47.98 | 2 / 25 | 0.08 | Unusually small positive gap |
 | Public investment | -4.83 | 20 / 25 | 0.24 | Not extreme vs LOO distribution |
 | Total expenditure | -22.08 | 23 / 25 | 0.12 | Not extreme vs LOO distribution |
 
 ## Current limitations
 
-- All outcomes now share the 14-bimester pre-window (2015B1-2017B2), bounded at the start by Siconfi 2015. For labor/consumption this is shorter than the 36-52 monthly pre-periods used in V2/V3, so their pre-fit is tighter (lower RMSPE_pre) and more prone to overfitting; rely on the placebo inference, not the raw gap.
+- Pre-window is 24 bimesters for labor/consumption but only 14 for fiscal, because Siconfi/RREO starts at 2015B1. The fiscal pre-fit is therefore tight (low RMSPE_pre) and prone to overfitting; rely on the placebo inference, not the raw gap. This asymmetry cannot be removed without a pre-2015 fiscal source.
 - All seasonal adjustment is STL (freq 6). X-13 cannot process bimonthly (freq 6). Bimester fixed effects and MA(6) are reasonable robustness alternatives.
 - Seasonal adjustment falls back to the raw series for states/variables with too few cycles; check build log.
 - ICMS from Annex 06 is derived by within-year differencing; RS 2018 B1-B5 imputed with 2017 seasonal shares.

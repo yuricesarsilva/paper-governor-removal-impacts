@@ -1,8 +1,8 @@
 Outcome,Treated,Synthetic,RMSPE pre
-Formal hiring,-170.35,-170.36,0.02
-Construction,-19.26,-19.26,0.01
-Retail,90.65,90.65,0.00
-Services,83.97,83.97,0.01
+Formal hiring,-102.91,-106.16,44.65
+Construction,-26.00,-26.69,19.07
+Retail,94.08,94.23,1.14
+Services,90.93,90.82,1.01
 Own tax revenue,491.63,491.63,0.08
 ICMS,430.97,430.90,0.55
 Public investment,50.22,50.22,0.01

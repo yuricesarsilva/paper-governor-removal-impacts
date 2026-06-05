@@ -32,28 +32,28 @@ event <- event_inventory |>
 instability_start_date <- event$instability_start_date[[1]]
 removal_date           <- event$removal_date[[1]]
 
-# ── Window design (ACCOUNTABILITY FRAME) ──────────────────────────────────────
+# ── Window design (ACCOUNTABILITY FRAME, all bimonthly) ───────────────────────
 #
-# Treatment = the effective removal (TSE cassation, 2017-05-04). There is NO
-# separate instability/crisis window: the cassation PROCESS months (2016-2017)
-# are treated as ordinary pre-treatment, because under the accountability reading
-# nothing changes until the captured government is actually removed/replaced.
+# Treatment = the effective removal (TSE cassation, 2017-05-04). No separate
+# crisis window: the cassation-process bimesters count as pre-treatment.
 #
-# Monthly (freq = 12):
-#   Pre-treatment:  2013-01-01 to 2017-04-01  (52 months, up to removal)
-#   Post-removal:   2017-05-01 to 2018-04-01  (12 months)
-#   Total window:   2013-01-01 to 2018-04-01
+# Target pre-treatment = 24 bimesters (2013B3-2017B2). Post = 9 bimesters
+# (2017B3-2018B5). Window: 2013-06-01 to 2018-10-01 (period_date = bimester*2).
 #
-# Bimonthly fiscal (freq = 6):
-#   Pre-treatment:  2015-01-01 to 2017-04-01  (14 bimesters, 2015B1-2017B2)
-#   Post-removal:   2017B3 to 2018B5          (9 bimesters)
-#   Total window:   2015-01-01 to 2018-10-01 (period_date = bimester*2 month)
+# Data availability differs by outcome and is handled per-outcome by the SCM
+# (complete-case pre-window):
+#   - Labor (CAGED) and consumption (PMC/PMS): data from 2007, so the full
+#     24-bimester pre-window is available.
+#   - Fiscal (Siconfi/RREO) starts only at 2015B1, so the fiscal pre-window is
+#     the MAXIMUM AVAILABLE = 14 bimesters (2015B1-2017B2), not 24. This is
+#     reported as a limitation; it cannot be extended without pre-2015 fiscal data.
 
-monthly_window_start   <- as.Date("2013-01-01")
-monthly_window_end     <- as.Date("2018-04-01")
-bimonthly_window_start <- as.Date("2015-01-01")
-bimonthly_window_end   <- as.Date("2018-10-01")
-quarterly_window_start <- as.Date("2012-01-01")
+bimonthly_window_start <- as.Date("2013-06-01")   # 2013B3 = 24 bimesters before removal
+bimonthly_window_end   <- as.Date("2018-10-01")   # 2018B5
+# Vestigial (kept for metadata compatibility; outcomes are all bimonthly):
+monthly_window_start   <- bimonthly_window_start
+monthly_window_end     <- bimonthly_window_end
+quarterly_window_start <- as.Date("2010-01-01")
 quarterly_window_end   <- as.Date("2018-06-30")
 
 donor_exclusion_window_start <- min(monthly_window_start, bimonthly_window_start)
@@ -567,13 +567,31 @@ rebase_sa_in_window <- function(data, vars, window_start, window_end) {
 }
 
 # ── V4: single bimonthly panel with all 8 outcomes ────────────────────────────
-# Start from the SA fiscal panel and join the bimonthly-aggregated, STL-adjusted
-# labor and consumption series. All outcomes share one frequency and one window.
-fiscal_panel <- fiscal_sa |>
+# Driven by a FULL state x bimester grid over the window (not by the fiscal
+# series), so labor/consumption can use pre-2015 bimesters that fiscal lacks.
+# Fiscal columns are NA before 2015B1; the SCM handles this per-outcome via its
+# complete-case pre-window (fiscal -> 14 bimesters, labor/consumption -> 24).
+panel_states <- sort(unique(fiscal_sa$state_abbrev))
+window_dates <- seq(bimonthly_window_start, bimonthly_window_end, by = "2 months")
+
+bimonthly_grid <- tidyr::expand_grid(
+  state_abbrev = panel_states,
+  period_date  = window_dates
+) |>
+  dplyr::mutate(
+    year     = lubridate::year(.data$period_date),
+    bimester = lubridate::month(.data$period_date) %/% 2L  # month 2->1, 6->3, 12->6
+  )
+
+fiscal_panel <- bimonthly_grid |>
   dplyr::left_join(caged_sa,        by = c("state_abbrev", "period_date")) |>
   dplyr::left_join(construction_sa, by = c("state_abbrev", "period_date")) |>
   dplyr::left_join(retail_sa,       by = c("state_abbrev", "period_date")) |>
   dplyr::left_join(services_sa,     by = c("state_abbrev", "period_date")) |>
+  dplyr::left_join(
+    fiscal_sa |> dplyr::select(-dplyr::any_of(c("year", "bimester", "quarter"))),
+    by = c("state_abbrev", "period_date")
+  ) |>
   dplyr::left_join(pnadc_pop_annual, by = c("state_abbrev", "year")) |>
   dplyr::filter(
     .data$period_date >= bimonthly_window_start,

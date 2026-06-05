@@ -1,8 +1,8 @@
 Covariate,Treated,Formal hiring,Construction
-Unemployment rate (SA),    0.104,    0.085,    0.087
-Formalization rate (SA),    0.434,    0.563,    0.510
-"Labor income (SA, R$)","2,711.134","2,735.977","2,630.347"
-Transfer dependency ratio (SA),   -0.002,   -0.001,   -0.002
-"Health expenditure pc (SA, R$)",  175.427,  131.080,  137.257
-"Education expenditure pc (SA, R$)",  153.268,  113.266,  159.566
-"Public security expenditure pc (SA, R$)",   96.182,  103.311,   98.439
+Unemployment rate (SA),    0.104,    0.091,    0.094
+Formalization rate (SA),    0.434,    0.588,    0.526
+"Labor income (SA, R$)","2,711.134","2,981.909","2,797.837"
+Transfer dependency ratio (SA),   -0.002,   -0.001,   -0.001
+"Health expenditure pc (SA, R$)",  175.427,  117.392,  139.163
+"Education expenditure pc (SA, R$)",  153.268,  130.298,  149.886
+"Public security expenditure pc (SA, R$)",   96.182,  110.114,   77.675
