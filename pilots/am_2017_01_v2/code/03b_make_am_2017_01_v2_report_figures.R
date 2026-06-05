@@ -48,17 +48,13 @@ save_plot <- function(plot, filename, width = 12, height = 7) {
                   width = width, height = height, dpi = 300, bg = "white")
 }
 
-# Crisis shading helper — calendar dates on x-axis
-crisis_rect <- function() {
-  ggplot2::annotate("rect",
-    xmin = event$instability_start_date, xmax = event$removal_date,
-    ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.5)
-}
+# Accountability frame: single treatment marker at the removal date.
+# No crisis window — the cassation-process months are ordinary pre-treatment.
+crisis_rect <- function() NULL
 
 vlines <- function() {
   list(
-    ggplot2::geom_vline(xintercept = as.numeric(event$instability_start_date), linetype = "dotted", color = "gray25"),
-    ggplot2::geom_vline(xintercept = as.numeric(event$removal_date),           linetype = "dashed",  color = "gray10")
+    ggplot2::geom_vline(xintercept = as.numeric(event$removal_date), linetype = "dashed", color = "gray10")
   )
 }
 
@@ -134,7 +130,7 @@ build_preliminary_plot <- function(channel_slug_value) {
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
       title    = paste0("Preliminary view (SA): ", unique(mr$channel_label)),
-      subtitle = "Shaded = crisis window; dotted = instability onset; dashed = removal",
+      subtitle = "Dashed line = effective removal (treatment); cassation-process months are pre-treatment",
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
@@ -161,7 +157,7 @@ build_augmented_paths_plot <- function(channel_slug_value) {
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
       title    = paste0("Augmented SCM paths (SA): ", unique(mr$channel_label)),
-      subtitle = "Shaded = crisis; dotted = instability onset; dashed = removal",
+      subtitle = "Dashed line = effective removal (treatment)",
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
@@ -182,7 +178,7 @@ build_augmented_gaps_plot <- function(channel_slug_value) {
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
       title    = paste0("Augmented SCM gaps (SA): ", unique(mr$channel_label)),
-      subtitle = "Gap = Amazonas minus synthetic; shaded = crisis",
+      subtitle = "Gap = Amazonas minus synthetic; dashed line = effective removal",
       x = NULL, y = NULL
     ) +
     base_theme()

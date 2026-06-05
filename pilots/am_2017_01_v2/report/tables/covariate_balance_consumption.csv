@@ -1,8 +1,8 @@
 Covariate,Treated,Retail SA,Services SA
-Unemployment rate (SA),    0.091,    0.080,    0.094
-Formalization rate (SA),    0.461,    0.552,    0.508
-"Labor income (SA, R$)","2,770.049","2,798.492","2,469.258"
-Transfer dependency ratio (SA),    0.000,    0.000,    0.000
-"Health expenditure pc (SA, R$)",  185.049,  149.390,  128.627
-"Education expenditure pc (SA, R$)",  165.177,  144.151,  166.262
-"Public security expenditure pc (SA, R$)",  100.635,   82.369,   89.149
+Unemployment rate (SA),    0.104,    0.089,    0.106
+Formalization rate (SA),    0.434,    0.523,    0.485
+"Labor income (SA, R$)","2,711.134","2,675.576","2,348.724"
+Transfer dependency ratio (SA),   -0.002,   -0.001,   -0.002
+"Health expenditure pc (SA, R$)",  175.427,  139.250,  114.653
+"Education expenditure pc (SA, R$)",  153.268,  129.053,  164.644
+"Public security expenditure pc (SA, R$)",   96.182,   74.468,   92.835

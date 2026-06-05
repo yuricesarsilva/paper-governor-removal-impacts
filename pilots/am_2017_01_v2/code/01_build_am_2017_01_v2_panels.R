@@ -32,18 +32,21 @@ event <- event_inventory |>
 instability_start_date <- event$instability_start_date[[1]]
 removal_date           <- event$removal_date[[1]]
 
-# ── Window design ─────────────────────────────────────────────────────────────
+# ── Window design (ACCOUNTABILITY FRAME) ──────────────────────────────────────
+#
+# Treatment = the effective removal (TSE cassation, 2017-05-04). There is NO
+# separate instability/crisis window: the cassation PROCESS months (2016-2017)
+# are treated as ordinary pre-treatment, because under the accountability reading
+# nothing changes until the captured government is actually removed/replaced.
 #
 # Monthly (freq = 12):
-#   Pre-treatment:  36 months before instability_start → 2013-01-01 to 2015-12-01
-#   Crisis:         instability → removal               → 2016-01-01 to 2017-04-01
-#   Post-removal:   12 months after removal             → 2017-05-01 to 2018-04-01
+#   Pre-treatment:  2013-01-01 to 2017-04-01  (52 months, up to removal)
+#   Post-removal:   2017-05-01 to 2018-04-01  (12 months)
 #   Total window:   2013-01-01 to 2018-04-01
 #
 # Bimonthly fiscal (freq = 6):
-#   Pre-treatment:  24 bimesters desired, limited by Siconfi start 2015 → 6 available
-#   Crisis:         2016B1 to 2017B2  (8 bimesters)
-#   Post-removal:   9 bimesters after removal (2017B3) → 2017B3 to 2018B5
+#   Pre-treatment:  2015-01-01 to 2017-04-01  (14 bimesters, 2015B1-2017B2)
+#   Post-removal:   2017B3 to 2018B5          (9 bimesters)
 #   Total window:   2015-01-01 to 2018-10-01 (period_date = bimester*2 month)
 
 monthly_window_start   <- as.Date("2013-01-01")
@@ -75,50 +78,30 @@ excluded_event_lookup <- event_inventory |>
 
 excluded_donor_states <- sort(unique(c(treated_state, excluded_event_lookup$state_abbrev)))
 
-# ── Crisis-end event times ─────────────────────────────────────────────────────
-instability_month   <- lubridate::floor_date(instability_start_date, "month")
-removal_month       <- lubridate::floor_date(removal_date, "month")
+# ── Removal-date cut points ─────────────────────────────────────────────────
+removal_month   <- lubridate::floor_date(removal_date, "month")
+removal_bim_yr  <- lubridate::year(removal_date)
+removal_bim     <- ((lubridate::month(removal_date) - 1L) %/% 2L) + 1L
 
-instability_bim_yr  <- lubridate::year(instability_start_date)
-instability_bim     <- ((lubridate::month(instability_start_date) - 1L) %/% 2L) + 1L
-removal_bim_yr      <- lubridate::year(removal_date)
-removal_bim         <- ((lubridate::month(removal_date) - 1L) %/% 2L) + 1L
-
-crisis_end_monthly   <- 12L * (lubridate::year(removal_month) - lubridate::year(instability_month)) +
-                        (lubridate::month(removal_month) - lubridate::month(instability_month))
-crisis_end_bimonthly <- 6L * (removal_bim_yr - instability_bim_yr) +
-                        (removal_bim - instability_bim)
-
-# ── Period assignment (3-segment: pre / crisis / post) ─────────────────────────
-# Pre:    period_date <  instability_start (floor to month/bimester)
-# Crisis: instability_start ≤ period_date < removal_date
-# Post:   period_date ≥ removal_date (floor to month/bimester)
+# ── Period assignment (ACCOUNTABILITY: 2-segment pre / post, cut at removal) ───
+# Pre:  period_date <  removal_date (cassation-process months count as pre)
+# Post: period_date >= removal_date (floor to month/bimester)
 assign_period_monthly <- function(period_date) {
-  dplyr::case_when(
-    period_date < instability_month ~ "pre",
-    period_date < removal_month     ~ "crisis",
-    TRUE                            ~ "post"
-  )
+  dplyr::if_else(period_date < removal_month, "pre", "post")
 }
 
 assign_period_bimonthly <- function(year, bimester) {
   yr  <- as.integer(year)
   bim <- as.integer(bimester)
-  dplyr::case_when(
-    yr < instability_bim_yr | (yr == instability_bim_yr & bim < instability_bim) ~ "pre",
-    yr < removal_bim_yr     | (yr == removal_bim_yr     & bim < removal_bim)     ~ "crisis",
-    TRUE                                                                           ~ "post"
+  dplyr::if_else(
+    yr < removal_bim_yr | (yr == removal_bim_yr & bim < removal_bim),
+    "pre", "post"
   )
 }
 
 assign_period_quarterly <- function(period_date) {
-  instability_q <- lubridate::floor_date(instability_start_date, "quarter")
-  removal_q     <- lubridate::floor_date(removal_date,           "quarter")
-  dplyr::case_when(
-    period_date < instability_q ~ "pre",
-    period_date < removal_q     ~ "crisis",
-    TRUE                        ~ "post"
-  )
+  removal_q <- lubridate::floor_date(removal_date, "quarter")
+  dplyr::if_else(period_date < removal_q, "pre", "post")
 }
 
 # ── X-13 seasonal adjustment ──────────────────────────────────────────────────
@@ -697,8 +680,7 @@ event_metadata <- event |>
     quarterly_window_end     = quarterly_window_end,
     donor_exclusion_window_start = donor_exclusion_window_start,
     donor_exclusion_window_end   = donor_exclusion_window_end,
-    crisis_end_monthly           = crisis_end_monthly,
-    crisis_end_bimonthly         = crisis_end_bimonthly,
+    treatment_frame              = "accountability: single cut at removal_date; no crisis window",
     sa_method                    = "X-13 (freq 12/4); STL fallback for bimonthly freq 6"
   )
 

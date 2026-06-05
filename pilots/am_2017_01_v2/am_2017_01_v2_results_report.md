@@ -2,20 +2,21 @@
 
 Generated on 2026-06-05.
 
-This version replaces moving-average smoothing with model-based seasonal adjustment for all sub-annual variables and covariates: X-13ARIMA-SEATS for monthly and quarterly series, and STL for bimonthly fiscal series (X-13 supports only quarterly and monthly frequencies). Because seasonality is removed at source, the analysis uses calendar time on the x-axis (not event-centered time). The three-segment logic — pre-treatment, crisis window, post-removal — is preserved.
+This pilot uses an **accountability frame**: the electoral cassation is read as a corrective institutional act (removal of a vote-buying government), not as an exogenous instability shock. The single treatment date is the effective removal; the cassation-process months count as ordinary pre-treatment, because under this reading nothing changes until the captured government is actually removed and replaced. Seasonality is removed at source (X-13ARIMA-SEATS for monthly/quarterly, STL for bimonthly fiscal), so the analysis uses calendar time on the x-axis. No moving averages are used.
 
 ## Event design
 
 - Treated state: `AM` (Amazonas).
-- Instability start: `2016-01-25` (first TRE/TSE cassation decision).
-- Effective removal: `2017-05-04` (TSE final cassation decision).
-- Crisis window: `2016-01-25` to `2017-05-04` (465 days).
+- Treatment (single cut): effective removal `2017-05-04` (TSE final cassation decision for vote-buying).
+- The cassation process began `2016-01-25` (first TRE/TSE decision), but this is treated as pre-treatment, not a separate crisis window.
 
 ## Window design
 
-- Monthly: `2013-01-01` to `2018-04-01`. Pre-treatment = 36 months; crisis window; post-removal = 12 months.
-- Bimonthly fiscal: `2015-01-01` to `2018-10-01`. Pre-treatment limited to 6 bimesters by Siconfi start (2015); crisis window; post-removal = 9 bimesters.
-- The post-removal window is the sum of the crisis interval plus 12 months (monthly) or 9 bimesters (bimonthly).
+- Monthly: `2013-01-01` to `2018-04-01`. Pre-treatment = 52 months (up to removal); post-removal = 12 months.
+- Bimonthly fiscal: `2015-01-01` to `2018-10-01`. Pre-treatment = 14 bimesters (2015B1-2017B2, limited at the start by Siconfi 2015); post-removal = 9 bimesters.
+- Folding the cassation-process months into pre-treatment lengthens the fiscal pre-window from 6 to 14 bimesters, reducing the overfitting that affected the instability-framed specification.
+
+## Seasonal adjustment
 
 - Monthly outcomes and quarterly covariates are seasonally adjusted with X-13ARIMA-SEATS (`seasonal::seas`, x11 mode, no transformation).
 - Bimonthly fiscal series use STL (`stats::stl`, periodic seasonal window, robust), because X-13 supports only quarterly (4) and monthly (12) frequencies, not bimonthly (6). The seasonally adjusted series is the observed series minus the STL seasonal component.
@@ -27,7 +28,7 @@ This version replaces moving-average smoothing with model-based seasonal adjustm
 
 ## Methodological strategy
 
-The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 24 eligible donors. Augmented Synthetic Control is the headline estimator; SCM weights are estimated on the pre-treatment (pre-instability) window only. Predictors are the full pre-treatment outcome path plus six structural covariates (all seasonally adjusted): unemployment rate, formalization rate, transfer dependency ratio, and health, education, and public security expenditure per capita.
+The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 24 eligible donors. Augmented Synthetic Control is the headline estimator; SCM weights are estimated on the pre-treatment window (everything before the removal date). Predictors are the full pre-treatment outcome path plus six structural covariates (all seasonally adjusted): unemployment rate, formalization rate, transfer dependency ratio, and health, education, and public security expenditure per capita.
 
 ## Preliminary plots
 
@@ -43,63 +44,63 @@ The main donor pool excludes `AM`, `RJ`, `TO`. The preferred specification uses 
 
 | Outcome | Treated | Synthetic | RMSPE pre |
 | --- | --- | --- | --- |
-| Formal hiring SA | -41.52 | -38.85 | 35.57 |
-| Construction SA | -12.36 | -12.14 | 13.56 |
-| Retail SA | 101.92 | 101.93 | 1.35 |
-| Services SA | 103.72 | 103.74 | 1.68 |
-| Own tax revenue SA | 524.75 | 524.75 | 0.02 |
-| ICMS SA | 466.14 | 466.14 | 0.04 |
-| Public investment SA | 55.81 | 55.81 | 0.00 |
-| Total expenditure SA | 1,019.72 | 1,019.72 | 0.03 |
+| Formal hiring SA | -45.85 | -45.62 | 33.84 |
+| Construction SA | -11.58 | -10.43 | 14.11 |
+| Retail SA | 97.63 | 97.65 | 1.92 |
+| Services SA | 97.41 | 97.51 | 2.08 |
+| Own tax revenue SA | 491.63 | 491.63 | 0.08 |
+| ICMS SA | 430.97 | 430.90 | 0.55 |
+| Public investment SA | 50.22 | 50.22 | 0.01 |
+| Total expenditure SA | 970.87 | 970.88 | 0.11 |
 
 ### Covariate balance: formal labor market
 
 | Covariate | Treated | Formal hiring SA | Construction SA |
 | --- | --- | --- | --- |
-| Unemployment rate (SA) |     0.091 |     0.079 |     0.092 |
-| Formalization rate (SA) |     0.461 |     0.607 |     0.510 |
-| Labor income (SA, R$) | 2,770.049 | 3,152.212 | 2,636.124 |
-| Transfer dependency ratio (SA) |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (SA, R$) |   185.049 |   125.025 |   144.600 |
-| Education expenditure pc (SA, R$) |   165.177 |   139.303 |   147.756 |
-| Public security expenditure pc (SA, R$) |   100.635 |   107.569 |    77.050 |
+| Unemployment rate (SA) |     0.104 |     0.087 |     0.097 |
+| Formalization rate (SA) |     0.434 |     0.580 |     0.520 |
+| Labor income (SA, R$) | 2,711.134 | 2,946.195 | 2,709.570 |
+| Transfer dependency ratio (SA) |    -0.002 |    -0.001 |    -0.001 |
+| Health expenditure pc (SA, R$) |   175.427 |   124.369 |   139.814 |
+| Education expenditure pc (SA, R$) |   153.268 |   131.666 |   138.702 |
+| Public security expenditure pc (SA, R$) |    96.182 |   113.404 |    81.787 |
 
 ### Covariate balance: household consumption
 
 | Covariate | Treated | Retail SA | Services SA |
 | --- | --- | --- | --- |
-| Unemployment rate (SA) |     0.091 |     0.080 |     0.094 |
-| Formalization rate (SA) |     0.461 |     0.552 |     0.508 |
-| Labor income (SA, R$) | 2,770.049 | 2,798.492 | 2,469.258 |
-| Transfer dependency ratio (SA) |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (SA, R$) |   185.049 |   149.390 |   128.627 |
-| Education expenditure pc (SA, R$) |   165.177 |   144.151 |   166.262 |
-| Public security expenditure pc (SA, R$) |   100.635 |    82.369 |    89.149 |
+| Unemployment rate (SA) |     0.104 |     0.089 |     0.106 |
+| Formalization rate (SA) |     0.434 |     0.523 |     0.485 |
+| Labor income (SA, R$) | 2,711.134 | 2,675.576 | 2,348.724 |
+| Transfer dependency ratio (SA) |    -0.002 |    -0.001 |    -0.002 |
+| Health expenditure pc (SA, R$) |   175.427 |   139.250 |   114.653 |
+| Education expenditure pc (SA, R$) |   153.268 |   129.053 |   164.644 |
+| Public security expenditure pc (SA, R$) |    96.182 |    74.468 |    92.835 |
 
 ### Covariate balance: state public finances
 
 | Covariate | Treated | Own tax revenue SA | ICMS SA | Public investment SA | Total expenditure SA |
 | --- | --- | --- | --- | --- | --- |
-| Unemployment rate (SA) |     0.091 |     0.088 |     0.085 |     0.088 |     0.091 |
-| Formalization rate (SA) |     0.461 |     0.498 |     0.534 |     0.488 |     0.480 |
-| Labor income (SA, R$) | 2,770.049 | 2,841.206 | 2,964.301 | 2,627.145 | 2,693.662 |
-| Transfer dependency ratio (SA) |     0.000 |     0.000 |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (SA, R$) |   185.049 |   160.672 |   140.826 |   168.065 |   156.675 |
-| Education expenditure pc (SA, R$) |   165.177 |   201.851 |   187.229 |   184.980 |   190.065 |
-| Public security expenditure pc (SA, R$) |   100.635 |    95.105 |    97.098 |    97.225 |   100.175 |
+| Unemployment rate (SA) |     0.104 |     0.099 |     0.097 |     0.098 |     0.098 |
+| Formalization rate (SA) |     0.434 |     0.482 |     0.521 |     0.476 |     0.463 |
+| Labor income (SA, R$) | 2,711.134 | 2,704.581 | 2,866.460 | 2,622.891 | 2,525.141 |
+| Transfer dependency ratio (SA) |    -0.002 |    -0.002 |    -0.001 |    -0.002 |    -0.002 |
+| Health expenditure pc (SA, R$) |   175.427 |   161.985 |   143.592 |   154.001 |   138.867 |
+| Education expenditure pc (SA, R$) |   153.268 |   183.201 |   179.931 |   169.246 |   173.171 |
+| Public security expenditure pc (SA, R$) |    96.182 |    87.344 |    90.546 |    90.453 |    94.832 |
 
 ## Main results: Augmented SCM (SA)
 
-| Channel | Outcome | Mean gap crisis | Mean gap post | RMSPE pre | RMSPE post | Donors |
-| --- | --- | --- | --- | --- | --- | --- |
-| Formal labor market | Formal hiring balance per 100k WAP (SA) |  20.76 |  2.38 | 35.57 | 24.63 | 24 |
-| Formal labor market | Construction hiring per 100k WAP (SA) |   1.45 | -4.97 | 13.56 | 12.98 | 24 |
-| Household consumption | Retail volume index (SA) |   0.89 | 11.98 |  1.35 | 12.59 | 24 |
-| Household consumption | Services volume index (SA) |  -2.34 |  3.21 |  1.68 |  4.01 | 24 |
-| State public finances | Own tax revenue, real per capita (SA) |   4.03 | 51.47 |  0.02 | 55.69 | 24 |
-| State public finances | ICMS revenue, real per capita (SA) |  27.97 | 86.45 |  0.04 | 88.00 | 24 |
-| State public finances | Public investment, real per capita (SA) |   4.12 | -1.29 |  0.00 | 24.58 | 24 |
-| State public finances | Total liquidated expenditure, real pc (SA) | -20.95 | 13.06 |  0.03 | 85.93 | 24 |
+| Channel | Outcome | Mean gap post | RMSPE pre | RMSPE post | Donors |
+| --- | --- | --- | --- | --- | --- |
+| Formal labor market | Formal hiring balance per 100k WAP (SA) |  -1.64 | 33.84 | 23.20 | 24 |
+| Formal labor market | Construction hiring per 100k WAP (SA) |  -6.07 | 14.11 | 12.25 | 24 |
+| Household consumption | Retail volume index (SA) |   4.42 |  1.92 |  5.97 | 24 |
+| Household consumption | Services volume index (SA) |   7.38 |  2.08 |  7.84 | 24 |
+| State public finances | Own tax revenue, real per capita (SA) |  46.95 |  0.08 | 50.43 | 24 |
+| State public finances | ICMS revenue, real per capita (SA) |  47.98 |  0.55 | 52.16 | 24 |
+| State public finances | Public investment, real per capita (SA) |  -4.83 |  0.01 | 18.27 | 24 |
+| State public finances | Total liquidated expenditure, real pc (SA) | -22.08 |  0.11 | 85.47 | 24 |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -135,14 +136,14 @@ Each eligible donor is treated as pseudo-treated at the same dates; gaps are nor
 
 | Outcome | RMSPE ratio (post/pre) | p-value (ratio) | p-value (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Formal hiring SA |      0.69 | 0.958 | 1.000 | 24 |
-| Construction SA |      0.96 | 0.583 | 0.958 | 24 |
-| Retail SA |      9.30 | 0.125 | 0.125 | 24 |
-| Services SA |      2.39 | 0.708 | 0.750 | 24 |
-| Own tax revenue SA |  2,631.62 | 0.333 | 0.417 | 24 |
-| ICMS SA |  2,116.31 | 0.208 | 0.208 | 24 |
-| Public investment SA | 19,845.74 | 0.083 | 1.000 | 24 |
-| Total expenditure SA |  3,199.43 | 0.625 | 1.000 | 24 |
+| Formal hiring SA |     0.69 | 0.958 | 1.000 | 24 |
+| Construction SA |     0.87 | 0.583 | 0.667 | 24 |
+| Retail SA |     3.11 | 0.167 | 0.333 | 24 |
+| Services SA |     3.77 | 0.000 | 0.083 | 24 |
+| Own tax revenue SA |   603.26 | 0.125 | 0.458 | 24 |
+| ICMS SA |    94.27 | 0.000 | 0.333 | 24 |
+| Public investment SA | 1,300.69 | 0.250 | 1.000 | 24 |
+| Total expenditure SA |   760.80 | 0.042 | 0.958 | 24 |
 
 ![placebo_gaps_labor_market.png](report/figures/placebo_gaps_labor_market.png)
 
@@ -160,16 +161,16 @@ Each eligible donor is treated as pseudo-treated at the same dates; gaps are nor
 
 | Outcome | Gap post | LOO rank | p-value (2-sided) | Note |
 | --- | --- | --- | --- | --- |
-| Formal hiring SA | 2.38 | 24 / 25 | 0.08 | Unusually large positive gap |
-| Retail SA | 11.98 | 25 / 25 | 0.04 | Unusually large positive gap |
-| Services SA | 3.21 | 25 / 25 | 0.04 | Unusually large positive gap |
-| ICMS SA | 86.45 | 23 / 25 | 0.12 | Not extreme vs LOO distribution |
-| Public investment SA | -1.29 | 21 / 25 | 0.2 | Not extreme vs LOO distribution |
-| Total expenditure SA | 13.06 | 23 / 25 | 0.12 | Not extreme vs LOO distribution |
+| Formal hiring SA | -1.64 | 2 / 25 | 0.08 | Unusually small negative gap |
+| Retail SA | 4.42 | 1 / 25 | 0.04 | Unusually small positive gap |
+| Services SA | 7.38 | 25 / 25 | 0.04 | Unusually large positive gap |
+| ICMS SA | 47.98 | 2 / 25 | 0.08 | Unusually small positive gap |
+| Public investment SA | -4.83 | 20 / 25 | 0.24 | Not extreme vs LOO distribution |
+| Total expenditure SA | -22.08 | 23 / 25 | 0.12 | Not extreme vs LOO distribution |
 
 ## Current limitations
 
-- Bimonthly fiscal pre-treatment is only 6 bimesters (Siconfi starts 2015), short of the 24-bimester target. Fiscal estimates rely on a short pre-window.
+- Bimonthly fiscal pre-treatment is 14 bimesters (2015B1-2017B2), still short of the 24-bimester target because Siconfi starts in 2015, but a substantial improvement over the instability-framed 6-bimester window.
 - Bimonthly fiscal seasonal adjustment uses STL, not X-13 (X-13 supports only freq 4 and 12). Bimester fixed effects and MA(6) are reasonable robustness alternatives.
 - Seasonal adjustment falls back to the raw series for states/variables with too few seasonal cycles; check build log.
 - ICMS from Annex 06 is derived by within-year differencing; RS 2018 B1-B5 imputed with 2017 seasonal shares.
