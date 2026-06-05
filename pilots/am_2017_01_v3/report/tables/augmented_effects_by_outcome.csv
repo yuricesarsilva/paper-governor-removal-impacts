@@ -1,0 +1,9 @@
+outcome,label,channel,short_label,mean_gap_post,mean_gap_pre,augmented_rmspe_pre,augmented_rmspe_post,donor_count
+formal_hiring_balance_sa_per_100k_wap,Formal hiring balance per 100k WAP (trend-cycle),Formal labor market,Formal hiring TC,8.11055918655494,-0.24543788221898283,3.9233145950920534,16.57957773861587,24
+formal_hiring_balance_construction_sa_per_100k_wap,Construction hiring per 100k WAP (trend-cycle),Formal labor market,Construction TC,-3.022377103961214,-0.0841961719254648,1.1008552782771668,5.1981123488295475,24
+retail_volume_index_sa,Retail volume index (trend-cycle),Household consumption,Retail TC,-0.4008270052068781,-0.01723165132012601,0.28062819068403483,1.4419874525643377,24
+services_volume_index_sa,Services volume index (trend-cycle),Household consumption,Services TC,5.681841952957466,0.00665535347214211,0.4453698123507384,5.882500247714892,24
+state_tax_revenue_real_pc_sa,"Own tax revenue, real per capita (SA)",State public finances,Own tax revenue SA,46.95334125413226,-2.2388509840100463e-4,0.08359951043203798,50.43212131725661,24
+icms_revenue_real_pc_sa,"ICMS revenue, real per capita (SA)",State public finances,ICMS SA,47.97749925505392,0.07599283788653517,0.5532995085449225,52.16099839496528,24
+public_investment_liquidated_real_pc_sa,"Public investment, real per capita (SA)",State public finances,Public investment SA,-4.830087006386304,-0.00425489953796619,0.01404404022909249,18.266975219542225,24
+liquidated_expenditure_total_real_pc_sa,"Total liquidated expenditure, real pc (SA)",State public finances,Total expenditure SA,-22.081099507317237,-0.00861838898385615,0.11233956831111724,85.46835119667212,24
