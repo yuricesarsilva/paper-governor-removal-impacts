@@ -1,17 +1,17 @@
 # AM 2017-01: results report
 
-Generated on 2026-06-04.
+Generated on 2026-06-05.
 
-This document consolidates the Augmented Synthetic Control results for the Amazonas 2017 case across three channels: formal labor market, household consumption, and state public finances. The design follows the project-wide protocol for gubernatorial removal events in Brazil.
+This document consolidates the Augmented Synthetic Control results for the Amazonas 2016 case across three channels: formal labor market, household consumption, and state public finances. The design follows the project-wide protocol for gubernatorial removal events in Brazil.
 
 ## Event design
 
 - Treated state: `AM` (Amazonas).
 - Instability start: `2016-01-25` (first TRE/TSE cassation decision).
 - Effective removal/intervention: `2017-05-04` (TSE final cassation decision).
-- Monthly event time: 2017-05 is coded as 0; pre-treatment runs from -35 to -1 and post-treatment from 1 onward.
-- Bimonthly event time: 2017B3 is coded as 0; pre-treatment runs from -13 to -1 and post-treatment from 1 onward.
-- Pre-treatment clean window: periods before the instability start are flagged `pre_instability_clean`.
+- Monthly event time: 2016-01 (instability onset) is coded as 0. Pre-treatment: -20 to -1. Crisis window: 0 to 15 (2016-01 to 2017-04). Post-removal: 16 onward.
+- Bimonthly event time: 2016B1 (instability onset) is coded as 0. Pre-treatment: -6 to -1. Crisis: 0 to 7. Post-removal: 8 onward.
+- Pre-treatment weight estimation uses only `analysis_period == pre` observations (before instability onset).
 
 ## Methodological strategy
 
@@ -113,50 +113,50 @@ Mean of the outcome variable in the pre-treatment period for Roraima, the augmen
 
 | Outcome | Roraima | Synthetic | RMSPE pre |
 | --- | --- | --- | --- |
-| Formal hiring, MA6 | -80.80 | -81.33 | 4.79 |
-| Construction hiring, MA6 | -11.40 | -11.34 | 1.66 |
-| Retail, MA6 | 87.19 | 87.18 | 0.41 |
-| Services, MA6 | 82.03 | 82.04 | 0.21 |
-| Own tax revenue, MA4 | 485.47 | 485.47 | 0.17 |
-| ICMS, MA4 | 426.81 | 426.80 | 0.08 |
-| Public investment, MA4 | 50.56 | 50.56 | 0.00 |
-| Total expenditure, MA4 | 955.87 | 955.88 | 0.14 |
+| Formal hiring, MA6 | -84.01 | -84.00 | 0.05 |
+| Construction hiring, MA6 | -11.90 | -11.90 | 0.07 |
+| Retail, MA6 | 92.76 | 92.76 | 0.02 |
+| Services, MA6 | 89.90 | 89.90 | 0.01 |
+| Own tax revenue (raw) | 524.75 | 524.75 | 0.02 |
+| ICMS (raw) | 466.14 | 466.14 | 0.05 |
+| Public investment (raw) | 55.81 | 55.81 | 0.00 |
+| Total expenditure (raw) | 1,019.72 | 1,019.72 | 0.03 |
 
 ### Covariate balance: formal labor market
 
 | Covariate | Roraima | Formal hiring, MA6 | Construction hiring, MA6 |
 | --- | --- | --- | --- |
-| Unemployment rate |     0.138 |     0.126 |     0.117 |
-| Formalization rate |     0.433 |     0.589 |     0.528 |
-| Labor income (real, R$) | 2,564.833 | 2,985.655 | 2,684.326 |
+| Unemployment rate |     0.093 |     0.088 |     0.091 |
+| Formalization rate |     0.459 |     0.583 |     0.500 |
+| Labor income (real, R$) | 2,679.000 | 3,006.429 | 2,641.243 |
 | Transfer dependency ratio |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (real, R$) |   171.780 |   129.726 |   108.440 |
-| Education expenditure pc (real, R$) |   147.267 |   104.184 |   140.494 |
-| Public security expenditure pc (real, R$) |    94.962 |    91.181 |    92.601 |
+| Health expenditure pc (real, R$) |   185.049 |   147.030 |   153.526 |
+| Education expenditure pc (real, R$) |   165.177 |   153.667 |   169.572 |
+| Public security expenditure pc (real, R$) |   100.635 |   108.857 |    86.620 |
 
 ### Covariate balance: household consumption
 
 | Covariate | Roraima | Retail, MA6 | Services, MA6 |
 | --- | --- | --- | --- |
-| Unemployment rate |     0.138 |     0.126 |     0.122 |
-| Formalization rate |     0.433 |     0.496 |     0.472 |
-| Labor income (real, R$) | 2,564.833 | 2,561.943 | 2,540.720 |
+| Unemployment rate |     0.093 |     0.087 |     0.086 |
+| Formalization rate |     0.459 |     0.513 |     0.480 |
+| Labor income (real, R$) | 2,679.000 | 2,680.627 | 2,528.812 |
 | Transfer dependency ratio |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (real, R$) |   171.780 |   131.859 |   116.443 |
-| Education expenditure pc (real, R$) |   147.267 |   140.045 |   162.864 |
-| Public security expenditure pc (real, R$) |    94.962 |    82.145 |   100.285 |
+| Health expenditure pc (real, R$) |   185.049 |   150.997 |   118.994 |
+| Education expenditure pc (real, R$) |   165.177 |   171.306 |   171.185 |
+| Public security expenditure pc (real, R$) |   100.635 |    97.501 |   103.650 |
 
 ### Covariate balance: state public finances
 
-| Covariate | Roraima | Own tax revenue, MA4 | ICMS, MA4 | Public investment, MA4 | Total expenditure, MA4 |
+| Covariate | Roraima | Own tax revenue (raw) | ICMS (raw) | Public investment (raw) | Total expenditure (raw) |
 | --- | --- | --- | --- | --- | --- |
-| Unemployment rate |     0.138 |     0.135 |     0.133 |     0.138 |     0.137 |
-| Formalization rate |     0.433 |     0.485 |     0.525 |     0.476 |     0.459 |
-| Labor income (real, R$) | 2,564.833 | 2,652.943 | 2,868.641 | 2,574.159 | 2,576.465 |
+| Unemployment rate |     0.093 |     0.092 |     0.089 |     0.093 |     0.093 |
+| Formalization rate |     0.459 |     0.483 |     0.523 |     0.485 |     0.474 |
+| Labor income (real, R$) | 2,679.000 | 2,737.992 | 2,817.467 | 2,598.812 | 2,733.454 |
 | Transfer dependency ratio |     0.000 |     0.000 |     0.000 |     0.000 |     0.000 |
-| Health expenditure pc (real, R$) |   171.780 |   155.602 |   138.601 |   137.338 |   141.368 |
-| Education expenditure pc (real, R$) |   147.267 |   167.895 |   163.962 |   152.299 |   170.634 |
-| Public security expenditure pc (real, R$) |    94.962 |    86.932 |    85.908 |    90.029 |    93.146 |
+| Health expenditure pc (real, R$) |   185.049 |   161.791 |   149.466 |   163.842 |   155.173 |
+| Education expenditure pc (real, R$) |   165.177 |   187.813 |   179.420 |   181.107 |   191.747 |
+| Public security expenditure pc (real, R$) |   100.635 |    96.143 |    94.528 |    95.491 |    96.566 |
 
 Audit CSVs: `covariate_balance_labor_market.csv`, `covariate_balance_consumption.csv`, `covariate_balance_public_sector.csv`, `pretx_outcome_balance.csv`.
 
@@ -164,14 +164,14 @@ Audit CSVs: `covariate_balance_labor_market.csv`, `covariate_balance_consumption
 
 | Channel | Outcome | Mean gap crisis | Mean gap post | RMSPE pre | RMSPE post | Donors |
 | --- | --- | --- | --- | --- | --- | --- |
-| Formal labor market | Formal hiring balance per 100k working-age population, MA6 V5 |  |  4.26 | 4.79 | 18.37 | 24 |
-| Formal labor market | Construction hiring balance per 100k working-age population, MA6 V5 |  |  0.99 | 1.66 |  5.00 | 24 |
-| Household consumption | Retail volume index, MA6 V5 |  | 15.34 | 0.41 | 16.01 | 24 |
-| Household consumption | Services volume index, MA6 V5 |  |  4.44 | 0.21 |  4.68 | 24 |
-| State public finances | Own tax revenue, real per capita, MA4 V5 |  | 35.16 | 0.17 | 36.78 | 24 |
-| State public finances | ICMS revenue, real per capita, MA4 V5 |  | 43.19 | 0.08 | 44.75 | 24 |
-| State public finances | Public investment, liquidated, real per capita, MA4 V5 |  |  6.80 | 0.00 | 15.83 | 24 |
-| State public finances | Total liquidated expenditure, real per capita, MA4 V5 |  | 49.82 | 0.14 | 63.79 | 24 |
+| Formal labor market | Formal hiring balance per 100k working-age population, MA6 V5 |  10.13 | 10.44 | 0.05 |  36.27 | 24 |
+| Formal labor market | Construction hiring balance per 100k working-age population, MA6 V5 |  17.03 |  0.98 | 0.07 |   4.91 | 24 |
+| Household consumption | Retail volume index, MA6 V5 |  -0.76 |  8.70 | 0.02 |   9.63 | 24 |
+| Household consumption | Services volume index, MA6 V5 |   0.15 |  2.68 | 0.01 |   3.91 | 24 |
+| State public finances | Own tax revenue, real per capita | -40.43 | 19.91 | 0.02 |  36.43 | 24 |
+| State public finances | ICMS revenue, real per capita |  41.61 | 90.53 | 0.05 |  92.46 | 24 |
+| State public finances | Public investment, liquidated, real per capita |  -0.57 |  3.01 | 0.00 |  21.69 | 24 |
+| State public finances | Total liquidated expenditure, real per capita |  42.50 | 80.31 | 0.03 | 121.30 | 24 |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -239,27 +239,23 @@ Raw specification results:
 
 | Channel | Outcome | Mean gap crisis | Mean gap post | RMSPE pre | RMSPE post | Donors |
 | --- | --- | --- | --- | --- | --- | --- |
-| Formal labor market | Formal hiring balance per 100k working-age population | -31.67 |  7.96 | 31.30 |  45.01 | 24 |
-| Formal labor market | Construction hiring balance per 100k working-age population |  -8.31 |  0.50 | 11.07 |   8.51 | 24 |
-| Household consumption | Retail volume index |   2.12 | 10.61 |  2.26 |  11.84 | 24 |
-| Household consumption | Services volume index |   1.97 |  5.98 |  2.20 |   7.61 | 24 |
-| State public finances | Own tax revenue, real per capita |   9.76 | 32.47 |  0.21 |  60.85 | 24 |
-| State public finances | ICMS revenue, real per capita |  34.18 | 42.24 |  0.13 |  51.02 | 24 |
-| State public finances | Public investment, liquidated, real per capita |  -4.42 | 13.42 |  0.01 |  32.47 | 24 |
-| State public finances | Total liquidated expenditure, real per capita | -91.34 | 20.15 |  0.11 | 100.59 | 24 |
+| Formal labor market | Formal hiring balance per 100k working-age population | -5.32 |  2.94 | 26.44 | 57.90 | 24 |
+| Formal labor market | Construction hiring balance per 100k working-age population | 14.07 |  2.61 |  7.38 |  9.70 | 24 |
+| Household consumption | Retail volume index |  3.08 | 10.70 |  0.75 | 11.93 | 24 |
+| Household consumption | Services volume index | -2.03 | -0.16 |  1.28 |  4.95 | 24 |
 
 Smoothed specification results (preferred):
 
 | Channel | Outcome | Mean gap crisis | Mean gap post | RMSPE pre | RMSPE post | Donors |
 | --- | --- | --- | --- | --- | --- | --- |
-| Formal labor market | Formal hiring balance per 100k working-age population, MA6 V5 |  |  4.26 | 4.79 | 18.37 | 24 |
-| Formal labor market | Construction hiring balance per 100k working-age population, MA6 V5 |  |  0.99 | 1.66 |  5.00 | 24 |
-| Household consumption | Retail volume index, MA6 V5 |  | 15.34 | 0.41 | 16.01 | 24 |
-| Household consumption | Services volume index, MA6 V5 |  |  4.44 | 0.21 |  4.68 | 24 |
-| State public finances | Own tax revenue, real per capita, MA4 V5 |  | 35.16 | 0.17 | 36.78 | 24 |
-| State public finances | ICMS revenue, real per capita, MA4 V5 |  | 43.19 | 0.08 | 44.75 | 24 |
-| State public finances | Public investment, liquidated, real per capita, MA4 V5 |  |  6.80 | 0.00 | 15.83 | 24 |
-| State public finances | Total liquidated expenditure, real per capita, MA4 V5 |  | 49.82 | 0.14 | 63.79 | 24 |
+| Formal labor market | Formal hiring balance per 100k working-age population, MA6 V5 |  10.13 | 10.44 | 0.05 |  36.27 | 24 |
+| Formal labor market | Construction hiring balance per 100k working-age population, MA6 V5 |  17.03 |  0.98 | 0.07 |   4.91 | 24 |
+| Household consumption | Retail volume index, MA6 V5 |  -0.76 |  8.70 | 0.02 |   9.63 | 24 |
+| Household consumption | Services volume index, MA6 V5 |   0.15 |  2.68 | 0.01 |   3.91 | 24 |
+| State public finances | Own tax revenue, real per capita | -40.43 | 19.91 | 0.02 |  36.43 | 24 |
+| State public finances | ICMS revenue, real per capita |  41.61 | 90.53 | 0.05 |  92.46 | 24 |
+| State public finances | Public investment, liquidated, real per capita |  -0.57 |  3.01 | 0.00 |  21.69 | 24 |
+| State public finances | Total liquidated expenditure, real per capita |  42.50 | 80.31 | 0.03 | 121.30 | 24 |
 
 The second check is the explicit separation between the crisis window (instability start to removal date) and the post-removal period. For this case, November 2018 (event_time = -1) is the only month in the crisis window under the monthly specification. Results are nearly identical between the full pre-treatment and the pre-instability-only weight estimation, confirming that the short crisis window does not materially affect the estimates.
 
@@ -277,14 +273,10 @@ This normalization makes units with different scales comparable. The test is not
 
 | Outcome | RMSPE ratio (post/pre) | p-value (ratio) | p-value (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Formal hiring, MA6 |     3.84 | 0.500 | 1.000 | 24 |
-| Construction hiring, MA6 |     3.01 | 0.625 | 1.000 | 24 |
-| Retail, MA6 |    38.84 | 0.417 | 0.083 | 24 |
-| Services, MA6 |    21.83 | 0.167 | 0.417 | 24 |
-| Own tax revenue, MA4 |   210.23 | 0.167 | 0.417 | 24 |
-| ICMS, MA4 |   533.57 | 0.000 | 0.375 | 24 |
-| Public investment, MA4 | 4,550.15 | 0.250 | 0.917 | 24 |
-| Total expenditure, MA4 |   455.00 | 0.375 | 0.708 | 24 |
+| Formal hiring, MA6 | 678.40 | 0.125 | 1.000 | 24 |
+| Construction hiring, MA6 |  74.74 | 0.708 | 1.000 | 24 |
+| Retail, MA6 | 522.63 | 0.583 | 0.375 | 24 |
+| Services, MA6 | 492.19 | 0.500 | 0.625 | 24 |
 
 ### In-space placebo figures
 
@@ -306,9 +298,9 @@ A leave-one-out (LOO) placebo was run for six outcomes: formal hiring balance, r
 
 | Outcome | Gap post | LOO rank | p-value (2-sided) | Note |
 | --- | --- | --- | --- | --- |
-| Formal hiring (MA6) | 4.26 | 3 / 25 | 0.12 | Not extreme relative to LOO distribution |
-| Retail index (MA6) | 15.34 | 25 / 25 | 0.04 | Unusually large positive gap |
-| Services index (MA6) | 4.44 | 25 / 25 | 0.04 | Unusually large positive gap |
+| Formal hiring (MA6) | 10.44 | 3 / 25 | 0.12 | Not extreme relative to LOO distribution |
+| Retail index (MA6) | 8.7 | 23 / 25 | 0.12 | Not extreme relative to LOO distribution |
+| Services index (MA6) | 2.68 | 25 / 25 | 0.04 | Unusually large positive gap |
 | ICMS revenue (MA4) | 43.19 | 3 / 25 | 0.12 | Not extreme relative to LOO distribution |
 | Public investment (MA4) | 6.8 | 14 / 25 | 0.48 | Not extreme relative to LOO distribution |
 | Total expenditure (MA4) | 49.82 | 23 / 25 | 0.12 | Not extreme relative to LOO distribution |
@@ -327,7 +319,7 @@ The `ma6_v5_instability` specification estimates SCM weights using only periods 
 - Public investment and total liquidated expenditure underwent gap repair in Siconfi/RREO; both should be read together with their audit tables.
 - RS 2018 ICMS bimesters B1–B5 were imputed using 2017 seasonal shares (Siconfi API returned 0 rows for those periods).
 - The post-treatment window closes at end of 2019 to avoid pandemic overlap and the January 2020 CAGED methodological break.
-- This document is a preliminary consolidation of the Amazonas 2017 pilot, not the final results section of the article.
+- This document is a preliminary consolidation of the Amazonas 2016 pilot, not the final results section of the article.
 
 ## Generated files
 

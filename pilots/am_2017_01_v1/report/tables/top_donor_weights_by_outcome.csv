@@ -1,41 +1,41 @@
 donor_state,scm_weight,outcome,short_label
-PE,0.432729057921872,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
-ES,0.16798453053042678,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
-MG,0.1513668416027017,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
-RS,0.1328355293578352,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
-SP,0.0621820009837914,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
-GO,0.4022046766606828,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
-MA,0.2024622409651855,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
-BA,0.1705304072154578,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
-MS,0.14183108336995195,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
-AP,0.06487050512993574,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
-BA,0.44747954546980245,retail_volume_index_ma6_v5,"Retail, MA6"
-RO,0.2416125152142871,retail_volume_index_ma6_v5,"Retail, MA6"
-PB,0.23218828946346537,retail_volume_index_ma6_v5,"Retail, MA6"
-DF,0.06719417555033994,retail_volume_index_ma6_v5,"Retail, MA6"
-GO,0.01152547430210267,retail_volume_index_ma6_v5,"Retail, MA6"
-MA,0.4561667280189855,services_volume_index_ma6_v5,"Services, MA6"
-MT,0.27870995757088607,services_volume_index_ma6_v5,"Services, MA6"
-AP,0.2651233144101201,services_volume_index_ma6_v5,"Services, MA6"
-RJ,3.767671451191316e-15,services_volume_index_ma6_v5,"Services, MA6"
-BA,1.3350098620077076e-15,services_volume_index_ma6_v5,"Services, MA6"
-BA,0.477065182433174,state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4"
-PA,0.21664412114583576,state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4"
-AC,0.1403934813998826,state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4"
-DF,0.09737271395367277,state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4"
-MG,0.06852450106521572,state_tax_revenue_real_pc_ma4_v5,"Own tax revenue, MA4"
-BA,0.37515467477106507,icms_revenue_real_pc_ma4_v5,"ICMS, MA4"
-SP,0.26403473122602544,icms_revenue_real_pc_ma4_v5,"ICMS, MA4"
-AC,0.21366662856811225,icms_revenue_real_pc_ma4_v5,"ICMS, MA4"
-PA,0.14714396543052047,icms_revenue_real_pc_ma4_v5,"ICMS, MA4"
-MA,2.5491546184108712e-12,icms_revenue_real_pc_ma4_v5,"ICMS, MA4"
-BA,0.4708496103028759,public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4"
-PA,0.2069189230821885,public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4"
-AP,0.1070693047824067,public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4"
-AC,0.07191344870918262,public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4"
-RO,0.05024638008818979,public_investment_liquidated_real_pc_ma4_v5,"Public investment, MA4"
-PA,0.35421915990180236,liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4"
-BA,0.3198952108468205,liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4"
-AP,0.21215737854733296,liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4"
-AC,0.07113779775689708,liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4"
-DF,0.04259045294698996,liquidated_expenditure_total_real_pc_ma4_v5,"Total expenditure, MA4"
+RS,0.36785493054634666,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
+RO,0.2255034207771072,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
+PE,0.2085998705204481,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
+AP,0.17779519914395153,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
+ES,0.01366371631160711,formal_hiring_balance_per_100k_wap_ma6_v5,"Formal hiring, MA6"
+SE,0.4877356558753635,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
+MA,0.2644075259834887,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
+MS,0.09942169721507538,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
+DF,0.09633423790130562,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
+MT,0.03694698949528249,formal_hiring_balance_construction_per_100k_wap_ma6_v5,"Construction hiring, MA6"
+RO,0.3697561249815155,retail_volume_index_ma6_v5,"Retail, MA6"
+PB,0.30731743839800624,retail_volume_index_ma6_v5,"Retail, MA6"
+CE,0.11278277866672844,retail_volume_index_ma6_v5,"Retail, MA6"
+BA,0.10824668896785218,retail_volume_index_ma6_v5,"Retail, MA6"
+DF,0.07806460177768614,retail_volume_index_ma6_v5,"Retail, MA6"
+MA,0.41195606753450886,services_volume_index_ma6_v5,"Services, MA6"
+MT,0.3490565419880481,services_volume_index_ma6_v5,"Services, MA6"
+AP,0.23898739047716855,services_volume_index_ma6_v5,"Services, MA6"
+AC,2.4907781163290316e-13,services_volume_index_ma6_v5,"Services, MA6"
+MS,1.5677329846239347e-14,services_volume_index_ma6_v5,"Services, MA6"
+PA,0.5341537906255137,state_tax_revenue_real_pc,Own tax revenue (raw)
+MG,0.15668507351773772,state_tax_revenue_real_pc,Own tax revenue (raw)
+DF,0.117186564597334,state_tax_revenue_real_pc,Own tax revenue (raw)
+BA,0.1076936645403196,state_tax_revenue_real_pc,Own tax revenue (raw)
+AC,0.0723596451644041,state_tax_revenue_real_pc,Own tax revenue (raw)
+MS,0.344412810271353,icms_revenue_real_pc,ICMS (raw)
+BA,0.3163863455777636,icms_revenue_real_pc,ICMS (raw)
+PA,0.17075256141647024,icms_revenue_real_pc,ICMS (raw)
+AC,0.09413562335845596,icms_revenue_real_pc,ICMS (raw)
+DF,0.07431265937106897,icms_revenue_real_pc,ICMS (raw)
+SE,0.3496724862826577,public_investment_liquidated_real_pc,Public investment (raw)
+PA,0.2978599909582307,public_investment_liquidated_real_pc,Public investment (raw)
+AC,0.11804796587950116,public_investment_liquidated_real_pc,Public investment (raw)
+DF,0.08374964240156904,public_investment_liquidated_real_pc,Public investment (raw)
+CE,0.07598483142631957,public_investment_liquidated_real_pc,Public investment (raw)
+PA,0.5759084275705532,liquidated_expenditure_total_real_pc,Total expenditure (raw)
+AP,0.13789983748132403,liquidated_expenditure_total_real_pc,Total expenditure (raw)
+DF,0.09429868418282776,liquidated_expenditure_total_real_pc,Total expenditure (raw)
+RO,0.07899367560830829,liquidated_expenditure_total_real_pc,Total expenditure (raw)
+RN,0.02997210447538044,liquidated_expenditure_total_real_pc,Total expenditure (raw)

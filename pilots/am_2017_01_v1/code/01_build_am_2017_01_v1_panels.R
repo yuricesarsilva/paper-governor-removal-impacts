@@ -32,10 +32,19 @@ event <- event_inventory |>
 instability_start_date <- event$instability_start_date[[1]]
 removal_date <- event$removal_date[[1]]
 
-# AM removal: 2017-05-04  → event_month = 2017-05
-# 36 months pre → window_start = 2014-05-01
-# Post until end of 2019 to avoid COVID (31 months clean post-treatment)
-# Bimonthly: 2015B1 to 2019B6 (14 pre-treatment bimesters, 15 post)
+# EVENT TIME DESIGN: event_time = 0 at instability_start_date (2016-01-25, TRE cassation).
+# The 465-day crisis window (TRE → TSE) is a distinct analytical segment.
+# Three segments: pre (< 0) / crisis (0 to crisis_end-1) / post (≥ crisis_end).
+#
+# Monthly:
+#   Pre:    2014-05 to 2015-12 = 20 months (event_time -20 to -1)
+#   Crisis: 2016-01 to 2017-04 = 16 months (event_time  0 to 15)
+#   Post:   2017-05 to 2019-12 = 31 months (event_time 16 to 46)
+#
+# Bimonthly (limited by Siconfi start 2015):
+#   Pre:    2015B1 to 2015B6   = 6 bimesters (event_time -6 to -1) [short; acknowledged limitation]
+#   Crisis: 2016B1 to 2017B2   = 8 bimesters (event_time  0 to  7)
+#   Post:   2017B3 to 2019B6   = 15 bimesters (event_time 8 to 22)
 monthly_window_start    <- as.Date("2014-05-01")
 monthly_window_end      <- as.Date("2019-12-01")
 bimonthly_window_start  <- as.Date("2015-01-01")
@@ -68,11 +77,27 @@ excluded_donor_states <- sort(unique(c(
   excluded_event_lookup$state_abbrev
 )))
 
-event_month_date <- lubridate::floor_date(removal_date, "month")
-event_bimonth_year <- lubridate::year(removal_date)
-event_bimonth <- ((lubridate::month(removal_date) - 1) %/% 2) + 1L
-event_quarter_year <- lubridate::year(removal_date)
-event_quarter <- lubridate::quarter(removal_date)
+# event_time = 0 is anchored at instability_start_date (not removal_date)
+event_month_date   <- lubridate::floor_date(instability_start_date, "month")
+event_bimonth_year <- lubridate::year(instability_start_date)
+event_bimonth      <- ((lubridate::month(instability_start_date) - 1L) %/% 2L) + 1L
+event_quarter_year <- lubridate::year(instability_start_date)
+event_quarter      <- lubridate::quarter(instability_start_date)
+
+# Crisis end: event_time at which removal_date falls (start of post segment)
+removal_month_date  <- lubridate::floor_date(removal_date, "month")
+crisis_end_monthly  <- 12L * (lubridate::year(removal_month_date) - lubridate::year(event_month_date)) +
+                       (lubridate::month(removal_month_date) - lubridate::month(event_month_date))
+
+removal_bimonth_year <- lubridate::year(removal_date)
+removal_bimonth      <- ((lubridate::month(removal_date) - 1L) %/% 2L) + 1L
+crisis_end_bimonthly <- 6L * (removal_bimonth_year - event_bimonth_year) +
+                        (removal_bimonth - event_bimonth)
+
+removal_quarter_year <- lubridate::year(removal_date)
+removal_quarter      <- lubridate::quarter(removal_date)
+crisis_end_quarterly <- 4L * (removal_quarter_year - event_quarter_year) +
+                        (removal_quarter - event_quarter)
 
 compute_monthly_event_time <- function(period_date) {
   12L * (lubridate::year(period_date) - lubridate::year(event_month_date)) +
@@ -87,12 +112,13 @@ compute_quarterly_event_time <- function(year, quarter) {
   4L * (as.integer(year) - event_quarter_year) + (as.integer(quarter) - event_quarter)
 }
 
-assign_period_from_event_time <- function(event_time) {
+# 3-segment period assignment: pre / crisis / post
+# crisis_end is the first event_time in the post segment (= removal date event_time)
+assign_period_from_event_time <- function(event_time, crisis_end) {
   dplyr::case_when(
-    event_time < 0 ~ "pre",
-    event_time == 0 ~ "event",
-    event_time > 0 ~ "post",
-    TRUE ~ NA_character_
+    event_time < 0L           ~ "pre",
+    event_time < crisis_end   ~ "crisis",
+    TRUE                      ~ "post"
   )
 }
 
@@ -112,38 +138,40 @@ strict_complete_trailing_mean <- function(x, window) {
   )
 }
 
-v5_segment_moving_average <- function(x, event_time, window) {
+# 3-segment MA: pre / crisis / post computed independently (no window crosses segment boundaries)
+v5_segment_moving_average <- function(x, event_time, window, crisis_end) {
   out <- rep(NA_real_, length(x))
 
-  pre_idx <- which(event_time < 0)
-  if (length(pre_idx) > 0) {
+  pre_idx <- which(event_time < 0L)
+  if (length(pre_idx) > 0L) {
     out[pre_idx] <- strict_complete_trailing_mean(x[pre_idx], window)
   }
 
-  post_idx <- which(event_time > 0)
-  if (length(post_idx) > 0) {
+  crisis_idx <- which(event_time >= 0L & event_time < crisis_end)
+  if (length(crisis_idx) > 0L) {
+    out[crisis_idx] <- strict_complete_trailing_mean(x[crisis_idx], window)
+  }
+
+  post_idx <- which(event_time >= crisis_end)
+  if (length(post_idx) > 0L) {
     out[post_idx] <- strict_complete_trailing_mean(x[post_idx], window)
   }
 
   out
 }
 
-add_v5_moving_average <- function(data, vars, window) {
+add_v5_moving_average <- function(data, vars, window, crisis_end) {
   data |>
     dplyr::group_by(.data$state_abbrev) |>
     dplyr::arrange(.data$period_date, .by_group = TRUE) |>
     dplyr::mutate(
       dplyr::across(
         dplyr::all_of(vars),
-        ~v5_segment_moving_average(.x, .data$event_time, window),
+        ~v5_segment_moving_average(.x, .data$event_time, window, crisis_end),
         .names = "{.col}_ma{window}_v5"
       ),
-      !!paste0("plot_time_ma", window, "_v5") := dplyr::case_when(
-        .data$event_time < 0 ~ .data$event_time,
-        .data$event_time == 0 ~ 0,
-        .data$event_time > 0 ~ .data$event_time - (window - 1L),
-        TRUE ~ NA_real_
-      )
+      # plot_time = event_time (no shift); crisis window visible in graphs
+      !!paste0("plot_time_ma", window, "_v5") := .data$event_time
     ) |>
     dplyr::ungroup()
 }
@@ -366,8 +394,8 @@ monthly_panel <- formal_monthly |>
       NA_character_
     ),
     event_time = compute_monthly_event_time(.data$period_date),
-    analysis_period = assign_period_from_event_time(.data$event_time),
-    pre_instability_clean = .data$period_date < lubridate::floor_date(instability_start_date, "month"),
+    analysis_period = assign_period_from_event_time(.data$event_time, crisis_end_monthly),
+    pre_instability_clean = .data$analysis_period == "pre",
     formal_hiring_balance_per_100k_wap = 100000 * .data$formal_hiring_balance / .data$pnadc_population,
     formal_hiring_balance_construction_per_100k_wap = 100000 * .data$formal_hiring_balance_construction / .data$pnadc_population,
     instability_start_date = instability_start_date,
@@ -389,7 +417,8 @@ monthly_panel <- formal_monthly |>
       "retail_volume_index",
       "services_volume_index"
     ),
-    window = 6
+    window = 6,
+    crisis_end = crisis_end_monthly
   )
 
 fiscal_raw <- readr::read_csv(
@@ -528,14 +557,8 @@ fiscal_panel <- fiscal_raw |>
       NA_character_
     ),
     event_time = compute_bimonthly_event_time(.data$year, .data$bimester),
-    analysis_period = assign_period_from_event_time(.data$event_time),
-    pre_instability_clean = .data$analysis_period == "pre" & (
-      as.integer(.data$year) < lubridate::year(instability_start_date) |
-      (
-        as.integer(.data$year) == lubridate::year(instability_start_date) &
-        as.integer(.data$bimester) < ((lubridate::month(instability_start_date) - 1L) %/% 2L + 1L)
-      )
-    ),
+    analysis_period = assign_period_from_event_time(.data$event_time, crisis_end_bimonthly),
+    pre_instability_clean = .data$analysis_period == "pre",
     fiscal_deflator_factor = dplyr::if_else(
       is.finite(.data$state_tax_revenue_nominal) & .data$state_tax_revenue_nominal > 0,
       .data$state_tax_revenue_real / .data$state_tax_revenue_nominal,
@@ -570,7 +593,8 @@ fiscal_panel <- fiscal_raw |>
       "public_investment_liquidated_real_pc",
       "liquidated_expenditure_total_real_pc"
     ),
-    window = 4
+    window = 4,
+    crisis_end = crisis_end_bimonthly
   ) |>
   impute_adjacent_mean("liquidated_expenditure_health_real_pc") |>
   impute_adjacent_mean("liquidated_expenditure_education_real_pc") |>
@@ -591,7 +615,7 @@ quarterly_panel <- pnadc_quarterly |>
       NA_character_
     ),
     event_time = compute_quarterly_event_time(.data$year, .data$quarter),
-    analysis_period = assign_period_from_event_time(.data$event_time),
+    analysis_period = assign_period_from_event_time(.data$event_time, crisis_end_quarterly),
     instability_start_date = instability_start_date,
     removal_date = removal_date
   ) |>
@@ -663,7 +687,10 @@ event_metadata <- event |>
     quarterly_window_start = quarterly_window_start,
     quarterly_window_end = quarterly_window_end,
     donor_exclusion_window_start = donor_exclusion_window_start,
-    donor_exclusion_window_end = donor_exclusion_window_end
+    donor_exclusion_window_end = donor_exclusion_window_end,
+    crisis_end_monthly   = crisis_end_monthly,
+    crisis_end_bimonthly = crisis_end_bimonthly,
+    crisis_end_quarterly = crisis_end_quarterly
   )
 
 readr::write_csv(monthly_panel, file.path(pilot_data_dir, "am_2017_01_v1_monthly_panel.csv"), na = "")

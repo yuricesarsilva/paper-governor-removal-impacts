@@ -1,6 +1,6 @@
 # AM 2017-01 Run Summary
 
-Run date: 2026-06-04
+Run date: 2026-06-05
 
 ## Pipeline
 
@@ -26,6 +26,6 @@ Run date: 2026-06-04
 ## Notes
 
 - Instability window: 465 days (2016-01-25 to 2017-05-04).
-- Monthly pre-treatment periods: 35; post-treatment periods (until end of window): 31.
-- Bimonthly pre-treatment bimesters: 13; post: 15.
+- Monthly pre-treatment periods: 20; post-treatment periods (until end of window): 43.
+- Bimonthly pre-treatment bimesters: 6; post: 23.
 - Excluded donor states: `AM`, `RR`, `TO`.

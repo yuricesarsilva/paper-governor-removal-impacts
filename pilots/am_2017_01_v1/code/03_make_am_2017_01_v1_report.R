@@ -71,18 +71,18 @@ outcome_meta <- tibble::tribble(
   "formal_hiring_balance_construction_per_100k_wap", "Construction hiring balance per 100k working-age population", "Formal labor market", NA_character_, FALSE,
   "retail_volume_index", "Retail volume index", "Household consumption", NA_character_, FALSE,
   "services_volume_index", "Services volume index", "Household consumption", NA_character_, FALSE,
-  "state_tax_revenue_real_pc", "Own tax revenue, real per capita", "State public finances", "revenues", FALSE,
-  "icms_revenue_real_pc", "ICMS revenue, real per capita", "State public finances", "revenues", FALSE,
-  "public_investment_liquidated_real_pc", "Public investment, liquidated, real per capita", "State public finances", "expenditures", FALSE,
-  "liquidated_expenditure_total_real_pc", "Total liquidated expenditure, real per capita", "State public finances", "expenditures", FALSE,
+  "state_tax_revenue_real_pc", "Own tax revenue, real per capita", "State public finances", "revenues", TRUE,
+  "icms_revenue_real_pc", "ICMS revenue, real per capita", "State public finances", "revenues", TRUE,
+  "public_investment_liquidated_real_pc", "Public investment, liquidated, real per capita", "State public finances", "expenditures", TRUE,
+  "liquidated_expenditure_total_real_pc", "Total liquidated expenditure, real per capita", "State public finances", "expenditures", TRUE,
   "formal_hiring_balance_per_100k_wap_ma6_v5", "Formal hiring balance per 100k working-age population, MA6 V5", "Formal labor market", NA_character_, TRUE,
   "formal_hiring_balance_construction_per_100k_wap_ma6_v5", "Construction hiring balance per 100k working-age population, MA6 V5", "Formal labor market", NA_character_, TRUE,
   "retail_volume_index_ma6_v5", "Retail volume index, MA6 V5", "Household consumption", NA_character_, TRUE,
   "services_volume_index_ma6_v5", "Services volume index, MA6 V5", "Household consumption", NA_character_, TRUE,
-  "state_tax_revenue_real_pc_ma4_v5", "Own tax revenue, real per capita, MA4 V5", "State public finances", "revenues", TRUE,
-  "icms_revenue_real_pc_ma4_v5", "ICMS revenue, real per capita, MA4 V5", "State public finances", "revenues", TRUE,
-  "public_investment_liquidated_real_pc_ma4_v5", "Public investment, liquidated, real per capita, MA4 V5", "State public finances", "expenditures", TRUE,
-  "liquidated_expenditure_total_real_pc_ma4_v5", "Total liquidated expenditure, real per capita, MA4 V5", "State public finances", "expenditures", TRUE
+  "state_tax_revenue_real_pc_ma4_v5", "Own tax revenue, real per capita, MA4 V5", "State public finances", "revenues", FALSE,
+  "icms_revenue_real_pc_ma4_v5", "ICMS revenue, real per capita, MA4 V5", "State public finances", "revenues", FALSE,
+  "public_investment_liquidated_real_pc_ma4_v5", "Public investment, liquidated, real per capita, MA4 V5", "State public finances", "expenditures", FALSE,
+  "liquidated_expenditure_total_real_pc_ma4_v5", "Total liquidated expenditure, real per capita, MA4 V5", "State public finances", "expenditures", FALSE
 )
 
 effects_tbl <- summary_tbl |>
@@ -113,16 +113,18 @@ read_weights_safe <- function(family, specification, outcome) {
   readr::read_csv(f, show_col_types = FALSE) |> dplyr::mutate(outcome = outcome)
 }
 
+# NOTE: MA4 fiscal is not feasible with only 6 bimonthly pre-treatment periods
+# (Siconfi starts 2015; event_time=0 at instability 2016-01). Raw fiscal is used instead.
 preferred_spec_lookup <- tibble::tribble(
   ~outcome,                                                   ~family,            ~specification, ~short_label,
   "formal_hiring_balance_per_100k_wap_ma6_v5",               "monthly",          "ma6_v5",       "Formal hiring, MA6",
   "formal_hiring_balance_construction_per_100k_wap_ma6_v5",  "monthly",          "ma6_v5",       "Construction hiring, MA6",
   "retail_volume_index_ma6_v5",                              "monthly",          "ma6_v5",       "Retail, MA6",
   "services_volume_index_ma6_v5",                            "monthly",          "ma6_v5",       "Services, MA6",
-  "state_tax_revenue_real_pc_ma4_v5",                        "bimonthly_fiscal", "ma4_v5",       "Own tax revenue, MA4",
-  "icms_revenue_real_pc_ma4_v5",                             "bimonthly_fiscal", "ma4_v5",       "ICMS, MA4",
-  "public_investment_liquidated_real_pc_ma4_v5",             "bimonthly_fiscal", "ma4_v5",       "Public investment, MA4",
-  "liquidated_expenditure_total_real_pc_ma4_v5",             "bimonthly_fiscal", "ma4_v5",       "Total expenditure, MA4"
+  "state_tax_revenue_real_pc",                               "bimonthly_fiscal", "raw",          "Own tax revenue (raw)",
+  "icms_revenue_real_pc",                                    "bimonthly_fiscal", "raw",          "ICMS (raw)",
+  "public_investment_liquidated_real_pc",                    "bimonthly_fiscal", "raw",          "Public investment (raw)",
+  "liquidated_expenditure_total_real_pc",                    "bimonthly_fiscal", "raw",          "Total expenditure (raw)"
 )
 
 # === COVARIATE BALANCE TABLE ===
@@ -449,23 +451,27 @@ removal_date_dt    <- as.Date(event$removal_date[[1]])
 instability_dt     <- as.Date(event$instability_start_date[[1]])
 treated_st         <- event$state_abbrev[[1]]
 state_name_val     <- event$state_name[[1]]
-event_year_val     <- lubridate::year(removal_date_dt)
-event_month_label  <- format(lubridate::floor_date(removal_date_dt, "month"), "%Y-%m")
-event_bimonth_num  <- ((lubridate::month(removal_date_dt) - 1L) %/% 2L) + 1L
+# event_time = 0 is anchored at instability_start_date (not removal_date)
+event_year_val     <- lubridate::year(instability_dt)
+event_month_label  <- format(lubridate::floor_date(instability_dt, "month"), "%Y-%m")
+event_bimonth_num  <- ((lubridate::month(instability_dt) - 1L) %/% 2L) + 1L
 event_bimonth_label <- paste0(event_year_val, "B", event_bimonth_num)
+removal_year_val   <- lubridate::year(removal_date_dt)
+crisis_end_monthly_val   <- as.integer(event$crisis_end_monthly[[1]])
+crisis_end_bimstr_val    <- as.integer(event$crisis_end_bimonthly[[1]])
 
 monthly_ws   <- as.Date(event$monthly_window_start[[1]])
 monthly_we   <- as.Date(event$monthly_window_end[[1]])
 bim_ws       <- as.Date(event$bimonthly_window_start[[1]])
 
 monthly_pre_n  <- 12L * (event_year_val - lubridate::year(monthly_ws)) +
-                  (lubridate::month(removal_date_dt) - lubridate::month(monthly_ws)) - 1L
+                  (lubridate::month(instability_dt) - lubridate::month(monthly_ws))
 monthly_post_n <- 12L * (lubridate::year(monthly_we) - event_year_val) +
                   (lubridate::month(monthly_we) - lubridate::month(removal_date_dt))
 
 bim_ws_year  <- lubridate::year(bim_ws)
 bim_ws_bim   <- ((lubridate::month(bim_ws) - 1L) %/% 2L) + 1L
-bim_pre_n    <- 6L * (event_year_val - bim_ws_year) + (event_bimonth_num - bim_ws_bim) - 1L
+bim_pre_n    <- 6L * (event_year_val - bim_ws_year) + (event_bimonth_num - bim_ws_bim)
 bim_post_n   <- 6L * (lubridate::year(as.Date(event$bimonthly_window_end[[1]])) - event_year_val) +
                 (3L - event_bimonth_num)  # rough; overridden below
 bim_we_year  <- lubridate::year(as.Date(event$bimonthly_window_end[[1]]))
@@ -496,7 +502,7 @@ mechanism_desc <- dplyr::case_when(
   TRUE ~ event$removal_mechanism[[1]]
 )
 
-pilot_label <- paste0(treated_st, " ", event_year_val, "-01")
+pilot_label <- paste0(treated_st, " ", removal_year_val, "-01")
 
 report_lines <- c(
   paste0("# ", pilot_label, ": results report"),
@@ -510,9 +516,9 @@ report_lines <- c(
   paste0("- Treated state: `", treated_st, "` (", state_name_val, ")."),
   paste0("- Instability start: `", instability_dt, "` (", instability_type_desc, ")."),
   paste0("- Effective removal/intervention: `", removal_date_dt, "` (", mechanism_desc, ")."),
-  paste0("- Monthly event time: ", event_month_label, " is coded as 0; pre-treatment runs from -", monthly_pre_n, " to -1 and post-treatment from 1 onward."),
-  paste0("- Bimonthly event time: ", event_bimonth_label, " is coded as 0; pre-treatment runs from -", bim_pre_n, " to -1 and post-treatment from 1 onward."),
-  "- Pre-treatment clean window: periods before the instability start are flagged `pre_instability_clean`.",
+  paste0("- Monthly event time: ", event_month_label, " (instability onset) is coded as 0. Pre-treatment: -", monthly_pre_n, " to -1. Crisis window: 0 to ", crisis_end_monthly_val - 1L, " (", event_month_label, " to ", format(lubridate::floor_date(removal_date_dt, "month") - months(1), "%Y-%m"), "). Post-removal: ", crisis_end_monthly_val, " onward."),
+  paste0("- Bimonthly event time: ", event_bimonth_label, " (instability onset) is coded as 0. Pre-treatment: -", bim_pre_n, " to -1. Crisis: 0 to ", crisis_end_bimstr_val - 1L, ". Post-removal: ", crisis_end_bimstr_val, " onward."),
+  "- Pre-treatment weight estimation uses only `analysis_period == pre` observations (before instability onset).",
   "",
   "## Methodological strategy",
   "",

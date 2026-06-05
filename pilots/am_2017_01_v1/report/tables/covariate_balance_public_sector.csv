@@ -1,8 +1,8 @@
-Covariate,Roraima,"Own tax revenue, MA4","ICMS, MA4","Public investment, MA4","Total expenditure, MA4"
-Unemployment rate,    0.138,    0.135,    0.133,    0.138,    0.137
-Formalization rate,    0.433,    0.485,    0.525,    0.476,    0.459
-"Labor income (real, R$)","2,564.833","2,652.943","2,868.641","2,574.159","2,576.465"
+Covariate,Roraima,Own tax revenue (raw),ICMS (raw),Public investment (raw),Total expenditure (raw)
+Unemployment rate,    0.093,    0.092,    0.089,    0.093,    0.093
+Formalization rate,    0.459,    0.483,    0.523,    0.485,    0.474
+"Labor income (real, R$)","2,679.000","2,737.992","2,817.467","2,598.812","2,733.454"
 Transfer dependency ratio,    0.000,    0.000,    0.000,    0.000,    0.000
-"Health expenditure pc (real, R$)",  171.780,  155.602,  138.601,  137.338,  141.368
-"Education expenditure pc (real, R$)",  147.267,  167.895,  163.962,  152.299,  170.634
-"Public security expenditure pc (real, R$)",   94.962,   86.932,   85.908,   90.029,   93.146
+"Health expenditure pc (real, R$)",  185.049,  161.791,  149.466,  163.842,  155.173
+"Education expenditure pc (real, R$)",  165.177,  187.813,  179.420,  181.107,  191.747
+"Public security expenditure pc (real, R$)",  100.635,   96.143,   94.528,   95.491,   96.566

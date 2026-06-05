@@ -27,6 +27,9 @@ event <- readr::read_csv(
     removal_date = as.Date(.data$removal_date)
   )
 
+crisis_end_monthly   <- event$crisis_end_monthly[[1]]
+crisis_end_bimonthly <- event$crisis_end_bimonthly[[1]]
+
 covariates_raw <- readr::read_csv(
   file.path(data_dir, "am_2017_01_v1_covariates.csv"),
   show_col_types = FALSE
@@ -133,10 +136,10 @@ load_paths <- function(meta_rows) {
     seq_len(nrow(meta_rows)),
     function(i) {
       row <- meta_rows[i, ]
-      readr::read_csv(
-        file.path(output_root, row$family[[1]], row$specification[[1]], paste0(make_slug(row$outcome[[1]]), "_path.csv")),
-        show_col_types = FALSE
-      ) |>
+      f <- file.path(output_root, row$family[[1]], row$specification[[1]],
+                     paste0(make_slug(row$outcome[[1]]), "_path.csv"))
+      if (!file.exists(f)) return(NULL)
+      readr::read_csv(f, show_col_types = FALSE) |>
         dplyr::mutate(
           period_date = as.Date(.data$period_date),
           short_label = row$short_label[[1]]
@@ -150,10 +153,10 @@ load_weights <- function(meta_rows) {
     seq_len(nrow(meta_rows)),
     function(i) {
       row <- meta_rows[i, ]
-      readr::read_csv(
-        file.path(output_root, row$family[[1]], row$specification[[1]], paste0(make_slug(row$outcome[[1]]), "_weights.csv")),
-        show_col_types = FALSE
-      ) |>
+      f <- file.path(output_root, row$family[[1]], row$specification[[1]],
+                     paste0(make_slug(row$outcome[[1]]), "_weights.csv"))
+      if (!file.exists(f)) return(NULL)
+      readr::read_csv(f, show_col_types = FALSE) |>
         dplyr::mutate(short_label = row$short_label[[1]])
     }
   )
@@ -273,12 +276,21 @@ build_augmented_paths_plot <- function(channel_slug_value, specification_value) 
       ggplot2::labs(title = paste0("Augmented SCM paths: ", unique(meta_rows$channel_label)), x = NULL, y = NULL, color = NULL) +
       base_theme()
   } else {
+    # Smooth spec: x = event_time; crisis window shown as shading (0 to crisis_end)
+    ce <- if (grepl("ma6", specification_value)) crisis_end_monthly else crisis_end_bimonthly
     ggplot2::ggplot(path_data, ggplot2::aes(x = .data$plot_time, y = .data$value, color = .data$series)) +
+      ggplot2::annotate("rect", xmin = 0, xmax = ce,
+                        ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.5) +
       ggplot2::geom_line(linewidth = 1) +
-      ggplot2::geom_vline(xintercept = 0, linetype = "dashed", color = "gray10") +
+      ggplot2::geom_vline(xintercept = 0,  linetype = "dotted", color = "gray25") +
+      ggplot2::geom_vline(xintercept = ce, linetype = "dashed", color = "gray10") +
       ggplot2::scale_color_manual(values = c("Roraima" = "#1f6f8b", "Augmented synthetic" = "#6a3d9a")) +
       ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
-      ggplot2::labs(title = paste0("Augmented SCM paths: ", unique(meta_rows$channel_label)), x = "Event time", y = NULL, color = NULL) +
+      ggplot2::labs(
+        title    = paste0("Augmented SCM paths: ", unique(meta_rows$channel_label)),
+        subtitle = "Shaded region = crisis window (instability → removal); dotted = instability onset; dashed = removal",
+        x = "Event time (0 = instability start)", y = NULL, color = NULL
+      ) +
       base_theme()
   }
 }
@@ -291,7 +303,8 @@ build_augmented_gaps_plot <- function(channel_slug_value, specification_value) {
 
   if (specification_value == "raw") {
     ggplot2::ggplot(gap_data, ggplot2::aes(x = .data$period_date, y = .data$augmented_gap)) +
-      ggplot2::annotate("rect", xmin = event$instability_start_date, xmax = event$removal_date, ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.5) +
+      ggplot2::annotate("rect", xmin = event$instability_start_date, xmax = event$removal_date,
+                        ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.5) +
       ggplot2::geom_hline(yintercept = 0, color = "gray60", linewidth = 0.4) +
       ggplot2::geom_line(color = "#6a3d9a", linewidth = 1) +
       ggplot2::geom_vline(xintercept = event$instability_start_date, linetype = "dotted", color = "gray25") +
@@ -300,12 +313,20 @@ build_augmented_gaps_plot <- function(channel_slug_value, specification_value) {
       ggplot2::labs(title = paste0("Augmented SCM gaps: ", unique(meta_rows$channel_label)), x = NULL, y = NULL) +
       base_theme()
   } else {
+    ce <- if (grepl("ma6", specification_value)) crisis_end_monthly else crisis_end_bimonthly
     ggplot2::ggplot(gap_data, ggplot2::aes(x = .data$plot_time, y = .data$augmented_gap)) +
+      ggplot2::annotate("rect", xmin = 0, xmax = ce,
+                        ymin = -Inf, ymax = Inf, fill = "gray85", alpha = 0.5) +
       ggplot2::geom_hline(yintercept = 0, color = "gray60", linewidth = 0.4) +
       ggplot2::geom_line(color = "#6a3d9a", linewidth = 1) +
-      ggplot2::geom_vline(xintercept = 0, linetype = "dashed", color = "gray10") +
+      ggplot2::geom_vline(xintercept = 0,  linetype = "dotted", color = "gray25") +
+      ggplot2::geom_vline(xintercept = ce, linetype = "dashed", color = "gray10") +
       ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
-      ggplot2::labs(title = paste0("Augmented SCM gaps: ", unique(meta_rows$channel_label)), x = "Event time", y = NULL) +
+      ggplot2::labs(
+        title    = paste0("Augmented SCM gaps: ", unique(meta_rows$channel_label)),
+        subtitle = "Shaded = crisis window; dotted = instability onset; dashed = removal",
+        x = "Event time (0 = instability start)", y = NULL
+      ) +
       base_theme()
   }
 }
@@ -361,10 +382,10 @@ build_placebo_gaps_plot <- function(channel_slug_value) {
     "formal_hiring_balance_construction_per_100k_wap_ma6_v5",  "Construction hiring, MA6","labor_market",
     "retail_volume_index_ma6_v5",                              "Retail, MA6",             "consumption",
     "services_volume_index_ma6_v5",                            "Services, MA6",           "consumption",
-    "state_tax_revenue_real_pc_ma4_v5",                        "Own tax revenue, MA4",    "public_sector",
-    "icms_revenue_real_pc_ma4_v5",                             "ICMS, MA4",               "public_sector",
-    "public_investment_liquidated_real_pc_ma4_v5",             "Public investment, MA4",  "public_sector",
-    "liquidated_expenditure_total_real_pc_ma4_v5",             "Total expenditure, MA4",  "public_sector"
+    "state_tax_revenue_real_pc",                               "Own tax revenue (raw)",   "public_sector",
+    "icms_revenue_real_pc",                                    "ICMS (raw)",              "public_sector",
+    "public_investment_liquidated_real_pc",                    "Public investment (raw)", "public_sector",
+    "liquidated_expenditure_total_real_pc",                    "Total expenditure (raw)", "public_sector"
   )
 
   channel_outcomes <- preferred_outcomes |>
@@ -372,12 +393,13 @@ build_placebo_gaps_plot <- function(channel_slug_value) {
 
   rr_rmspe_lookup <- summary_tbl |>
     dplyr::filter(.data$status == "estimated",
-                  .data$specification %in% c("ma6_v5", "ma4_v5")) |>
+                  .data$specification %in% c("ma6_v5", "ma4_v5", "raw")) |>
     dplyr::inner_join(channel_outcomes |> dplyr::select(.data$outcome, .data$short_label),
                       by = "outcome") |>
     dplyr::select(.data$outcome, .data$short_label, rmspe_pre = .data$augmented_rmspe_pre)
 
-  spec_val <- if (channel_slug_value == "public_sector") "ma4_v5" else "ma6_v5"
+  # NOTE: AM 2017 uses raw fiscal (MA4 not feasible with 6 pre-treatment bimesters)
+  spec_val <- if (channel_slug_value == "public_sector") "raw" else "ma6_v5"
   family_val <- if (channel_slug_value == "public_sector") "bimonthly_fiscal" else "monthly"
 
   rr_paths <- purrr::map_dfr(seq_len(nrow(rr_rmspe_lookup)), function(i) {
@@ -503,5 +525,5 @@ if (has_placebo) {
   message("Placebo output not found — skipping placebo figures.")
 }
 
-message(paste0(pilot_label, " report figures regenerated."))
+message("AM 2017-01 V1 report figures regenerated.")
 

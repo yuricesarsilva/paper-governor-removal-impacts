@@ -205,10 +205,10 @@ preferred_specs <- tibble::tribble(
   "formal_hiring_balance_construction_per_100k_wap_ma6_v5",  "monthly",          "ma6_v5",       "labor_market",  "Construction hiring, MA6",
   "retail_volume_index_ma6_v5",                              "monthly",          "ma6_v5",       "consumption",   "Retail, MA6",
   "services_volume_index_ma6_v5",                            "monthly",          "ma6_v5",       "consumption",   "Services, MA6",
-  "state_tax_revenue_real_pc_ma4_v5",                        "bimonthly_fiscal", "ma4_v5",       "public_sector", "Own tax revenue, MA4",
-  "icms_revenue_real_pc_ma4_v5",                             "bimonthly_fiscal", "ma4_v5",       "public_sector", "ICMS, MA4",
-  "public_investment_liquidated_real_pc_ma4_v5",             "bimonthly_fiscal", "ma4_v5",       "public_sector", "Public investment, MA4",
-  "liquidated_expenditure_total_real_pc_ma4_v5",             "bimonthly_fiscal", "ma4_v5",       "public_sector", "Total expenditure, MA4"
+  "state_tax_revenue_real_pc",                               "bimonthly_fiscal", "raw",          "public_sector", "Own tax revenue (raw)",
+  "icms_revenue_real_pc",                                    "bimonthly_fiscal", "raw",          "public_sector", "ICMS (raw)",
+  "public_investment_liquidated_real_pc",                    "bimonthly_fiscal", "raw",          "public_sector", "Public investment (raw)",
+  "liquidated_expenditure_total_real_pc",                    "bimonthly_fiscal", "raw",          "public_sector", "Total expenditure (raw)"
 )
 
 get_panel <- function(family) {

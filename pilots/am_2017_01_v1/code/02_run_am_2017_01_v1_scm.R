@@ -602,13 +602,13 @@ placebo_specs <- list(
   list(
     data = fiscal_panel,
     family = "bimonthly_fiscal",
-    specification = "ma4_v5",
-    plot_time_var = "plot_time_ma4_v5",
+    specification = "raw",
+    plot_time_var = "event_time",
     weight_period = "pre",
     outcomes = c(
-      "icms_revenue_real_pc_ma4_v5",
-      "public_investment_liquidated_real_pc_ma4_v5",
-      "liquidated_expenditure_total_real_pc_ma4_v5"
+      "icms_revenue_real_pc",
+      "public_investment_liquidated_real_pc",
+      "liquidated_expenditure_total_real_pc"
     )
   )
 )
