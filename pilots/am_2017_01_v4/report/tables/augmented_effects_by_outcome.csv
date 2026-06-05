@@ -1,0 +1,9 @@
+outcome,label,channel,short_label,mean_gap_post,mean_gap_pre,augmented_rmspe_pre,augmented_rmspe_post,donor_count
+formal_hiring_balance_sa_per_100k_wap,Formal hiring balance per 100k WAP,Formal labor market,Formal hiring,7.338626076832442,0.00135858503359668,0.02238855578460796,47.78506796449765,24
+formal_hiring_balance_construction_sa_per_100k_wap,Construction hiring per 100k WAP,Formal labor market,Construction,-10.63343473735192,4.225721264632704e-4,0.0061219193025641,19.104775539002446,24
+retail_volume_index_sa,Retail volume index,Household consumption,Retail,4.737720972937636,2.214609579301704e-4,0.00430715949946425,4.890960731638223,24
+services_volume_index_sa,Services volume index,Household consumption,Services,7.466824196214246,-1.219482404794446e-4,0.00689047353165295,7.965122904550311,24
+state_tax_revenue_real_pc_sa,"Own tax revenue, real per capita",State public finances,Own tax revenue,46.95334125413226,-2.2388509840100463e-4,0.08359951043203798,50.43212131725661,24
+icms_revenue_real_pc_sa,"ICMS revenue, real per capita",State public finances,ICMS,47.97749925505392,0.07599283788653517,0.5532995085449225,52.16099839496528,24
+public_investment_liquidated_real_pc_sa,"Public investment, real per capita",State public finances,Public investment,-4.830087006386304,-0.00425489953796619,0.01404404022909249,18.266975219542225,24
+liquidated_expenditure_total_real_pc_sa,"Total liquidated expenditure, real pc",State public finances,Total expenditure,-22.081099507317237,-0.00861838898385615,0.11233956831111724,85.46835119667212,24
