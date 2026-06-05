@@ -1,6 +1,6 @@
 source(file.path("code", "00_setup", "00_project_paths.R"))
 source(file.path("code", "00_setup", "01_required_packages.R"))
-extra_packages <- c("ggplot2", "tidyr")
+extra_packages <- c("ggplot2", "tidyr", "ggh4x", "scales")
 missing_extra  <- extra_packages[!vapply(extra_packages, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing_extra) > 0) stop("Missing: ", paste(missing_extra, collapse = ", "))
 invisible(lapply(extra_packages, library, character.only = TRUE))
@@ -129,22 +129,18 @@ build_preliminary_plot <- function(channel_slug_value) {
       .pad  = (.data$.ymax - .data$.ymin) * 0.05,
       .ymin = .data$.ymin - .data$.pad,
       .ymax = .data$.ymax + .data$.pad
+    ) |>
+    dplyr::arrange(.data$short_label)  # match facet_wrap (alphabetical) order
+
+  # Per-facet y scales: bound to the main-series range, but oob = keep so donor
+  # lines stay CONTINUOUS (clipped at the panel edge by the coord, not split
+  # into fragments by NA). This avoids the "more lines than states" artifact.
+  y_scales <- lapply(seq_len(nrow(y_ranges)), function(i) {
+    ggplot2::scale_y_continuous(
+      limits = c(y_ranges$.ymin[i], y_ranges$.ymax[i]),
+      oob    = scales::oob_keep
     )
-
-  # Clip donor lines to each facet's main-series range (out-of-range -> NA, so
-  # they are not drawn beyond it and do not expand the free_y scale).
-  donor_lines <- plot_data |>
-    dplyr::filter(!.data$treated) |>
-    dplyr::left_join(y_ranges, by = "short_label") |>
-    dplyr::mutate(value = dplyr::if_else(
-      is.finite(.data$value) & .data$value >= .data$.ymin & .data$value <= .data$.ymax,
-      .data$value, NA_real_
-    ))
-
-  # geom_blank anchors each facet's free_y scale to exactly the main-series range.
-  y_anchor <- y_ranges |>
-    tidyr::pivot_longer(c(".ymin", ".ymax"), values_to = "value") |>
-    dplyr::mutate(period_date = min(plot_data$period_date))
+  })
 
   # X-limits: clip the view to where data actually exists (e.g. fiscal starts
   # 2015, so the public-sector plot does not show empty 2013-2014).
@@ -155,11 +151,9 @@ build_preliminary_plot <- function(channel_slug_value) {
 
   ggplot2::ggplot() +
     crisis_rect() +
-    ggplot2::geom_blank(data = y_anchor,
-      ggplot2::aes(x = .data$period_date, y = .data$value)) +
-    ggplot2::geom_line(data = donor_lines,
+    ggplot2::geom_line(data = plot_data |> dplyr::filter(!.data$treated),
       ggplot2::aes(x = .data$period_date, y = .data$value, group = .data$state_abbrev),
-      color = "gray70", alpha = 0.3, linewidth = 0.6) +
+      color = "gray75", alpha = 0.25, linewidth = 0.5) +
     ggplot2::geom_line(data = donor_mean,
       ggplot2::aes(x = .data$period_date, y = .data$value, color = "Donor mean"), linewidth = 1) +
     ggplot2::geom_line(data = plot_data |> dplyr::filter(.data$treated),
@@ -169,9 +163,10 @@ build_preliminary_plot <- function(channel_slug_value) {
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
     ggplot2::coord_cartesian(xlim = x_lim) +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
+    ggh4x::facetted_pos_scales(y = y_scales) +
     ggplot2::labs(
       title    = paste0("Preliminary view (SA): ", unique(mr$channel_label)),
-      subtitle = "Y-axis bounded by Amazonas and the donor mean; x-axis limited to the data window. Dashed line = removal.",
+      subtitle = "Y-axis bounded by Amazonas and the donor mean (24 donor states in light gray); x-axis limited to the data window. Dashed line = removal.",
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
