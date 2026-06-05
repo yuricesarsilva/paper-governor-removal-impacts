@@ -115,9 +115,49 @@ build_preliminary_plot <- function(channel_slug_value) {
     dplyr::group_by(.data$period_date, .data$short_label) |>
     dplyr::summarise(value = mean(.data$value, na.rm = TRUE), .groups = "drop")
 
+  # Per-facet y-range from the TWO MAIN series only (Amazonas + donor mean), so
+  # the axis is not blown up by extreme individual donors.
+  main_series <- dplyr::bind_rows(
+    plot_data |> dplyr::filter(.data$treated) |> dplyr::select("short_label", "value"),
+    donor_mean |> dplyr::select("short_label", "value")
+  ) |> dplyr::filter(is.finite(.data$value))
+
+  y_ranges <- main_series |>
+    dplyr::group_by(.data$short_label) |>
+    dplyr::summarise(.ymin = min(.data$value), .ymax = max(.data$value), .groups = "drop") |>
+    dplyr::mutate(
+      .pad  = (.data$.ymax - .data$.ymin) * 0.05,
+      .ymin = .data$.ymin - .data$.pad,
+      .ymax = .data$.ymax + .data$.pad
+    )
+
+  # Clip donor lines to each facet's main-series range (out-of-range -> NA, so
+  # they are not drawn beyond it and do not expand the free_y scale).
+  donor_lines <- plot_data |>
+    dplyr::filter(!.data$treated) |>
+    dplyr::left_join(y_ranges, by = "short_label") |>
+    dplyr::mutate(value = dplyr::if_else(
+      is.finite(.data$value) & .data$value >= .data$.ymin & .data$value <= .data$.ymax,
+      .data$value, NA_real_
+    ))
+
+  # geom_blank anchors each facet's free_y scale to exactly the main-series range.
+  y_anchor <- y_ranges |>
+    tidyr::pivot_longer(c(".ymin", ".ymax"), values_to = "value") |>
+    dplyr::mutate(period_date = min(plot_data$period_date))
+
+  # X-limits: clip the view to where data actually exists (e.g. fiscal starts
+  # 2015, so the public-sector plot does not show empty 2013-2014).
+  x_lim <- plot_data |>
+    dplyr::filter(is.finite(.data$value)) |>
+    dplyr::pull(.data$period_date) |>
+    range(na.rm = TRUE)
+
   ggplot2::ggplot() +
     crisis_rect() +
-    ggplot2::geom_line(data = plot_data |> dplyr::filter(!.data$treated),
+    ggplot2::geom_blank(data = y_anchor,
+      ggplot2::aes(x = .data$period_date, y = .data$value)) +
+    ggplot2::geom_line(data = donor_lines,
       ggplot2::aes(x = .data$period_date, y = .data$value, group = .data$state_abbrev),
       color = "gray70", alpha = 0.3, linewidth = 0.6) +
     ggplot2::geom_line(data = donor_mean,
@@ -127,10 +167,11 @@ build_preliminary_plot <- function(channel_slug_value) {
     vlines() +
     ggplot2::scale_color_manual(values = c("Donor mean" = "#222222", "Amazonas" = "#1f6f8b")) +
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
+    ggplot2::coord_cartesian(xlim = x_lim) +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
       title    = paste0("Preliminary view (SA): ", unique(mr$channel_label)),
-      subtitle = "Dashed line = effective removal (treatment); cassation-process months are pre-treatment",
+      subtitle = "Y-axis bounded by Amazonas and the donor mean; x-axis limited to the data window. Dashed line = removal.",
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
