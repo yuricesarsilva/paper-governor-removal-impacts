@@ -1,0 +1,41 @@
+donor_state,scm_weight,outcome,short_label,channel
+AC,0.5414887251345616,formal_hiring_balance_per_100k_wap_ma6_clean,"Emprego formal, MM6",Mercado de trabalho formal
+SC,0.3473604533750221,formal_hiring_balance_per_100k_wap_ma6_clean,"Emprego formal, MM6",Mercado de trabalho formal
+AP,0.1111508214904042,formal_hiring_balance_per_100k_wap_ma6_clean,"Emprego formal, MM6",Mercado de trabalho formal
+MA,5.656034056111262e-15,formal_hiring_balance_per_100k_wap_ma6_clean,"Emprego formal, MM6",Mercado de trabalho formal
+PR,2.3995334743546395e-15,formal_hiring_balance_per_100k_wap_ma6_clean,"Emprego formal, MM6",Mercado de trabalho formal
+RS,0.6883611273181942,formal_hiring_balance_construction_per_100k_wap_ma6_clean,"Construcao civil, MM6",Mercado de trabalho formal
+AC,0.19823454526014497,formal_hiring_balance_construction_per_100k_wap_ma6_clean,"Construcao civil, MM6",Mercado de trabalho formal
+MG,0.06891175248496446,formal_hiring_balance_construction_per_100k_wap_ma6_clean,"Construcao civil, MM6",Mercado de trabalho formal
+MA,0.04449257493668119,formal_hiring_balance_construction_per_100k_wap_ma6_clean,"Construcao civil, MM6",Mercado de trabalho formal
+RN,6.970638322741061e-15,formal_hiring_balance_construction_per_100k_wap_ma6_clean,"Construcao civil, MM6",Mercado de trabalho formal
+AC,0.3920964759961793,retail_volume_index_ma6_clean,"Comercio, MM6",Consumo das familias
+PB,0.3883256536069774,retail_volume_index_ma6_clean,"Comercio, MM6",Consumo das familias
+DF,0.212685312547681,retail_volume_index_ma6_clean,"Comercio, MM6",Consumo das familias
+GO,0.00689255784914515,retail_volume_index_ma6_clean,"Comercio, MM6",Consumo das familias
+PA,4.988592888966076e-15,retail_volume_index_ma6_clean,"Comercio, MM6",Consumo das familias
+AC,0.40683358476313425,services_volume_index_ma6_clean,"Servicos, MM6",Consumo das familias
+AP,0.3221122169789228,services_volume_index_ma6_clean,"Servicos, MM6",Consumo das familias
+SC,0.1759200953390518,services_volume_index_ma6_clean,"Servicos, MM6",Consumo das familias
+DF,0.09186832784846095,services_volume_index_ma6_clean,"Servicos, MM6",Consumo das familias
+MT,0.00326577507042889,services_volume_index_ma6_clean,"Servicos, MM6",Consumo das familias
+AC,0.9000017423985137,state_tax_revenue_real_pc_ma4_clean,"Arrecadacao propria, MM4",Financas publicas estaduais
+RO,0.0999982576014429,state_tax_revenue_real_pc_ma4_clean,"Arrecadacao propria, MM4",Financas publicas estaduais
+PI,2.514439822700793e-14,state_tax_revenue_real_pc_ma4_clean,"Arrecadacao propria, MM4",Financas publicas estaduais
+MA,1.0221983768235158e-14,state_tax_revenue_real_pc_ma4_clean,"Arrecadacao propria, MM4",Financas publicas estaduais
+PE,3.135262859125015e-15,state_tax_revenue_real_pc_ma4_clean,"Arrecadacao propria, MM4",Financas publicas estaduais
+AC,0.9214438490238116,icms_revenue_real_pc_ma4_clean,"ICMS, MM4",Financas publicas estaduais
+RS,0.07855615097322205,icms_revenue_real_pc_ma4_clean,"ICMS, MM4",Financas publicas estaduais
+CE,2.9547799880484164e-12,icms_revenue_real_pc_ma4_clean,"ICMS, MM4",Financas publicas estaduais
+AL,3.7952568338442894e-15,icms_revenue_real_pc_ma4_clean,"ICMS, MM4",Financas publicas estaduais
+PI,2.4675111495727588e-15,icms_revenue_real_pc_ma4_clean,"ICMS, MM4",Financas publicas estaduais
+AP,0.3689895868020483,public_investment_liquidated_real_pc_ma4_clean,"Investimento publico, MM4",Financas publicas estaduais
+AC,0.27351438962210206,public_investment_liquidated_real_pc_ma4_clean,"Investimento publico, MM4",Financas publicas estaduais
+RO,0.15171480209937752,public_investment_liquidated_real_pc_ma4_clean,"Investimento publico, MM4",Financas publicas estaduais
+MT,0.135461737694064,public_investment_liquidated_real_pc_ma4_clean,"Investimento publico, MM4",Financas publicas estaduais
+DF,0.07031948378240037,public_investment_liquidated_real_pc_ma4_clean,"Investimento publico, MM4",Financas publicas estaduais
+AC,0.8659819443333946,liquidated_expenditure_total_real_pc_ma4_clean,"Despesa total, MM4",Financas publicas estaduais
+DF,0.10993201507628154,liquidated_expenditure_total_real_pc_ma4_clean,"Despesa total, MM4",Financas publicas estaduais
+RO,0.0240860405902884,liquidated_expenditure_total_real_pc_ma4_clean,"Despesa total, MM4",Financas publicas estaduais
+PE,2.9354368540740584e-14,liquidated_expenditure_total_real_pc_ma4_clean,"Despesa total, MM4",Financas publicas estaduais
+MS,2.959876274112902e-15,liquidated_expenditure_total_real_pc_ma4_clean,"Despesa total, MM4",Financas publicas estaduais

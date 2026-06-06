@@ -154,6 +154,15 @@ This file records the main methodological decisions adopted for the project so f
   - preferred pre-treatment window: `12 to 18 bimesters`
   - preferred post-treatment window: `6 to 12 bimesters`
 - These windows may be adjusted case by case depending on data availability and institutional timing.
+- The default target is a two-year post-treatment window when that horizon does not overlap a major common shock that would dominate interpretation, especially the Covid-19 pandemic for late-2017 and 2018 cases.
+- When a two-year post window would overlap the pandemic, the main specification should stop at the end of `2019` and treat `2020` onward as a separate robustness or descriptive extension.
+
+## Donor-pool exclusion rule
+
+- The treated state is always excluded from its own donor pool.
+- The default event-contamination rule is to exclude any donor state with a coded rupture episode in `data/raw/governor_removal_events.csv` whose `removal_date` falls inside the estimation window used for the treated case.
+- The applied donor-pool window must be recorded in the case metadata or run summary so the exclusion rule is transparent and reproducible.
+- If a future case requires a wider buffer than the estimation window itself, that buffer should be declared in the case README before estimation rather than added silently in the code.
 
 ## Data architecture
 

@@ -1,0 +1,1351 @@
+competencia,period_date,year,month,uf,state_abbrev,state_name,macroregion,formal_hiring_balance_construction,source_archive,source_status
+201511,2015-11-01,2015,11,12,AC,Acre,North,-279,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,27,AL,Alagoas,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,13,AM,Amazonas,North,-307,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,16,AP,Amapa,North,122,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,29,BA,Bahia,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,23,CE,Ceara,Northeast,-2517,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,32,ES,Espirito Santo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,21,MA,Maranhao,Northeast,-2005,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,31,MG,Minas Gerais,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,15,PA,Para,North,-6053,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,25,PB,Paraiba,Northeast,-967,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,26,PE,Pernambuco,Northeast,-1381,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,22,PI,Piaui,Northeast,-1338,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,33,RJ,Rio de Janeiro,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,24,RN,Rio Grande do Norte,Northeast,-735,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,11,RO,Rondonia,North,-1953,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,14,RR,Roraima,North,-119,CAGEDEST_112015.7z,salvaged_exit_2
+201511,2015-11-01,2015,11,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,28,SE,Sergipe,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,35,SP,Sao Paulo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201511,2015-11-01,2015,11,17,TO,Tocantins,North,-489,CAGEDEST_112015.7z,salvaged_exit_2
+201512,2015-12-01,2015,12,12,AC,Acre,North,-549,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,27,AL,Alagoas,Northeast,-1060,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,13,AM,Amazonas,North,-806,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,16,AP,Amapa,North,-164,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,29,BA,Bahia,Northeast,-5847,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,23,CE,Ceara,Northeast,-5279,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,53,DF,Distrito Federal,Center-West,-2364,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,32,ES,Espirito Santo,Southeast,-2531,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,52,GO,Goias,Center-West,-4043,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,21,MA,Maranhao,Northeast,-3592,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,31,MG,Minas Gerais,Southeast,-15972,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,50,MS,Mato Grosso do Sul,Center-West,-761,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,51,MT,Mato Grosso,Center-West,-4236,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,15,PA,Para,North,-6714,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,25,PB,Paraiba,Northeast,-608,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,26,PE,Pernambuco,Northeast,-3187,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,22,PI,Piaui,Northeast,-1358,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,41,PR,Parana,South,-6926,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,33,RJ,Rio de Janeiro,Southeast,-7704,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,24,RN,Rio Grande do Norte,Northeast,-1552,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,11,RO,Rondonia,North,-1431,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,14,RR,Roraima,North,-91,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,43,RS,Rio Grande do Sul,South,-4202,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,42,SC,Santa Catarina,South,-4951,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,28,SE,Sergipe,Northeast,-894,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,35,SP,Sao Paulo,Southeast,-21995,CAGEDEST_122015.7z,integrity_ok
+201512,2015-12-01,2015,12,17,TO,Tocantins,North,-612,CAGEDEST_122015.7z,integrity_ok
+201601,2016-01-01,2016,1,12,AC,Acre,North,-228,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,27,AL,Alagoas,Northeast,140,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,13,AM,Amazonas,North,-560,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,16,AP,Amapa,North,4,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,29,BA,Bahia,Northeast,-679,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,23,CE,Ceara,Northeast,-1346,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,53,DF,Distrito Federal,Center-West,-893,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,32,ES,Espirito Santo,Southeast,-90,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,52,GO,Goias,Center-West,-12,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,21,MA,Maranhao,Northeast,-2105,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,31,MG,Minas Gerais,Southeast,-2025,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,50,MS,Mato Grosso do Sul,Center-West,373,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,51,MT,Mato Grosso,Center-West,-37,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,15,PA,Para,North,-1491,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,25,PB,Paraiba,Northeast,-362,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,26,PE,Pernambuco,Northeast,279,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,22,PI,Piaui,Northeast,-12,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,41,PR,Parana,South,1571,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,33,RJ,Rio de Janeiro,Southeast,-2362,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,24,RN,Rio Grande do Norte,Northeast,-539,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,11,RO,Rondonia,North,-807,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,14,RR,Roraima,North,-38,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,43,RS,Rio Grande do Sul,South,471,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,42,SC,Santa Catarina,South,1558,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,28,SE,Sergipe,Northeast,300,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,35,SP,Sao Paulo,Southeast,6019,CAGEDEST_012016.7z,integrity_ok
+201601,2016-01-01,2016,1,17,TO,Tocantins,North,211,CAGEDEST_012016.7z,integrity_ok
+201602,2016-02-01,2016,2,12,AC,Acre,North,-11,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,27,AL,Alagoas,Northeast,-434,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,13,AM,Amazonas,North,-310,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,16,AP,Amapa,North,-88,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,29,BA,Bahia,Northeast,-680,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,23,CE,Ceara,Northeast,1067,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,53,DF,Distrito Federal,Center-West,-719,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,32,ES,Espirito Santo,Southeast,-937,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,52,GO,Goias,Center-West,-330,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,21,MA,Maranhao,Northeast,-3151,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,31,MG,Minas Gerais,Southeast,-820,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,50,MS,Mato Grosso do Sul,Center-West,595,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,51,MT,Mato Grosso,Center-West,60,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,15,PA,Para,North,-1949,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,25,PB,Paraiba,Northeast,-535,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,26,PE,Pernambuco,Northeast,-334,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,22,PI,Piaui,Northeast,-297,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,41,PR,Parana,South,-968,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,33,RJ,Rio de Janeiro,Southeast,-3718,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,24,RN,Rio Grande do Norte,Northeast,-785,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,11,RO,Rondonia,North,-1039,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,14,RR,Roraima,North,39,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,43,RS,Rio Grande do Sul,South,-238,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,42,SC,Santa Catarina,South,-1148,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,28,SE,Sergipe,Northeast,-29,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,35,SP,Sao Paulo,Southeast,-2879,CAGEDEST_022016.7z,integrity_ok
+201602,2016-02-01,2016,2,17,TO,Tocantins,North,87,CAGEDEST_022016.7z,integrity_ok
+201603,2016-03-01,2016,3,12,AC,Acre,North,-85,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,27,AL,Alagoas,Northeast,-522,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,13,AM,Amazonas,North,-178,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,16,AP,Amapa,North,-64,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,29,BA,Bahia,Northeast,-67,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,23,CE,Ceara,Northeast,-1646,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201603,2016-03-01,2016,3,32,ES,Espirito Santo,Southeast,-137,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201603,2016-03-01,2016,3,21,MA,Maranhao,Northeast,-1542,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,31,MG,Minas Gerais,Southeast,-2179,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201603,2016-03-01,2016,3,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201603,2016-03-01,2016,3,15,PA,Para,North,-1398,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,25,PB,Paraiba,Northeast,-529,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,26,PE,Pernambuco,Northeast,-437,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,22,PI,Piaui,Northeast,-236,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,41,PR,Parana,South,-2388,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,33,RJ,Rio de Janeiro,Southeast,-3751,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,24,RN,Rio Grande do Norte,Northeast,-620,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,11,RO,Rondonia,North,-269,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,14,RR,Roraima,North,60,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201603,2016-03-01,2016,3,42,SC,Santa Catarina,South,-310,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,28,SE,Sergipe,Northeast,-256,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,35,SP,Sao Paulo,Southeast,-7362,CAGEDEST_032016.7z,salvaged_exit_2
+201603,2016-03-01,2016,3,17,TO,Tocantins,North,125,CAGEDEST_032016.7z,salvaged_exit_2
+201604,2016-04-01,2016,4,12,AC,Acre,North,12,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,27,AL,Alagoas,Northeast,-430,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,13,AM,Amazonas,North,-46,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,16,AP,Amapa,North,-70,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,29,BA,Bahia,Northeast,-3425,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,23,CE,Ceara,Northeast,-952,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,53,DF,Distrito Federal,Center-West,757,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,32,ES,Espirito Santo,Southeast,153,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,52,GO,Goias,Center-West,2055,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,21,MA,Maranhao,Northeast,-1632,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,31,MG,Minas Gerais,Southeast,-1543,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,50,MS,Mato Grosso do Sul,Center-West,50,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,51,MT,Mato Grosso,Center-West,138,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,15,PA,Para,North,-1039,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,25,PB,Paraiba,Northeast,-294,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,26,PE,Pernambuco,Northeast,-1440,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,22,PI,Piaui,Northeast,-625,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,41,PR,Parana,South,-558,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,33,RJ,Rio de Janeiro,Southeast,-4370,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,24,RN,Rio Grande do Norte,Northeast,-585,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,11,RO,Rondonia,North,-604,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,14,RR,Roraima,North,-23,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,43,RS,Rio Grande do Sul,South,-7,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,42,SC,Santa Catarina,South,679,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,28,SE,Sergipe,Northeast,-64,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,35,SP,Sao Paulo,Southeast,-3424,CAGEDEST_042016.7z,integrity_ok
+201604,2016-04-01,2016,4,17,TO,Tocantins,North,231,CAGEDEST_042016.7z,integrity_ok
+201605,2016-05-01,2016,5,12,AC,Acre,North,15,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,27,AL,Alagoas,Northeast,-642,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,13,AM,Amazonas,North,106,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,16,AP,Amapa,North,-27,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,29,BA,Bahia,Northeast,-3554,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,23,CE,Ceara,Northeast,-446,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,32,ES,Espirito Santo,Southeast,-80,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,21,MA,Maranhao,Northeast,46,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,31,MG,Minas Gerais,Southeast,-2981,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,15,PA,Para,North,-1481,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,25,PB,Paraiba,Northeast,-576,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,26,PE,Pernambuco,Northeast,-1338,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,22,PI,Piaui,Northeast,-671,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,33,RJ,Rio de Janeiro,Southeast,-6281,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,24,RN,Rio Grande do Norte,Northeast,-575,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,11,RO,Rondonia,North,-490,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,14,RR,Roraima,North,3,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201605,2016-05-01,2016,5,28,SE,Sergipe,Northeast,-566,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,35,SP,Sao Paulo,Southeast,-5232,CAGEDEST_052016.7z,salvaged_exit_2
+201605,2016-05-01,2016,5,17,TO,Tocantins,North,286,CAGEDEST_052016.7z,salvaged_exit_2
+201606,2016-06-01,2016,6,12,AC,Acre,North,258,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,27,AL,Alagoas,Northeast,-778,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,13,AM,Amazonas,North,447,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,16,AP,Amapa,North,-48,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,29,BA,Bahia,Northeast,-2260,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,23,CE,Ceara,Northeast,-1923,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,53,DF,Distrito Federal,Center-West,-65,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,32,ES,Espirito Santo,Southeast,-479,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,52,GO,Goias,Center-West,498,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,21,MA,Maranhao,Northeast,346,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,31,MG,Minas Gerais,Southeast,-3040,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,50,MS,Mato Grosso do Sul,Center-West,2,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,51,MT,Mato Grosso,Center-West,-153,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,15,PA,Para,North,-418,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,25,PB,Paraiba,Northeast,-488,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,26,PE,Pernambuco,Northeast,-1477,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,22,PI,Piaui,Northeast,-92,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,41,PR,Parana,South,-1607,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,33,RJ,Rio de Janeiro,Southeast,-7065,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,24,RN,Rio Grande do Norte,Northeast,-767,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,11,RO,Rondonia,North,-552,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,14,RR,Roraima,North,-121,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,43,RS,Rio Grande do Sul,South,-511,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,42,SC,Santa Catarina,South,-938,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,28,SE,Sergipe,Northeast,-637,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,35,SP,Sao Paulo,Southeast,-8894,CAGEDEST_062016.7z,integrity_ok
+201606,2016-06-01,2016,6,17,TO,Tocantins,North,118,CAGEDEST_062016.7z,integrity_ok
+201607,2016-07-01,2016,7,12,AC,Acre,North,102,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,27,AL,Alagoas,Northeast,-724,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,13,AM,Amazonas,North,-53,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,16,AP,Amapa,North,-37,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,29,BA,Bahia,Northeast,-1894,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,23,CE,Ceara,Northeast,-1628,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,53,DF,Distrito Federal,Center-West,-429,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,32,ES,Espirito Santo,Southeast,-556,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,52,GO,Goias,Center-West,313,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,21,MA,Maranhao,Northeast,2,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,31,MG,Minas Gerais,Southeast,-2231,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,50,MS,Mato Grosso do Sul,Center-West,347,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,51,MT,Mato Grosso,Center-West,76,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,15,PA,Para,North,-689,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,25,PB,Paraiba,Northeast,-439,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,26,PE,Pernambuco,Northeast,-2114,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,22,PI,Piaui,Northeast,-329,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,41,PR,Parana,South,-53,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,33,RJ,Rio de Janeiro,Southeast,-10773,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,24,RN,Rio Grande do Norte,Northeast,-482,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,11,RO,Rondonia,North,-220,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,14,RR,Roraima,North,-104,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,43,RS,Rio Grande do Sul,South,-1795,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,42,SC,Santa Catarina,South,-304,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,28,SE,Sergipe,Northeast,-783,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,35,SP,Sao Paulo,Southeast,-4867,CAGEDEST_072016.7z,integrity_ok
+201607,2016-07-01,2016,7,17,TO,Tocantins,North,240,CAGEDEST_072016.7z,integrity_ok
+201608,2016-08-01,2016,8,12,AC,Acre,North,-143,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,27,AL,Alagoas,Northeast,-341,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,13,AM,Amazonas,North,-107,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,16,AP,Amapa,North,50,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,29,BA,Bahia,Northeast,155,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,23,CE,Ceara,Northeast,-1203,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,53,DF,Distrito Federal,Center-West,-702,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,32,ES,Espirito Santo,Southeast,-668,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,52,GO,Goias,Center-West,693,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,21,MA,Maranhao,Northeast,-450,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,31,MG,Minas Gerais,Southeast,-544,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,50,MS,Mato Grosso do Sul,Center-West,616,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,51,MT,Mato Grosso,Center-West,-149,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,15,PA,Para,North,-3427,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,25,PB,Paraiba,Northeast,-284,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,26,PE,Pernambuco,Northeast,-248,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,22,PI,Piaui,Northeast,-345,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,41,PR,Parana,South,-220,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,33,RJ,Rio de Janeiro,Southeast,-7234,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,24,RN,Rio Grande do Norte,Northeast,-765,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,11,RO,Rondonia,North,-414,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,14,RR,Roraima,North,-11,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,43,RS,Rio Grande do Sul,South,-854,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,42,SC,Santa Catarina,South,-558,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,28,SE,Sergipe,Northeast,-827,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,35,SP,Sao Paulo,Southeast,-5920,CAGEDEST_082016.7z,integrity_ok
+201608,2016-08-01,2016,8,17,TO,Tocantins,North,158,CAGEDEST_082016.7z,integrity_ok
+201609,2016-09-01,2016,9,12,AC,Acre,North,22,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,27,AL,Alagoas,Northeast,-85,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,13,AM,Amazonas,North,-308,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,16,AP,Amapa,North,-156,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,29,BA,Bahia,Northeast,-1520,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,23,CE,Ceara,Northeast,-1190,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,53,DF,Distrito Federal,Center-West,-378,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,32,ES,Espirito Santo,Southeast,-615,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,52,GO,Goias,Center-West,-652,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,21,MA,Maranhao,Northeast,-713,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,31,MG,Minas Gerais,Southeast,-1800,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,50,MS,Mato Grosso do Sul,Center-West,340,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,51,MT,Mato Grosso,Center-West,-477,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,15,PA,Para,North,-647,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,25,PB,Paraiba,Northeast,-150,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,26,PE,Pernambuco,Northeast,-803,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,22,PI,Piaui,Northeast,-607,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,41,PR,Parana,South,-1891,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,33,RJ,Rio de Janeiro,Southeast,-5358,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,24,RN,Rio Grande do Norte,Northeast,-14,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,11,RO,Rondonia,North,-385,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,14,RR,Roraima,North,26,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,43,RS,Rio Grande do Sul,South,-975,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,42,SC,Santa Catarina,South,-520,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,28,SE,Sergipe,Northeast,-777,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,35,SP,Sao Paulo,Southeast,-9619,CAGEDEST_092016.7z,integrity_ok
+201609,2016-09-01,2016,9,17,TO,Tocantins,North,16,CAGEDEST_092016.7z,integrity_ok
+201610,2016-10-01,2016,10,12,AC,Acre,North,-85,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,27,AL,Alagoas,Northeast,-413,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,13,AM,Amazonas,North,-32,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,16,AP,Amapa,North,49,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,29,BA,Bahia,Northeast,-1346,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,23,CE,Ceara,Northeast,-1942,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,53,DF,Distrito Federal,Center-West,-905,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,32,ES,Espirito Santo,Southeast,-558,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,52,GO,Goias,Center-West,-2026,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,21,MA,Maranhao,Northeast,-321,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,31,MG,Minas Gerais,Southeast,-1151,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,50,MS,Mato Grosso do Sul,Center-West,37,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,51,MT,Mato Grosso,Center-West,-682,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,15,PA,Para,North,-2865,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,25,PB,Paraiba,Northeast,-547,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,26,PE,Pernambuco,Northeast,-1736,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,22,PI,Piaui,Northeast,92,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,41,PR,Parana,South,-1482,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,33,RJ,Rio de Janeiro,Southeast,-7282,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,24,RN,Rio Grande do Norte,Northeast,-662,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,11,RO,Rondonia,North,-586,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,14,RR,Roraima,North,60,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,43,RS,Rio Grande do Sul,South,-1082,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,42,SC,Santa Catarina,South,-870,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,28,SE,Sergipe,Northeast,-816,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,35,SP,Sao Paulo,Southeast,-8021,CAGEDEST_102016.7z,integrity_ok
+201610,2016-10-01,2016,10,17,TO,Tocantins,North,-226,CAGEDEST_102016.7z,integrity_ok
+201611,2016-11-01,2016,11,12,AC,Acre,North,-166,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,27,AL,Alagoas,Northeast,-568,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,13,AM,Amazonas,North,-652,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,16,AP,Amapa,North,-189,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,29,BA,Bahia,Northeast,585,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,23,CE,Ceara,Northeast,-1105,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,53,DF,Distrito Federal,Center-West,-959,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,32,ES,Espirito Santo,Southeast,-1195,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,52,GO,Goias,Center-West,-2422,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,21,MA,Maranhao,Northeast,-1461,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,31,MG,Minas Gerais,Southeast,-7437,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,50,MS,Mato Grosso do Sul,Center-West,197,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,51,MT,Mato Grosso,Center-West,-2388,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,15,PA,Para,North,-2869,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,25,PB,Paraiba,Northeast,-1133,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,26,PE,Pernambuco,Northeast,-2534,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,22,PI,Piaui,Northeast,-869,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,41,PR,Parana,South,-3179,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,33,RJ,Rio de Janeiro,Southeast,-7107,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,24,RN,Rio Grande do Norte,Northeast,-696,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,11,RO,Rondonia,North,-478,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,14,RR,Roraima,North,30,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,43,RS,Rio Grande do Sul,South,-2288,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,42,SC,Santa Catarina,South,-2183,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,28,SE,Sergipe,Northeast,-589,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,35,SP,Sao Paulo,Southeast,-11340,CAGEDEST_112016.7z,integrity_ok
+201611,2016-11-01,2016,11,17,TO,Tocantins,North,-836,CAGEDEST_112016.7z,integrity_ok
+201612,2016-12-01,2016,12,12,AC,Acre,North,-324,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,27,AL,Alagoas,Northeast,-316,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,13,AM,Amazonas,North,-1089,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,16,AP,Amapa,North,35,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,29,BA,Bahia,Northeast,-6285,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,23,CE,Ceara,Northeast,-3549,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,53,DF,Distrito Federal,Center-West,-1885,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,32,ES,Espirito Santo,Southeast,-1691,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,52,GO,Goias,Center-West,-3928,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,21,MA,Maranhao,Northeast,-1886,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,31,MG,Minas Gerais,Southeast,-11222,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,50,MS,Mato Grosso do Sul,Center-West,-988,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,51,MT,Mato Grosso,Center-West,-4578,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,15,PA,Para,North,-4612,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,25,PB,Paraiba,Northeast,-490,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,26,PE,Pernambuco,Northeast,-2508,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,22,PI,Piaui,Northeast,-1306,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,41,PR,Parana,South,-5196,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,33,RJ,Rio de Janeiro,Southeast,-7726,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,24,RN,Rio Grande do Norte,Northeast,-845,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,11,RO,Rondonia,North,-944,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,14,RR,Roraima,North,-81,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,43,RS,Rio Grande do Sul,South,-3195,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,42,SC,Santa Catarina,South,-3775,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,28,SE,Sergipe,Northeast,-1018,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,35,SP,Sao Paulo,Southeast,-16682,CAGEDEST_122016.7z,integrity_ok
+201612,2016-12-01,2016,12,17,TO,Tocantins,North,-684,CAGEDEST_122016.7z,integrity_ok
+201701,2017-01-01,2017,1,12,AC,Acre,North,-54,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,27,AL,Alagoas,Northeast,53,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,13,AM,Amazonas,North,-489,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,16,AP,Amapa,North,-93,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,29,BA,Bahia,Northeast,-794,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,23,CE,Ceara,Northeast,-1015,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,53,DF,Distrito Federal,Center-West,-442,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,32,ES,Espirito Santo,Southeast,119,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,52,GO,Goias,Center-West,279,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,21,MA,Maranhao,Northeast,-1368,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,31,MG,Minas Gerais,Southeast,1123,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,50,MS,Mato Grosso do Sul,Center-West,370,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,51,MT,Mato Grosso,Center-West,-327,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,15,PA,Para,North,-979,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,25,PB,Paraiba,Northeast,10,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,26,PE,Pernambuco,Northeast,-157,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,22,PI,Piaui,Northeast,-240,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,41,PR,Parana,South,1594,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,33,RJ,Rio de Janeiro,Southeast,-2458,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,24,RN,Rio Grande do Norte,Northeast,-276,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,11,RO,Rondonia,North,-149,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,14,RR,Roraima,North,57,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,43,RS,Rio Grande do Sul,South,809,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,42,SC,Santa Catarina,South,1690,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,28,SE,Sergipe,Northeast,-43,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,35,SP,Sao Paulo,Southeast,1839,CAGEDEST_012017.7z,integrity_ok
+201701,2017-01-01,2017,1,17,TO,Tocantins,North,-255,CAGEDEST_012017.7z,integrity_ok
+201702,2017-02-01,2017,2,12,AC,Acre,North,20,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,27,AL,Alagoas,Northeast,-307,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,13,AM,Amazonas,North,-416,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,16,AP,Amapa,North,103,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,29,BA,Bahia,Northeast,-2660,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,23,CE,Ceara,Northeast,1115,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,53,DF,Distrito Federal,Center-West,10,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,32,ES,Espirito Santo,Southeast,-1002,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,52,GO,Goias,Center-West,-349,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,21,MA,Maranhao,Northeast,-1108,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,31,MG,Minas Gerais,Southeast,-1121,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,50,MS,Mato Grosso do Sul,Center-West,160,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,51,MT,Mato Grosso,Center-West,-378,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,15,PA,Para,North,-2387,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,25,PB,Paraiba,Northeast,154,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,26,PE,Pernambuco,Northeast,-291,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,22,PI,Piaui,Northeast,-425,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,41,PR,Parana,South,1127,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,33,RJ,Rio de Janeiro,Southeast,-1971,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,24,RN,Rio Grande do Norte,Northeast,58,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,11,RO,Rondonia,North,-126,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,14,RR,Roraima,North,188,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,43,RS,Rio Grande do Sul,South,68,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,42,SC,Santa Catarina,South,490,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,28,SE,Sergipe,Northeast,-137,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,35,SP,Sao Paulo,Southeast,-4765,CAGEDEST_022017.7z,integrity_ok
+201702,2017-02-01,2017,2,17,TO,Tocantins,North,189,CAGEDEST_022017.7z,integrity_ok
+201703,2017-03-01,2017,3,12,AC,Acre,North,-41,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,27,AL,Alagoas,Northeast,-269,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,13,AM,Amazonas,North,-397,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,16,AP,Amapa,North,1,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,29,BA,Bahia,Northeast,-910,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,23,CE,Ceara,Northeast,-1515,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,53,DF,Distrito Federal,Center-West,-188,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,32,ES,Espirito Santo,Southeast,672,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,52,GO,Goias,Center-West,61,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,21,MA,Maranhao,Northeast,-821,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,31,MG,Minas Gerais,Southeast,988,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,50,MS,Mato Grosso do Sul,Center-West,428,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,51,MT,Mato Grosso,Center-West,-174,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,15,PA,Para,North,-161,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,25,PB,Paraiba,Northeast,4,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,26,PE,Pernambuco,Northeast,-165,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,22,PI,Piaui,Northeast,-272,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,41,PR,Parana,South,-554,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,33,RJ,Rio de Janeiro,Southeast,-935,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,24,RN,Rio Grande do Norte,Northeast,448,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,11,RO,Rondonia,North,-312,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,14,RR,Roraima,North,27,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,43,RS,Rio Grande do Sul,South,-635,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,42,SC,Santa Catarina,South,-36,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,28,SE,Sergipe,Northeast,-415,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,35,SP,Sao Paulo,Southeast,-4950,CAGEDEST_032017.7z,integrity_ok
+201703,2017-03-01,2017,3,17,TO,Tocantins,North,-86,CAGEDEST_032017.7z,integrity_ok
+201704,2017-04-01,2017,4,12,AC,Acre,North,42,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,27,AL,Alagoas,Northeast,-20,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,13,AM,Amazonas,North,-238,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,16,AP,Amapa,North,48,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,29,BA,Bahia,Northeast,-590,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,23,CE,Ceara,Northeast,-580,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,32,ES,Espirito Santo,Southeast,368,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,21,MA,Maranhao,Northeast,312,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,31,MG,Minas Gerais,Southeast,346,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,15,PA,Para,North,-1186,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,25,PB,Paraiba,Northeast,-171,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,26,PE,Pernambuco,Northeast,-1104,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,22,PI,Piaui,Northeast,-486,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,33,RJ,Rio de Janeiro,Southeast,-932,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,24,RN,Rio Grande do Norte,Northeast,-269,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,11,RO,Rondonia,North,-54,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,14,RR,Roraima,North,-108,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201704,2017-04-01,2017,4,28,SE,Sergipe,Northeast,-198,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,35,SP,Sao Paulo,Southeast,295,CAGEDEST_042017.7z,salvaged_exit_2
+201704,2017-04-01,2017,4,17,TO,Tocantins,North,234,CAGEDEST_042017.7z,salvaged_exit_2
+201705,2017-05-01,2017,5,12,AC,Acre,North,123,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,27,AL,Alagoas,Northeast,-31,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,13,AM,Amazonas,North,-134,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,16,AP,Amapa,North,-45,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,29,BA,Bahia,Northeast,-444,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,23,CE,Ceara,Northeast,340,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,53,DF,Distrito Federal,Center-West,382,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,32,ES,Espirito Santo,Southeast,169,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,52,GO,Goias,Center-West,892,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,21,MA,Maranhao,Northeast,271,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,31,MG,Minas Gerais,Southeast,1151,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,50,MS,Mato Grosso do Sul,Center-West,-849,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,51,MT,Mato Grosso,Center-West,644,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,15,PA,Para,North,200,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,25,PB,Paraiba,Northeast,63,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,26,PE,Pernambuco,Northeast,-906,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,22,PI,Piaui,Northeast,22,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,41,PR,Parana,South,923,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,33,RJ,Rio de Janeiro,Southeast,-1355,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,24,RN,Rio Grande do Norte,Northeast,-215,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,11,RO,Rondonia,North,90,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,14,RR,Roraima,North,132,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,43,RS,Rio Grande do Sul,South,-844,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,42,SC,Santa Catarina,South,-202,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,28,SE,Sergipe,Northeast,-343,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,35,SP,Sao Paulo,Southeast,-4880,CAGEDEST_052017.7z,integrity_ok
+201705,2017-05-01,2017,5,17,TO,Tocantins,North,377,CAGEDEST_052017.7z,integrity_ok
+201706,2017-06-01,2017,6,12,AC,Acre,North,236,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,27,AL,Alagoas,Northeast,-198,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,13,AM,Amazonas,North,130,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,16,AP,Amapa,North,1,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,29,BA,Bahia,Northeast,-291,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,23,CE,Ceara,Northeast,-232,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201706,2017-06-01,2017,6,32,ES,Espirito Santo,Southeast,19,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201706,2017-06-01,2017,6,21,MA,Maranhao,Northeast,815,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,31,MG,Minas Gerais,Southeast,-724,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201706,2017-06-01,2017,6,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201706,2017-06-01,2017,6,15,PA,Para,North,270,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,25,PB,Paraiba,Northeast,-279,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,26,PE,Pernambuco,Northeast,-602,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,22,PI,Piaui,Northeast,-509,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,41,PR,Parana,South,-1996,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,33,RJ,Rio de Janeiro,Southeast,-308,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,24,RN,Rio Grande do Norte,Northeast,-486,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,11,RO,Rondonia,North,-184,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,14,RR,Roraima,North,41,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201706,2017-06-01,2017,6,42,SC,Santa Catarina,South,-446,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,28,SE,Sergipe,Northeast,-412,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,35,SP,Sao Paulo,Southeast,-5572,CAGEDEST_062017.7z,salvaged_exit_2
+201706,2017-06-01,2017,6,17,TO,Tocantins,North,490,CAGEDEST_062017.7z,salvaged_exit_2
+201707,2017-07-01,2017,7,12,AC,Acre,North,122,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,27,AL,Alagoas,Northeast,-284,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,13,AM,Amazonas,North,352,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,16,AP,Amapa,North,-9,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,29,BA,Bahia,Northeast,646,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,23,CE,Ceara,Northeast,-500,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,53,DF,Distrito Federal,Center-West,442,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,32,ES,Espirito Santo,Southeast,-302,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,52,GO,Goias,Center-West,660,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,21,MA,Maranhao,Northeast,973,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,31,MG,Minas Gerais,Southeast,2152,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,50,MS,Mato Grosso do Sul,Center-West,-275,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,51,MT,Mato Grosso,Center-West,930,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,15,PA,Para,North,958,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,25,PB,Paraiba,Northeast,-189,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,26,PE,Pernambuco,Northeast,-698,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,22,PI,Piaui,Northeast,-99,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,41,PR,Parana,South,-806,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,33,RJ,Rio de Janeiro,Southeast,-4723,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,24,RN,Rio Grande do Norte,Northeast,-112,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,11,RO,Rondonia,North,174,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,14,RR,Roraima,North,-42,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,43,RS,Rio Grande do Sul,South,146,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,42,SC,Santa Catarina,South,254,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,28,SE,Sergipe,Northeast,-10,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,35,SP,Sao Paulo,Southeast,179,CAGEDEST_072017.7z,integrity_ok
+201707,2017-07-01,2017,7,17,TO,Tocantins,North,23,CAGEDEST_072017.7z,integrity_ok
+201708,2017-08-01,2017,8,12,AC,Acre,North,97,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,27,AL,Alagoas,Northeast,133,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,13,AM,Amazonas,North,-98,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,16,AP,Amapa,North,-205,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,29,BA,Bahia,Northeast,2267,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,23,CE,Ceara,Northeast,511,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,53,DF,Distrito Federal,Center-West,218,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,32,ES,Espirito Santo,Southeast,298,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,52,GO,Goias,Center-West,753,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,21,MA,Maranhao,Northeast,729,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,31,MG,Minas Gerais,Southeast,743,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,50,MS,Mato Grosso do Sul,Center-West,-836,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,51,MT,Mato Grosso,Center-West,411,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,15,PA,Para,North,-1055,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,25,PB,Paraiba,Northeast,-81,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,26,PE,Pernambuco,Northeast,235,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,22,PI,Piaui,Northeast,40,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,41,PR,Parana,South,-1596,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,33,RJ,Rio de Janeiro,Southeast,-2391,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,24,RN,Rio Grande do Norte,Northeast,222,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,11,RO,Rondonia,North,128,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,14,RR,Roraima,North,147,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,43,RS,Rio Grande do Sul,South,794,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,42,SC,Santa Catarina,South,792,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,28,SE,Sergipe,Northeast,27,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,35,SP,Sao Paulo,Southeast,-2354,CAGEDEST_082017.7z,integrity_ok
+201708,2017-08-01,2017,8,17,TO,Tocantins,North,-170,CAGEDEST_082017.7z,integrity_ok
+201709,2017-09-01,2017,9,12,AC,Acre,North,21,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,27,AL,Alagoas,Northeast,61,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,13,AM,Amazonas,North,-100,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,16,AP,Amapa,North,7,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,29,BA,Bahia,Northeast,378,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,23,CE,Ceara,Northeast,48,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,53,DF,Distrito Federal,Center-West,-124,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,32,ES,Espirito Santo,Southeast,-71,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,52,GO,Goias,Center-West,138,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,21,MA,Maranhao,Northeast,314,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,31,MG,Minas Gerais,Southeast,190,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,50,MS,Mato Grosso do Sul,Center-West,-569,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,51,MT,Mato Grosso,Center-West,709,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,15,PA,Para,North,937,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,25,PB,Paraiba,Northeast,-114,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,26,PE,Pernambuco,Northeast,180,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,22,PI,Piaui,Northeast,103,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,41,PR,Parana,South,70,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,33,RJ,Rio de Janeiro,Southeast,-576,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,24,RN,Rio Grande do Norte,Northeast,41,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,11,RO,Rondonia,North,38,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,14,RR,Roraima,North,212,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,43,RS,Rio Grande do Sul,South,254,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,42,SC,Santa Catarina,South,337,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,28,SE,Sergipe,Northeast,-241,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,35,SP,Sao Paulo,Southeast,-3156,CAGEDEST_092017.7z,integrity_ok
+201709,2017-09-01,2017,9,17,TO,Tocantins,North,461,CAGEDEST_092017.7z,integrity_ok
+201710,2017-10-01,2017,10,12,AC,Acre,North,33,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,27,AL,Alagoas,Northeast,157,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,13,AM,Amazonas,North,-58,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,16,AP,Amapa,North,56,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,29,BA,Bahia,Northeast,-1380,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,23,CE,Ceara,Northeast,35,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,53,DF,Distrito Federal,Center-West,131,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,32,ES,Espirito Santo,Southeast,155,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,52,GO,Goias,Center-West,-668,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,21,MA,Maranhao,Northeast,230,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,31,MG,Minas Gerais,Southeast,2228,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,50,MS,Mato Grosso do Sul,Center-West,-761,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,51,MT,Mato Grosso,Center-West,11,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,15,PA,Para,North,-762,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,25,PB,Paraiba,Northeast,-89,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,26,PE,Pernambuco,Northeast,-35,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,22,PI,Piaui,Northeast,340,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,41,PR,Parana,South,-536,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,33,RJ,Rio de Janeiro,Southeast,-965,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,24,RN,Rio Grande do Norte,Northeast,-352,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,11,RO,Rondonia,North,110,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,14,RR,Roraima,North,148,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,43,RS,Rio Grande do Sul,South,-977,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,42,SC,Santa Catarina,South,-418,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,28,SE,Sergipe,Northeast,45,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,35,SP,Sao Paulo,Southeast,-2316,CAGEDEST_102017.7z,integrity_ok
+201710,2017-10-01,2017,10,17,TO,Tocantins,North,241,CAGEDEST_102017.7z,integrity_ok
+201711,2017-11-01,2017,11,12,AC,Acre,North,-212,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,27,AL,Alagoas,Northeast,-408,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,13,AM,Amazonas,North,-356,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,16,AP,Amapa,North,-210,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,29,BA,Bahia,Northeast,-653,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,23,CE,Ceara,Northeast,-360,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,53,DF,Distrito Federal,Center-West,-436,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,32,ES,Espirito Santo,Southeast,20,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,52,GO,Goias,Center-West,-1809,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,21,MA,Maranhao,Northeast,-57,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,31,MG,Minas Gerais,Southeast,-4341,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,50,MS,Mato Grosso do Sul,Center-West,-378,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,51,MT,Mato Grosso,Center-West,-1535,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,15,PA,Para,North,-161,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,25,PB,Paraiba,Northeast,-389,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,26,PE,Pernambuco,Northeast,-127,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,22,PI,Piaui,Northeast,-521,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,41,PR,Parana,South,-1852,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,33,RJ,Rio de Janeiro,Southeast,-1534,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,24,RN,Rio Grande do Norte,Northeast,-232,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,11,RO,Rondonia,North,-326,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,14,RR,Roraima,North,91,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,43,RS,Rio Grande do Sul,South,-794,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,42,SC,Santa Catarina,South,-1180,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,28,SE,Sergipe,Northeast,-150,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,35,SP,Sao Paulo,Southeast,-6384,CAGEDEST_112017.7z,integrity_ok
+201711,2017-11-01,2017,11,17,TO,Tocantins,North,-196,CAGEDEST_112017.7z,integrity_ok
+201712,2017-12-01,2017,12,12,AC,Acre,North,-130,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,27,AL,Alagoas,Northeast,-904,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,13,AM,Amazonas,North,-265,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,16,AP,Amapa,North,-210,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,29,BA,Bahia,Northeast,-3354,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,23,CE,Ceara,Northeast,-1749,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,32,ES,Espirito Santo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,21,MA,Maranhao,Northeast,-666,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,31,MG,Minas Gerais,Southeast,11546,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,15,PA,Para,North,-2965,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,25,PB,Paraiba,Northeast,-271,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,26,PE,Pernambuco,Northeast,-1087,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,22,PI,Piaui,Northeast,-589,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,33,RJ,Rio de Janeiro,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,24,RN,Rio Grande do Norte,Northeast,-836,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,11,RO,Rondonia,North,-615,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,14,RR,Roraima,North,4,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,28,SE,Sergipe,Northeast,-454,CAGEDEST_122017.7z,salvaged_exit_2
+201712,2017-12-01,2017,12,35,SP,Sao Paulo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201712,2017-12-01,2017,12,17,TO,Tocantins,North,-700,CAGEDEST_122017.7z,salvaged_exit_2
+201801,2018-01-01,2018,1,12,AC,Acre,North,-91,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,27,AL,Alagoas,Northeast,372,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,13,AM,Amazonas,North,-699,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,16,AP,Amapa,North,225,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,29,BA,Bahia,Northeast,1452,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,23,CE,Ceara,Northeast,-300,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,53,DF,Distrito Federal,Center-West,634,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,32,ES,Espirito Santo,Southeast,856,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,52,GO,Goias,Center-West,1679,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,21,MA,Maranhao,Northeast,-747,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,31,MG,Minas Gerais,Southeast,3684,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,50,MS,Mato Grosso do Sul,Center-West,152,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,51,MT,Mato Grosso,Center-West,366,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,15,PA,Para,North,-2616,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,25,PB,Paraiba,Northeast,113,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,26,PE,Pernambuco,Northeast,207,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,22,PI,Piaui,Northeast,-11,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,41,PR,Parana,South,1546,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,33,RJ,Rio de Janeiro,Southeast,-801,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,24,RN,Rio Grande do Norte,Northeast,696,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,11,RO,Rondonia,North,-110,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,14,RR,Roraima,North,137,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,43,RS,Rio Grande do Sul,South,1499,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,42,SC,Santa Catarina,South,1783,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,28,SE,Sergipe,Northeast,192,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,35,SP,Sao Paulo,Southeast,6034,CAGEDEST_012018.7z,integrity_ok
+201801,2018-01-01,2018,1,17,TO,Tocantins,North,-239,CAGEDEST_012018.7z,integrity_ok
+201802,2018-02-01,2018,2,12,AC,Acre,North,-155,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,27,AL,Alagoas,Northeast,423,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,13,AM,Amazonas,North,-10,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,16,AP,Amapa,North,21,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,29,BA,Bahia,Northeast,-215,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,23,CE,Ceara,Northeast,71,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,53,DF,Distrito Federal,Center-West,144,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,32,ES,Espirito Santo,Southeast,76,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,52,GO,Goias,Center-West,215,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,21,MA,Maranhao,Northeast,-618,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,31,MG,Minas Gerais,Southeast,-46,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,50,MS,Mato Grosso do Sul,Center-West,182,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,51,MT,Mato Grosso,Center-West,36,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,15,PA,Para,North,-1754,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,25,PB,Paraiba,Northeast,31,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,26,PE,Pernambuco,Northeast,193,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,22,PI,Piaui,Northeast,-261,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,41,PR,Parana,South,317,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,33,RJ,Rio de Janeiro,Southeast,-2537,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,24,RN,Rio Grande do Norte,Northeast,-606,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,11,RO,Rondonia,North,-59,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,14,RR,Roraima,North,121,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,43,RS,Rio Grande do Sul,South,1013,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,42,SC,Santa Catarina,South,538,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,28,SE,Sergipe,Northeast,304,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,35,SP,Sao Paulo,Southeast,-939,CAGEDEST_022018.7z,integrity_ok
+201802,2018-02-01,2018,2,17,TO,Tocantins,North,-271,CAGEDEST_022018.7z,integrity_ok
+201803,2018-03-01,2018,3,12,AC,Acre,North,-52,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,27,AL,Alagoas,Northeast,329,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,13,AM,Amazonas,North,-36,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,16,AP,Amapa,North,-31,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,29,BA,Bahia,Northeast,1093,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,23,CE,Ceara,Northeast,-243,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,53,DF,Distrito Federal,Center-West,412,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,32,ES,Espirito Santo,Southeast,776,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,52,GO,Goias,Center-West,295,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,21,MA,Maranhao,Northeast,-448,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,31,MG,Minas Gerais,Southeast,3271,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,50,MS,Mato Grosso do Sul,Center-West,21,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,51,MT,Mato Grosso,Center-West,46,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,15,PA,Para,North,-193,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,25,PB,Paraiba,Northeast,-61,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,26,PE,Pernambuco,Northeast,538,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,22,PI,Piaui,Northeast,58,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,41,PR,Parana,South,3,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,33,RJ,Rio de Janeiro,Southeast,-1462,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,24,RN,Rio Grande do Norte,Northeast,-221,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,11,RO,Rondonia,North,175,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,14,RR,Roraima,North,97,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,43,RS,Rio Grande do Sul,South,1240,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,42,SC,Santa Catarina,South,257,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,28,SE,Sergipe,Northeast,104,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,35,SP,Sao Paulo,Southeast,2010,CAGEDEST_032018.7z,integrity_ok
+201803,2018-03-01,2018,3,17,TO,Tocantins,North,-155,CAGEDEST_032018.7z,integrity_ok
+201804,2018-04-01,2018,4,12,AC,Acre,North,49,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,27,AL,Alagoas,Northeast,391,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,13,AM,Amazonas,North,81,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,16,AP,Amapa,North,149,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,29,BA,Bahia,Northeast,-834,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,23,CE,Ceara,Northeast,275,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,53,DF,Distrito Federal,Center-West,530,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,32,ES,Espirito Santo,Southeast,263,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,52,GO,Goias,Center-West,1674,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,21,MA,Maranhao,Northeast,-104,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,31,MG,Minas Gerais,Southeast,3571,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,50,MS,Mato Grosso do Sul,Center-West,-73,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,51,MT,Mato Grosso,Center-West,993,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,15,PA,Para,North,289,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,25,PB,Paraiba,Northeast,110,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,26,PE,Pernambuco,Northeast,-505,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,22,PI,Piaui,Northeast,80,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,41,PR,Parana,South,202,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,33,RJ,Rio de Janeiro,Southeast,772,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,24,RN,Rio Grande do Norte,Northeast,451,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,11,RO,Rondonia,North,54,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,14,RR,Roraima,North,-90,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,43,RS,Rio Grande do Sul,South,858,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,42,SC,Santa Catarina,South,1320,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,28,SE,Sergipe,Northeast,57,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,35,SP,Sao Paulo,Southeast,4371,CAGEDEST_042018.7z,integrity_ok
+201804,2018-04-01,2018,4,17,TO,Tocantins,North,110,CAGEDEST_042018.7z,integrity_ok
+201805,2018-05-01,2018,5,12,AC,Acre,North,-5,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,27,AL,Alagoas,Northeast,-117,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,13,AM,Amazonas,North,-358,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,16,AP,Amapa,North,55,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,29,BA,Bahia,Northeast,-411,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,23,CE,Ceara,Northeast,1510,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,53,DF,Distrito Federal,Center-West,81,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,32,ES,Espirito Santo,Southeast,83,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,52,GO,Goias,Center-West,-995,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,21,MA,Maranhao,Northeast,57,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,31,MG,Minas Gerais,Southeast,3901,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,50,MS,Mato Grosso do Sul,Center-West,83,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,51,MT,Mato Grosso,Center-West,757,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,15,PA,Para,North,1587,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,25,PB,Paraiba,Northeast,-178,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,26,PE,Pernambuco,Northeast,-1031,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,22,PI,Piaui,Northeast,-95,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,41,PR,Parana,South,644,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,33,RJ,Rio de Janeiro,Southeast,-983,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,24,RN,Rio Grande do Norte,Northeast,250,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,11,RO,Rondonia,North,375,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,14,RR,Roraima,North,-285,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,43,RS,Rio Grande do Sul,South,-8,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,42,SC,Santa Catarina,South,-253,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,28,SE,Sergipe,Northeast,55,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,35,SP,Sao Paulo,Southeast,-3297,CAGEDEST_052018.7z,integrity_ok
+201805,2018-05-01,2018,5,17,TO,Tocantins,North,1007,CAGEDEST_052018.7z,integrity_ok
+201806,2018-06-01,2018,6,12,AC,Acre,North,198,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,27,AL,Alagoas,Northeast,-415,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,13,AM,Amazonas,North,189,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,16,AP,Amapa,North,63,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,29,BA,Bahia,Northeast,-664,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,23,CE,Ceara,Northeast,470,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,53,DF,Distrito Federal,Center-West,177,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,32,ES,Espirito Santo,Southeast,-268,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,52,GO,Goias,Center-West,550,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,21,MA,Maranhao,Northeast,13,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,31,MG,Minas Gerais,Southeast,402,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,50,MS,Mato Grosso do Sul,Center-West,-92,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,51,MT,Mato Grosso,Center-West,639,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,15,PA,Para,North,1856,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,25,PB,Paraiba,Northeast,41,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,26,PE,Pernambuco,Northeast,-827,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,22,PI,Piaui,Northeast,-171,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,41,PR,Parana,South,-1235,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,33,RJ,Rio de Janeiro,Southeast,-921,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,24,RN,Rio Grande do Norte,Northeast,-123,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,11,RO,Rondonia,North,101,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,14,RR,Roraima,North,-180,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,43,RS,Rio Grande do Sul,South,-1362,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,42,SC,Santa Catarina,South,-56,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,28,SE,Sergipe,Northeast,21,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,35,SP,Sao Paulo,Southeast,-654,CAGEDEST_062018.7z,integrity_ok
+201806,2018-06-01,2018,6,17,TO,Tocantins,North,338,CAGEDEST_062018.7z,integrity_ok
+201807,2018-07-01,2018,7,12,AC,Acre,North,294,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,27,AL,Alagoas,Northeast,-145,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,13,AM,Amazonas,North,294,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,16,AP,Amapa,North,202,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,29,BA,Bahia,Northeast,-376,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,23,CE,Ceara,Northeast,267,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,53,DF,Distrito Federal,Center-West,516,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,32,ES,Espirito Santo,Southeast,407,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,52,GO,Goias,Center-West,700,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,21,MA,Maranhao,Northeast,137,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,31,MG,Minas Gerais,Southeast,4359,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,50,MS,Mato Grosso do Sul,Center-West,-55,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,51,MT,Mato Grosso,Center-West,772,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,15,PA,Para,North,2492,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,25,PB,Paraiba,Northeast,-251,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,26,PE,Pernambuco,Northeast,199,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,22,PI,Piaui,Northeast,-75,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,41,PR,Parana,South,1141,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,33,RJ,Rio de Janeiro,Southeast,-902,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,24,RN,Rio Grande do Norte,Northeast,-186,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,11,RO,Rondonia,North,187,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,14,RR,Roraima,North,-144,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,43,RS,Rio Grande do Sul,South,-97,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,42,SC,Santa Catarina,South,-36,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,28,SE,Sergipe,Northeast,-1,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,35,SP,Sao Paulo,Southeast,-246,CAGEDEST_072018.7z,integrity_ok
+201807,2018-07-01,2018,7,17,TO,Tocantins,North,389,CAGEDEST_072018.7z,integrity_ok
+201808,2018-08-01,2018,8,12,AC,Acre,North,108,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,27,AL,Alagoas,Northeast,-114,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,13,AM,Amazonas,North,100,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,16,AP,Amapa,North,193,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,29,BA,Bahia,Northeast,737,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,23,CE,Ceara,Northeast,33,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,53,DF,Distrito Federal,Center-West,-444,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,32,ES,Espirito Santo,Southeast,926,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,52,GO,Goias,Center-West,719,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,21,MA,Maranhao,Northeast,-62,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,31,MG,Minas Gerais,Southeast,2637,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,50,MS,Mato Grosso do Sul,Center-West,26,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,51,MT,Mato Grosso,Center-West,579,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,15,PA,Para,North,1906,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,25,PB,Paraiba,Northeast,425,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,26,PE,Pernambuco,Northeast,412,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,22,PI,Piaui,Northeast,-405,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,41,PR,Parana,South,327,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,33,RJ,Rio de Janeiro,Southeast,313,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,24,RN,Rio Grande do Norte,Northeast,415,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,11,RO,Rondonia,North,27,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,14,RR,Roraima,North,-27,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,43,RS,Rio Grande do Sul,South,-19,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,42,SC,Santa Catarina,South,589,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,28,SE,Sergipe,Northeast,-127,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,35,SP,Sao Paulo,Southeast,2201,CAGEDEST_082018.7z,integrity_ok
+201808,2018-08-01,2018,8,17,TO,Tocantins,North,56,CAGEDEST_082018.7z,integrity_ok
+201809,2018-09-01,2018,9,12,AC,Acre,North,0,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,27,AL,Alagoas,Northeast,31,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,13,AM,Amazonas,North,341,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,16,AP,Amapa,North,268,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,29,BA,Bahia,Northeast,2108,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,23,CE,Ceara,Northeast,408,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,53,DF,Distrito Federal,Center-West,198,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,32,ES,Espirito Santo,Southeast,935,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,52,GO,Goias,Center-West,497,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,21,MA,Maranhao,Northeast,197,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,31,MG,Minas Gerais,Southeast,3752,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,50,MS,Mato Grosso do Sul,Center-West,30,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,51,MT,Mato Grosso,Center-West,29,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,15,PA,Para,North,1416,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,25,PB,Paraiba,Northeast,-181,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,26,PE,Pernambuco,Northeast,82,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,22,PI,Piaui,Northeast,-148,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,41,PR,Parana,South,948,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,33,RJ,Rio de Janeiro,Southeast,846,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,24,RN,Rio Grande do Norte,Northeast,-189,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,11,RO,Rondonia,North,158,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,14,RR,Roraima,North,298,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,43,RS,Rio Grande do Sul,South,-408,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,42,SC,Santa Catarina,South,-108,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,28,SE,Sergipe,Northeast,248,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,35,SP,Sao Paulo,Southeast,575,CAGEDEST_092018.7z,integrity_ok
+201809,2018-09-01,2018,9,17,TO,Tocantins,North,-84,CAGEDEST_092018.7z,integrity_ok
+201810,2018-10-01,2018,10,12,AC,Acre,North,-105,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,27,AL,Alagoas,Northeast,58,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,13,AM,Amazonas,North,156,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,16,AP,Amapa,North,228,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,29,BA,Bahia,Northeast,-87,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,23,CE,Ceara,Northeast,-31,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,53,DF,Distrito Federal,Center-West,-449,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,32,ES,Espirito Santo,Southeast,185,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,52,GO,Goias,Center-West,-615,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,21,MA,Maranhao,Northeast,-121,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,31,MG,Minas Gerais,Southeast,2362,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,50,MS,Mato Grosso do Sul,Center-West,-242,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,51,MT,Mato Grosso,Center-West,-130,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,15,PA,Para,North,-206,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,25,PB,Paraiba,Northeast,-166,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,26,PE,Pernambuco,Northeast,-242,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,22,PI,Piaui,Northeast,102,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,41,PR,Parana,South,-96,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,33,RJ,Rio de Janeiro,Southeast,183,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,24,RN,Rio Grande do Norte,Northeast,631,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,11,RO,Rondonia,North,-177,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,14,RR,Roraima,North,122,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,43,RS,Rio Grande do Sul,South,181,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,42,SC,Santa Catarina,South,-32,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,28,SE,Sergipe,Northeast,390,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,35,SP,Sao Paulo,Southeast,-1691,CAGEDEST_102018.7z,integrity_ok
+201810,2018-10-01,2018,10,17,TO,Tocantins,North,-263,CAGEDEST_102018.7z,integrity_ok
+201811,2018-11-01,2018,11,12,AC,Acre,North,-250,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,27,AL,Alagoas,Northeast,-467,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,13,AM,Amazonas,North,-465,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,16,AP,Amapa,North,-39,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,29,BA,Bahia,Northeast,333,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,23,CE,Ceara,Northeast,-894,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,53,DF,Distrito Federal,Center-West,-425,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,32,ES,Espirito Santo,Southeast,23,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,52,GO,Goias,Center-West,-1581,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,21,MA,Maranhao,Northeast,-347,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,31,MG,Minas Gerais,Southeast,-3852,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,50,MS,Mato Grosso do Sul,Center-West,-214,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,51,MT,Mato Grosso,Center-West,-1247,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,15,PA,Para,North,-1359,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,25,PB,Paraiba,Northeast,-185,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,26,PE,Pernambuco,Northeast,-218,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,22,PI,Piaui,Northeast,-306,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,41,PR,Parana,South,227,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,33,RJ,Rio de Janeiro,Southeast,848,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,24,RN,Rio Grande do Norte,Northeast,-140,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,11,RO,Rondonia,North,-436,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,14,RR,Roraima,North,61,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,43,RS,Rio Grande do Sul,South,-424,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,42,SC,Santa Catarina,South,-691,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,28,SE,Sergipe,Northeast,77,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,35,SP,Sao Paulo,Southeast,-2060,CAGEDEST_112018.7z,integrity_ok
+201811,2018-11-01,2018,11,17,TO,Tocantins,North,-1099,CAGEDEST_112018.7z,integrity_ok
+201812,2018-12-01,2018,12,12,AC,Acre,North,-221,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,27,AL,Alagoas,Northeast,-657,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,13,AM,Amazonas,North,-543,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,16,AP,Amapa,North,-265,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,29,BA,Bahia,Northeast,-3976,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,23,CE,Ceara,Northeast,-2709,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,53,DF,Distrito Federal,Center-West,-779,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,32,ES,Espirito Santo,Southeast,-1125,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,52,GO,Goias,Center-West,-3380,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,21,MA,Maranhao,Northeast,-981,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,31,MG,Minas Gerais,Southeast,-8593,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,50,MS,Mato Grosso do Sul,Center-West,-675,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,51,MT,Mato Grosso,Center-West,-3328,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,15,PA,Para,North,-2987,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,25,PB,Paraiba,Northeast,-693,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,26,PE,Pernambuco,Northeast,-1017,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,22,PI,Piaui,Northeast,-429,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,41,PR,Parana,South,-3405,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,33,RJ,Rio de Janeiro,Southeast,-2349,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,24,RN,Rio Grande do Norte,Northeast,-1124,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,11,RO,Rondonia,North,-540,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,14,RR,Roraima,North,-171,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,43,RS,Rio Grande do Sul,South,-1929,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,42,SC,Santa Catarina,South,-3177,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,28,SE,Sergipe,Northeast,-582,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,35,SP,Sao Paulo,Southeast,-8245,CAGEDEST_122018.7z,integrity_ok
+201812,2018-12-01,2018,12,17,TO,Tocantins,North,-893,CAGEDEST_122018.7z,integrity_ok
+201901,2019-01-01,2019,1,12,AC,Acre,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,27,AL,Alagoas,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,13,AM,Amazonas,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,16,AP,Amapa,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,29,BA,Bahia,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,23,CE,Ceara,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,53,DF,Distrito Federal,Center-West,500,CAGEDEST_012019.7z,salvaged_exit_2
+201901,2019-01-01,2019,1,32,ES,Espirito Santo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,52,GO,Goias,Center-West,285,CAGEDEST_012019.7z,salvaged_exit_2
+201901,2019-01-01,2019,1,21,MA,Maranhao,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,31,MG,Minas Gerais,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,51,MT,Mato Grosso,Center-West,-163,CAGEDEST_012019.7z,salvaged_exit_2
+201901,2019-01-01,2019,1,15,PA,Para,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,25,PB,Paraiba,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,26,PE,Pernambuco,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,22,PI,Piaui,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,33,RJ,Rio de Janeiro,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,24,RN,Rio Grande do Norte,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,11,RO,Rondonia,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,14,RR,Roraima,North,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,42,SC,Santa Catarina,South,523,CAGEDEST_012019.7z,salvaged_exit_2
+201901,2019-01-01,2019,1,28,SE,Sergipe,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,35,SP,Sao Paulo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201901,2019-01-01,2019,1,17,TO,Tocantins,North,0,implicit_zero_fill,implicit_zero_fill
+201902,2019-02-01,2019,2,12,AC,Acre,North,-33,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,27,AL,Alagoas,Northeast,335,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,13,AM,Amazonas,North,273,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,16,AP,Amapa,North,-11,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,29,BA,Bahia,Northeast,1476,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,23,CE,Ceara,Northeast,27,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,53,DF,Distrito Federal,Center-West,699,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,32,ES,Espirito Santo,Southeast,-259,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,52,GO,Goias,Center-West,256,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,21,MA,Maranhao,Northeast,-708,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,31,MG,Minas Gerais,Southeast,4736,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,50,MS,Mato Grosso do Sul,Center-West,294,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,51,MT,Mato Grosso,Center-West,-57,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,15,PA,Para,North,-1019,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,25,PB,Paraiba,Northeast,-204,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,26,PE,Pernambuco,Northeast,-370,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,22,PI,Piaui,Northeast,238,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,41,PR,Parana,South,737,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,33,RJ,Rio de Janeiro,Southeast,1803,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,24,RN,Rio Grande do Norte,Northeast,-156,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,11,RO,Rondonia,North,-244,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,14,RR,Roraima,North,-248,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,43,RS,Rio Grande do Sul,South,719,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,42,SC,Santa Catarina,South,1531,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,28,SE,Sergipe,Northeast,33,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,35,SP,Sao Paulo,Southeast,2333,CAGEDEST_022019.7z,integrity_ok
+201902,2019-02-01,2019,2,17,TO,Tocantins,North,-185,CAGEDEST_022019.7z,integrity_ok
+201903,2019-03-01,2019,3,12,AC,Acre,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,27,AL,Alagoas,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,13,AM,Amazonas,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,16,AP,Amapa,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,29,BA,Bahia,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,23,CE,Ceara,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,53,DF,Distrito Federal,Center-West,-34,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,32,ES,Espirito Santo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,52,GO,Goias,Center-West,55,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,21,MA,Maranhao,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,31,MG,Minas Gerais,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,50,MS,Mato Grosso do Sul,Center-West,-304,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,51,MT,Mato Grosso,Center-West,90,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,15,PA,Para,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,25,PB,Paraiba,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,26,PE,Pernambuco,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,22,PI,Piaui,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,41,PR,Parana,South,-470,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,33,RJ,Rio de Janeiro,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,24,RN,Rio Grande do Norte,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,11,RO,Rondonia,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,14,RR,Roraima,North,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,43,RS,Rio Grande do Sul,South,-1793,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,42,SC,Santa Catarina,South,129,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,28,SE,Sergipe,Northeast,0,implicit_zero_fill,implicit_zero_fill
+201903,2019-03-01,2019,3,35,SP,Sao Paulo,Southeast,8334,CAGEDEST_032019.7z,salvaged_exit_2
+201903,2019-03-01,2019,3,17,TO,Tocantins,North,0,implicit_zero_fill,implicit_zero_fill
+201904,2019-04-01,2019,4,12,AC,Acre,North,58,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,27,AL,Alagoas,Northeast,449,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,13,AM,Amazonas,North,186,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,16,AP,Amapa,North,52,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,29,BA,Bahia,Northeast,1540,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,23,CE,Ceara,Northeast,-603,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,53,DF,Distrito Federal,Center-West,716,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,32,ES,Espirito Santo,Southeast,224,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,52,GO,Goias,Center-West,1549,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,21,MA,Maranhao,Northeast,98,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,31,MG,Minas Gerais,Southeast,2234,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,50,MS,Mato Grosso do Sul,Center-West,48,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,51,MT,Mato Grosso,Center-West,663,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,15,PA,Para,North,-561,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,25,PB,Paraiba,Northeast,243,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,26,PE,Pernambuco,Northeast,618,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,22,PI,Piaui,Northeast,88,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,41,PR,Parana,South,1810,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,33,RJ,Rio de Janeiro,Southeast,95,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,24,RN,Rio Grande do Norte,Northeast,257,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,11,RO,Rondonia,North,207,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,14,RR,Roraima,North,-32,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,43,RS,Rio Grande do Sul,South,-414,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,42,SC,Santa Catarina,South,1734,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,28,SE,Sergipe,Northeast,105,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,35,SP,Sao Paulo,Southeast,4221,CAGEDEST_042019.7z,integrity_ok
+201904,2019-04-01,2019,4,17,TO,Tocantins,North,-306,CAGEDEST_042019.7z,integrity_ok
+201905,2019-05-01,2019,5,12,AC,Acre,North,304,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,27,AL,Alagoas,Northeast,-211,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,13,AM,Amazonas,North,221,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,16,AP,Amapa,North,-10,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,29,BA,Bahia,Northeast,1089,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,23,CE,Ceara,Northeast,-298,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,53,DF,Distrito Federal,Center-West,378,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,32,ES,Espirito Santo,Southeast,391,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,52,GO,Goias,Center-West,332,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,21,MA,Maranhao,Northeast,-19,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,31,MG,Minas Gerais,Southeast,1416,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,50,MS,Mato Grosso do Sul,Center-West,83,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,51,MT,Mato Grosso,Center-West,390,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,15,PA,Para,North,772,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,25,PB,Paraiba,Northeast,67,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,26,PE,Pernambuco,Northeast,131,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,22,PI,Piaui,Northeast,674,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,41,PR,Parana,South,2433,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,33,RJ,Rio de Janeiro,Southeast,-180,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,24,RN,Rio Grande do Norte,Northeast,131,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,11,RO,Rondonia,North,230,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,14,RR,Roraima,North,20,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,43,RS,Rio Grande do Sul,South,-249,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,42,SC,Santa Catarina,South,349,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,28,SE,Sergipe,Northeast,-66,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,35,SP,Sao Paulo,Southeast,249,CAGEDEST_052019.7z,integrity_ok
+201905,2019-05-01,2019,5,17,TO,Tocantins,North,-152,CAGEDEST_052019.7z,integrity_ok
+201906,2019-06-01,2019,6,12,AC,Acre,North,131,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,27,AL,Alagoas,Northeast,221,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,13,AM,Amazonas,North,443,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,16,AP,Amapa,North,41,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,29,BA,Bahia,Northeast,1577,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,23,CE,Ceara,Northeast,318,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,53,DF,Distrito Federal,Center-West,342,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,32,ES,Espirito Santo,Southeast,288,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,52,GO,Goias,Center-West,273,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,21,MA,Maranhao,Northeast,861,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,31,MG,Minas Gerais,Southeast,2495,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,50,MS,Mato Grosso do Sul,Center-West,-9,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,51,MT,Mato Grosso,Center-West,391,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,15,PA,Para,North,1087,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,25,PB,Paraiba,Northeast,119,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,26,PE,Pernambuco,Northeast,420,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,22,PI,Piaui,Northeast,477,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,41,PR,Parana,South,108,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,33,RJ,Rio de Janeiro,Southeast,1211,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,24,RN,Rio Grande do Norte,Northeast,301,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,11,RO,Rondonia,North,469,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,14,RR,Roraima,North,-25,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,43,RS,Rio Grande do Sul,South,-209,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,42,SC,Santa Catarina,South,387,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,28,SE,Sergipe,Northeast,-352,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,35,SP,Sao Paulo,Southeast,1582,CAGEDEST_062019.7z,integrity_ok
+201906,2019-06-01,2019,6,17,TO,Tocantins,North,-74,CAGEDEST_062019.7z,integrity_ok
+201907,2019-07-01,2019,7,12,AC,Acre,North,129,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,27,AL,Alagoas,Northeast,186,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,13,AM,Amazonas,North,448,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,16,AP,Amapa,North,174,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,29,BA,Bahia,Northeast,585,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,23,CE,Ceara,Northeast,1169,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,53,DF,Distrito Federal,Center-West,270,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,32,ES,Espirito Santo,Southeast,455,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,52,GO,Goias,Center-West,-89,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,21,MA,Maranhao,Northeast,645,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,31,MG,Minas Gerais,Southeast,6010,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,50,MS,Mato Grosso do Sul,Center-West,116,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,51,MT,Mato Grosso,Center-West,378,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,15,PA,Para,North,2438,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,25,PB,Paraiba,Northeast,-74,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,26,PE,Pernambuco,Northeast,88,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,22,PI,Piaui,Northeast,458,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,41,PR,Parana,South,672,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,33,RJ,Rio de Janeiro,Southeast,1817,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,24,RN,Rio Grande do Norte,Northeast,-45,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,11,RO,Rondonia,North,301,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,14,RR,Roraima,North,29,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,43,RS,Rio Grande do Sul,South,-107,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,42,SC,Santa Catarina,South,1089,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,28,SE,Sergipe,Northeast,60,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,35,SP,Sao Paulo,Southeast,1654,CAGEDEST_072019.7z,integrity_ok
+201907,2019-07-01,2019,7,17,TO,Tocantins,North,26,CAGEDEST_072019.7z,integrity_ok
+201908,2019-08-01,2019,8,12,AC,Acre,North,108,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,27,AL,Alagoas,Northeast,-14,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,13,AM,Amazonas,North,328,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,16,AP,Amapa,North,76,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,29,BA,Bahia,Northeast,2030,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,23,CE,Ceara,Northeast,469,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,32,ES,Espirito Santo,Southeast,116,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,21,MA,Maranhao,Northeast,979,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,31,MG,Minas Gerais,Southeast,3246,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,15,PA,Para,North,540,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,25,PB,Paraiba,Northeast,-285,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,26,PE,Pernambuco,Northeast,316,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,22,PI,Piaui,Northeast,579,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,41,PR,Parana,South,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,33,RJ,Rio de Janeiro,Southeast,4164,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,24,RN,Rio Grande do Norte,Northeast,104,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,11,RO,Rondonia,North,357,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,14,RR,Roraima,North,130,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,28,SE,Sergipe,Northeast,-31,CAGEDEST_082019.7z,salvaged_exit_2
+201908,2019-08-01,2019,8,35,SP,Sao Paulo,Southeast,0,implicit_zero_fill,implicit_zero_fill
+201908,2019-08-01,2019,8,17,TO,Tocantins,North,16,CAGEDEST_082019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,12,AC,Acre,North,83,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,27,AL,Alagoas,Northeast,36,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,13,AM,Amazonas,North,240,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,16,AP,Amapa,North,8,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,29,BA,Bahia,Northeast,2206,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,23,CE,Ceara,Northeast,193,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,53,DF,Distrito Federal,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,32,ES,Espirito Santo,Southeast,531,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,52,GO,Goias,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,21,MA,Maranhao,Northeast,1402,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,31,MG,Minas Gerais,Southeast,2638,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,50,MS,Mato Grosso do Sul,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,51,MT,Mato Grosso,Center-West,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,15,PA,Para,North,879,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,25,PB,Paraiba,Northeast,142,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,26,PE,Pernambuco,Northeast,-471,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,22,PI,Piaui,Northeast,222,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,41,PR,Parana,South,4033,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,33,RJ,Rio de Janeiro,Southeast,180,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,24,RN,Rio Grande do Norte,Northeast,114,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,11,RO,Rondonia,North,255,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,14,RR,Roraima,North,260,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,43,RS,Rio Grande do Sul,South,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,42,SC,Santa Catarina,South,0,implicit_zero_fill,implicit_zero_fill
+201909,2019-09-01,2019,9,28,SE,Sergipe,Northeast,47,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,35,SP,Sao Paulo,Southeast,3728,CAGEDEST_092019.7z,salvaged_exit_2
+201909,2019-09-01,2019,9,17,TO,Tocantins,North,40,CAGEDEST_092019.7z,salvaged_exit_2
+201910,2019-10-01,2019,10,12,AC,Acre,North,-239,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,27,AL,Alagoas,Northeast,-123,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,13,AM,Amazonas,North,-208,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,16,AP,Amapa,North,105,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,29,BA,Bahia,Northeast,-98,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,23,CE,Ceara,Northeast,-167,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,53,DF,Distrito Federal,Center-West,48,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,32,ES,Espirito Santo,Southeast,-338,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,52,GO,Goias,Center-West,193,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,21,MA,Maranhao,Northeast,1092,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,31,MG,Minas Gerais,Southeast,3230,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,50,MS,Mato Grosso do Sul,Center-West,-118,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,51,MT,Mato Grosso,Center-West,57,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,15,PA,Para,North,-70,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,25,PB,Paraiba,Northeast,41,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,26,PE,Pernambuco,Northeast,20,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,22,PI,Piaui,Northeast,513,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,41,PR,Parana,South,700,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,33,RJ,Rio de Janeiro,Southeast,-1548,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,24,RN,Rio Grande do Norte,Northeast,636,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,11,RO,Rondonia,North,10,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,14,RR,Roraima,North,129,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,43,RS,Rio Grande do Sul,South,-96,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,42,SC,Santa Catarina,South,614,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,28,SE,Sergipe,Northeast,193,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,35,SP,Sao Paulo,Southeast,2272,CAGEDEST_102019.7z,integrity_ok
+201910,2019-10-01,2019,10,17,TO,Tocantins,North,-111,CAGEDEST_102019.7z,integrity_ok
+201911,2019-11-01,2019,11,12,AC,Acre,North,-254,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,27,AL,Alagoas,Northeast,127,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,13,AM,Amazonas,North,27,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,16,AP,Amapa,North,-185,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,29,BA,Bahia,Northeast,1739,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,23,CE,Ceara,Northeast,332,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,53,DF,Distrito Federal,Center-West,-105,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,32,ES,Espirito Santo,Southeast,-246,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,52,GO,Goias,Center-West,-917,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,21,MA,Maranhao,Northeast,-22,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,31,MG,Minas Gerais,Southeast,-4349,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,50,MS,Mato Grosso do Sul,Center-West,-210,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,51,MT,Mato Grosso,Center-West,-749,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,15,PA,Para,North,-105,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,25,PB,Paraiba,Northeast,-267,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,26,PE,Pernambuco,Northeast,-326,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,22,PI,Piaui,Northeast,-110,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,41,PR,Parana,South,-666,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,33,RJ,Rio de Janeiro,Southeast,-1182,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,24,RN,Rio Grande do Norte,Northeast,229,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,11,RO,Rondonia,North,-241,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,14,RR,Roraima,North,59,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,43,RS,Rio Grande do Sul,South,-399,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,42,SC,Santa Catarina,South,-560,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,28,SE,Sergipe,Northeast,38,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,35,SP,Sao Paulo,Southeast,184,CAGEDEST_112019.7z,integrity_ok
+201911,2019-11-01,2019,11,17,TO,Tocantins,North,-209,CAGEDEST_112019.7z,integrity_ok
+201912,2019-12-01,2019,12,12,AC,Acre,North,-20,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,27,AL,Alagoas,Northeast,-412,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,13,AM,Amazonas,North,-180,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,16,AP,Amapa,North,-125,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,29,BA,Bahia,Northeast,-5481,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,23,CE,Ceara,Northeast,-1520,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,53,DF,Distrito Federal,Center-West,-1393,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,32,ES,Espirito Santo,Southeast,-919,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,52,GO,Goias,Center-West,-3002,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,21,MA,Maranhao,Northeast,-244,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,31,MG,Minas Gerais,Southeast,-7604,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,50,MS,Mato Grosso do Sul,Center-West,-826,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,51,MT,Mato Grosso,Center-West,-1885,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,15,PA,Para,North,-1850,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,25,PB,Paraiba,Northeast,-280,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,26,PE,Pernambuco,Northeast,-916,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,22,PI,Piaui,Northeast,-914,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,41,PR,Parana,South,-4247,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,33,RJ,Rio de Janeiro,Southeast,-2325,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,24,RN,Rio Grande do Norte,Northeast,-274,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,11,RO,Rondonia,North,-491,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,14,RR,Roraima,North,-88,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,43,RS,Rio Grande do Sul,South,-2194,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,42,SC,Santa Catarina,South,-3120,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,28,SE,Sergipe,Northeast,-649,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,35,SP,Sao Paulo,Southeast,-8190,CAGEDEST_122019.7z,integrity_ok
+201912,2019-12-01,2019,12,17,TO,Tocantins,North,-313,CAGEDEST_122019.7z,integrity_ok

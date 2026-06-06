@@ -7,7 +7,8 @@ required_packages <- c(
   "janitor",
   "purrr",
   "tibble",
-  "archive"
+  "archive",
+  "readxl"
 )
 
 missing_packages <- required_packages[!vapply(

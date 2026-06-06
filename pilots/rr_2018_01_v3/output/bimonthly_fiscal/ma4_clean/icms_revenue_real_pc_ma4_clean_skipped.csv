@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+icms_revenue_real_pc_ma4_clean,bimonthly_fiscal,ma4_clean,skipped,Treated state has incomplete pre-treatment data for outcome: icms_revenue_real_pc_ma4_clean

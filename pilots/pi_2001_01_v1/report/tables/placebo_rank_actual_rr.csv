@@ -1,0 +1,5 @@
+outcome,short_label,channel_slug,post_pre_rmspe_ratio,donor_placebo_count,ratio_p_value,abs_gap_p_value
+va_icms_total_real_pc_sa,ICMS total VA,tax_base,3.0556554279723933,26,0.34615384615384615,0.7692307692307693
+va_receita_tributaria_total_real_pc_sa,Tax revenue VA,tax_base,2.6599904230777156,26,0.2692307692307692,0.6923076923076923
+va_icms_terciario_varejista_real_pc_sa,ICMS retail VA,tax_base,1.728848902708215,26,0.7692307692307693,1
+retail_volume_index_sa,Retail volume,consumption,23.547685479293957,26,0,0

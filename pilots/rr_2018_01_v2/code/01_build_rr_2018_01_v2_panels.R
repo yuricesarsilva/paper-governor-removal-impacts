@@ -11,27 +11,79 @@ invisible(lapply(extra_packages, library, character.only = TRUE))
 pilot_id <- "rr_2018_01_v2"
 event_id <- "RR_2018_01"
 treated_state <- "RR"
-excluded_donor_states <- c("RR", "AM", "TO")
 pilot_root <- file.path(root_dir, "pilots", pilot_id)
 pilot_data_dir <- file.path(pilot_root, "data")
 dir.create(pilot_data_dir, recursive = TRUE, showWarnings = FALSE)
 
-event <- readr::read_csv(
+event_inventory <- readr::read_csv(
   file.path(root_dir, "data", "raw", "governor_removal_events.csv"),
   show_col_types = FALSE
-) |>
+)
+
+event <- event_inventory |>
   dplyr::filter(.data$event_id == !!event_id) |>
   dplyr::slice(1)
+
+state_year_panel <- readr::read_csv(
+  file.path(root_dir, "data", "processed", "state_year_panel_template.csv"),
+  show_col_types = FALSE
+) |>
+  dplyr::filter(!is.na(.data$population)) |>
+  dplyr::mutate(
+    year = as.integer(.data$year),
+    population = as.numeric(.data$population),
+    anchor_date = as.Date(sprintf("%s-07-01", .data$year))
+  ) |>
+  dplyr::select(.data$state_abbrev, .data$year, .data$population, .data$anchor_date)
 
 instability_start_date <- as.Date(event$instability_start_date)
 removal_date <- as.Date(event$removal_date)
 
 monthly_window_start <- as.Date("2015-11-01")
-monthly_window_end <- as.Date("2020-12-01")
+monthly_window_end <- as.Date("2019-12-01")
 bimonthly_window_start <- as.Date("2015-01-01")
-bimonthly_window_end <- as.Date("2020-12-01")
+bimonthly_window_end <- as.Date("2019-12-01")
 quarterly_window_start <- as.Date("2015-01-01")
-quarterly_window_end <- as.Date("2020-12-31")
+quarterly_window_end <- as.Date("2019-12-31")
+
+donor_exclusion_window_start <- min(monthly_window_start, bimonthly_window_start, quarterly_window_start)
+donor_exclusion_window_end <- max(monthly_window_end, bimonthly_window_end, quarterly_window_end)
+donor_exclusion_rule <- paste0(
+  "exclude_treated_state_and_any_state_with_coded_rupture_between_",
+  format(donor_exclusion_window_start, "%Y_%m_%d"),
+  "_and_",
+  format(donor_exclusion_window_end, "%Y_%m_%d")
+)
+
+excluded_event_states <- event_inventory |>
+  dplyr::mutate(removal_date = as.Date(.data$removal_date)) |>
+  dplyr::filter(
+    .data$include_extended_sample == 1,
+    !is.na(.data$removal_date),
+    .data$removal_date >= donor_exclusion_window_start,
+    .data$removal_date <= donor_exclusion_window_end
+  ) |>
+  dplyr::distinct(.data$state_abbrev) |>
+  dplyr::pull(.data$state_abbrev)
+
+excluded_donor_states <- sort(unique(c(treated_state, excluded_event_states)))
+
+excluded_event_lookup <- event_inventory |>
+  dplyr::mutate(removal_date = as.Date(.data$removal_date)) |>
+  dplyr::filter(
+    .data$include_extended_sample == 1,
+    !is.na(.data$removal_date),
+    .data$removal_date >= donor_exclusion_window_start,
+    .data$removal_date <= donor_exclusion_window_end
+  ) |>
+  dplyr::group_by(.data$state_abbrev) |>
+  dplyr::summarise(
+    donor_pool_exclusion_reason = paste0(
+      "coded_rupture_in_main_estimation_window:",
+      paste(sort(unique(.data$event_id)), collapse = ",")
+    ),
+    .groups = "drop"
+  )
 
 assign_period_monthly <- function(period_date) {
   dplyr::case_when(
@@ -79,6 +131,47 @@ partial_trailing_mean <- function(x, window) {
       mean(x[start_i:i], na.rm = TRUE)
     }
   )
+}
+
+resident_population_lookup <- state_year_panel |>
+  dplyr::select(.data$state_abbrev, .data$year, population_current = .data$population) |>
+  dplyr::left_join(
+    state_year_panel |>
+      dplyr::transmute(
+        state_abbrev = .data$state_abbrev,
+        year = .data$year - 1L,
+        population_next = .data$population
+      ),
+    by = c("state_abbrev", "year")
+  )
+
+add_interpolated_resident_population <- function(data, date_col = "period_date") {
+  data |>
+    dplyr::mutate(
+      interpolation_year = lubridate::year(.data[[date_col]]),
+      interpolation_month = lubridate::month(.data[[date_col]])
+    ) |>
+    dplyr::left_join(
+      resident_population_lookup,
+      by = c("state_abbrev", "interpolation_year" = "year")
+    ) |>
+    dplyr::mutate(
+      resident_population = dplyr::if_else(
+        is.finite(.data$population_current) & is.finite(.data$population_next),
+        .data$population_current +
+          ((.data$interpolation_month - 1) / 12) *
+            (.data$population_next - .data$population_current),
+        .data$population_current
+      )
+    ) |>
+    dplyr::select(
+      -dplyr::any_of(c(
+        "interpolation_year",
+        "interpolation_month",
+        "population_current",
+        "population_next"
+      ))
+    )
 }
 
 add_clean_ma <- function(data, vars, window) {
@@ -234,6 +327,26 @@ caged <- readr::read_csv(
 ) |>
   dplyr::mutate(period_date = as.Date(period_date))
 
+caged_construction_path <- file.path(
+  root_dir,
+  "data",
+  "processed",
+  "caged_construction_state_balance_monthly_panel_ready.csv"
+)
+
+if (!file.exists(caged_construction_path)) {
+  stop(
+    "Construction CAGED file not found: ", caged_construction_path,
+    ". Run code/01_build_panel/05a_build_caged_construction_state_balance_final.R first."
+  )
+}
+
+caged_construction <- readr::read_csv(
+  caged_construction_path,
+  show_col_types = FALSE
+) |>
+  dplyr::mutate(period_date = as.Date(period_date))
+
 pmc <- readr::read_csv(
   file.path(root_dir, "data", "processed", "pmc_retail_monthly_panel_ready.csv"),
   show_col_types = FALSE
@@ -264,6 +377,11 @@ monthly_panel <- caged |>
     series_version
   ) |>
   dplyr::left_join(
+    caged_construction |>
+      dplyr::select(period_date, state_abbrev, formal_hiring_balance_construction),
+    by = c("period_date", "state_abbrev")
+  ) |>
+  dplyr::left_join(
     pmc |>
       dplyr::select(period_date, state_abbrev, retail_volume_index),
     by = c("period_date", "state_abbrev")
@@ -278,21 +396,31 @@ monthly_panel <- caged |>
     monthly_pnadc,
     by = c("state_abbrev", "year", "quarter")
   ) |>
+  add_interpolated_resident_population() |>
   dplyr::mutate(
     treated_unit = .data$state_abbrev == treated_state,
     donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
     excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
-    donor_pool_exclusion_reason = dplyr::case_when(
-      .data$state_abbrev == "RR" ~ "treated_unit",
-      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
-      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
-      TRUE ~ NA_character_
+    donor_pool_exclusion_reason = dplyr::if_else(
+      .data$state_abbrev == treated_state,
+      "treated_unit",
+      NA_character_
     ),
     analysis_period = assign_period_monthly(.data$period_date),
     formal_hiring_balance_per_100k_wap = 100000 * .data$formal_hiring_balance / .data$pnadc_population,
+    formal_hiring_balance_construction_per_100k_wap =
+      100000 * .data$formal_hiring_balance_construction / .data$pnadc_population,
     instability_start_date = instability_start_date,
     removal_date = removal_date
   ) |>
+  dplyr::left_join(excluded_event_lookup, by = "state_abbrev", suffix = c("", "_event")) |>
+  dplyr::mutate(
+    donor_pool_exclusion_reason = dplyr::coalesce(
+      .data$donor_pool_exclusion_reason,
+      .data$donor_pool_exclusion_reason_event
+    )
+  ) |>
+  dplyr::select(-dplyr::any_of("donor_pool_exclusion_reason_event")) |>
   dplyr::filter(
     .data$period_date >= monthly_window_start,
     .data$period_date <= monthly_window_end
@@ -306,6 +434,7 @@ monthly_panel <- caged |>
   add_clean_ma(
     vars = c(
       "formal_hiring_balance_per_100k_wap",
+      "formal_hiring_balance_construction_per_100k_wap",
       "retail_volume_index",
       "services_volume_index"
     ),
@@ -314,6 +443,7 @@ monthly_panel <- caged |>
   add_visual_ma(
     vars = c(
       "formal_hiring_balance_per_100k_wap",
+      "formal_hiring_balance_construction_per_100k_wap",
       "retail_volume_index",
       "services_volume_index"
     ),
@@ -346,15 +476,15 @@ fiscal_panel <- fiscal_raw |>
       dplyr::select(state_abbrev, year, quarter, pnadc_population),
     by = c("state_abbrev", "year", "quarter")
   ) |>
+  add_interpolated_resident_population() |>
   dplyr::mutate(
     treated_unit = .data$state_abbrev == treated_state,
     donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
     excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
-    donor_pool_exclusion_reason = dplyr::case_when(
-      .data$state_abbrev == "RR" ~ "treated_unit",
-      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
-      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
-      TRUE ~ NA_character_
+    donor_pool_exclusion_reason = dplyr::if_else(
+      .data$state_abbrev == treated_state,
+      "treated_unit",
+      NA_character_
     ),
     analysis_period = assign_period_bimonthly(.data$year, .data$bimester),
     fiscal_deflator_factor = dplyr::if_else(
@@ -362,14 +492,21 @@ fiscal_panel <- fiscal_raw |>
       .data$state_tax_revenue_real / .data$state_tax_revenue_nominal,
       NA_real_
     ),
+    fiscal_population_denominator = dplyr::coalesce(.data$resident_population, .data$pnadc_population),
+    fiscal_population_source = dplyr::case_when(
+      is.finite(.data$resident_population) ~ "resident_population_interpolated",
+      is.finite(.data$pnadc_population) ~ "pnadc_population_fallback",
+      TRUE ~ NA_character_
+    ),
     icms_revenue_real = .data$icms_revenue_nominal * .data$fiscal_deflator_factor,
-    icms_revenue_real_pc = .data$icms_revenue_real / .data$pnadc_population,
-    state_tax_revenue_real_pc = .data$state_tax_revenue_real / .data$pnadc_population,
-    public_investment_liquidated_real_pc = .data$public_investment_liquidated_real / .data$pnadc_population,
-    liquidated_expenditure_total_real_pc = .data$liquidated_expenditure_total_real / .data$pnadc_population,
-    liquidated_expenditure_health_real_pc = .data$liquidated_expenditure_health_real / .data$pnadc_population,
-    liquidated_expenditure_education_real_pc = .data$liquidated_expenditure_education_real / .data$pnadc_population,
-    liquidated_expenditure_public_security_real_pc = .data$liquidated_expenditure_public_security_real / .data$pnadc_population,
+    icms_revenue_real_pc = .data$icms_revenue_real / .data$fiscal_population_denominator,
+    state_tax_revenue_real_pc = .data$state_tax_revenue_real / .data$fiscal_population_denominator,
+    total_revenue_real_pc = .data$total_revenue_real / .data$fiscal_population_denominator,
+    public_investment_liquidated_real_pc = .data$public_investment_liquidated_real / .data$fiscal_population_denominator,
+    liquidated_expenditure_total_real_pc = .data$liquidated_expenditure_total_real / .data$fiscal_population_denominator,
+    liquidated_expenditure_health_real_pc = .data$liquidated_expenditure_health_real / .data$fiscal_population_denominator,
+    liquidated_expenditure_education_real_pc = .data$liquidated_expenditure_education_real / .data$fiscal_population_denominator,
+    liquidated_expenditure_public_security_real_pc = .data$liquidated_expenditure_public_security_real / .data$fiscal_population_denominator,
     public_investment_share_total = dplyr::if_else(
       .data$liquidated_expenditure_total_real > 0,
       .data$public_investment_liquidated_real / .data$liquidated_expenditure_total_real,
@@ -387,6 +524,14 @@ fiscal_panel <- fiscal_raw |>
     instability_start_date = instability_start_date,
     removal_date = removal_date
   ) |>
+  dplyr::left_join(excluded_event_lookup, by = "state_abbrev", suffix = c("", "_event")) |>
+  dplyr::mutate(
+    donor_pool_exclusion_reason = dplyr::coalesce(
+      .data$donor_pool_exclusion_reason,
+      .data$donor_pool_exclusion_reason_event
+    )
+  ) |>
+  dplyr::select(-dplyr::any_of("donor_pool_exclusion_reason_event")) |>
   dplyr::filter(
     .data$period_date >= bimonthly_window_start,
     .data$period_date <= bimonthly_window_end
@@ -394,7 +539,10 @@ fiscal_panel <- fiscal_raw |>
   add_clean_ma(
     vars = c(
       "icms_revenue_real_pc",
-      "public_investment_share_total",
+      "state_tax_revenue_real_pc",
+      "total_revenue_real_pc",
+      "public_investment_liquidated_real_pc",
+      "liquidated_expenditure_total_real_pc",
       "priority_expenditure_share_total"
     ),
     window = 4
@@ -402,7 +550,10 @@ fiscal_panel <- fiscal_raw |>
   add_visual_ma(
     vars = c(
       "icms_revenue_real_pc",
-      "public_investment_share_total",
+      "state_tax_revenue_real_pc",
+      "total_revenue_real_pc",
+      "public_investment_liquidated_real_pc",
+      "liquidated_expenditure_total_real_pc",
       "priority_expenditure_share_total"
     ),
     window = 4
@@ -413,16 +564,23 @@ quarterly_panel <- pnadc |>
     treated_unit = .data$state_abbrev == treated_state,
     donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
     excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
-    donor_pool_exclusion_reason = dplyr::case_when(
-      .data$state_abbrev == "RR" ~ "treated_unit",
-      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
-      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
-      TRUE ~ NA_character_
+    donor_pool_exclusion_reason = dplyr::if_else(
+      .data$state_abbrev == treated_state,
+      "treated_unit",
+      NA_character_
     ),
     analysis_period = assign_period_quarterly(.data$year, .data$quarter),
     instability_start_date = instability_start_date,
     removal_date = removal_date
   ) |>
+  dplyr::left_join(excluded_event_lookup, by = "state_abbrev", suffix = c("", "_event")) |>
+  dplyr::mutate(
+    donor_pool_exclusion_reason = dplyr::coalesce(
+      .data$donor_pool_exclusion_reason,
+      .data$donor_pool_exclusion_reason_event
+    )
+  ) |>
+  dplyr::select(-dplyr::any_of("donor_pool_exclusion_reason_event")) |>
   dplyr::filter(
     .data$period_date >= quarterly_window_start,
     .data$period_date <= quarterly_window_end
@@ -453,16 +611,23 @@ covariate_panel <- pnadc_covariates |>
   dplyr::mutate(
     donor_pool_main = !(.data$state_abbrev %in% excluded_donor_states),
     excluded_from_main_donor_pool = .data$state_abbrev %in% excluded_donor_states,
-    donor_pool_exclusion_reason = dplyr::case_when(
-      .data$state_abbrev == "RR" ~ "treated_unit",
-      .data$state_abbrev == "AM" ~ "nearby_treated_event_AM_2017_01",
-      .data$state_abbrev == "TO" ~ "nearby_or_repeated_treated_events_TO",
-      TRUE ~ NA_character_
+    donor_pool_exclusion_reason = dplyr::if_else(
+      .data$state_abbrev == treated_state,
+      "treated_unit",
+      NA_character_
     )
-  )
+  ) |>
+  dplyr::left_join(excluded_event_lookup, by = "state_abbrev", suffix = c("", "_event")) |>
+  dplyr::mutate(
+    donor_pool_exclusion_reason = dplyr::coalesce(
+      .data$donor_pool_exclusion_reason,
+      .data$donor_pool_exclusion_reason_event
+    )
+  ) |>
+  dplyr::select(-dplyr::any_of("donor_pool_exclusion_reason_event"))
 
 event_metadata <- event |>
-  dplyr::select(
+  dplyr::transmute(
     event_id,
     state_abbrev,
     state_name,
@@ -472,7 +637,17 @@ event_metadata <- event |>
     instability_start_type,
     instability_start_confidence,
     instability_duration_days,
-    instability_coding_notes
+    instability_coding_notes,
+    main_monthly_window_start = monthly_window_start,
+    main_monthly_window_end = monthly_window_end,
+    main_bimonthly_window_start = bimonthly_window_start,
+    main_bimonthly_window_end = bimonthly_window_end,
+    main_quarterly_window_start = quarterly_window_start,
+    main_quarterly_window_end = quarterly_window_end,
+    donor_exclusion_window_start = donor_exclusion_window_start,
+    donor_exclusion_window_end = donor_exclusion_window_end,
+    donor_exclusion_rule = donor_exclusion_rule,
+    donor_excluded_states = paste(excluded_donor_states, collapse = ",")
   )
 
 readr::write_csv(monthly_panel, file.path(pilot_data_dir, "rr_2018_01_v2_monthly_panel.csv"), na = "")

@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+total_revenue_real_pc,bimonthly_fiscal,raw,skipped,Treated state has incomplete pre-treatment data for outcome: total_revenue_real_pc

@@ -1,0 +1,17 @@
+transfer_sheet,transfer_variable,transfer_scope,first_period,last_period,n_periods,n_states,non_missing_rows,missing_rows
+CIDE_EST,cide_est,states_direct,200401,202612,276,27,7425,27
+CIDE_MUN,cide_mun,municipal_aggregate_to_state,200401,202612,276,27,7452,0
+FEX_EST,fex_est,states_direct,200401,202612,276,27,7452,0
+FEX_MUN,fex_mun,municipal_aggregate_to_state,200401,202612,276,27,7452,0
+FPE,fpe,states_direct,199101,202612,432,27,11664,0
+FPM,fpm,municipal_aggregate_to_state,199101,202612,432,27,11664,0
+FPM_CAPITAIS,fpm_capitais,municipal_aggregate_to_state,199101,202612,432,27,11664,0
+IOF_EST,iof_est,states_direct,199101,202612,432,27,11661,3
+IOF_MUN,iof_mun,municipal_aggregate_to_state,199101,202612,432,27,11662,2
+IPI-EXP,ipi_exp,other,199101,202612,432,27,11652,12
+ITR,itr,municipal_aggregate_to_state,199101,202612,432,27,11664,0
+LC176_EST,lc176_est,states_direct,202001,202612,84,27,2268,0
+LC176_MUN,lc176_mun,municipal_aggregate_to_state,202001,202612,84,27,2268,0
+LC87_EST,lc87_est,states_direct,199601,201812,276,27,7452,0
+LC87_MUN,lc87_mun,municipal_aggregate_to_state,199601,201812,276,27,7452,0
+TCP,tcp,states_direct,200001,201812,228,27,6141,15

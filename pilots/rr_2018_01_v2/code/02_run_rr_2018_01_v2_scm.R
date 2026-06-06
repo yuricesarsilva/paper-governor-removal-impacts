@@ -553,6 +553,7 @@ specs <- list(
     specification = "raw",
     outcomes = c(
       "formal_hiring_balance_per_100k_wap",
+      "formal_hiring_balance_construction_per_100k_wap",
       "retail_volume_index",
       "services_volume_index"
     )
@@ -563,6 +564,7 @@ specs <- list(
     specification = "ma6_clean",
     outcomes = c(
       "formal_hiring_balance_per_100k_wap_ma6_clean",
+      "formal_hiring_balance_construction_per_100k_wap_ma6_clean",
       "retail_volume_index_ma6_clean",
       "services_volume_index_ma6_clean"
     )
@@ -573,8 +575,9 @@ specs <- list(
     specification = "raw",
     outcomes = c(
       "icms_revenue_real_pc",
-      "public_investment_share_total",
-      "priority_expenditure_share_total"
+      "state_tax_revenue_real_pc",
+      "public_investment_liquidated_real_pc",
+      "liquidated_expenditure_total_real_pc"
     )
   ),
   list(
@@ -583,8 +586,9 @@ specs <- list(
     specification = "ma4_clean",
     outcomes = c(
       "icms_revenue_real_pc_ma4_clean",
-      "public_investment_share_total_ma4_clean",
-      "priority_expenditure_share_total_ma4_clean"
+      "state_tax_revenue_real_pc_ma4_clean",
+      "public_investment_liquidated_real_pc_ma4_clean",
+      "liquidated_expenditure_total_real_pc_ma4_clean"
     )
   )
 )
@@ -614,6 +618,7 @@ visual_specs <- list(
     clean_visual_pairs = tibble::tribble(
       ~clean_outcome, ~visual_outcome,
       "formal_hiring_balance_per_100k_wap_ma6_clean", "formal_hiring_balance_per_100k_wap_ma6_visual",
+      "formal_hiring_balance_construction_per_100k_wap_ma6_clean", "formal_hiring_balance_construction_per_100k_wap_ma6_visual",
       "retail_volume_index_ma6_clean", "retail_volume_index_ma6_visual",
       "services_volume_index_ma6_clean", "services_volume_index_ma6_visual"
     )
@@ -625,8 +630,9 @@ visual_specs <- list(
     clean_visual_pairs = tibble::tribble(
       ~clean_outcome, ~visual_outcome,
       "icms_revenue_real_pc_ma4_clean", "icms_revenue_real_pc_ma4_visual",
-      "public_investment_share_total_ma4_clean", "public_investment_share_total_ma4_visual",
-      "priority_expenditure_share_total_ma4_clean", "priority_expenditure_share_total_ma4_visual"
+      "state_tax_revenue_real_pc_ma4_clean", "state_tax_revenue_real_pc_ma4_visual",
+      "public_investment_liquidated_real_pc_ma4_clean", "public_investment_liquidated_real_pc_ma4_visual",
+      "liquidated_expenditure_total_real_pc_ma4_clean", "liquidated_expenditure_total_real_pc_ma4_visual"
     )
   )
 )

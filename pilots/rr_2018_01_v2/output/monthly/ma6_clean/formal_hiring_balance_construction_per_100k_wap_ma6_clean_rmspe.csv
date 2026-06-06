@@ -1,0 +1,2 @@
+scm_rmspe_post,scm_rmspe_pre,augmented_rmspe_post,augmented_rmspe_pre,scm_mean_gap_post,scm_mean_gap_pre,augmented_mean_gap_post,augmented_mean_gap_pre,n_periods_post,n_periods_pre,outcome,donor_count
+17.247534361724135,18.737452491382697,14.126520135001911,3.4039109511298076,8.313887223634131,7.882774444629537,3.6082644287770718,0.1720731744950527,7,31,formal_hiring_balance_construction_per_100k_wap_ma6_clean,24

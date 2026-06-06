@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+services_volume_index,monthly,raw,skipped,Treated state has incomplete pre-treatment data for outcome: services_volume_index

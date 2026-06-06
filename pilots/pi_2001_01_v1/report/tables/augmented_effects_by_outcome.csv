@@ -1,0 +1,5 @@
+outcome,label,channel,short_label,mean_gap_post,mean_gap_pre,augmented_rmspe_pre,augmented_rmspe_post,donor_count
+va_icms_total_real_pc_sa,"ICMS total value added, real per capita",State tax base (ICMS VA),ICMS total VA,-1.5877584436458947,-0.0763038835113009,0.6030079703038119,1.8425845775694587,26
+va_receita_tributaria_total_real_pc_sa,"Tax revenue value added, real per capita",State tax base (ICMS VA),Tax revenue VA,-2.0078845922440487,-0.1522951482730018,0.8413665136725252,2.238026868667203,26
+va_icms_terciario_varejista_real_pc_sa,"ICMS retail-trade VA, real per capita",State tax base (ICMS VA),ICMS retail VA,-0.1446079763076992,-0.00599935650328499,0.24682193917101267,0.42671783870011903,26
+retail_volume_index_sa,Retail volume index (PMC),Household consumption,Retail volume,16.616046169243557,-0.0280173795092134,0.7695666731695707,18.12151397514366,26

@@ -1,7 +1,24 @@
 source(file.path("code", "01_download_data", "00_download_config.R"))
 
-resident_population_sidra_tables <- list(
+resident_population_sources <- list(
+  historico_1999 = list(
+    source_type = "historical_xls",
+    table_id = "IBGE_SECULOXX_1999",
+    description = "Populacao residente estimada, segundo as Unidades da Federacao e municipios - 1999",
+    raw_output_path = file.path(path_data_raw_ibge, "populacao_residente_estimada_1999_ibge.xls"),
+    source_system = "IBGE/SeculoXX",
+    reference_date_rule = "1 July"
+  ),
+  historico_2000 = list(
+    source_type = "historical_xls",
+    table_id = "IBGE_SECULOXX_2000",
+    description = "Populacao residente, segundo as Unidades da Federacao e municipios - 2000",
+    raw_output_path = file.path(path_data_raw_ibge, "populacao_residente_2000_ibge.xls"),
+    source_system = "IBGE/SeculoXX",
+    reference_date_rule = "Census 2000 historical table"
+  ),
   estimapop = list(
+    source_type = "sidra",
     table_id = 6579,
     description = "Populacao residente estimada",
     api_candidates = c(
@@ -13,6 +30,7 @@ resident_population_sidra_tables <- list(
     reference_date_rule = "1 July"
   ),
   contagem_2007 = list(
+    source_type = "sidra",
     table_id = 793,
     description = "Populacao residente - Contagem 2007",
     api_candidates = c("/t/793/n3/all/p/2007"),
@@ -21,6 +39,7 @@ resident_population_sidra_tables <- list(
     reference_date_rule = "31 August"
   ),
   censo_2010 = list(
+    source_type = "sidra",
     table_id = 202,
     description = "Populacao residente, por sexo e situacao do domicilio - Censo 2010",
     api_candidates = c("/t/202/n3/all/p/2010"),
@@ -29,6 +48,7 @@ resident_population_sidra_tables <- list(
     reference_date_rule = "31 July"
   ),
   censo_2022 = list(
+    source_type = "sidra",
     table_id = 4709,
     description = "Populacao residente - Primeiros resultados do Censo 2022",
     api_candidates = c("/t/4709/n3/all/p/2022"),
@@ -53,6 +73,12 @@ parse_sidra_value <- function(x) {
 }
 
 download_sidra_table <- function(table_config) {
+  if (file.exists(table_config$raw_output_path)) {
+    message("Using existing raw SIDRA file: ", table_config$raw_output_path)
+    raw_data <- readr::read_csv(table_config$raw_output_path, show_col_types = FALSE)
+    return(list(raw_data = raw_data, api = "cached_raw_csv"))
+  }
+
   last_error <- NULL
 
   for (api in table_config$api_candidates) {
@@ -73,6 +99,16 @@ download_sidra_table <- function(table_config) {
   }
 
   stop("Failed to download SIDRA table ", table_config$table_id, ": ", conditionMessage(last_error))
+}
+
+normalize_population_key <- function(x) {
+  x |>
+    as.character() |>
+    iconv(from = "", to = "ASCII//TRANSLIT") |>
+    stringr::str_to_lower() |>
+    stringr::str_replace_all("[[:space:]]+", " ") |>
+    stringr::str_replace_all("\\.+$", "") |>
+    stringr::str_trim()
 }
 
 standardize_population_table <- function(raw_data, table_config, uf_lookup) {
@@ -153,6 +189,92 @@ standardize_population_table <- function(raw_data, table_config, uf_lookup) {
     dplyr::arrange(.data$year, .data$state_abbrev)
 }
 
+standardize_historical_excel_population_table <- function(table_config, uf_lookup) {
+  if (!file.exists(table_config$raw_output_path)) {
+    stop("Historical population XLS not found: ", table_config$raw_output_path)
+  }
+
+  historical_raw <- readxl::read_excel(table_config$raw_output_path, col_names = FALSE)
+  parsed_locale <- readr::locale(decimal_mark = ",", grouping_mark = ".")
+
+  candidate_pairs <- purrr::map_dfr(
+    seq_len(ncol(historical_raw) - 1L),
+    function(i) {
+      tibble::tibble(
+        start_col = i,
+        numeric_count = sum(
+          !is.na(
+            suppressWarnings(
+              readr::parse_number(as.character(historical_raw[[i + 1L]]), locale = parsed_locale)
+            )
+          )
+        ),
+        name_count = sum(!is.na(historical_raw[[i]]))
+      )
+    }
+  ) |>
+    dplyr::filter(.data$numeric_count > 100, .data$name_count > 100)
+
+  extracted_pairs <- purrr::map_dfr(
+    candidate_pairs$start_col,
+    function(i) {
+      tibble::tibble(
+        raw_name = historical_raw[[i]],
+        raw_value = historical_raw[[i + 1L]]
+      )
+    }
+  ) |>
+    dplyr::mutate(
+      population_key = normalize_population_key(.data$raw_name),
+      population = suppressWarnings(
+        readr::parse_number(as.character(.data$raw_value), locale = parsed_locale)
+      )
+    ) |>
+    dplyr::filter(!is.na(.data$population_key), !is.na(.data$population))
+
+  uf_lookup_keys <- uf_lookup |>
+    dplyr::mutate(population_key = normalize_population_key(.data$state_name))
+
+  matched_population <- extracted_pairs |>
+    dplyr::inner_join(uf_lookup_keys, by = "population_key") |>
+    dplyr::group_by(.data$uf) |>
+    dplyr::slice_max(order_by = .data$population, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup()
+
+  if (nrow(matched_population) != nrow(uf_lookup_keys)) {
+    stop(
+      "Historical population XLS parsing did not recover all UFs for ",
+      table_config$raw_output_path,
+      ". Parsed ",
+      nrow(matched_population),
+      " of ",
+      nrow(uf_lookup_keys),
+      "."
+    )
+  }
+
+  year <- as.integer(stringr::str_extract(table_config$table_id, "\\d{4}$"))
+
+  matched_population |>
+    dplyr::transmute(
+      period = as.character(year),
+      period_date = as.Date(sprintf("%d-07-01", year)),
+      year = year,
+      uf,
+      state_abbrev,
+      state_name,
+      macroregion,
+      population,
+      source_system = table_config$source_system,
+      source_frequency = "annual",
+      reference_date_rule = table_config$reference_date_rule,
+      source_table_id = as.character(table_config$table_id),
+      observation_status = "observed",
+      imputation_rule = NA_character_
+    ) |>
+    dplyr::arrange(.data$year, .data$state_abbrev)
+}
+
 build_2023_interpolation <- function(population_panel) {
   pop_2022 <- population_panel |>
     dplyr::filter(.data$year == 2022L) |>
@@ -202,18 +324,26 @@ uf_lookup <- readr::read_csv(uf_lookup_path, show_col_types = FALSE) |>
   dplyr::select(uf, state_abbrev, state_name, macroregion)
 
 download_results <- purrr::imap(
-  resident_population_sidra_tables,
+  resident_population_sources,
   ~ {
-    table_result <- download_sidra_table(.x)
-    standardized <- standardize_population_table(table_result$raw_data, .x, uf_lookup)
+    if (identical(.x$source_type, "sidra")) {
+      table_result <- download_sidra_table(.x)
+      standardized <- standardize_population_table(table_result$raw_data, .x, uf_lookup)
+      raw_rows <- nrow(table_result$raw_data)
+      api_used <- table_result$api
+    } else {
+      standardized <- standardize_historical_excel_population_table(.x, uf_lookup)
+      raw_rows <- NA_integer_
+      api_used <- "local_historical_xls"
+    }
 
     list(
       key = .y,
       table_id = .x$table_id,
       description = .x$description,
-      api = table_result$api,
+      api = api_used,
       raw_output_path = .x$raw_output_path,
-      raw_rows = nrow(table_result$raw_data),
+      raw_rows = raw_rows,
       processed_rows = nrow(standardized),
       data = standardized
     )

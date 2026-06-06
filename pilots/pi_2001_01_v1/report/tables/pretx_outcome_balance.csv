@@ -1,0 +1,5 @@
+Outcome,Treated,Synthetic,RMSPE pre,Pre periods
+ICMS total VA,13.34,13.42,0.60,36
+Tax revenue VA,14.14,14.29,0.84,36
+ICMS retail VA,3.43,3.44,0.25,36
+Retail volume,100.87,100.90,0.77,22
