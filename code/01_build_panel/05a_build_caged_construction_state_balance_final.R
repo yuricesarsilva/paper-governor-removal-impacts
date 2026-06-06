@@ -12,7 +12,7 @@ base_panel_path <- file.path(path_data_processed, "caged_state_balance_monthly_p
 integrity_path <- file.path(path_data_raw_mte, "old_caged_complete_integrity_7z.csv")
 output_full_path <- file.path(path_data_processed, "caged_construction_state_balance_monthly_processed.csv")
 output_panel_ready_path <- file.path(path_data_processed, "caged_construction_state_balance_monthly_panel_ready.csv")
-output_coverage_path <- file.path(path_output, "validation", "caged_construction_monthly_coverage.csv")
+output_coverage_path <- file.path(path_output_validation, "caged_construction_monthly_coverage.csv")
 
 if (!file.exists(base_panel_path)) {
   stop("Base CAGED panel not found: ", base_panel_path)

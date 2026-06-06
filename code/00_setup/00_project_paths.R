@@ -13,4 +13,10 @@ path_data_external <- file.path(root_dir, "data", "external")
 path_data_processed <- file.path(root_dir, "data", "processed")
 path_code <- file.path(root_dir, "code")
 path_output <- file.path(root_dir, "output")
+# Data-pipeline artifacts (validation tables, data-diagnostic figures) live under
+# output/_data_pipeline/ so they do not mix with the per-event analysis results
+# in output/<event_id>/.
+path_output_data_pipeline <- file.path(path_output, "_data_pipeline")
+path_output_validation <- file.path(path_output_data_pipeline, "validation")
+path_output_figures <- file.path(path_output_data_pipeline, "figures")
 path_notes <- file.path(root_dir, "notes")

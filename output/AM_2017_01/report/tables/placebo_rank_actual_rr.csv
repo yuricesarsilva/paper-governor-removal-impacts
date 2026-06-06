@@ -1,0 +1,7 @@
+outcome,short_label,channel_slug,post_pre_rmspe_ratio,donor_placebo_count,ratio_p_value,abs_gap_p_value
+retail,Retail volume,consumption,4.468061009556898,24,0.5,0.375
+services,Services volume,consumption,1.6696599410104866,24,0.7916666666666666,1
+formal_hiring,Formal hiring,labor_market,1.8767630845894339,24,0.25,1
+construction,Construction,labor_market,0.7579417382041186,24,0.875,1
+icms_confaz,ICMS,public_sector,1.383631284044696,24,0.75,0.6666666666666666
+tax_confaz,Tax revenue,public_sector,0.7480680775082179,24,1,1

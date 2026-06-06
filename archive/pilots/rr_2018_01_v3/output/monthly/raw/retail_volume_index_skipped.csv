@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+retail_volume_index,monthly,raw,skipped,Treated state has incomplete pre-treatment data for outcome: retail_volume_index

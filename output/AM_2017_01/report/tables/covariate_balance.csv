@@ -1,0 +1,7 @@
+Covariate,Treated,Retail volume,Services volume,Formal hiring,Construction,ICMS,Tax revenue
+ICMS secondary VA pc,51.463,26.685, 8.980,33.414,34.135,39.993,42.279
+ICMS tertiary VA pc,83.627,58.929,34.655,70.401,60.337,76.528,74.735
+ICMS energy VA pc, 4.517,12.345, 6.597,11.856,13.086,10.465,10.340
+ICMS fuels VA pc,20.509,29.087,19.400,22.808,30.363,20.845,19.299
+FPE transfer pc,37.524,42.864,72.128,50.609,34.019,61.828,64.749
+IOF-state pc, 0.001, 0.001, 0.010, 0.003, 0.001, 0.003, 0.002

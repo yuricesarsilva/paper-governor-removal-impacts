@@ -16,7 +16,7 @@ if (!file.exists(uf_lookup_path)) {
 }
 
 dir.create(path_data_raw_tesouro, recursive = TRUE, showWarnings = FALSE)
-dir.create(file.path(path_output, "validation"), recursive = TRUE, showWarnings = FALSE)
+dir.create(path_output_validation, recursive = TRUE, showWarnings = FALSE)
 
 uf_lookup <- readr::read_csv(uf_lookup_path, show_col_types = FALSE) |>
   dplyr::filter(include_in_panel) |>
@@ -145,14 +145,12 @@ registry_path <- file.path(
 )
 
 coverage_path <- file.path(
-  path_output,
-  "validation",
+  path_output_validation,
   "tesouro_transferencias_obrigatorias_sheet_coverage.csv"
 )
 
 missing_summary_path <- file.path(
-  path_output,
-  "validation",
+  path_output_validation,
   "tesouro_transferencias_obrigatorias_missing_summary.csv"
 )
 

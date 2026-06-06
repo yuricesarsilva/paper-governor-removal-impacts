@@ -1,0 +1,6 @@
+outcome,family,specification,status,skip_reason
+state_tax_revenue_real_pc_ma4_clean,bimonthly_fiscal,ma4_clean,skipped,"i In argument: `complete_pre_periods =
+  sum(is.finite(.data[[""state_tax_revenue_real_pc_ma4_clean""]]))`.
+i In group 1: `state_abbrev = ""AC""`.
+Caused by error in `.data[[""state_tax_revenue_real_pc_ma4_clean""]]`:
+! Column `state_tax_revenue_real_pc_ma4_clean` not found in `.data`."

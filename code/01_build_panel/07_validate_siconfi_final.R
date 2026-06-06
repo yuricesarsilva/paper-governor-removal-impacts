@@ -19,7 +19,7 @@ if (!file.exists(registry_path)) {
   stop("Registry file not found: ", registry_path)
 }
 
-validation_dir <- file.path(path_output, "validation")
+validation_dir <- path_output_validation
 if (!dir.exists(validation_dir)) {
   dir.create(validation_dir, recursive = TRUE)
 }

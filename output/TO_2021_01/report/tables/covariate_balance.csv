@@ -1,0 +1,8 @@
+Covariate,Treated,Retail volume,Services volume,Formal hiring,Construction,ICMS,Tax revenue,Public investment,Total expenditure
+Unemployment rate,    0.102,    0.111,    0.081,    0.108,    0.099,    0.106,    0.103,    0.108,    0.112
+Formalization rate,    0.556,    0.553,    0.625,    0.483,    0.515,    0.503,    0.522,    0.568,    0.536
+Labor income (real),"2,659.377","3,314.464","3,246.674","2,677.851","2,592.656","2,721.351","2,771.551","3,035.630","2,855.385"
+Transfer dependency ratio,    0.255,    0.152,    0.108,    0.177,    0.155,    0.248,    0.244,    0.195,    0.226
+Health expenditure pc,  251.799,  166.739,  121.421,  155.704,  112.135,  184.039,  201.140,  176.582,  205.688
+Education expenditure pc,  181.093,  195.509,  132.943,  180.812,  133.816,  221.344,  226.842,  186.675,  248.701
+Public security expenditure pc,  139.965,  104.051,  102.160,  109.471,   93.285,  134.026,  128.329,  119.548,  131.596

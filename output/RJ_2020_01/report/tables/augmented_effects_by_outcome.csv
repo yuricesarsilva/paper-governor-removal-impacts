@@ -1,0 +1,9 @@
+Channel,Outcome,Mean gap post,RMSPE pre,RMSPE post,Donors,Freq
+Household consumption,Retail volume index (PMC), -2.23, 1.37,  4.48,22,monthly
+Household consumption,Services volume index (PMS), -7.55, 1.63,  9.35,22,monthly
+Formal labor market,Formal hiring balance per 100k pop,-22.97,23.31, 44.08,22,monthly
+Formal labor market,Construction hiring balance per 100k pop,  0.65, 6.13,  6.49,22,monthly
+State public finances,"ICMS revenue, real per capita (SICONFI)",  5.21,23.37, 43.98,21,bimonthly
+State public finances,"Own tax revenue, real per capita (SICONFI)", -4.23,39.70, 55.35,22,bimonthly
+State public finances,"Public investment, real per capita (SICONFI)", -8.99, 3.72, 16.80,22,bimonthly
+State public finances,"Total liquidated expenditure, real per capita (SICONFI)", 76.77,86.90,176.07,22,bimonthly

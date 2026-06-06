@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+formal_hiring_balance_per_100k_wap,monthly,raw,skipped,Treated state has incomplete pre-treatment data for outcome: formal_hiring_balance_per_100k_wap

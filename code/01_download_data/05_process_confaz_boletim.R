@@ -14,7 +14,7 @@ if (is.na(source_path)) {
 
 dir.create(path_data_raw_confaz, recursive = TRUE, showWarnings = FALSE)
 dir.create(path_output, recursive = TRUE, showWarnings = FALSE)
-dir.create(file.path(path_output, "validation"), recursive = TRUE, showWarnings = FALSE)
+dir.create(path_output_validation, recursive = TRUE, showWarnings = FALSE)
 
 canonical_raw_path <- file.path(
   path_data_raw_confaz,
@@ -331,22 +331,22 @@ readr::write_csv(registry, file.path(path_data_raw_confaz, "confaz_boletim_impor
 
 readr::write_csv(
   setorial_coverage,
-  file.path(path_output, "validation", "confaz_state_tax_revenue_monthly_coverage.csv"),
+  file.path(path_output_validation, "confaz_state_tax_revenue_monthly_coverage.csv"),
   na = ""
 )
 readr::write_csv(
   setorial_missing_summary,
-  file.path(path_output, "validation", "confaz_state_tax_revenue_monthly_missing_summary.csv"),
+  file.path(path_output_validation, "confaz_state_tax_revenue_monthly_missing_summary.csv"),
   na = ""
 )
 readr::write_csv(
   planilha1_coverage,
-  file.path(path_output, "validation", "confaz_state_tax_revenue_cnae_monthly_coverage.csv"),
+  file.path(path_output_validation, "confaz_state_tax_revenue_cnae_monthly_coverage.csv"),
   na = ""
 )
 readr::write_csv(
   planilha1_missing_summary,
-  file.path(path_output, "validation", "confaz_state_tax_revenue_cnae_monthly_missing_summary.csv"),
+  file.path(path_output_validation, "confaz_state_tax_revenue_cnae_monthly_missing_summary.csv"),
   na = ""
 )
 

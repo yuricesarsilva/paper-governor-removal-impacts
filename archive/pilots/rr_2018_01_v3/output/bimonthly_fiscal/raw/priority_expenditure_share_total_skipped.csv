@@ -1,0 +1,2 @@
+outcome,family,specification,status,skip_reason
+priority_expenditure_share_total,bimonthly_fiscal,raw,skipped,Treated state has incomplete pre-treatment data for outcome: priority_expenditure_share_total
