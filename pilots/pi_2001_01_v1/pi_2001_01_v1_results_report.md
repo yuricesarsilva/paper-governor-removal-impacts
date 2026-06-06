@@ -36,9 +36,9 @@ The main donor pool excludes `PI` (any state that is itself treated anywhere in 
 
 ## Preliminary plots
 
-![preliminary_tax_base.png](report/figures/preliminary_tax_base.png)
+All four outcomes are shown together in a single 2x2 panel (ICMS total VA, tax-revenue VA, ICMS retail VA, retail volume).
 
-![preliminary_consumption.png](report/figures/preliminary_consumption.png)
+![preliminary_outcomes.png](report/figures/preliminary_outcomes.png)
 
 ## Covariate and pre-treatment outcome balance
 
@@ -84,23 +84,15 @@ The main donor pool excludes `PI` (any state that is itself treated anywhere in 
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
-### State tax base (ICMS value added)
+### Augmented SCM paths and gaps (all outcomes)
 
-![augmented_paths_tax_base.png](report/figures/augmented_paths_tax_base.png)
+![augmented_paths_outcomes.png](report/figures/augmented_paths_outcomes.png)
 
-![augmented_gaps_tax_base.png](report/figures/augmented_gaps_tax_base.png)
-
-### Household consumption
-
-![augmented_paths_consumption.png](report/figures/augmented_paths_consumption.png)
-
-![augmented_gaps_consumption.png](report/figures/augmented_gaps_consumption.png)
+![augmented_gaps_outcomes.png](report/figures/augmented_gaps_outcomes.png)
 
 ## Donor weights
 
-![donor_weights_tax_base.png](report/figures/donor_weights_tax_base.png)
-
-![donor_weights_consumption.png](report/figures/donor_weights_consumption.png)
+![donor_weights_outcomes.png](report/figures/donor_weights_outcomes.png)
 
 ## In-space placebos
 
@@ -113,13 +105,9 @@ Each eligible donor is treated as pseudo-treated at the same dates; gaps are nor
 | ICMS retail VA |  1.73 | 0.769 | 1.000 | 26 |
 | Retail volume | 23.55 | 0.000 | 0.000 | 26 |
 
-![placebo_gaps_tax_base.png](report/figures/placebo_gaps_tax_base.png)
+![placebo_gaps_outcomes.png](report/figures/placebo_gaps_outcomes.png)
 
-![placebo_rmspe_ratio_tax_base.png](report/figures/placebo_rmspe_ratio_tax_base.png)
-
-![placebo_gaps_consumption.png](report/figures/placebo_gaps_consumption.png)
-
-![placebo_rmspe_ratio_consumption.png](report/figures/placebo_rmspe_ratio_consumption.png)
+![placebo_rmspe_ratio_outcomes.png](report/figures/placebo_rmspe_ratio_outcomes.png)
 
 ## Leave-one-out donor placebo
 

@@ -43,7 +43,7 @@ base_theme <- function() {
                    strip.text = ggplot2::element_text(size = 11))
 }
 
-save_plot <- function(plot, filename, width = 12, height = 7) {
+save_plot <- function(plot, filename, width = 12, height = 8) {
   ggplot2::ggsave(file.path(figure_dir, filename), plot = plot,
                   width = width, height = height, dpi = 300, bg = "white")
 }
@@ -54,21 +54,17 @@ vlines <- function() {
 }
 
 # ── Outcome meta ──────────────────────────────────────────────────────────────
-# V1: all outcomes monthly + X-13 (freq 12); one family; x-axis = calendar date.
-# Two channels: state tax base (ICMS / tax-revenue value added) and consumption.
+# V1: all 4 outcomes are monthly + X-13 (freq 12) and shown together in ONE
+# 2x2 panel (no channel split). Facet order is fixed below.
 meta <- tibble::tribble(
-  ~channel_slug, ~channel_label,                ~family,   ~specification, ~outcome,                                  ~short_label,
-  "tax_base",    "State tax base (ICMS VA)",    "monthly", "sa", "va_icms_total_real_pc_sa",                "ICMS total VA",
-  "tax_base",    "State tax base (ICMS VA)",    "monthly", "sa", "va_receita_tributaria_total_real_pc_sa",  "Tax revenue VA",
-  "tax_base",    "State tax base (ICMS VA)",    "monthly", "sa", "va_icms_terciario_varejista_real_pc_sa",  "ICMS retail VA",
-  "consumption", "Household consumption",       "monthly", "sa", "retail_volume_index_sa",                  "Retail volume"
+  ~family,   ~specification, ~outcome,                                  ~short_label,
+  "monthly", "sa", "va_icms_total_real_pc_sa",                "ICMS total VA",
+  "monthly", "sa", "va_receita_tributaria_total_real_pc_sa",  "Tax revenue VA",
+  "monthly", "sa", "va_icms_terciario_varejista_real_pc_sa",  "ICMS retail VA",
+  "monthly", "sa", "retail_volume_index_sa",                  "Retail volume"
 )
-
-channel_label_of <- function(slug) {
-  dplyr::case_when(slug == "tax_base" ~ "State tax base (ICMS VA)",
-                   slug == "consumption" ~ "Household consumption",
-                   TRUE ~ slug)
-}
+outcome_order <- meta$short_label  # ICMS total, Tax revenue, ICMS retail, Retail
+as_facet <- function(x) factor(x, levels = outcome_order)
 
 load_paths <- function(meta_rows) {
   purrr::map_dfr(seq_len(nrow(meta_rows)), function(i) {
@@ -89,12 +85,10 @@ load_weights <- function(meta_rows) {
   })
 }
 
-# ── Preliminary plots ─────────────────────────────────────────────────────────
-build_preliminary_plot <- function(channel_slug_value) {
-  mr    <- meta |> dplyr::filter(.data$channel_slug == channel_slug_value)
-
-  plot_data <- purrr::map_dfr(seq_len(nrow(mr)), function(i) {
-    row <- mr[i,]
+# ── Preliminary plot (all 4 outcomes) ─────────────────────────────────────────
+build_preliminary_plot <- function() {
+  plot_data <- purrr::map_dfr(seq_len(nrow(meta)), function(i) {
+    row <- meta[i,]
     monthly_panel |>
       dplyr::filter(.data$state_abbrev %in% c(treated_state, main_donor_states)) |>
       dplyr::transmute(
@@ -104,7 +98,7 @@ build_preliminary_plot <- function(channel_slug_value) {
         short_label  = row$short_label,
         treated      = .data$state_abbrev == treated_state
       )
-  })
+  }) |> dplyr::mutate(short_label = as_facet(.data$short_label))
 
   donor_mean <- plot_data |> dplyr::filter(!.data$treated) |>
     dplyr::group_by(.data$period_date, .data$short_label) |>
@@ -128,9 +122,6 @@ build_preliminary_plot <- function(channel_slug_value) {
                                 oob = scales::oob_keep)
   })
 
-  x_lim <- plot_data |> dplyr::filter(is.finite(.data$value)) |>
-    dplyr::pull(.data$period_date) |> range(na.rm = TRUE)
-
   ggplot2::ggplot() +
     ggplot2::geom_line(data = plot_data |> dplyr::filter(!.data$treated),
       ggplot2::aes(x = .data$period_date, y = .data$value, group = .data$state_abbrev),
@@ -142,24 +133,23 @@ build_preliminary_plot <- function(channel_slug_value) {
     vlines() +
     ggplot2::scale_color_manual(values = stats::setNames(c("#222222", "#1f6f8b"), c("Donor mean", treated_label))) +
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
-    ggplot2::coord_cartesian(xlim = x_lim) +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggh4x::facetted_pos_scales(y = y_scales) +
     ggplot2::labs(
-      title    = paste0("Preliminary view (SA): ", unique(mr$channel_label)),
-      subtitle = paste0("Y-axis bounded by ", treated_label, " and the donor mean (26 donor states in light gray); x-axis limited to the data window. Dashed line = removal."),
+      title    = "Preliminary view (SA): PI 2001 outcomes",
+      subtitle = paste0("Y-axis bounded by ", treated_label, " and the donor mean (26 donor states in light gray). Dashed line = removal."),
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
 }
 
-# ── Augmented SCM paths ───────────────────────────────────────────────────────
-build_augmented_paths_plot <- function(channel_slug_value) {
-  mr        <- meta |> dplyr::filter(.data$channel_slug == channel_slug_value)
-  path_data <- load_paths(mr)
+# ── Augmented SCM paths (all 4 outcomes) ──────────────────────────────────────
+build_augmented_paths_plot <- function() {
+  path_data <- load_paths(meta)
   if (is.null(path_data) || nrow(path_data) == 0) return(NULL)
 
   path_long <- path_data |>
+    dplyr::mutate(short_label = as_facet(.data$short_label)) |>
     tidyr::pivot_longer(c("treated_value", "augmented_synthetic_value"),
                         names_to = "series", values_to = "value") |>
     dplyr::mutate(series = dplyr::recode(.data$series,
@@ -172,18 +162,18 @@ build_augmented_paths_plot <- function(channel_slug_value) {
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
-      title    = paste0("Augmented SCM paths (SA): ", unique(mr$channel_label)),
+      title    = "Augmented SCM paths (SA): PI 2001 outcomes",
       subtitle = "Dashed line = effective removal (treatment)",
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
 }
 
-# ── Augmented SCM gaps ────────────────────────────────────────────────────────
-build_augmented_gaps_plot <- function(channel_slug_value) {
-  mr       <- meta |> dplyr::filter(.data$channel_slug == channel_slug_value)
-  gap_data <- load_paths(mr)
+# ── Augmented SCM gaps (all 4 outcomes) ───────────────────────────────────────
+build_augmented_gaps_plot <- function() {
+  gap_data <- load_paths(meta)
   if (is.null(gap_data) || nrow(gap_data) == 0) return(NULL)
+  gap_data <- gap_data |> dplyr::mutate(short_label = as_facet(.data$short_label))
 
   ggplot2::ggplot(gap_data, ggplot2::aes(x = .data$period_date, y = .data$augmented_gap)) +
     ggplot2::geom_hline(yintercept = 0, color = "gray60", linewidth = 0.4) +
@@ -192,57 +182,58 @@ build_augmented_gaps_plot <- function(channel_slug_value) {
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
-      title    = paste0("Augmented SCM gaps (SA): ", unique(mr$channel_label)),
+      title    = "Augmented SCM gaps (SA): PI 2001 outcomes",
       subtitle = paste0("Gap = ", treated_label, " minus synthetic; dashed line = effective removal"),
       x = NULL, y = NULL
     ) +
     base_theme()
 }
 
-# ── Donor weights ─────────────────────────────────────────────────────────────
-build_weight_plot <- function(channel_slug_value) {
-  mr          <- meta |> dplyr::filter(.data$channel_slug == channel_slug_value)
-  weight_data <- load_weights(mr)
+# ── Donor weights (all 4 outcomes) ────────────────────────────────────────────
+build_weight_plot <- function() {
+  weight_data <- load_weights(meta)
   if (is.null(weight_data) || nrow(weight_data) == 0) return(NULL)
 
   weight_data <- weight_data |>
     dplyr::filter(.data$scm_weight > 0.001) |>
+    dplyr::mutate(short_label = as_facet(.data$short_label)) |>
     dplyr::group_by(.data$short_label) |>
     dplyr::slice_max(.data$scm_weight, n = 6, with_ties = FALSE) |>
     dplyr::ungroup() |>
-    dplyr::mutate(donor_state = stats::reorder(.data$donor_state, .data$scm_weight))
+    dplyr::mutate(donor_state = tidytext_reorder(.data$donor_state, .data$scm_weight, .data$short_label))
 
   ggplot2::ggplot(weight_data, ggplot2::aes(x = .data$scm_weight, y = .data$donor_state)) +
     ggplot2::geom_col(fill = "#7a52aa", alpha = 0.9) +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::scale_x_continuous(labels = function(x) paste0(round(100 * x), "%")) +
-    ggplot2::labs(title = paste0("Donor weights (SA): ", unique(mr$channel_label)), x = "Weight", y = NULL) +
+    ggplot2::labs(title = "Donor weights (SA): PI 2001 outcomes", x = "Weight", y = NULL) +
     base_theme()
 }
 
-# ── Effect summary ────────────────────────────────────────────────────────────
+# Reorder donor_state within each facet (so bars sort by weight per panel).
+tidytext_reorder <- function(x, by, within) {
+  new_x <- paste(x, within, sep = "___")
+  stats::reorder(new_x, by)
+}
+strip_reorder <- function(x) sub("___.*$", "", as.character(x))
+
+# ── Effect summary (all 4 outcomes) ───────────────────────────────────────────
 effect_summary_plot <- summary_tbl |>
   dplyr::filter(.data$status == "estimated") |>
-  dplyr::left_join(meta |> dplyr::select("outcome", "short_label", "channel_slug", "channel_label"), by = "outcome") |>
+  dplyr::left_join(meta |> dplyr::select("outcome", "short_label"), by = "outcome") |>
   dplyr::filter(!is.na(.data$short_label)) |>
-  dplyr::mutate(short_label = factor(.data$short_label, levels = rev(unique(.data$short_label)))) |>
-  ggplot2::ggplot(ggplot2::aes(x = .data$augmented_mean_gap_post,
-                                y = .data$short_label, color = .data$channel_label)) +
+  dplyr::mutate(short_label = factor(.data$short_label, levels = rev(outcome_order))) |>
+  ggplot2::ggplot(ggplot2::aes(x = .data$augmented_mean_gap_post, y = .data$short_label)) +
   ggplot2::geom_vline(xintercept = 0, color = "gray70", linewidth = 0.4) +
-  ggplot2::geom_point(size = 3) +
-  ggplot2::scale_color_manual(values = c(
-    "State tax base (ICMS VA)" = "#6a3d9a",
-    "Household consumption"    = "#c65a2e"
-  )) +
-  ggplot2::labs(title = "Post-removal average gaps (SA specification)", x = "Mean post-removal gap", y = NULL, color = NULL) +
+  ggplot2::geom_point(size = 3, color = "#6a3d9a") +
+  ggplot2::labs(title = "Post-removal average gaps (SA specification)", x = "Mean post-removal gap", y = NULL) +
   base_theme()
 
-# ── Placebo plots ─────────────────────────────────────────────────────────────
-build_placebo_gaps_plot <- function(channel_slug_value) {
+# ── In-space placebo gaps (all 4 outcomes) ────────────────────────────────────
+build_placebo_gaps_plot <- function() {
   if (!has_placebo) return(NULL)
 
   preferred_lookup <- meta |>
-    dplyr::filter(.data$channel_slug == channel_slug_value) |>
     dplyr::select("outcome", "short_label") |>
     dplyr::inner_join(
       summary_tbl |> dplyr::filter(.data$status == "estimated") |>
@@ -260,13 +251,13 @@ build_placebo_gaps_plot <- function(channel_slug_value) {
                     short_label = row$short_label,
                     normalized_gap = .data$augmented_gap / row$rmspe_pre) |>
       dplyr::select("period_date", "short_label", "normalized_gap")
-  })
+  }) |> dplyr::mutate(short_label = as_facet(.data$short_label))
 
   placebo_data <- placebo_paths |>
-    dplyr::filter(.data$channel_slug == channel_slug_value) |>
     dplyr::left_join(placebo_summary |> dplyr::select("outcome", "pseudo_treated_state", "pre_rmspe"),
                      by = c("outcome", "pseudo_treated_state")) |>
-    dplyr::mutate(normalized_gap = .data$augmented_gap / .data$pre_rmspe)
+    dplyr::mutate(normalized_gap = .data$augmented_gap / .data$pre_rmspe,
+                  short_label = as_facet(.data$short_label))
 
   ggplot2::ggplot() +
     ggplot2::geom_hline(yintercept = 0, color = "gray65", linewidth = 0.4) +
@@ -280,43 +271,53 @@ build_placebo_gaps_plot <- function(channel_slug_value) {
     ggplot2::scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
     ggplot2::facet_wrap(~short_label, scales = "free_y", ncol = 2) +
     ggplot2::labs(
-      title    = paste0("In-space placebo: normalized gaps — ", channel_label_of(channel_slug_value)),
+      title    = "In-space placebo: normalized gaps — PI 2001 outcomes",
       subtitle = paste0("Gray = placebos; blue = ", treated_label, "; gaps normalized by pre-treatment RMSPE"),
       x = NULL, y = NULL, color = NULL
     ) +
     base_theme()
 }
 
-build_placebo_ratio_plot <- function(channel_slug_value) {
+# ── In-space placebo RMSPE ratio (all 4 outcomes) ─────────────────────────────
+build_placebo_ratio_plot <- function() {
   if (!has_placebo) return(NULL)
   plot_data <- placebo_rank |>
-    dplyr::filter(.data$channel_slug == channel_slug_value) |>
-    dplyr::mutate(short_label = factor(.data$short_label, levels = rev(unique(.data$short_label))))
+    dplyr::mutate(short_label = factor(.data$short_label, levels = rev(outcome_order)))
   if (nrow(plot_data) == 0) return(NULL)
 
   ggplot2::ggplot(plot_data, ggplot2::aes(x = .data$post_pre_rmspe_ratio, y = .data$short_label)) +
     ggplot2::geom_col(fill = "#7a52aa", alpha = 0.9) +
-    ggplot2::labs(title = paste0("RMSPE ratio (post/pre) — ", channel_label_of(channel_slug_value)), x = "Ratio", y = NULL) +
+    ggplot2::labs(title = "In-space placebo: RMSPE ratio (post/pre) — PI 2001 outcomes",
+                  x = "Ratio", y = NULL) +
     base_theme()
 }
 
-# ── Save all figures ──────────────────────────────────────────────────────────
-for (ch in c("tax_base", "consumption")) {
-  save_plot(build_preliminary_plot(ch), paste0("preliminary_", ch, ".png"), width = 12, height = 7)
-  p <- build_augmented_paths_plot(ch)
-  if (!is.null(p)) save_plot(p, paste0("augmented_paths_", ch, ".png"), width = 12, height = 7)
-  g <- build_augmented_gaps_plot(ch)
-  if (!is.null(g)) save_plot(g, paste0("augmented_gaps_", ch, ".png"), width = 12, height = 7)
-  w <- build_weight_plot(ch)
-  if (!is.null(w)) save_plot(w, paste0("donor_weights_", ch, ".png"), width = 12, height = 7)
-  if (has_placebo) {
-    pg <- build_placebo_gaps_plot(ch)
-    if (!is.null(pg)) save_plot(pg, paste0("placebo_gaps_", ch, ".png"), width = 12, height = 7)
-    pr <- build_placebo_ratio_plot(ch)
-    if (!is.null(pr)) save_plot(pr, paste0("placebo_rmspe_ratio_", ch, ".png"), width = 10, height = 4)
-  }
+# ── Save all figures (single combined panel each) ─────────────────────────────
+save_plot(build_preliminary_plot(),     "preliminary_outcomes.png",        width = 12, height = 8)
+p <- build_augmented_paths_plot(); if (!is.null(p)) save_plot(p, "augmented_paths_outcomes.png", width = 12, height = 8)
+g <- build_augmented_gaps_plot();  if (!is.null(g)) save_plot(g, "augmented_gaps_outcomes.png",  width = 12, height = 8)
+
+# Donor-weights facet needs per-facet y relabeling (strip the ___facet suffix).
+w <- build_weight_plot()
+if (!is.null(w)) {
+  w <- w + ggplot2::scale_y_discrete(labels = strip_reorder)
+  save_plot(w, "donor_weights_outcomes.png", width = 12, height = 8)
 }
 
 save_plot(effect_summary_plot, "augmented_effect_summary.png", width = 10, height = 6)
 
-message("PI 2001-01 V1 report figures generated.")
+if (has_placebo) {
+  pg <- build_placebo_gaps_plot();  if (!is.null(pg)) save_plot(pg, "placebo_gaps_outcomes.png",       width = 12, height = 8)
+  pr <- build_placebo_ratio_plot(); if (!is.null(pr)) save_plot(pr, "placebo_rmspe_ratio_outcomes.png", width = 10, height = 5)
+}
+
+# Remove superseded per-channel figures so the report has a single source.
+old_figs <- c("preliminary_tax_base.png", "preliminary_consumption.png",
+              "augmented_paths_tax_base.png", "augmented_paths_consumption.png",
+              "augmented_gaps_tax_base.png", "augmented_gaps_consumption.png",
+              "donor_weights_tax_base.png", "donor_weights_consumption.png",
+              "placebo_gaps_tax_base.png", "placebo_gaps_consumption.png",
+              "placebo_rmspe_ratio_tax_base.png", "placebo_rmspe_ratio_consumption.png")
+invisible(file.remove(file.path(figure_dir, old_figs[file.exists(file.path(figure_dir, old_figs))])))
+
+message("PI 2001-01 V1 report figures generated (single 4-outcome panels).")
