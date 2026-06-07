@@ -93,20 +93,22 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 | ICMS | -0.1 | 2 / 27 | 0.074 |
 | Tax revenue | -0.07 | 2 / 27 | 0.074 |
 
-## Evidence classification (5-criterion AugSCM ruler)
+## Evidence classification
 
-We do not rely on placebo p-value thresholds alone. Each outcome is graded on five criteria — (C1) pre-treatment fit (treated pre-RMSPE vs the donor median, no pre-trend), (C2) substantive magnitude (post gap >= 1 pre-period SD), (C3) persistence (share of post periods keeping the gap's sign), (C4) placebo position (discrete rank/N p <= 0.15), (C5) robustness (>= 80% of leave-one-out variants keep the sign) — into a 0-5 score. Pre-fit is a hard gate: a poor pre-fit makes the effect *non-interpretable* regardless of the rest. Tiers: **strong** (5/5), **moderate** (>=4 with placebo), **suggestive** (>=3 with magnitude or placebo), **weak**, **non-interpretable**. A *considerable* effect is strong/moderate/suggestive.
+Inference follows the standard placebo approach (Abadie, Diamond & Hainmueller 2010): the tier is the treated unit's position in the placebo distribution of the post/pre RMSPE ratio (discrete p = rank/N), which already self-normalises for pre-treatment fit. To rise above *weak* an effect must also be substantively large (|post gap| >= 1 pre-period SD) and free of a pre-trend. Tiers: **strong** (placebo p <= 0.05), **moderate** (<= 0.10), **suggestive** (<= 0.15), **weak** otherwise; a *considerable* effect is strong/moderate/suggestive. Persistence and leave-one-out sign-stability are reported as supporting robustness.
 
-Considerable effects for this event: **4** of 6 outcomes.
+**Pre-treatment fit quality is reported, not used to discard results.** The SCM literature has no fixed fit threshold (fit is judged visually and relative to the effect), so we show the treated pre-RMSPE percentile class (A-D), the treated-vs-synthetic pre correlation and R^2, and flag poor-fit cases (⚠) for the reader rather than labelling them non-interpretable.
 
-| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | moderate | 4/5 | +3.7% | 0.91 | 1.00 | A | 4/27 | 0.148 | 1.00 |
-| Services volume | suggestive | 4/5 | +4.1% | 1.06 | 0.83 | B | 9/27 | 0.333 | 1.00 |
-| Formal hiring | weak | 2/5 | -2.3 | 0.06 | 0.54 | A | 10/27 | 0.370 | 1.00 |
-| Construction | weak | 2/5 | -2.0 | 0.16 | 0.58 | B | 16/27 | 0.593 | 0.92 |
-| ICMS | strong | 5/5 | -9.2% | 1.58 | 0.79 | B | 4/27 | 0.148 | 1.00 |
-| Tax revenue | suggestive | 4/5 | -6.6% | 1.27 | 0.75 | B | 5/27 | 0.185 | 1.00 |
+Considerable effects for this event: **1** of 6 outcomes.
 
-Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
+| Outcome | Tier | Effect | Placebo p | Rank | Mag (pre-SD) | Persist | LOO sign | Pre-trend p | Pre-fit | Pre corr | Pre R2 | ⚠fit |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Retail volume | weak | +3.7% | 0.148 | 4/27 | 0.91 | 1.00 | 1.00 | 0.97 | A | 0.95 |  0.91 |  |
+| Services volume | weak | +4.1% | 0.333 | 9/27 | 1.06 | 0.83 | 1.00 | 0.42 | B | 0.82 |  0.62 |  |
+| Formal hiring | weak | -2.3 | 0.370 | 10/27 | 0.06 | 0.54 | 1.00 | 0.27 | A | 0.71 |  0.49 |  |
+| Construction | weak | -2.0 | 0.593 | 16/27 | 0.16 | 0.58 | 0.92 | 0.39 | B | 0.44 | -0.07 | yes |
+| ICMS | suggestive | -9.2% | 0.148 | 4/27 | 1.58 | 0.79 | 1.00 | 0.37 | B | 0.41 | -0.10 | yes |
+| Tax revenue | weak | -6.6% | 0.185 | 5/27 | 1.27 | 0.75 | 1.00 | 0.48 | B | 0.28 | -0.80 | yes |
+
+Note: placebo inference in synthetic control is discrete and low-resolution with few donors (finest p ~ 1/N). A p slightly above the conventional threshold with a high placebo rank, good fit and a substantive, persistent gap is read as *suggestive*, not as conventional significance.
 

@@ -93,20 +93,22 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 | ICMS | 0.05 | 2 / 25 | 0.08 |
 | Tax revenue | 0.02 | 2 / 25 | 0.08 |
 
-## Evidence classification (5-criterion AugSCM ruler)
+## Evidence classification
 
-We do not rely on placebo p-value thresholds alone. Each outcome is graded on five criteria — (C1) pre-treatment fit (treated pre-RMSPE vs the donor median, no pre-trend), (C2) substantive magnitude (post gap >= 1 pre-period SD), (C3) persistence (share of post periods keeping the gap's sign), (C4) placebo position (discrete rank/N p <= 0.15), (C5) robustness (>= 80% of leave-one-out variants keep the sign) — into a 0-5 score. Pre-fit is a hard gate: a poor pre-fit makes the effect *non-interpretable* regardless of the rest. Tiers: **strong** (5/5), **moderate** (>=4 with placebo), **suggestive** (>=3 with magnitude or placebo), **weak**, **non-interpretable**. A *considerable* effect is strong/moderate/suggestive.
+Inference follows the standard placebo approach (Abadie, Diamond & Hainmueller 2010): the tier is the treated unit's position in the placebo distribution of the post/pre RMSPE ratio (discrete p = rank/N), which already self-normalises for pre-treatment fit. To rise above *weak* an effect must also be substantively large (|post gap| >= 1 pre-period SD) and free of a pre-trend. Tiers: **strong** (placebo p <= 0.05), **moderate** (<= 0.10), **suggestive** (<= 0.15), **weak** otherwise; a *considerable* effect is strong/moderate/suggestive. Persistence and leave-one-out sign-stability are reported as supporting robustness.
+
+**Pre-treatment fit quality is reported, not used to discard results.** The SCM literature has no fixed fit threshold (fit is judged visually and relative to the effect), so we show the treated pre-RMSPE percentile class (A-D), the treated-vs-synthetic pre correlation and R^2, and flag poor-fit cases (⚠) for the reader rather than labelling them non-interpretable.
 
 Considerable effects for this event: **0** of 6 outcomes.
 
-| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | weak | 3/5 | -1.5% | 0.19 | 0.75 | C | 20/25 | 0.800 | 0.96 |
-| Services volume | non-interpretable | 0/5 | +1.1% | 0.08 | 0.58 | C | 17/25 | 0.680 | 0.00 |
-| Formal hiring | weak | 3/5 | +9.9 | 0.28 | 0.62 | B | 13/25 | 0.520 | 1.00 |
-| Construction | weak | 2/5 | +0.5 | 0.07 | 0.58 | B | 24/25 | 0.960 | 0.92 |
-| ICMS | weak | 3/5 | +5.6% | 0.46 | 0.96 | B | 16/25 | 0.640 | 1.00 |
-| Tax revenue | non-interpretable | 2/5 | +2.2% | 0.17 | 0.79 | C | 23/25 | 0.920 | 0.96 |
+| Outcome | Tier | Effect | Placebo p | Rank | Mag (pre-SD) | Persist | LOO sign | Pre-trend p | Pre-fit | Pre corr | Pre R2 | ⚠fit |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Retail volume | weak | -1.5% | 0.800 | 20/25 | 0.19 | 0.75 | 0.96 | 0.84 | C | 0.94 |  0.88 |  |
+| Services volume | weak | +1.1% | 0.680 | 17/25 | 0.08 | 0.58 | 0.00 | 0.01 | C | 0.95 |  0.90 |  |
+| Formal hiring | weak | +9.9 | 0.520 | 13/25 | 0.28 | 0.62 | 1.00 | 0.77 | B | 0.73 |  0.52 |  |
+| Construction | weak | +0.5 | 0.960 | 24/25 | 0.07 | 0.58 | 0.92 | 0.75 | B | 0.13 | -1.13 | yes |
+| ICMS | weak | +5.6% | 0.640 | 16/25 | 0.46 | 0.96 | 1.00 | 0.25 | B | 0.81 |  0.66 |  |
+| Tax revenue | weak | +2.2% | 0.920 | 23/25 | 0.17 | 0.79 | 0.96 | 0.08 | B | 0.80 |  0.65 |  |
 
-Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
+Note: placebo inference in synthetic control is discrete and low-resolution with few donors (finest p ~ 1/N). A p slightly above the conventional threshold with a high placebo rank, good fit and a substantive, persistent gap is read as *suggestive*, not as conventional significance.
 

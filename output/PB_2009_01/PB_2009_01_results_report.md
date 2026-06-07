@@ -89,19 +89,21 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 | ICMS | -0.04 | 21 / 23 | 0.13 |
 | Tax revenue | 0.01 | 23 / 24 | 0.083 |
 
-## Evidence classification (5-criterion AugSCM ruler)
+## Evidence classification
 
-We do not rely on placebo p-value thresholds alone. Each outcome is graded on five criteria — (C1) pre-treatment fit (treated pre-RMSPE vs the donor median, no pre-trend), (C2) substantive magnitude (post gap >= 1 pre-period SD), (C3) persistence (share of post periods keeping the gap's sign), (C4) placebo position (discrete rank/N p <= 0.15), (C5) robustness (>= 80% of leave-one-out variants keep the sign) — into a 0-5 score. Pre-fit is a hard gate: a poor pre-fit makes the effect *non-interpretable* regardless of the rest. Tiers: **strong** (5/5), **moderate** (>=4 with placebo), **suggestive** (>=3 with magnitude or placebo), **weak**, **non-interpretable**. A *considerable* effect is strong/moderate/suggestive.
+Inference follows the standard placebo approach (Abadie, Diamond & Hainmueller 2010): the tier is the treated unit's position in the placebo distribution of the post/pre RMSPE ratio (discrete p = rank/N), which already self-normalises for pre-treatment fit. To rise above *weak* an effect must also be substantively large (|post gap| >= 1 pre-period SD) and free of a pre-trend. Tiers: **strong** (placebo p <= 0.05), **moderate** (<= 0.10), **suggestive** (<= 0.15), **weak** otherwise; a *considerable* effect is strong/moderate/suggestive. Persistence and leave-one-out sign-stability are reported as supporting robustness.
 
-Considerable effects for this event: **1** of 5 outcomes.
+**Pre-treatment fit quality is reported, not used to discard results.** The SCM literature has no fixed fit threshold (fit is judged visually and relative to the effect), so we show the treated pre-RMSPE percentile class (A-D), the treated-vs-synthetic pre correlation and R^2, and flag poor-fit cases (⚠) for the reader rather than labelling them non-interpretable.
 
-| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | weak | 3/5 | -0.7% | 0.10 | 0.62 | C | 19/24 | 0.792 | 1.00 |
-| Formal hiring | weak | 3/5 | -16.9 | 0.36 | 0.67 | C | 17/24 | 0.708 | 1.00 |
-| Construction | suggestive | 4/5 | -11.6 | 1.79 | 0.88 | C | 10/24 | 0.417 | 1.00 |
-| ICMS | weak | 3/5 | -3.5% | 0.66 | 0.75 | A | 15/24 | 0.625 | 1.00 |
-| Tax revenue | weak | 3/5 | +0.8% | 0.12 | 0.62 | A | 18/24 | 0.750 | 0.83 |
+Considerable effects for this event: **0** of 5 outcomes.
 
-Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
+| Outcome | Tier | Effect | Placebo p | Rank | Mag (pre-SD) | Persist | LOO sign | Pre-trend p | Pre-fit | Pre corr | Pre R2 | ⚠fit |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Retail volume | weak | -0.7% | 0.792 | 19/24 | 0.10 | 0.62 | 1.00 | 0.37 | C | 0.90 |  0.82 |  |
+| Formal hiring | weak | -16.9 | 0.708 | 17/24 | 0.36 | 0.67 | 1.00 | 0.71 | C | 0.11 | -0.45 | yes |
+| Construction | weak | -11.6 | 0.417 | 10/24 | 1.79 | 0.88 | 1.00 | 0.35 | C | 0.04 | -1.84 | yes |
+| ICMS | weak | -3.5% | 0.625 | 15/24 | 0.66 | 0.75 | 1.00 | 0.51 | A | 0.66 |  0.12 |  |
+| Tax revenue | weak | +0.8% | 0.750 | 18/24 | 0.12 | 0.62 | 0.83 | 0.94 | A | 0.71 |  0.28 |  |
+
+Note: placebo inference in synthetic control is discrete and low-resolution with few donors (finest p ~ 1/N). A p slightly above the conventional threshold with a high placebo rank, good fit and a substantive, persistent gap is read as *suggestive*, not as conventional significance.
 

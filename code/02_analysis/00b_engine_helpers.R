@@ -26,32 +26,36 @@ parse_siconfi_value <- function(x) {
   p
 }
 
-# ── Evidence classification (5-criterion AugSCM ruler) ────────────────────────
-# Placebo p-values alone are a poor ruler for AugSCM (discrete, low-resolution
-# with few donors). We grade each event-outcome on five dimensions and combine
-# them into a 0-5 robustness score, gated by pre-treatment fit:
-#   C1 pre-fit       : treated pre-RMSPE <= median donor pre-RMSPE AND no pre-trend
-#   C2 magnitude     : |mean post gap| >= mag_sd_threshold pre-period SDs (substantive)
-#   C3 persistence   : share of post periods with the mean gap's sign >= persist_threshold
-#   C4 placebo rank  : discrete placebo p (rank/N) <= placebo_p_threshold (rank ~top 4)
-#   C5 robustness    : >= loo_threshold of leave-one-out variants keep the effect's sign
-# Tiers (gated by C1): 5 -> strong, 4 -> moderate, 3 -> suggestive, <=2 -> weak;
-# C1 failing -> "non-interpretable". A "considerable" effect = eligible (C1) and
-# score >= 3 (i.e. at least suggestive; placebo p <= 0.15 band).
+# ── Evidence classification (literature-aligned) ──────────────────────────────
+# Inference follows the standard placebo/permutation approach (Abadie, Diamond &
+# Hainmueller 2010): the tier is the treated unit's position in the placebo
+# distribution of the post/pre RMSPE ratio (discrete p = rank/N), which already
+# self-normalises for pre-treatment fit. To rise above "weak" an effect must also
+# be substantively large (|post gap| >= 1 pre-period SD) and free of a pre-trend
+# (the parallel-pre condition). Persistence and leave-one-out stability are
+# REPORTED as supporting robustness, not used as gates.
 #
+# Pre-treatment FIT QUALITY (pre-RMSPE percentile among donors + treated-vs-
+# synthetic pre correlation + R^2) is reported SEPARATELY and never bins a result
+# as "non-interpretable": the SCM literature has no fixed fit threshold (fit is
+# judged visually and relative to the effect), so poor-fit results are flagged for
+# the reader, not hidden.
+#   tier:  strong     placebo p <= 0.05   (+ magnitude + no pre-trend)
+#          moderate   placebo p <= 0.10   (+ magnitude + no pre-trend)
+#          suggestive placebo p <= 0.15   (+ magnitude + no pre-trend)
+#          weak       otherwise
+#   considerable = strong / moderate / suggestive.
 # All inputs come from files already written by stages 02/02b; no refitting.
-evidence_thresholds <- list(mag_sd = 1.0, persist = 0.60, placebo_p = 0.15, loo = 0.80,
-                            pretrend_p = 0.10, prefit_pctile = 0.75)
+evidence_thresholds <- list(mag_sd = 1.0, persist = 0.60, loo = 0.80, pretrend_p = 0.10,
+                            p_strong = 0.05, p_moderate = 0.10, p_suggestive = 0.15,
+                            fit_corr_ok = 0.50)
 
-# Tier from the five criteria. Pre-fit (C1) is a hard gate. Beyond the raw 0-5
-# score we require placebo evidence (C4) for "moderate"+, and at least one of
-# magnitude/placebo for "suggestive", so a small-but-persistent common swing
-# cannot be promoted to a considerable effect.
-classify_tier <- function(C1, C2, C4, score) {
-  if (!isTRUE(C1)) return("non-interpretable")
-  if (score >= 5) "strong"
-  else if (score >= 4 && C4) "moderate"
-  else if (score >= 3 && (C2 || C4)) "suggestive"
+# Tier = placebo band, conditional on a substantive effect with no pre-trend.
+classify_tier <- function(eligible, classic_p, thr = evidence_thresholds) {
+  if (!isTRUE(eligible) || !is.finite(classic_p)) return("weak")
+  if (classic_p <= thr$p_strong) "strong"
+  else if (classic_p <= thr$p_moderate) "moderate"
+  else if (classic_p <= thr$p_suggestive) "suggestive"
   else "weak"
 }
 
@@ -95,6 +99,10 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
     } else ""
     pre_sd <- stats::sd(pre$treated_value, na.rm = TRUE)
     mag_sd <- if (is.finite(pre_sd) && pre_sd > 0) abs(gap_post) / pre_sd else NA_real_
+    # Pre-treatment fit quality: how well the synthetic tracks the treated path.
+    pre_fit_corr <- tryCatch(stats::cor(pre$treated_value, pre$augmented_synthetic_value), error = function(e) NA_real_)
+    pre_rmspe_in <- sqrt(mean((pre$treated_value - pre$augmented_synthetic_value)^2, na.rm = TRUE))
+    pre_fit_r2 <- if (is.finite(pre_sd) && pre_sd > 0) 1 - pre_rmspe_in^2 / stats::var(pre$treated_value, na.rm = TRUE) else NA_real_
     persistence <- mean(sign(post$augmented_gap) == sign(gap_post), na.rm = TRUE)
     pre_trend_p <- tryCatch({
       if (nrow(pre) >= 4) summary(stats::lm(augmented_gap ~ as.numeric(period_date), data = pre))$coefficients[2, 4] else NA_real_
@@ -105,12 +113,12 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
     med_donor_pre <- if (length(donor_pre)) stats::median(donor_pre, na.rm = TRUE) else NA_real_
     pre_pctile <- if (length(donor_pre)) mean(donor_pre < treated_pre, na.rm = TRUE) else NA_real_
     no_pretrend <- is.na(pre_trend_p) || pre_trend_p >= thr$pretrend_p
-    # Adequate pre-fit = treated is not in the worst quartile of donor fits
-    # (a median split would mechanically fail ~half regardless of quality), and
-    # the pre-treatment gap has no significant trend.
-    prefit_ok <- is.finite(pre_pctile) && pre_pctile <= thr$prefit_pctile && no_pretrend
-    prefit_class <- if (!is.finite(pre_pctile)) "D" else if (pre_pctile <= 0.25 && no_pretrend) "A" else
-      if (pre_pctile <= 0.50 && no_pretrend) "B" else if (pre_pctile <= 0.75) "C" else "D"
+    # Pre-fit quality flag (reported, not a gate): combine the treated's pre-RMSPE
+    # rank among donors with how well the synthetic tracks the treated path.
+    prefit_class <- if (!is.finite(pre_pctile)) "D" else if (pre_pctile <= 0.25) "A" else
+      if (pre_pctile <= 0.50) "B" else if (pre_pctile <= 0.75) "C" else "D"
+    tracks_ok <- is.finite(pre_fit_corr) && pre_fit_corr >= thr$fit_corr_ok
+    poor_fit  <- prefit_class == "D" || !tracks_ok
 
     rank <- NA_integer_; n_units <- NA_integer_; classic_p <- NA_real_
     if (!is.null(prk) && o %in% prk$outcome) {
@@ -128,24 +136,25 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
       if (nrow(lg)) loo_frac <- mean(sign(lg$m) == sign(gap_post), na.rm = TRUE)
     }
 
-    C1 <- isTRUE(prefit_ok)
-    C2 <- is.finite(mag_sd) && mag_sd >= thr$mag_sd   # |post gap| >= 1 pre-period SD (signal vs pre-noise)
-    C3 <- is.finite(persistence) && persistence >= thr$persist
-    C4 <- is.finite(classic_p) && classic_p <= thr$placebo_p
-    C5 <- is.finite(loo_frac) && loo_frac >= thr$loo
-    score <- sum(C1, C2, C3, C4, C5)
-    tier <- classify_tier(C1, C2, C4, score)
+    magnitude_ok <- is.finite(mag_sd) && mag_sd >= thr$mag_sd      # substantive
+    persistence_ok <- is.finite(persistence) && persistence >= thr$persist
+    loo_ok <- is.finite(loo_frac) && loo_frac >= thr$loo
+    robust <- persistence_ok && loo_ok                            # supporting robustness
+    # Eligible to rise above "weak": substantive effect with no pre-trend.
+    eligible <- magnitude_ok && no_pretrend
+    tier <- classify_tier(eligible, classic_p)
 
     tibble::tibble(
       event_id = event_id, outcome = o, short = cat_o$short, channel = cat_o$channel, family = fam,
       gap_post = gap_post, pct_effect = pct_effect, effect_display = effect_display,
-      effect_for_plot = effect_for_plot, effect_label = effect_label, mag_sd = mag_sd, persistence = persistence,
-      pre_trend_p = pre_trend_p, treated_pre_rmspe = treated_pre, median_donor_pre_rmspe = med_donor_pre,
-      prefit_class = prefit_class, rank = rank, n_units = n_units, classic_p = classic_p,
-      loo_frac_same_sign = loo_frac,
-      C1_prefit = C1, C2_magnitude = C2, C3_persistence = C3, C4_placebo = C4, C5_robust = C5,
-      robustness_score = score, tier = tier,
-      considerable = tier %in% c("strong", "moderate", "suggestive"),
+      effect_for_plot = effect_for_plot, effect_label = effect_label,
+      mag_sd = mag_sd, magnitude_ok = magnitude_ok, persistence = persistence, persistence_ok = persistence_ok,
+      pre_trend_p = pre_trend_p, no_pretrend = no_pretrend,
+      treated_pre_rmspe = treated_pre, median_donor_pre_rmspe = med_donor_pre,
+      pre_fit_corr = pre_fit_corr, pre_fit_r2 = pre_fit_r2, prefit_class = prefit_class, poor_fit = poor_fit,
+      rank = rank, n_units = n_units, classic_p = classic_p,
+      loo_frac_same_sign = loo_frac, loo_ok = loo_ok, robust = robust,
+      tier = tier, considerable = tier %in% c("strong", "moderate", "suggestive"),
       direction = ifelse(gap_post < 0, "negative", "positive")
     )
   })
