@@ -1,9 +1,9 @@
 Outcome,Treated,Synthetic,RMSPE pre,Pre periods
-Retail volume,100.23,100.21,1.53,36
-Services volume,99.31,99.17,2.57,36
-Formal hiring,43.79,39.55,26.96,36
-Construction,6.66,6.66,6.40,36
-ICMS,218.76,218.03,8.40,24
-Tax revenue,279.45,280.32,13.35,24
-Public investment,85.52,84.79,8.57,24
-Total expenditure,716.86,718.04,52.98,24
+Retail volume,95.45,95.74,2.83,36
+Services volume,84.19,84.35,3.20,36
+Formal hiring,43.79,39.40,59.80,36
+Construction,6.66,6.28,9.49,36
+ICMS,5.38,5.39,0.05,24
+Tax revenue,5.63,5.64,0.07,24
+Public investment,4.03,4.01,0.41,24
+Total expenditure,6.55,6.56,0.17,24

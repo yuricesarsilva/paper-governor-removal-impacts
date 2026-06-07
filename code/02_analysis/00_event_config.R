@@ -45,63 +45,90 @@ spec <- list(
 # bimonthly pre-periods (and a complete post). Otherwise Regime A.
 regime_b_min_pre_bim <- spec$bimonthly$pre_floor
 
+# SCM predictors:
+#   "yearmeans_plus_covariates" -> yearly means of the pre-outcome path + covariate
+#       means. Parsimonious outcome representation so covariates retain weight
+#       (Kaul, Klössner, Pfeifer & Schieler 2022). A held-out validation pilot
+#       (RJ_2020) showed this matches the out-of-sample prediction of the full-lags
+#       spec while giving a substantially more credible covariate balance.
+#   "lags_plus_covariates"      -> full pre path + covariate means.
+#   "lags_only"                 -> full pre path only (covariates dropped from fit).
+scm_predictors <- "yearmeans_plus_covariates"
+
 # ── Outcome catalog ───────────────────────────────────────────────────────────
-# scaling: "index"   -> SA + rebase to 100 (no deflation / per capita)
-#          "real_pc" -> deflate to real R$ + divide by resident population, then SA
-#          "per100k" -> per 100k resident population, then SA
-# panel:   which built panel holds the SA series ("monthly" or "bimonthly").
+# Pre-specified transformations (literature-grounded; see notes):
+#   scaling "real_pc_log"  -> deflate to real R$, /resident pop, then LOG (fiscal R$)
+#   scaling "index_level"  -> SA index level on the common base (NO window rebase)
+#   scaling "log_emp_rate" -> LOG(employment stock / resident pop) = log formal
+#                             employment rate (labor; stock anchored to Novo CAGED
+#                             Jan/2020 + reconstructed via flows)
+# transform: "log" -> the modelled series is in logs (effect read as exp(gap)-1 %)
+#            "level" -> modelled in levels (effect read as gap / synthetic)
+# mag_threshold: |% effect| required to count as substantive (criterion C2):
+#            0.05 everywhere, 0.02 for labor (formal employment is sticky).
+# panel: which built panel holds the SA series ("monthly" or "bimonthly").
 outcome_catalog <- list(
   retail = list(
-    label = "Retail volume index (PMC)", short = "Retail volume",
+    label = "Retail volume index (PMC, SA level)", short = "Retail volume",
     source = "pmc", value_col = "retail_volume_index",
-    freq = "M", scaling = "index", panel = "monthly", channel = "consumption"
+    freq = "M", scaling = "index_level", transform = "level", mag_threshold = 0.05,
+    panel = "monthly", channel = "consumption"
   ),
   services = list(
-    label = "Services volume index (PMS)", short = "Services volume",
+    label = "Services volume index (PMS, SA level)", short = "Services volume",
     source = "pms", value_col = "services_volume_index",
-    freq = "M", scaling = "index", panel = "monthly", channel = "consumption"
+    freq = "M", scaling = "index_level", transform = "level", mag_threshold = 0.05,
+    panel = "monthly", channel = "consumption"
   ),
   formal_hiring = list(
     label = "Formal hiring balance per 100k pop", short = "Formal hiring",
     source = "caged", value_col = "formal_hiring_balance",
-    freq = "M", scaling = "per100k", panel = "monthly", channel = "labor_market"
+    freq = "M", scaling = "per100k", transform = "level", mag_threshold = 0.02,
+    panel = "monthly", channel = "labor_market", effect_display = "absolute"
   ),
   construction = list(
     label = "Construction hiring balance per 100k pop", short = "Construction",
     source = "caged_construction", value_col = "formal_hiring_balance_construction",
-    freq = "M", scaling = "per100k", panel = "monthly", channel = "labor_market"
+    freq = "M", scaling = "per100k", transform = "level", mag_threshold = 0.02,
+    panel = "monthly", channel = "labor_market", effect_display = "absolute"
   ),
   # Regime A fiscal (CONFAZ, monthly)
   icms_confaz = list(
-    label = "ICMS value added, real per capita (CONFAZ)", short = "ICMS",
+    label = "ICMS value added, log real per capita (CONFAZ)", short = "ICMS",
     source = "confaz", value_col = "va_icms_total",
-    freq = "M", scaling = "real_pc", panel = "monthly", channel = "public_sector"
+    freq = "M", scaling = "real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "monthly", channel = "public_sector"
   ),
   tax_confaz = list(
-    label = "Tax revenue value added, real per capita (CONFAZ)", short = "Tax revenue",
+    label = "Tax revenue value added, log real per capita (CONFAZ)", short = "Tax revenue",
     source = "confaz", value_col = "va_receita_tributaria_total",
-    freq = "M", scaling = "real_pc", panel = "monthly", channel = "public_sector"
+    freq = "M", scaling = "real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "monthly", channel = "public_sector"
   ),
   # Regime B fiscal (SICONFI, bimonthly)
   icms_siconfi = list(
-    label = "ICMS revenue, real per capita (SICONFI)", short = "ICMS",
+    label = "ICMS revenue, log real per capita (SICONFI)", short = "ICMS",
     source = "siconfi_icms", value_col = "icms_revenue_real_pc",
-    freq = "B", scaling = "prebuilt_real_pc", panel = "bimonthly", channel = "public_sector"
+    freq = "B", scaling = "prebuilt_real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "bimonthly", channel = "public_sector"
   ),
   tax_siconfi = list(
-    label = "Own tax revenue, real per capita (SICONFI)", short = "Tax revenue",
+    label = "Own tax revenue, log real per capita (SICONFI)", short = "Tax revenue",
     source = "siconfi", value_col = "state_tax_revenue_real",
-    freq = "B", scaling = "real_pc", panel = "bimonthly", channel = "public_sector"
+    freq = "B", scaling = "real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "bimonthly", channel = "public_sector"
   ),
   investment_siconfi = list(
-    label = "Public investment, real per capita (SICONFI)", short = "Public investment",
+    label = "Public investment, log real per capita (SICONFI)", short = "Public investment",
     source = "siconfi", value_col = "public_investment_liquidated_real",
-    freq = "B", scaling = "real_pc", panel = "bimonthly", channel = "public_sector"
+    freq = "B", scaling = "real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "bimonthly", channel = "public_sector"
   ),
   totalexp_siconfi = list(
-    label = "Total liquidated expenditure, real per capita (SICONFI)", short = "Total expenditure",
+    label = "Total liquidated expenditure, log real per capita (SICONFI)", short = "Total expenditure",
     source = "siconfi", value_col = "liquidated_expenditure_total_real",
-    freq = "B", scaling = "real_pc", panel = "bimonthly", channel = "public_sector"
+    freq = "B", scaling = "real_pc_log", transform = "log", mag_threshold = 0.05,
+    panel = "bimonthly", channel = "public_sector"
   )
 )
 

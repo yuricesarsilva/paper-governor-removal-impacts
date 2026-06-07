@@ -1,7 +1,7 @@
 Channel,Outcome,Mean gap post,RMSPE pre,RMSPE post,Donors,Freq
-Household consumption,Retail volume index (PMC),5.28, 1.57, 6.99,24,monthly
-Household consumption,Services volume index (PMS),0.24, 1.90, 3.17,24,monthly
-Formal labor market,Formal hiring balance per 100k pop,4.07,12.33,23.14,24,monthly
-Formal labor market,Construction hiring balance per 100k pop,0.85, 8.39, 6.36,24,monthly
-State public finances,"ICMS value added, real per capita (CONFAZ)",5.98, 9.96,13.78,24,monthly
-State public finances,"Tax revenue value added, real per capita (CONFAZ)",2.06,13.41,10.03,24,monthly
+Household consumption,"Retail volume index (PMC, SA level)",-1.29, 2.29, 3.12,24,monthly
+Household consumption,"Services volume index (PMS, SA level)", 0.87, 3.32, 3.70,24,monthly
+Formal labor market,Formal hiring balance per 100k pop, 9.93,24.87,23.45,24,monthly
+Formal labor market,Construction hiring balance per 100k pop, 0.54,10.71, 4.94,24,monthly
+State public finances,"ICMS value added, log real per capita (CONFAZ)", 0.05, 0.07, 0.07,24,monthly
+State public finances,"Tax revenue value added, log real per capita (CONFAZ)", 0.02, 0.07, 0.05,24,monthly

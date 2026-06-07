@@ -28,7 +28,11 @@ cov_vars     <- split_csv(meta$covariate_set[[1]])
 
 covariates_raw <- readr::read_csv(file.path(d$data, paste0(event_id, "_covariates.csv")), show_col_types = FALSE)
 main_donor_states <- covariates_raw |> dplyr::filter(.data$donor_pool_main) |> dplyr::pull(.data$state_abbrev) |> sort()
-covariate_data <- covariates_raw |> dplyr::select(dplyr::all_of(c("state_abbrev", cov_vars)))
+covariate_data <- if (identical(scm_predictors, "lags_only")) {
+  covariates_raw |> dplyr::select(dplyr::all_of("state_abbrev"))           # predictors = outcome lags only
+} else {
+  covariates_raw |> dplyr::select(dplyr::all_of(c("state_abbrev", cov_vars)))
+}
 
 monthly_panel <- readr::read_csv(file.path(d$data, paste0(event_id, "_monthly_panel.csv")), show_col_types = FALSE) |>
   dplyr::mutate(period_date = as.Date(.data$period_date))

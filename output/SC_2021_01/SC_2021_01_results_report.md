@@ -1,6 +1,6 @@
 # SC_2021_01 results report (siconfi regime)
 
-Generated on 2026-06-06.
+Generated on 2026-06-07.
 
 Treated state: `SC` (Santa Catarina). Treatment (single accountability cut): effective removal `2021-03-30`.
 Data regime: **siconfi**. Fiscal outcomes (ICMS, tax revenue, public investment, total expenditure) are bimonthly from SICONFI/RREO (STL). Non-fiscal outcomes (retail, services, formal hiring, construction) are monthly (X-13).
@@ -27,39 +27,39 @@ Main donor pool excludes `AL`, `AM`, `RJ`, `RR`, `SC`, `TO` (any state treated a
 
 | Outcome | Treated | Synthetic | RMSPE pre | Pre periods |
 | --- | --- | --- | --- | --- |
-| Retail volume | 104.39 | 104.29 | 1.90 | 36 |
-| Services volume | 101.36 | 101.25 | 1.96 | 36 |
-| Formal hiring | 68.29 | 68.59 | 46.34 | 36 |
-| Construction | 3.04 | 3.35 | 4.28 | 36 |
-| ICMS | 458.10 | 458.29 | 17.14 | 24 |
-| Tax revenue | 588.61 | 590.88 | 21.87 | 24 |
-| Public investment | 45.24 | 44.41 | 8.94 | 24 |
-| Total expenditure | 887.04 | 889.43 | 94.44 | 24 |
+| Retail volume | 91.92 | 91.38 | 3.91 | 36 |
+| Services volume | 85.08 | 85.43 | 3.03 | 36 |
+| Formal hiring | 68.29 | 57.82 | 92.75 | 36 |
+| Construction | 3.04 | 3.37 | 8.27 | 36 |
+| ICMS | 6.12 | 6.15 | 0.08 | 24 |
+| Tax revenue | 6.37 | 6.41 | 0.08 | 24 |
+| Public investment | 3.56 | 3.59 | 0.49 | 24 |
+| Total expenditure | 6.77 | 6.82 | 0.16 | 24 |
 
 ### Covariate balance (treated vs synthetic by outcome)
 
 | Covariate | Treated | Retail volume | Services volume | Formal hiring | Construction | ICMS | Tax revenue | Public investment | Total expenditure |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Unemployment rate |     0.051 |     0.088 |     0.093 |     0.071 |     0.096 |     0.075 |     0.076 |     0.087 |     0.084 |
-| Formalization rate |     0.731 |     0.578 |     0.655 |     0.668 |     0.645 |     0.636 |     0.636 |     0.630 |     0.635 |
-| Labor income (real) | 3,585.959 | 3,140.318 | 3,760.773 | 3,568.498 | 3,549.374 | 3,319.804 | 3,320.153 | 3,492.853 | 3,336.213 |
-| Transfer dependency ratio |     0.052 |     0.123 |     0.060 |     0.064 |     0.067 |     0.074 |     0.076 |     0.076 |     0.103 |
-| Health expenditure pc |   113.240 |   130.977 |   119.063 |   102.004 |   111.465 |   109.568 |   112.431 |   128.537 |   125.189 |
-| Education expenditure pc |   116.976 |   181.079 |   156.717 |   211.420 |   155.682 |   163.063 |   160.933 |   167.548 |   160.231 |
-| Public security expenditure pc |    80.385 |   132.159 |    84.326 |    82.033 |   103.243 |   102.671 |   101.042 |   110.732 |    85.738 |
+| Unemployment rate |     0.051 |     0.071 |     0.076 |     0.072 |     0.072 |     0.071 |     0.072 |     0.078 |     0.076 |
+| Formalization rate |     0.731 |     0.663 |     0.649 |     0.653 |     0.651 |     0.649 |     0.655 |     0.655 |     0.658 |
+| Labor income (real) | 3,585.959 | 3,516.405 | 3,464.513 | 3,498.443 | 3,477.345 | 3,410.969 | 3,456.212 | 3,594.509 | 3,491.119 |
+| Transfer dependency ratio |     0.052 |     0.065 |     0.066 |     0.069 |     0.079 |     0.067 |     0.067 |     0.068 |     0.075 |
+| Health expenditure pc |   113.240 |   112.460 |   109.912 |   107.179 |   117.784 |   102.286 |   112.088 |   112.310 |   116.981 |
+| Education expenditure pc |   116.976 |   156.758 |   151.028 |   202.793 |   163.695 |   177.712 |   147.975 |   196.236 |   167.127 |
+| Public security expenditure pc |    80.385 |    91.155 |   102.155 |   100.229 |    88.990 |    98.421 |    96.277 |    99.632 |    85.623 |
 
 ## Main results: Augmented SCM (SA)
 
 | Channel | Outcome | Mean gap post | RMSPE pre | RMSPE post | Donors | Freq |
 | --- | --- | --- | --- | --- | --- | --- |
-| Household consumption | Retail volume index (PMC) | -10.41 |  1.90 |  12.18 | 21 | monthly |
-| Household consumption | Services volume index (PMS) |  -3.20 |  1.96 |   5.65 | 21 | monthly |
-| Formal labor market | Formal hiring balance per 100k pop |  -1.43 | 46.34 |  45.83 | 21 | monthly |
-| Formal labor market | Construction hiring balance per 100k pop |   2.33 |  4.28 |   7.85 | 21 | monthly |
-| State public finances | ICMS revenue, real per capita (SICONFI) | -17.48 | 17.14 |  50.33 | 20 | bimonthly |
-| State public finances | Own tax revenue, real per capita (SICONFI) | -13.89 | 21.87 |  46.01 | 21 | bimonthly |
-| State public finances | Public investment, real per capita (SICONFI) | -13.64 |  8.94 |  42.82 | 21 | bimonthly |
-| State public finances | Total liquidated expenditure, real per capita (SICONFI) | 157.35 | 94.44 | 185.03 | 21 | bimonthly |
+| Household consumption | Retail volume index (PMC, SA level) |  0.95 |  3.91 |  3.03 | 21 | monthly |
+| Household consumption | Services volume index (PMS, SA level) |  0.55 |  3.03 |  4.73 | 21 | monthly |
+| Formal labor market | Formal hiring balance per 100k pop | -7.96 | 92.75 | 46.96 | 21 | monthly |
+| Formal labor market | Construction hiring balance per 100k pop |  8.81 |  8.27 | 11.44 | 21 | monthly |
+| State public finances | ICMS revenue, log real per capita (SICONFI) | -0.03 |  0.08 |  0.10 | 19 | bimonthly |
+| State public finances | Own tax revenue, log real per capita (SICONFI) |  0.01 |  0.08 |  0.08 | 21 | bimonthly |
+| State public finances | Public investment, log real per capita (SICONFI) |  0.09 |  0.49 |  0.60 | 20 | bimonthly |
+| State public finances | Total liquidated expenditure, log real per capita (SICONFI) |  0.14 |  0.16 |  0.17 | 20 | bimonthly |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -77,14 +77,14 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | RMSPE ratio (post/pre) | p (ratio) | p (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Retail volume | 6.40 | 0.048 | 0.000 | 21 |
-| Services volume | 2.88 | 0.238 | 0.429 | 21 |
-| Formal hiring | 0.99 | 0.857 | 1.000 | 21 |
-| Construction | 1.83 | 0.381 | 1.000 | 21 |
-| ICMS | 2.94 | 0.300 | 0.800 | 20 |
-| Tax revenue | 2.10 | 0.524 | 1.000 | 21 |
-| Public investment | 4.79 | 0.524 | 0.857 | 21 |
-| Total expenditure | 1.96 | 0.524 | 0.286 | 21 |
+| Retail volume | 0.77 | 0.762 | 1.000 | 21 |
+| Services volume | 1.56 | 0.238 | 1.000 | 21 |
+| Formal hiring | 0.51 | 0.952 | 1.000 | 21 |
+| Construction | 1.38 | 0.238 | 0.381 | 21 |
+| ICMS | 1.25 | 0.500 | 1.000 | 20 |
+| Tax revenue | 0.96 | 0.667 | 1.000 | 21 |
+| Public investment | 1.23 | 0.667 | 1.000 | 21 |
+| Total expenditure | 1.08 | 0.429 | 0.333 | 21 |
 
 ![placebo_gaps_outcomes.png](report/figures/placebo_gaps_outcomes.png)
 
@@ -94,14 +94,14 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | Gap post | LOO rank | p (2-sided) |
 | --- | --- | --- | --- |
-| Retail volume | -10.41 | 1 / 22 | 0.045 |
-| Services volume | -3.2 | 1 / 22 | 0.045 |
-| Formal hiring | -1.43 | 1 / 22 | 0.045 |
-| Construction | 2.33 | 12 / 22 | 0.5 |
-| ICMS | -17.48 | 3 / 21 | 0.143 |
-| Tax revenue | -13.89 | 1 / 22 | 0.045 |
-| Public investment | -13.64 | 2 / 22 | 0.091 |
-| Total expenditure | 157.35 | 22 / 22 | 0.045 |
+| Retail volume | 0.95 | 1 / 22 | 0.045 |
+| Services volume | 0.55 | 21 / 22 | 0.091 |
+| Formal hiring | -7.96 | 1 / 22 | 0.045 |
+| Construction | 8.81 | 22 / 22 | 0.045 |
+| ICMS | -0.03 | 2 / 20 | 0.1 |
+| Tax revenue | 0.01 | 2 / 22 | 0.091 |
+| Public investment | 0.09 | 2 / 21 | 0.095 |
+| Total expenditure | 0.14 | 21 / 21 | 0.048 |
 
 ## Evidence classification (5-criterion AugSCM ruler)
 
@@ -109,16 +109,16 @@ We do not rely on placebo p-value thresholds alone. Each outcome is graded on fi
 
 Considerable effects for this event: **1** of 8 outcomes.
 
-| Outcome | Tier | Score | % effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
+| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | strong | 5/5 |  -8.4 | 1.57 | 0.92 | B | 2/22 | 0.091 | 0.90 |
-| Services volume | non-interpretable | 1/5 |  -2.7 | 0.62 | 0.67 | C | 6/22 | 0.273 | 0.00 |
-| Formal hiring | non-interpretable | 0/5 |  -1.1 | 0.01 | 0.54 | D | 19/22 | 0.864 | 0.00 |
-| Construction | weak | 3/5 |  22.9 | 0.18 | 0.62 | A | 9/22 | 0.409 | 1.00 |
-| ICMS | weak | 3/5 |  -3.2 | 0.46 | 0.75 | B | 7/21 | 0.333 | 0.95 |
-| Tax revenue | weak | 1/5 |  -2.0 | 0.30 | 0.50 | B | 12/22 | 0.545 | 0.10 |
-| Public investment | non-interpretable | 2/5 | -13.4 | 0.82 | 0.75 | C | 12/22 | 0.545 | 0.95 |
-| Total expenditure | non-interpretable | 3/5 |  19.4 | 1.10 | 0.92 | C | 12/22 | 0.545 | 1.00 |
+| Retail volume | non-interpretable | 2/5 | +1.0% | 0.16 | 0.71 | C | 17/22 | 0.773 | 1.00 |
+| Services volume | weak | 1/5 | +0.6% | 0.13 | 0.58 | C | 6/22 | 0.273 | 0.14 |
+| Formal hiring | non-interpretable | 1/5 | -8.0 | 0.04 | 0.62 | D | 21/22 | 0.955 | 0.05 |
+| Construction | weak | 3/5 | +8.8 | 0.67 | 0.83 | B | 6/22 | 0.273 | 1.00 |
+| ICMS | weak | 3/5 | -3.4% | 0.40 | 0.75 | B | 11/21 | 0.524 | 0.89 |
+| Tax revenue | weak | 2/5 | +0.8% | 0.10 | 0.50 | B | 15/22 | 0.682 | 0.95 |
+| Public investment | weak | 2/5 | +9.1% | 0.22 | 0.58 | C | 15/22 | 0.682 | 1.00 |
+| Total expenditure | suggestive | 4/5 | +14.7% | 1.09 | 0.83 | C | 10/22 | 0.455 | 1.00 |
 
 Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
 

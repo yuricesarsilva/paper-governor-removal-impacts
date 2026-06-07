@@ -1,9 +1,9 @@
 Channel,Outcome,Mean gap post,RMSPE pre,RMSPE post,Donors,Freq
-Household consumption,Retail volume index (PMC), -7.22, 1.34,  9.32,22,monthly
-Household consumption,Services volume index (PMS),  3.02, 1.66,  5.14,22,monthly
-Formal labor market,Formal hiring balance per 100k pop, 16.17,55.62, 51.29,22,monthly
-Formal labor market,Construction hiring balance per 100k pop,  3.13, 4.02,  8.03,22,monthly
-State public finances,"ICMS revenue, real per capita (SICONFI)",-11.57,17.53, 49.95,21,bimonthly
-State public finances,"Own tax revenue, real per capita (SICONFI)", -5.12,24.20, 45.58,22,bimonthly
-State public finances,"Public investment, real per capita (SICONFI)",  3.25,14.02, 27.50,22,bimonthly
-State public finances,"Total liquidated expenditure, real per capita (SICONFI)",128.72,84.92,159.35,22,bimonthly
+Household consumption,"Retail volume index (PMC, SA level)", 3.16,  3.59, 4.67,22,monthly
+Household consumption,"Services volume index (PMS, SA level)", 0.05,  2.41, 3.79,22,monthly
+Formal labor market,Formal hiring balance per 100k pop, 9.97,104.63,60.16,22,monthly
+Formal labor market,Construction hiring balance per 100k pop, 8.01,  7.76,11.22,22,monthly
+State public finances,"ICMS revenue, log real per capita (SICONFI)",-0.03,  0.08, 0.13,20,bimonthly
+State public finances,"Own tax revenue, log real per capita (SICONFI)", 0.02,  0.10, 0.08,22,bimonthly
+State public finances,"Public investment, log real per capita (SICONFI)", 0.04,  0.47, 0.58,22,bimonthly
+State public finances,"Total liquidated expenditure, log real per capita (SICONFI)", 0.15,  0.18, 0.18,21,bimonthly

@@ -56,26 +56,25 @@ tier_cols <- c(strong = "#1a9850", moderate = "#91cf60", suggestive = "#fee08b",
                weak = "#f0f0f0", `non-interpretable` = "gray85")
 hm <- ggplot2::ggplot(master, ggplot2::aes(.data$outcome_f, .data$event_f, fill = .data$tier_f)) +
   ggplot2::geom_tile(color = "white", linewidth = 0.5) +
-  ggplot2::geom_text(ggplot2::aes(label = ifelse(.data$considerable & is.finite(.data$pct_effect),
-                                                  sprintf("%+.0f%%", .data$pct_effect), "")), size = 3) +
+  ggplot2::geom_text(ggplot2::aes(label = ifelse(.data$tier != "non-interpretable", .data$effect_label, "")), size = 3) +
   ggplot2::scale_fill_manual(values = tier_cols, drop = FALSE, name = "evidence tier") +
   ggplot2::labs(title = "Evidence strength by event and outcome (5-criterion AugSCM ruler)",
-                subtitle = "Labels: signed post effect (% of synthetic) for considerable effects (strong/moderate/suggestive)",
+                subtitle = "Labels: signed post effect for all eligible cells (% of synthetic; labor flows per 100k). Blank = non-interpretable (poor pre-fit).",
                 x = NULL, y = NULL) +
   ggplot2::theme_minimal(base_size = 12) +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 30, hjust = 1), panel.grid = ggplot2::element_blank())
 ggplot2::ggsave(file.path(fig_dir, "cross_event_evidence_tiers.png"), hm, width = 11, height = 7, dpi = 300, bg = "white")
 
 # (b) Considerable effects: signed % effect, faceted by channel, colored by tier.
-cons <- master |> dplyr::filter(.data$considerable, is.finite(.data$pct_effect))
+cons <- master |> dplyr::filter(.data$considerable, is.finite(.data$effect_for_plot))
 if (nrow(cons) > 0) {
-  gp <- ggplot2::ggplot(cons, ggplot2::aes(.data$pct_effect, .data$event_f, color = .data$tier_f)) +
+  gp <- ggplot2::ggplot(cons, ggplot2::aes(.data$effect_for_plot, .data$event_f, color = .data$tier_f)) +
     ggplot2::geom_vline(xintercept = 0, color = "gray70", linewidth = 0.4) +
     ggplot2::geom_point(size = 2.8) +
     ggplot2::facet_wrap(~ channel_labels[.data$channel], scales = "free", ncol = 2) +
     ggplot2::scale_color_manual(values = tier_cols, drop = FALSE, name = "tier") +
-    ggplot2::labs(title = "Considerable effects: signed magnitude (% of synthetic)",
-                  subtitle = "Only strong/moderate/suggestive effects shown", x = "Post effect (% of synthetic counterfactual)", y = NULL) +
+    ggplot2::labs(title = "Considerable effects: signed magnitude",
+                  subtitle = "Post effect — % of synthetic (fiscal/consumption) or absolute gap per 100k (labor flows)", x = "Post effect", y = NULL) +
     base_theme()
   ggplot2::ggsave(file.path(fig_dir, "cross_event_considerable_effects.png"), gp, width = 12, height = 7, dpi = 300, bg = "white")
 }
@@ -102,7 +101,7 @@ by_channel <- cons_all |> dplyr::mutate(ch = channel_labels[.data$channel]) |> g
 # Master table (considerable + a compact line per event-outcome with tier).
 master_tab <- master |> dplyr::arrange(.data$event_f, .data$outcome_f) |>
   dplyr::transmute(Event = .data$event_id, Outcome = .data$short, Tier = .data$tier,
-                   Score = paste0(.data$robustness_score, "/5"), `% eff` = fmt(.data$pct_effect, 0),
+                   Score = paste0(.data$robustness_score, "/5"), Effect = .data$effect_label,
                    `Pre-fit` = .data$prefit_class, `Rank` = ifelse(is.na(.data$rank), "", paste0(.data$rank, "/", .data$n_units)),
                    `p` = fmt(.data$classic_p, 2), Dir = .data$direction)
 

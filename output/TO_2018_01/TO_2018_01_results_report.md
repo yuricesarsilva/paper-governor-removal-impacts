@@ -1,6 +1,6 @@
 # TO_2018_01 results report (confaz regime)
 
-Generated on 2026-06-06.
+Generated on 2026-06-07.
 
 Treated state: `TO` (Tocantins). Treatment (single accountability cut): effective removal `2018-03-22`.
 Data regime: **confaz**. All outcomes are monthly (X-13); fiscal outcomes (ICMS, tax revenue) are from CONFAZ.
@@ -26,34 +26,34 @@ Main donor pool excludes `AM`, `RR`, `TO` (any state treated anywhere in the SCM
 
 | Outcome | Treated | Synthetic | RMSPE pre | Pre periods |
 | --- | --- | --- | --- | --- |
-| Retail volume | 92.57 | 92.60 | 1.87 | 36 |
-| Services volume | 97.00 | 96.90 | 3.80 | 36 |
-| Formal hiring | -15.54 | -16.18 | 11.80 | 36 |
-| Construction | -5.59 | -6.82 | 10.52 | 36 |
-| ICMS | 135.87 | 137.01 | 7.18 | 36 |
-| Tax revenue | 152.87 | 153.26 | 7.14 | 36 |
+| Retail volume | 99.86 | 100.17 | 4.03 | 36 |
+| Services volume | 90.26 | 89.33 | 8.84 | 36 |
+| Formal hiring | -15.54 | -15.29 | 24.78 | 36 |
+| Construction | -5.59 | -5.85 | 16.86 | 36 |
+| ICMS | 4.91 | 4.90 | 0.07 | 36 |
+| Tax revenue | 5.03 | 5.02 | 0.08 | 36 |
 
 ### Covariate balance (treated vs synthetic by outcome)
 
 | Covariate | Treated | Retail volume | Services volume | Formal hiring | Construction | ICMS | Tax revenue |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ICMS secondary VA pc |  14.199 | 19.750 | 15.141 | 17.146 |  16.473 | 15.598 |  14.824 |
-| ICMS tertiary VA pc |  37.046 | 56.222 | 62.418 | 47.553 |  72.897 | 49.391 |  48.268 |
-| ICMS energy VA pc |   9.989 |  9.646 |  8.072 |  7.792 |   8.378 |  8.393 |   8.135 |
-| ICMS fuels VA pc |  29.923 | 22.081 | 21.810 | 17.314 |  19.271 | 24.751 |  24.790 |
-| FPE transfer pc | 149.357 | 59.455 | 59.948 | 74.870 | 131.449 | 98.034 | 100.653 |
-| IOF-state pc |   0.000 |  0.005 |  0.007 |  0.002 |   0.008 |  0.005 |   0.005 |
+| ICMS secondary VA pc |  14.199 | 16.143 | 21.418 | 15.323 | 20.597 |  16.003 |  16.009 |
+| ICMS tertiary VA pc |  37.046 | 48.409 | 40.697 | 54.519 | 71.965 |  52.664 |  52.334 |
+| ICMS energy VA pc |   9.989 |  8.978 |  9.595 |  8.381 | 10.085 |   8.717 |   8.709 |
+| ICMS fuels VA pc |  29.923 | 23.907 | 27.607 | 18.853 | 22.595 |  26.109 |  26.015 |
+| FPE transfer pc | 149.357 | 98.314 | 62.851 | 91.642 | 95.637 | 100.505 | 102.190 |
+| IOF-state pc |   0.000 |  0.005 |  0.005 |  0.002 |  0.001 |   0.005 |   0.005 |
 
 ## Main results: Augmented SCM (SA)
 
 | Channel | Outcome | Mean gap post | RMSPE pre | RMSPE post | Donors | Freq |
 | --- | --- | --- | --- | --- | --- | --- |
-| Household consumption | Retail volume index (PMC) |  7.09 |  1.87 |  9.31 | 24 | monthly |
-| Household consumption | Services volume index (PMS) |  0.97 |  3.80 |  5.74 | 24 | monthly |
-| Formal labor market | Formal hiring balance per 100k pop | -7.56 | 11.80 | 19.66 | 24 | monthly |
-| Formal labor market | Construction hiring balance per 100k pop | -6.17 | 10.52 | 20.51 | 24 | monthly |
-| State public finances | ICMS value added, real per capita (CONFAZ) |  5.38 |  7.18 | 10.36 | 24 | monthly |
-| State public finances | Tax revenue value added, real per capita (CONFAZ) |  1.13 |  7.14 | 12.74 | 24 | monthly |
+| Household consumption | Retail volume index (PMC, SA level) |  8.51 |  4.03 |  9.95 | 24 | monthly |
+| Household consumption | Services volume index (PMS, SA level) | -0.86 |  8.84 |  5.15 | 24 | monthly |
+| Formal labor market | Formal hiring balance per 100k pop | -1.31 | 24.78 | 26.52 | 24 | monthly |
+| Formal labor market | Construction hiring balance per 100k pop | -8.21 | 16.86 | 20.26 | 24 | monthly |
+| State public finances | ICMS value added, log real per capita (CONFAZ) |  0.06 |  0.07 |  0.10 | 24 | monthly |
+| State public finances | Tax revenue value added, log real per capita (CONFAZ) |  0.03 |  0.08 |  0.10 | 24 | monthly |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -71,12 +71,12 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | RMSPE ratio (post/pre) | p (ratio) | p (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Retail volume | 4.98 | 0.292 | 0.167 | 24 |
-| Services volume | 1.51 | 0.792 | 1.000 | 24 |
-| Formal hiring | 1.67 | 0.417 | 1.000 | 24 |
-| Construction | 1.95 | 0.000 | 0.500 | 24 |
-| ICMS | 1.44 | 0.833 | 0.875 | 24 |
-| Tax revenue | 1.79 | 0.500 | 1.000 | 24 |
+| Retail volume | 2.47 | 0.083 | 0.000 | 24 |
+| Services volume | 0.58 | 1.000 | 1.000 | 24 |
+| Formal hiring | 1.07 | 0.417 | 1.000 | 24 |
+| Construction | 1.20 | 0.000 | 0.125 | 24 |
+| ICMS | 1.47 | 0.333 | 0.625 | 24 |
+| Tax revenue | 1.22 | 0.583 | 0.958 | 24 |
 
 ![placebo_gaps_outcomes.png](report/figures/placebo_gaps_outcomes.png)
 
@@ -86,12 +86,12 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | Gap post | LOO rank | p (2-sided) |
 | --- | --- | --- | --- |
-| Retail volume | 7.09 | 24 / 25 | 0.08 |
-| Services volume | 0.97 | 25 / 25 | 0.04 |
-| Formal hiring | -7.56 | 1 / 25 | 0.04 |
-| Construction | -6.17 | 23 / 25 | 0.12 |
-| ICMS | 5.38 | 2 / 25 | 0.08 |
-| Tax revenue | 1.13 | 2 / 25 | 0.08 |
+| Retail volume | 8.51 | 2 / 25 | 0.08 |
+| Services volume | -0.86 | 25 / 25 | 0.04 |
+| Formal hiring | -1.31 | 24 / 25 | 0.08 |
+| Construction | -8.21 | 4 / 25 | 0.16 |
+| ICMS | 0.06 | 3 / 25 | 0.12 |
+| Tax revenue | 0.03 | 2 / 25 | 0.08 |
 
 ## Evidence classification (5-criterion AugSCM ruler)
 
@@ -99,14 +99,14 @@ We do not rely on placebo p-value thresholds alone. Each outcome is graded on fi
 
 Considerable effects for this event: **0** of 6 outcomes.
 
-| Outcome | Tier | Score | % effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
+| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | non-interpretable | 3/5 |    7.6 | 1.48 | 0.92 | D | 8/25 | 0.320 | 1.00 |
-| Services volume | non-interpretable | 0/5 |    1.2 | 0.11 | 0.46 | D | 20/25 | 0.800 | 0.08 |
-| Formal hiring | weak | 3/5 |  -49.4 | 0.34 | 0.67 | A | 11/25 | 0.440 | 1.00 |
-| Construction | non-interpretable | 3/5 | -732.4 | 0.39 | 0.67 | D | 1/25 | 0.040 | 1.00 |
-| ICMS | weak | 3/5 |    3.7 | 0.68 | 0.75 | B | 21/25 | 0.840 | 1.00 |
-| Tax revenue | weak | 2/5 |    0.7 | 0.13 | 0.58 | B | 13/25 | 0.520 | 0.96 |
+| Retail volume | non-interpretable | 4/5 | +8.6% | 1.65 | 0.96 | D | 3/25 | 0.120 | 1.00 |
+| Services volume | non-interpretable | 2/5 | -1.1% | 0.10 | 0.75 | D | 25/25 | 1.000 | 1.00 |
+| Formal hiring | weak | 2/5 | -1.3 | 0.06 | 0.58 | B | 11/25 | 0.440 | 1.00 |
+| Construction | non-interpretable | 3/5 | -8.2 | 0.52 | 0.71 | D | 1/25 | 0.040 | 1.00 |
+| ICMS | non-interpretable | 3/5 | +6.2% | 1.03 | 0.88 | C | 9/25 | 0.360 | 1.00 |
+| Tax revenue | weak | 3/5 | +3.5% | 0.61 | 0.71 | B | 15/25 | 0.600 | 1.00 |
 
 Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
 

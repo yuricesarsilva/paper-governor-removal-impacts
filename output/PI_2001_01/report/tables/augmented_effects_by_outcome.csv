@@ -1,4 +1,4 @@
 Channel,Outcome,Mean gap post,RMSPE pre,RMSPE post,Donors,Freq
-Household consumption,Retail volume index (PMC),16.02,0.85,17.45,26,monthly
-State public finances,"ICMS value added, real per capita (CONFAZ)",-1.17,0.49, 1.64,26,monthly
-State public finances,"Tax revenue value added, real per capita (CONFAZ)",-1.26,0.24, 1.87,26,monthly
+Household consumption,"Retail volume index (PMC, SA level)", 6.29,0.96,6.66,26,monthly
+State public finances,"ICMS value added, log real per capita (CONFAZ)",-0.07,0.08,0.10,26,monthly
+State public finances,"Tax revenue value added, log real per capita (CONFAZ)",-0.07,0.08,0.09,26,monthly

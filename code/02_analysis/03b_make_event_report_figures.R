@@ -41,12 +41,22 @@ otab <- tibble::tibble(
   family  = c(rep("monthly", length(qual_monthly)), rep("bimonthly", length(qual_bim)))
 ) |>
   dplyr::mutate(short = vapply(.data$outcome, function(k) outcome_catalog[[k]]$short, character(1)),
-                channel = vapply(.data$outcome, function(k) outcome_catalog[[k]]$channel, character(1)))
+                channel = vapply(.data$outcome, function(k) outcome_catalog[[k]]$channel, character(1)),
+                transform = vapply(.data$outcome, function(k) {
+                  tr <- outcome_catalog[[k]]$transform; if (is.null(tr)) "level" else tr }, character(1)))
 order_keys <- intersect(names(outcome_catalog), otab$outcome)
 otab <- otab |> dplyr::arrange(match(.data$outcome, order_keys))
 short_levels <- otab$short
 as_facet <- function(x) factor(x, levels = short_levels)
 panel_for <- function(fam) if (fam == "monthly") monthly_panel else bimonthly_panel
+tr_of <- function(sh) otab$transform[match(sh, otab$short)]
+
+# Display back-transforms: log outcomes are modelled in logs but shown in levels
+# (paths/preliminary) and as % deviations (gaps); level outcomes shown as-is.
+# NB: transform is a scalar per outcome; use if (not ifelse, which would collapse
+# a vectorised value to length 1 and flatten the series).
+disp_level <- function(value, transform) if (identical(transform[[1]], "log")) exp(value) else value
+disp_gap   <- function(gap, transform)   if (identical(transform[[1]], "log")) 100 * (exp(gap) - 1) else gap
 
 placebo_dir <- file.path(d$scm, "placebo_inspace")
 has_placebo <- file.exists(file.path(placebo_dir, "placebo_paths.csv"))
@@ -68,14 +78,18 @@ load_paths <- function() purrr::map_dfr(seq_len(nrow(otab)), function(i) {
   f <- file.path(d$scm, r$family, "sa", paste0(make_slug(r$outcome), "_path.csv"))
   if (!file.exists(f)) return(NULL)
   readr::read_csv(f, show_col_types = FALSE) |>
-    dplyr::mutate(period_date = as.Date(.data$period_date), short = r$short)
+    dplyr::mutate(period_date = as.Date(.data$period_date), short = r$short,
+                  disp_treated = disp_level(.data$treated_value, r$transform),
+                  disp_synth   = disp_level(.data$augmented_synthetic_value, r$transform),
+                  disp_gap     = disp_gap(.data$augmented_gap, r$transform))
 })
 
 # ── Preliminary ───────────────────────────────────────────────────────────────
 prelim_data <- purrr::map_dfr(seq_len(nrow(otab)), function(i) {
   r <- otab[i, ]; pn <- panel_for(r$family)
   pn |> dplyr::filter(.data$state_abbrev %in% c(treated_state, main_donor_states)) |>
-    dplyr::transmute(.data$period_date, .data$state_abbrev, value = .data[[r$outcome]],
+    dplyr::transmute(.data$period_date, .data$state_abbrev,
+                     value = disp_level(.data[[r$outcome]], r$transform),
                      short = r$short, treated = .data$state_abbrev == treated_state)
 }) |> dplyr::mutate(short = as_facet(.data$short))
 
@@ -111,22 +125,23 @@ save_plot(prelim, "preliminary_outcomes.png")
 paths <- load_paths()
 if (!is.null(paths) && nrow(paths) > 0) {
   paths <- paths |> dplyr::mutate(short = as_facet(.data$short))
-  pl <- paths |> tidyr::pivot_longer(c("treated_value", "augmented_synthetic_value"),
+  pl <- paths |> tidyr::pivot_longer(c("disp_treated", "disp_synth"),
           names_to = "series", values_to = "value") |>
-    dplyr::mutate(series = dplyr::recode(.data$series, treated_value = treated_label, augmented_synthetic_value = "Synthetic"))
+    dplyr::mutate(series = dplyr::recode(.data$series, disp_treated = treated_label, disp_synth = "Synthetic"))
   save_plot(ggplot2::ggplot(pl, ggplot2::aes(.data$period_date, .data$value, color = .data$series)) +
     ggplot2::geom_line(linewidth = 1.1) + vline() +
     ggplot2::scale_color_manual(values = stats::setNames(c("#1f6f8b", "#6a3d9a"), c(treated_label, "Synthetic"))) +
     ggplot2::scale_x_date(date_labels = "%Y") + ggplot2::facet_wrap(~short, scales = "free_y", ncol = 2) +
-    ggplot2::labs(title = paste0("Augmented SCM paths (SA): ", event_id), subtitle = "Dashed = effective removal",
+    ggplot2::labs(title = paste0("Augmented SCM paths (SA): ", event_id),
+                  subtitle = "Levels (fiscal R$ pc, employment rate %, index); dashed = effective removal",
                   x = NULL, y = NULL, color = NULL) + base_theme(), "augmented_paths_outcomes.png")
 
-  save_plot(ggplot2::ggplot(paths, ggplot2::aes(.data$period_date, .data$augmented_gap)) +
+  save_plot(ggplot2::ggplot(paths, ggplot2::aes(.data$period_date, .data$disp_gap)) +
     ggplot2::geom_hline(yintercept = 0, color = "gray60", linewidth = 0.4) +
     ggplot2::geom_line(color = "#6a3d9a", linewidth = 1.1) + vline() +
     ggplot2::scale_x_date(date_labels = "%Y") + ggplot2::facet_wrap(~short, scales = "free_y", ncol = 2) +
     ggplot2::labs(title = paste0("Augmented SCM gaps (SA): ", event_id),
-                  subtitle = paste0("Gap = ", treated_label, " minus synthetic; dashed = removal"), x = NULL, y = NULL) +
+                  subtitle = paste0("Gap = ", treated_label, " minus synthetic (fiscal in %, others in level units); dashed = removal"), x = NULL, y = NULL) +
     base_theme(), "augmented_gaps_outcomes.png")
 }
 

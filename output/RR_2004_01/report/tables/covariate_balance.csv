@@ -1,7 +1,7 @@
 Covariate,Treated,Retail volume,ICMS,Tax revenue
-ICMS secondary VA pc,  2.915, 5.445, 2.422, 2.384
-ICMS tertiary VA pc, 17.299,37.681,24.173,24.385
-ICMS energy VA pc,  1.220, 1.893, 2.061, 2.048
-ICMS fuels VA pc,  9.265, 3.022, 7.815, 7.793
-FPE transfer pc,120.770,33.229,73.779,74.011
-IOF-state pc,  0.004, 0.000, 0.007, 0.007
+ICMS secondary VA pc,  2.915, 2.356, 2.386, 2.381
+ICMS tertiary VA pc, 17.299,24.481,23.622,24.391
+ICMS energy VA pc,  1.220, 2.131, 2.082, 2.057
+ICMS fuels VA pc,  9.265, 7.883, 7.862, 7.803
+FPE transfer pc,120.770,72.017,73.247,73.790
+IOF-state pc,  0.004, 0.006, 0.007, 0.007

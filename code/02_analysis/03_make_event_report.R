@@ -126,7 +126,7 @@ evid_md <- if (nrow(evid) == 0) NULL else evid |>
   dplyr::arrange(match(.data$outcome, order_keys)) |>
   dplyr::transmute(
     Outcome = .data$short, Tier = .data$tier, Score = paste0(.data$robustness_score, "/5"),
-    `% effect` = fmt(.data$pct_effect, 1), `Mag (pre-SD)` = fmt(.data$mag_sd, 2),
+    Effect = .data$effect_label, `Mag (pre-SD)` = fmt(.data$mag_sd, 2),
     Persist = fmt(.data$persistence, 2), `Pre-fit` = .data$prefit_class,
     `Placebo rank` = ifelse(is.na(.data$rank), "", paste0(.data$rank, "/", .data$n_units)),
     `p (rank/N)` = fmt(.data$classic_p, 3), `LOO sign` = fmt(.data$loo_frac_same_sign, 2))

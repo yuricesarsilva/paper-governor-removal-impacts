@@ -40,7 +40,8 @@ parse_siconfi_value <- function(x) {
 # score >= 3 (i.e. at least suggestive; placebo p <= 0.15 band).
 #
 # All inputs come from files already written by stages 02/02b; no refitting.
-evidence_thresholds <- list(mag_sd = 1.0, persist = 0.60, placebo_p = 0.15, loo = 0.80, pretrend_p = 0.10)
+evidence_thresholds <- list(mag_sd = 1.0, persist = 0.60, placebo_p = 0.15, loo = 0.80,
+                            pretrend_p = 0.10, prefit_pctile = 0.75)
 
 # Tier from the five criteria. Pre-fit (C1) is a hard gate. Beyond the raw 0-5
 # score we require placebo evidence (C4) for "moderate"+, and at least one of
@@ -72,9 +73,26 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
     p <- readr::read_csv(path_f, show_col_types = FALSE)
     post <- p |> dplyr::filter(.data$analysis_period == "post")
     pre  <- p |> dplyr::filter(.data$analysis_period == "pre")
+    transform      <- if (!is.null(cat_o$transform)) cat_o$transform else "level"
+    mag_threshold  <- if (!is.null(cat_o$mag_threshold)) cat_o$mag_threshold else 0.05
+    effect_display <- if (!is.null(cat_o$effect_display)) cat_o$effect_display else "pct"
     gap_post <- mean(post$augmented_gap, na.rm = TRUE)
     synth_post <- mean(post$augmented_synthetic_value, na.rm = TRUE)
-    pct_effect <- if (is.finite(synth_post) && abs(synth_post) > 1e-9) 100 * gap_post / synth_post else NA_real_
+    # % effect of synthetic: for log outcomes exp(gap)-1; for level outcomes gap/synth.
+    # Flow outcomes (synth ~ 0) are reported as the absolute gap, not %.
+    pct_effect <- if (identical(effect_display, "absolute")) {
+      NA_real_
+    } else if (identical(transform, "log")) {
+      100 * (exp(gap_post) - 1)
+    } else if (is.finite(synth_post) && abs(synth_post) > 1e-9) {
+      100 * gap_post / synth_post
+    } else NA_real_
+    effect_for_plot <- if (identical(effect_display, "absolute")) gap_post else pct_effect
+    effect_label <- if (identical(effect_display, "absolute")) {
+      formatC(gap_post, format = "f", digits = 1, flag = "+")
+    } else if (is.finite(pct_effect)) {
+      paste0(formatC(pct_effect, format = "f", digits = 1, flag = "+"), "%")
+    } else ""
     pre_sd <- stats::sd(pre$treated_value, na.rm = TRUE)
     mag_sd <- if (is.finite(pre_sd) && pre_sd > 0) abs(gap_post) / pre_sd else NA_real_
     persistence <- mean(sign(post$augmented_gap) == sign(gap_post), na.rm = TRUE)
@@ -87,7 +105,10 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
     med_donor_pre <- if (length(donor_pre)) stats::median(donor_pre, na.rm = TRUE) else NA_real_
     pre_pctile <- if (length(donor_pre)) mean(donor_pre < treated_pre, na.rm = TRUE) else NA_real_
     no_pretrend <- is.na(pre_trend_p) || pre_trend_p >= thr$pretrend_p
-    prefit_ok <- is.finite(treated_pre) && is.finite(med_donor_pre) && treated_pre <= med_donor_pre && no_pretrend
+    # Adequate pre-fit = treated is not in the worst quartile of donor fits
+    # (a median split would mechanically fail ~half regardless of quality), and
+    # the pre-treatment gap has no significant trend.
+    prefit_ok <- is.finite(pre_pctile) && pre_pctile <= thr$prefit_pctile && no_pretrend
     prefit_class <- if (!is.finite(pre_pctile)) "D" else if (pre_pctile <= 0.25 && no_pretrend) "A" else
       if (pre_pctile <= 0.50 && no_pretrend) "B" else if (pre_pctile <= 0.75) "C" else "D"
 
@@ -108,7 +129,7 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
     }
 
     C1 <- isTRUE(prefit_ok)
-    C2 <- is.finite(mag_sd) && mag_sd >= thr$mag_sd
+    C2 <- is.finite(mag_sd) && mag_sd >= thr$mag_sd   # |post gap| >= 1 pre-period SD (signal vs pre-noise)
     C3 <- is.finite(persistence) && persistence >= thr$persist
     C4 <- is.finite(classic_p) && classic_p <= thr$placebo_p
     C5 <- is.finite(loo_frac) && loo_frac >= thr$loo
@@ -117,7 +138,8 @@ build_evidence_table <- function(event_id, thr = evidence_thresholds) {
 
     tibble::tibble(
       event_id = event_id, outcome = o, short = cat_o$short, channel = cat_o$channel, family = fam,
-      gap_post = gap_post, pct_effect = pct_effect, mag_sd = mag_sd, persistence = persistence,
+      gap_post = gap_post, pct_effect = pct_effect, effect_display = effect_display,
+      effect_for_plot = effect_for_plot, effect_label = effect_label, mag_sd = mag_sd, persistence = persistence,
       pre_trend_p = pre_trend_p, treated_pre_rmspe = treated_pre, median_donor_pre_rmspe = med_donor_pre,
       prefit_class = prefit_class, rank = rank, n_units = n_units, classic_p = classic_p,
       loo_frac_same_sign = loo_frac,
@@ -263,7 +285,22 @@ loocv_lambda <- function(x, y, lambdas) {
 }
 lambda_grid <- 10^seq(-4, 5, length.out = 20)
 
-# Predictor matrix: full pre-treatment outcome path (own lags) + covariate means.
+# Collapse the full pre-outcome path (periods x states) to one row per calendar
+# year (the parsimonious outcome representation used by spec "yearmeans_plus_covariates").
+yearly_means_mat <- function(om, years) {
+  ys <- sort(unique(years))
+  out <- t(vapply(ys, function(y) {
+    r <- which(years == y)
+    if (length(r) == 1L) om[r, ] else colMeans(om[r, , drop = FALSE])
+  }, numeric(ncol(om))))
+  rownames(out) <- paste0("ym_", ys); colnames(out) <- colnames(om)
+  out
+}
+
+# Predictor matrix. scm_predictors (config) selects the outcome representation:
+#   "lags_plus_covariates"      -> full pre path + covariate means
+#   "lags_only"                 -> full pre path only
+#   "yearmeans_plus_covariates" -> yearly means of the pre path + covariate means
 build_predictor_matrix <- function(data, outcome, treated_state, donor_states,
                                     covariate_data, min_pre) {
   states <- c(treated_state, donor_states)
@@ -278,6 +315,16 @@ build_predictor_matrix <- function(data, outcome, treated_state, donor_states,
   om <- pre_data |> dplyr::select(dplyr::all_of(states)) |> as.matrix()
   rownames(om) <- paste0("pre_", format(pre_data$period_date, "%Y_%m_%d"))
 
+  outcome_block <- if (identical(scm_predictors, "yearmeans_plus_covariates")) {
+    yearly_means_mat(om, lubridate::year(pre_data$period_date))
+  } else om
+
+  cov_cols <- setdiff(names(covariate_data), "state_abbrev")
+  if (identical(scm_predictors, "lags_only") || length(cov_cols) == 0) {
+    if (anyNA(outcome_block)) stop("Missing values in predictor matrix: ", outcome)
+    return(outcome_block)
+  }
+
   cl <- covariate_data |>
     dplyr::filter(.data$state_abbrev %in% states) |>
     tidyr::pivot_longer(-.data$state_abbrev, names_to = "pred", values_to = "val") |>
@@ -286,7 +333,7 @@ build_predictor_matrix <- function(data, outcome, treated_state, donor_states,
   cm <- cl |> dplyr::select(dplyr::all_of(states)) |> as.matrix()
   rownames(cm) <- paste0("cov_", cl$pred)
 
-  pm <- rbind(om, cm)
+  pm <- rbind(outcome_block, cm)
   if (anyNA(pm)) stop("Missing values in predictor matrix: ", outcome)
   pm
 }
@@ -461,14 +508,21 @@ fit_ascm_for_unit <- function(data, outcome, pseudo_treated, donor_pool, covaria
 
   om <- pre |> dplyr::select(dplyr::all_of(all_st)) |> as.matrix()
   rownames(om) <- paste0("pre_", format(pre$period_date, "%Y_%m_%d"))
-  cl <- covariate_data |>
-    dplyr::filter(.data$state_abbrev %in% all_st) |>
-    tidyr::pivot_longer(-.data$state_abbrev, names_to = "p", values_to = "v") |>
-    tidyr::pivot_wider(names_from = .data$state_abbrev, values_from = .data$v) |>
-    dplyr::arrange(.data$p)
-  cm <- cl |> dplyr::select(dplyr::all_of(all_st)) |> as.matrix()
-  rownames(cm) <- paste0("cov_", cl$p)
-  pm <- rbind(om, cm)
+  outcome_block <- if (identical(scm_predictors, "yearmeans_plus_covariates")) {
+    yearly_means_mat(om, lubridate::year(pre$period_date))
+  } else om
+  if (identical(scm_predictors, "lags_only") || length(setdiff(names(covariate_data), "state_abbrev")) == 0) {
+    pm <- outcome_block
+  } else {
+    cl <- covariate_data |>
+      dplyr::filter(.data$state_abbrev %in% all_st) |>
+      tidyr::pivot_longer(-.data$state_abbrev, names_to = "p", values_to = "v") |>
+      tidyr::pivot_wider(names_from = .data$state_abbrev, values_from = .data$v) |>
+      dplyr::arrange(.data$p)
+    cm <- cl |> dplyr::select(dplyr::all_of(all_st)) |> as.matrix()
+    rownames(cm) <- paste0("cov_", cl$p)
+    pm <- rbind(outcome_block, cm)
+  }
   if (anyNA(pm)) return(NULL)
 
   sc <- standardize_by_row(pm)

@@ -114,8 +114,11 @@ load_monthly <- function(f, col) readr::read_csv(dp(f), show_col_types = FALSE) 
   dplyr::transmute(state_abbrev = .data$state_abbrev, period_date = as.Date(.data$period_date),
                    value = as.numeric(.data[[col]]))
 
+log_pos <- function(x) ifelse(is.finite(x) & x > 0, log(x), NA_real_)
+
 retail <- load_monthly("pmc_retail_monthly_panel_ready.csv", "retail_volume_index")
 services <- load_monthly("pms_services_monthly_panel_ready.csv", "services_volume_index")
+# Labor: monthly net hiring balance (flow) per 100k resident population.
 caged <- load_monthly("caged_state_balance_monthly_panel_ready.csv", "formal_hiring_balance")
 caged_c <- load_monthly("caged_construction_state_balance_monthly_panel_ready.csv", "formal_hiring_balance_construction")
 
@@ -129,7 +132,10 @@ m_grid <- tidyr::expand_grid(state_abbrev = panel_states, period_date = all_m_da
   dplyr::left_join(ipca_deflator, by = "period_date")
 m_grid$population <- pop_for_year(m_grid$state_abbrev, m_grid$year)
 
-# Scaled (pre-SA) value per monthly outcome key.
+# Scaled (pre-SA) value per monthly outcome key:
+#   retail/services -> SA index LEVEL (common base, no rebase)
+#   formal_hiring/construction -> LOG(employment stock / pop) = log employment rate
+#   icms/tax (CONFAZ) -> LOG(real per capita)
 scaled_monthly <- m_grid |> dplyr::select("state_abbrev", "period_date", "year")
 join_val <- function(g, src, newname) g |>
   dplyr::left_join(src |> dplyr::rename(!!newname := "value"), by = c("state_abbrev", "period_date"))
@@ -141,8 +147,9 @@ scaled_monthly$population <- m_grid$population
 scaled_monthly$ipca_deflator_factor <- m_grid$ipca_deflator_factor
 
 build_scaled <- list(
-  retail = scaled_monthly$retail,
+  retail   = scaled_monthly$retail,
   services = scaled_monthly$services,
+  # labor: net hiring balance (flow) per 100k resident population
   formal_hiring = 1e5 * scaled_monthly$caged_bal / scaled_monthly$population,
   construction  = 1e5 * scaled_monthly$caged_c_bal / scaled_monthly$population
 )
@@ -152,8 +159,8 @@ if (regime == "confaz") {
                      va_icms_total = as.numeric(.data$va_icms_total),
                      va_receita_tributaria_total = as.numeric(.data$va_receita_tributaria_total))
   scaled_monthly <- scaled_monthly |> dplyr::left_join(confaz, by = c("state_abbrev", "period_date"))
-  build_scaled$icms_confaz <- scaled_monthly$va_icms_total * scaled_monthly$ipca_deflator_factor / scaled_monthly$population
-  build_scaled$tax_confaz  <- scaled_monthly$va_receita_tributaria_total * scaled_monthly$ipca_deflator_factor / scaled_monthly$population
+  build_scaled$icms_confaz <- log_pos(scaled_monthly$va_icms_total * scaled_monthly$ipca_deflator_factor / scaled_monthly$population)
+  build_scaled$tax_confaz  <- log_pos(scaled_monthly$va_receita_tributaria_total * scaled_monthly$ipca_deflator_factor / scaled_monthly$population)
 }
 for (k in monthly_keys) scaled_monthly[[k]] <- build_scaled[[k]]
 
@@ -165,10 +172,9 @@ monthly_panel <- tidyr::expand_grid(state_abbrev = panel_states, period_date = m
   dplyr::left_join(monthly_sa |> dplyr::select("state_abbrev", "period_date", dplyr::ends_with("_sa")),
                    by = c("state_abbrev", "period_date")) |>
   add_event_cols()
-# Rename <key>_sa -> <key>; rebase index outcomes to 100 in window.
+# Rename <key>_sa -> <key>. Indices stay at the common-base SA level (no rebase);
+# fiscal/labor are already in logs.
 names(monthly_panel) <- sub("_sa$", "", names(monthly_panel))
-index_keys <- intersect(monthly_keys, c("retail", "services"))
-if (length(index_keys)) monthly_panel <- rebase_sa_in_window(monthly_panel, index_keys, monthly_window_start, monthly_window_end)
 
 # ── Bimonthly SICONFI panel + ICMS (Annex06) — Regime B only ──────────────────
 bimonthly_panel <- NULL
@@ -205,10 +211,10 @@ if (regime == "siconfi") {
     dplyr::mutate(
       deflator_factor = dplyr::if_else(is.finite(.data$state_tax_revenue_nominal) & .data$state_tax_revenue_nominal > 0,
                                        .data$state_tax_revenue_real / .data$state_tax_revenue_nominal, NA_real_),
-      icms_revenue_real_pc          = .data$icms_revenue_nominal * .data$deflator_factor / .data$population,
-      tax_siconfi_val               = .data$state_tax_revenue_real / .data$population,
-      investment_siconfi_val        = .data$public_investment_liquidated_real / .data$population,
-      totalexp_siconfi_val          = .data$liquidated_expenditure_total_real / .data$population
+      icms_revenue_real_pc          = log_pos(.data$icms_revenue_nominal * .data$deflator_factor / .data$population),
+      tax_siconfi_val               = log_pos(.data$state_tax_revenue_real / .data$population),
+      investment_siconfi_val        = log_pos(.data$public_investment_liquidated_real / .data$population),
+      totalexp_siconfi_val          = log_pos(.data$liquidated_expenditure_total_real / .data$population)
     )
   bim_scaled <- fiscal |>
     dplyr::transmute(.data$state_abbrev, .data$period_date,

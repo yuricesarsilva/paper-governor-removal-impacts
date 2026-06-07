@@ -1,6 +1,6 @@
 # DF_2010_01 results report (confaz regime)
 
-Generated on 2026-06-06.
+Generated on 2026-06-07.
 
 Treated state: `DF` (Distrito Federal). Treatment (single accountability cut): effective removal `2010-02-11`.
 Data regime: **confaz**. All outcomes are monthly (X-13); fiscal outcomes (ICMS, tax revenue) are from CONFAZ.
@@ -26,32 +26,32 @@ Main donor pool excludes `DF`, `MA`, `PB`, `TO` (any state treated anywhere in t
 
 | Outcome | Treated | Synthetic | RMSPE pre | Pre periods |
 | --- | --- | --- | --- | --- |
-| Retail volume | 104.09 | 104.10 | 1.09 | 36 |
-| Formal hiring | 68.50 | 71.29 | 53.08 | 36 |
-| Construction | 10.82 | 10.31 | 5.21 | 36 |
-| ICMS | 135.84 | 136.40 | 6.29 | 36 |
-| Tax revenue | 156.85 | 157.97 | 16.33 | 36 |
+| Retail volume | 111.94 | 111.46 | 2.93 | 36 |
+| Formal hiring | 68.50 | 70.30 | 83.41 | 36 |
+| Construction | 10.82 | 10.15 | 11.06 | 36 |
+| ICMS | 4.91 | 4.95 | 0.12 | 36 |
+| Tax revenue | 5.05 | 5.08 | 0.11 | 36 |
 
 ### Covariate balance (treated vs synthetic by outcome)
 
 | Covariate | Treated | Retail volume | Formal hiring | Construction | ICMS | Tax revenue |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICMS secondary VA pc | 21.587 | 31.182 | 20.951 | 18.562 | 21.017 | 21.029 |
-| ICMS tertiary VA pc | 58.378 | 48.867 | 33.873 | 42.939 | 47.119 | 46.609 |
-| ICMS energy VA pc |  9.521 |  6.861 |  9.873 |  8.856 |  9.176 |  8.885 |
-| ICMS fuels VA pc | 25.926 | 16.096 | 16.370 | 22.607 | 21.753 | 23.147 |
-| FPE transfer pc |  7.273 | 15.934 |  9.961 | 12.034 | 14.979 | 12.080 |
+| ICMS secondary VA pc | 21.587 | 17.125 | 24.626 | 21.502 | 21.028 | 21.609 |
+| ICMS tertiary VA pc | 58.378 | 28.212 | 47.129 | 46.399 | 48.407 | 48.634 |
+| ICMS energy VA pc |  9.521 |  7.640 |  9.492 |  8.498 |  8.622 |  8.370 |
+| ICMS fuels VA pc | 25.926 | 17.246 | 21.224 | 22.917 | 23.560 | 23.852 |
+| FPE transfer pc |  7.273 | 12.537 | 11.695 | 10.224 | 10.591 | 12.525 |
 | IOF-state pc |  0.000 |  0.000 |  0.000 |  0.001 |  0.000 |  0.000 |
 
 ## Main results: Augmented SCM (SA)
 
 | Channel | Outcome | Mean gap post | RMSPE pre | RMSPE post | Donors | Freq |
 | --- | --- | --- | --- | --- | --- | --- |
-| Household consumption | Retail volume index (PMC) |  -3.08 |  1.09 |  4.41 | 23 | monthly |
-| Formal labor market | Formal hiring balance per 100k pop | -25.94 | 53.08 | 62.97 | 23 | monthly |
-| Formal labor market | Construction hiring balance per 100k pop |   4.36 |  5.21 | 32.04 | 23 | monthly |
-| State public finances | ICMS value added, real per capita (CONFAZ) |  -5.12 |  6.29 | 12.94 | 23 | monthly |
-| State public finances | Tax revenue value added, real per capita (CONFAZ) | -16.07 | 16.33 | 21.11 | 23 | monthly |
+| Household consumption | Retail volume index (PMC, SA level) |  -4.55 |  2.93 |  6.56 | 23 | monthly |
+| Formal labor market | Formal hiring balance per 100k pop | -15.35 | 83.41 | 51.94 | 23 | monthly |
+| Formal labor market | Construction hiring balance per 100k pop |   7.10 | 11.06 | 34.94 | 23 | monthly |
+| State public finances | ICMS value added, log real per capita (CONFAZ) |  -0.10 |  0.12 |  0.13 | 22 | monthly |
+| State public finances | Tax revenue value added, log real per capita (CONFAZ) |  -0.04 |  0.11 |  0.09 | 23 | monthly |
 
 ![augmented_effect_summary.png](report/figures/augmented_effect_summary.png)
 
@@ -69,11 +69,11 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | RMSPE ratio (post/pre) | p (ratio) | p (abs gap) | Placebos |
 | --- | --- | --- | --- | --- |
-| Retail volume | 4.03 | 0.304 | 0.652 | 23 |
-| Formal hiring | 1.19 | 0.870 | 0.696 | 23 |
-| Construction | 6.15 | 0.000 | 1.000 | 23 |
-| ICMS | 2.06 | 0.609 | 0.739 | 23 |
-| Tax revenue | 1.29 | 1.000 | 0.261 | 23 |
+| Retail volume | 2.24 | 0.478 | 0.304 | 23 |
+| Formal hiring | 0.62 | 0.870 | 0.957 | 23 |
+| Construction | 3.16 | 0.000 | 0.870 | 23 |
+| ICMS | 1.15 | 0.870 | 0.217 | 23 |
+| Tax revenue | 0.83 | 0.913 | 0.913 | 23 |
 
 ![placebo_gaps_outcomes.png](report/figures/placebo_gaps_outcomes.png)
 
@@ -83,11 +83,11 @@ Each eligible donor is treated as pseudo-treated; p = share of placebos with a p
 
 | Outcome | Gap post | LOO rank | p (2-sided) |
 | --- | --- | --- | --- |
-| Retail volume | -3.08 | 24 / 24 | 0.042 |
-| Formal hiring | -25.94 | 1 / 24 | 0.042 |
-| Construction | 4.36 | 1 / 24 | 0.042 |
-| ICMS | -5.12 | 2 / 24 | 0.083 |
-| Tax revenue | -16.07 | 1 / 24 | 0.042 |
+| Retail volume | -4.55 | 1 / 24 | 0.042 |
+| Formal hiring | -15.35 | 2 / 24 | 0.083 |
+| Construction | 7.1 | 22 / 24 | 0.125 |
+| ICMS | -0.1 | 1 / 23 | 0.043 |
+| Tax revenue | -0.04 | 23 / 24 | 0.083 |
 
 ## Evidence classification (5-criterion AugSCM ruler)
 
@@ -95,13 +95,13 @@ We do not rely on placebo p-value thresholds alone. Each outcome is graded on fi
 
 Considerable effects for this event: **1** of 5 outcomes.
 
-| Outcome | Tier | Score | % effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
+| Outcome | Tier | Score | Effect | Mag (pre-SD) | Persist | Pre-fit | Placebo rank | p (rank/N) | LOO sign |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Retail volume | weak | 3/5 |  -2.6 | 1.00 | 0.83 | B | 8/24 | 0.333 | 1.00 |
-| Formal hiring | non-interpretable | 1/5 | -27.5 | 0.34 | 0.58 | D | 21/24 | 0.875 | 1.00 |
-| Construction | moderate | 4/5 |  35.0 | 0.28 | 0.62 | A | 1/24 | 0.042 | 1.00 |
-| ICMS | non-interpretable | 2/5 |  -3.3 | 0.69 | 0.75 | C | 15/24 | 0.625 | 0.96 |
-| Tax revenue | non-interpretable | 2/5 |  -8.6 | 0.85 | 0.92 | D | 24/24 | 1.000 | 1.00 |
+| Retail volume | non-interpretable | 2/5 | -3.5% | 1.37 | 0.83 | D | 12/24 | 0.500 | 0.00 |
+| Formal hiring | non-interpretable | 1/5 | -15.4 | 0.20 | 0.58 | D | 21/24 | 0.875 | 1.00 |
+| Construction | suggestive | 3/5 | +7.1 | 0.45 | 0.58 | C | 1/24 | 0.042 | 1.00 |
+| ICMS | non-interpretable | 3/5 | -9.8% | 1.99 | 0.88 | D | 21/24 | 0.875 | 1.00 |
+| Tax revenue | weak | 3/5 | -3.8% | 0.38 | 0.71 | C | 22/24 | 0.917 | 1.00 |
 
 Note: placebo-based inference in synthetic control is discrete and low-resolution with few donors (here the finest p is ~1/N). Results with p slightly above conventional thresholds but a high placebo rank, good pre-fit, substantive magnitude and persistence are read as *suggestive* evidence, not as conventional statistical significance.
 
