@@ -1,0 +1,742 @@
+Acho **uma boa estratégia** — inclusive mais elegante — mas com uma ressalva importante: **retail e ICMS contam uma história mais estreita**. Elas funcionam bem se o paper deixar de prometer “impactos econômicos e fiscais amplos” e passar a prometer algo como:
+
+> efeitos de rupturas governamentais sobre **atividade econômica corrente** e **capacidade/arrecadação fiscal própria**.
+
+Nesse recorte, as duas variáveis têm uma lógica muito boa.
+
+## Minha avaliação
+
+### 1. `retail_volume_index` como variável econômica principal
+
+Eu gosto bastante. Ela é mensal, comparável entre UFs e está diretamente ligada ao canal de consumo/demanda local. No seu próprio desenho, o varejo aparece como proxy preferencial do canal de consumo das famílias e também como proxy geral de atividade local quando não há investimento privado estadual mensal observado. ([GitHub][1])
+
+Ela é melhor do que CAGED para ser outcome principal porque evita a quebra metodológica do CAGED em 2020, que seu projeto já reconhece como fonte de cautela. ([GitHub][2])
+
+**Interpretação:**
+se a remoção gera incerteza, atraso de pagamentos, paralisia administrativa, queda de confiança ou interrupção de contratos, parte disso pode aparecer no comércio varejista.
+
+### 2. `icms_revenue_real_pc` como variável fiscal principal
+
+Também faz sentido, mas eu seria mais cuidadoso na interpretação. O ICMS per capita é uma ótima proxy de **base econômica tributável** e de **capacidade de arrecadação própria**, mas ele não mede diretamente “decisão fiscal do novo governo”.
+
+A variável está documentada no seu dicionário como receita real de ICMS dividida pela população PNADc, construída a partir do Siconfi/RREO. ([GitHub][3]) Isso é bom porque aproxima a escala entre estados e reduz o problema de comparar UFs muito diferentes.
+
+**Interpretação correta:**
+não é “o governador arrecadou mais/menos porque quis”; é algo mais próximo de:
+
+> a ruptura afetou, ou não, a base econômica e a capacidade corrente de arrecadação do estado.
+
+O risco é que o ICMS seja fortemente influenciado por inflação setorial, composição produtiva, combustíveis, energia, transferências de arrecadação e regras administrativas. Então ele precisa ser apresentado como **resultado fiscal sensível à atividade**, não como variável pura de gestão fiscal.
+
+## A dupla funciona porque cria uma narrativa simples
+
+Você ficaria com dois blocos:
+
+| Canal                     | Variável               | Leitura                                     |
+| ------------------------- | ---------------------- | ------------------------------------------- |
+| Atividade privada/consumo | `retail_volume_index`  | demanda local, consumo, confiança           |
+| Receita própria estadual  | `icms_revenue_real_pc` | base tributável, capacidade fiscal corrente |
+
+Isso gera uma pergunta mais limpa:
+
+> remoções de governadores afetam a economia local de curto prazo e a arrecadação própria dos estados?
+
+Essa pergunta é mais defendável do que tentar provar efeitos em emprego, serviços, investimento público, saúde, educação, segurança, despesa total, receita total etc.
+
+## O que você perde ao tirar as outras variáveis
+
+Você perde três coisas:
+
+1. **Canal de execução pública**: sem investimento liquidado ou despesa liquidada, você deixa de observar o mecanismo mais diretamente ligado à troca de governo.
+2. **Canal de serviços**: o varejo captura consumo, mas não toda a atividade econômica urbana.
+3. **Canal de mercado de trabalho**: você evita ruído metodológico, mas deixa de falar sobre decisões das firmas.
+
+Mesmo assim, eu acho aceitável. O ganho em clareza pode compensar a perda de amplitude.
+
+## Minha sugestão de desenho
+
+Eu faria assim:
+
+### Outcomes principais
+
+1. `retail_volume_index`
+2. `icms_revenue_real_pc`
+
+### Outcomes secundários, só em apêndice/robustez
+
+1. `services_volume_index`
+2. `public_investment_liquidated_real`
+3. `liquidated_expenditure_total_real`
+
+Assim você não abandona totalmente os outros canais, mas deixa claro que o coração do artigo são **atividade econômica corrente e arrecadação própria**.
+
+## Título/narrativa que combina com isso
+
+Algo nessa linha:
+
+> **Do gubernatorial removals affect local economic activity and tax capacity? Evidence from Brazilian states**
+
+Ou, em português:
+
+> **Remoções de governadores afetam a atividade econômica e a arrecadação estadual? Evidências para os estados brasileiros**
+
+## Minha recomendação final
+
+Eu apoiaria essa escolha, com uma condição: **não use ICMS como variável fiscal ampla demais**. Use como variável de **arrecadação própria sensível ao ciclo econômico**.
+
+A estrutura ficaria forte assim:
+
+1. A literatura sugere que instabilidade política pode afetar consumo, investimento e governo.
+2. No nível estadual brasileiro, nem todos esses canais são observáveis em alta frequência.
+3. O paper foca nos dois canais mais comparáveis e mensuráveis para vários casos:
+   **varejo** e **ICMS per capita real**.
+4. Os demais outcomes entram apenas como evidência complementar.
+
+Então, sim: **ficar apenas com `retail_volume_index` e `icms_revenue_real_pc` pode melhorar muito a elegância do paper**, desde que você assuma que o artigo está medindo efeitos sobre **atividade econômica corrente e arrecadação própria**, e não todos os efeitos econômicos possíveis da remoção.
+
+[1]: https://raw.githubusercontent.com/yuricesarsilva/paper-governor-removal-impacts/main/notes/channels_and_instability_design.md "raw.githubusercontent.com"
+[2]: https://raw.githubusercontent.com/yuricesarsilva/paper-governor-removal-impacts/main/notes/methodological_decisions.md "raw.githubusercontent.com"
+[3]: https://raw.githubusercontent.com/yuricesarsilva/paper-governor-removal-impacts/main/data/processed/data_dictionary.csv "raw.githubusercontent.com"
+
+
+
+_________________________________________
+
+Concordo com você. **Sua interpretação é melhor do que tratar ICMS apenas como variável fiscal.** Eu só refinaria a redação: o ICMS pode ser lido como uma variável de **atividade econômica tributável**, não apenas como arrecadação.
+
+A lógica é forte:
+
+> Se o ICMS incide sobre circulação de mercadorias e sobre certos serviços, uma queda real per capita do ICMS pode indicar retração da base econômica tributável — comércio, transporte, comunicação, energia, combustíveis e cadeias associadas — e não apenas uma escolha arrecadatória do governo.
+
+A própria definição constitucional do ICMS está ligada a operações de circulação de mercadorias e prestações de serviços de transporte interestadual/intermunicipal e comunicação. O STF também reforça que a incidência exige operação de circulação de mercadorias ou serviços, isto é, há um fato econômico por trás do tributo. ([Supremo Tribunal Federal][1])
+
+Então eu reformularia sua classificação assim:
+
+| Variável               | Canal principal                           | Interpretação                                            |
+| ---------------------- | ----------------------------------------- | -------------------------------------------------------- |
+| `retail_volume_index`  | Atividade econômica observada diretamente | Volume físico do comércio varejista                      |
+| `icms_revenue_real_pc` | Atividade econômica tributável            | Circulação econômica capturada pela arrecadação estadual |
+
+Isso fica muito bom porque as duas variáveis se complementam.
+
+O `retail_volume_index` mede o **volume de vendas no varejo** diretamente, via IBGE/PMC. A PMC acompanha mensalmente variação de volume e receita nominal do comércio varejista, então é uma medida mais “limpa” do comportamento do comércio. ([Agência de Notícias - IBGE][2])
+
+Já o `icms_revenue_real_pc` mede uma coisa mais ampla e fiscalmente relevante: **quanto da circulação econômica efetivamente virou base tributária arrecadada pelo estado**.
+
+Eu escreveria no paper algo assim:
+
+> Embora o ICMS seja formalmente uma variável de arrecadação estadual, neste estudo ele é interpretado também como proxy de atividade econômica tributável. Diferentemente de tributos patrimoniais, sua arrecadação depende da ocorrência de operações de circulação de mercadorias e de determinadas prestações de serviços. Assim, variações reais per capita no ICMS podem refletir mudanças na intensidade da atividade econômica local, especialmente nos setores de comércio, transporte, comunicação, combustíveis, energia e cadeias correlatas.
+
+A única cautela é não dizer que **toda queda do ICMS é necessariamente queda da economia**. Existem ruídos: mudança de alíquota, benefícios fiscais, fiscalização, calendário de recolhimento, Refis, compensações, combustíveis, energia elétrica, inflação setorial, substituição tributária e mudanças legais. Mas isso não invalida a leitura econômica; apenas exige controles, deflacionamento e discussão institucional.
+
+Na verdade, essa escolha pode fortalecer o paper. Você passa a ter duas medidas econômicas com naturezas diferentes:
+
+1. **PMC/varejo:** atividade econômica medida por pesquisa estatística.
+2. **ICMS:** atividade econômica revelada pela base tributária estadual.
+
+Se ambas caem após a remoção, a evidência fica mais convincente: não é só um indicador estatístico; a própria arrecadação ligada à circulação econômica também reage.
+
+Eu só evitaria chamar o segundo outcome de “fiscal outcome” puro. Chamaria de:
+
+**taxable economic activity**,
+ou
+**state taxable activity**,
+ou
+**own-revenue-based activity measure**.
+
+Em português:
+
+**atividade econômica tributável estadual**.
+
+A pergunta do artigo ficaria mais precisa:
+
+> Remoções de governadores afetam a atividade econômica corrente e a atividade econômica tributável dos estados?
+
+Essa formulação combina muito bem com suas duas variáveis.
+
+[1]: https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=155&abrirBase=CF&utm_source=chatgpt.com "Art. 155. Compete aos Estados e ao Distrito Federal instituir"
+[2]: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/45895-vendas-no-comercio-variam-0-4-em-dezembro-e-fecham-2025-em-1-6?utm_source=chatgpt.com "Vendas no comércio variam -0,4% em dezembro e fecham ..."
+
+
+__________________________________________________
+
+Esse problema é muito importante — e, na minha leitura, **não deve ser tratado como falha do seu estudo**. Ele é quase uma característica natural do desenho: você está usando **séries mensais, estaduais, pequenas, muito sensíveis a sazonalidade, choques administrativos e ruído contábil**.
+
+O caminho que eu seguiria é este:
+
+> **manter retail e ICMS como variáveis centrais, mas mudar o estimando principal de efeito mensal para efeito acumulado ou médio em janelas curtas.**
+
+Ou seja: não tentar contar a história olhando mês a mês. Contar a história olhando para **janelas de 3, 6 e 12 meses após a remoção**.
+
+## Minha recomendação principal
+
+Eu usaria como especificação principal:
+
+### 1. `retail_volume_index`
+
+Transformar em:
+
+> **média móvel trimestral do índice de volume do varejo**
+
+Algo como:
+
+[
+retail_ma3_{it} = \frac{retail_{it} + retail_{i,t-1} + retail_{i,t-2}}{3}
+]
+
+Ou, se você quiser algo ainda mais interpretável:
+
+[
+\Delta \log(retail_ma3_{it})
+]
+
+Mas eu começaria com **nível logaritmizado da média móvel trimestral**.
+
+### 2. `icms_revenue_real_pc`
+
+Transformar em:
+
+> **ICMS real per capita acumulado em 3 meses**
+
+Algo como:
+
+[
+icms_3m_{it} = icms_{it} + icms_{i,t-1} + icms_{i,t-2}
+]
+
+Depois usar:
+
+[
+\log(icms_3m_{it})
+]
+
+Para ICMS, eu prefiro **soma móvel de 3 meses** em vez de média, porque arrecadação tem interpretação acumulada: quanto o estado arrecadou em uma janela curta.
+
+## Por que esse caminho é melhor?
+
+Porque ele preserva a interpretação econômica e reduz ruído.
+
+Você não perde a ideia de que ICMS indica circulação econômica. Só deixa de interpretar um mês isolado, que pode ter ruído de calendário de pagamento, recolhimento atrasado, compensação, energia, combustível ou mudança administrativa.
+
+A pergunta deixa de ser:
+
+> o que aconteceu exatamente no mês seguinte à queda do governador?
+
+E passa a ser:
+
+> a economia tributável e o varejo ficaram abaixo do contrafactual nos três, seis ou doze meses seguintes à remoção?
+
+Isso é muito mais defensável.
+
+A literatura recente sobre agregação temporal em Synthetic Control reconhece exatamente esse dilema: dados de alta frequência, como mensais, dificultam o bom ajuste pré-tratamento e aumentam risco de overfitting ao ruído; agregar pode reduzir ruído, mas também pode eliminar sinal relevante. Por isso, a solução não é simplesmente jogar tudo para anual, mas usar uma agregação moderada e teoricamente justificada. ([arXiv][1])
+
+## Eu não agregaria para anual
+
+Eu evitaria transformar tudo em anual, porque aí você perde o timing da intervenção. Para o seu desenho, anual é grosseiro demais.
+
+A escala ideal, na minha opinião, é:
+
+| Frequência                       | Minha avaliação                     |
+| -------------------------------- | ----------------------------------- |
+| Mensal puro                      | Muito volátil, difícil ajustar      |
+| Bimestral                        | Pode ajudar, mas ainda meio ruidoso |
+| Trimestral / média móvel 3 meses | Melhor equilíbrio                   |
+| Semestral                        | Bom para robustez                   |
+| Anual                            | Perde timing da remoção             |
+
+Então eu faria:
+
+**especificação principal:** janela móvel de 3 meses;
+**robustez:** efeitos acumulados em 6 e 12 meses;
+**apêndice:** série mensal crua, só para transparência.
+
+## Cuidado: não use média móvel centrada
+
+Isso é fundamental.
+
+Não use:
+
+[
+\frac{y_{t-1}+y_t+y_{t+1}}{3}
+]
+
+porque isso usa informação futura. Perto da intervenção, contaminaria o pré-tratamento com informação pós-tratamento.
+
+Use sempre média móvel **para trás**:
+
+[
+\frac{y_t+y_{t-1}+y_{t-2}}{3}
+]
+
+Para ICMS:
+
+[
+y_t+y_{t-1}+y_{t-2}
+]
+
+Assim, no mês da intervenção, você sabe exatamente o que está entrando na janela.
+
+## Eu não tentaria “forçar” o ajuste com 36 lags
+
+Esse é outro ponto importante. Com série muito volátil, jogar todos os 36 meses pré-tratamento no matching pode piorar o problema. Você pode acabar tentando ajustar barulho.
+
+Isso conversa com a crítica de Kaul et al.: usar todos os lags pré-tratamento como preditores pode fazer com que outras covariáveis percam relevância e alterar substancialmente os resultados e conclusões. ([oekonometrie.uni-saarland.de][2])
+
+Então eu não usaria os 36 meses crus como preditores principais.
+
+Eu usaria blocos resumidos do pré-tratamento, por exemplo:
+
+| Bloco pré-tratamento | Preditor                     |
+| -------------------- | ---------------------------- |
+| meses -36 a -25      | média do ano pré -3          |
+| meses -24 a -13      | média do ano pré -2          |
+| meses -12 a -1       | média do ano pré -1          |
+| meses -6 a -1        | média recente                |
+| meses -3 a -1        | média imediatamente anterior |
+
+Isso mantém informação temporal, mas reduz ruído.
+
+## Minha especificação preferida
+
+Eu faria assim:
+
+### Outcome principal
+
+Para retail:
+
+[
+\log(retail_ma3)
+]
+
+Para ICMS:
+
+[
+\log(icms_real_pc_3m)
+]
+
+### Período pré
+
+36 meses antes da intervenção.
+
+### Preditores para construir o sintético
+
+Não usar os 36 valores mensais crus. Usar:
+
+1. média do outcome entre -36 e -25;
+2. média do outcome entre -24 e -13;
+3. média do outcome entre -12 e -1;
+4. média do outcome entre -6 e -1;
+5. talvez média do mesmo mês nos anos anteriores, para capturar sazonalidade;
+6. população ou escala econômica, se necessário;
+7. dependência de transferências/autonomia fiscal como covariável estrutural, se o outcome for ICMS.
+
+### Estimando principal no pós
+
+Não dar ênfase ao efeito de cada mês.
+
+Dar ênfase a:
+
+| Janela        | Interpretação            |
+| ------------- | ------------------------ |
+| 0 a 2 meses   | efeito imediato          |
+| 0 a 5 meses   | efeito de curto prazo    |
+| 0 a 11 meses  | efeito anual pós-remoção |
+| 12 a 23 meses | persistência ou reversão |
+
+Ou seja, você estima mensalmente, mas apresenta o resultado como **efeito médio/acumulado por janela**.
+
+## Como escrever a interpretação
+
+Para retail:
+
+> O efeito estimado representa a diferença percentual entre o varejo observado e o varejo sintético em uma janela móvel de três meses.
+
+Para ICMS:
+
+> O efeito estimado representa a diferença percentual entre o ICMS real per capita acumulado em três meses e seu contrafactual sintético.
+
+Isso é muito mais forte do que dizer: “em fevereiro caiu, em março subiu, em abril caiu”.
+
+## E se o pré-ajuste continuar ruim?
+
+Aí eu não tentaria salvar o caso individual a qualquer custo.
+
+Eu classificaria os casos em três grupos:
+
+| Qualidade do ajuste | Uso no paper                              |
+| ------------------- | ----------------------------------------- |
+| Bom ajuste pré      | caso principal                            |
+| Ajuste moderado     | evidência complementar                    |
+| Ajuste ruim         | descritivo/apêndice, sem inferência forte |
+
+O próprio AugSCM foi criado para lidar com ajuste pré-tratamento imperfeito por meio de correção de viés com modelo de outcome, mas isso não significa que ele resolva qualquer caso. Ben-Michael, Feller e Rothstein propõem o Augmented SCM justamente como extensão para situações em que o ajuste perfeito é inviável, usando regularização para controlar extrapolação e reduzir overfitting. ([Taylor & Francis Online][3])
+
+Mas, se o ruído domina completamente a série, o problema deixa de ser apenas método e passa a ser **sinal fraco**. Nesse caso, o melhor é ser transparente.
+
+## O que eu não faria
+
+Eu evitaria quatro caminhos:
+
+1. **Não usaria filtro HP.**
+   Para esse problema, ele pode criar tendência artificial e piorar a interpretação causal.
+
+2. **Não usaria média móvel centrada.**
+   Pode contaminar o pré com o pós.
+
+3. **Não agregaria para anual.**
+   Você perderia o timing da intervenção.
+
+4. **Não tentaria melhorar o ajuste escolhendo seletivamente janelas até ficar bonito.**
+   Isso abriria margem para crítica de cherry-picking.
+
+## Melhor desenho para o artigo
+
+Eu colocaria assim na metodologia:
+
+> Devido à elevada volatilidade mensal das séries estaduais de varejo e ICMS, a análise principal utiliza transformações de curta janela: média móvel trimestral para o índice de volume do varejo e arrecadação real per capita acumulada em três meses para o ICMS. Essa escolha reduz ruído idiossincrático de calendário, recolhimento e sazonalidade sem eliminar o timing subanual da intervenção. Os efeitos são reportados principalmente como médias acumuladas nas janelas de 3, 6 e 12 meses após a remoção.
+
+Essa frase resolve muita coisa.
+
+## Minha recomendação final
+
+Eu seguiria esta ordem:
+
+1. **Transforme retail em média móvel de 3 meses.**
+2. **Transforme ICMS em acumulado real per capita de 3 meses.**
+3. **Use log das duas variáveis.**
+4. **Não use todos os 36 meses crus como preditores.**
+5. **Use blocos pré-tratamento agregados.**
+6. **Apresente efeitos médios em janelas de 3, 6 e 12 meses.**
+7. **Deixe mensal cru apenas no apêndice.**
+
+Esse caminho mantém o poder explicativo do pós-intervenção porque você ainda trabalha em frequência subanual, mas reduz a chance de o resultado ser apenas ruído mensal.
+
+[1]: https://arxiv.org/abs/2401.12084?utm_source=chatgpt.com "Temporal Aggregation for the Synthetic Control Method"
+[2]: https://www.oekonometrie.uni-saarland.de/papers/SCM_Predictors.pdf?utm_source=chatgpt.com "Synthetic Control Methods: Never Use All Pre-Intervention ..."
+[3]: https://www.tandfonline.com/doi/abs/10.1080/01621459.2021.1929245?utm_source=chatgpt.com "The Augmented Synthetic Control Method"
+
+
+_____________________________________________
+
+Você está certo: **não faria sentido suavizar/agregar o pré em 3 meses e depois voltar a interpretar o pós mês a mês como resultado principal**. O pós deve seguir a mesma lógica de tratamento do outcome.
+
+O caminho mais coerente é:
+
+> **a unidade estimada continua sendo mensal, mas o outcome já é uma série suavizada/acumulada em janela móvel de 3 meses. Depois, a inferência substantiva é feita por janelas pós-tratamento de 3, 6, 12 e 24 meses.**
+
+Ou seja, há duas ideias diferentes:
+
+1. **Transformação da variável:** média móvel ou acumulado móvel de 3 meses.
+2. **Resumo do efeito pós-tratamento:** efeito médio/acumulado nas janelas de 3, 6, 12 e 24 meses após a intervenção.
+
+## Como ficaria na prática
+
+Para o varejo, você transforma a série mensal original em:
+
+[
+retail_ma3_t = \frac{retail_t + retail_{t-1} + retail_{t-2}}{3}
+]
+
+Para ICMS, transforma em:
+
+[
+icms_3m_t = icms_t + icms_{t-1} + icms_{t-2}
+]
+
+Depois roda o AugSCM usando essas séries transformadas.
+
+Então o pós não “volta para mensal cru”. O pós continua mensal na indexação, mas cada ponto pós já representa uma informação de 3 meses.
+
+## Exemplo com intervenção em janeiro de 2018
+
+Suponha que o tratamento ocorre em janeiro de 2018.
+
+A série transformada ficaria:
+
+| Período transformado | O que contém                   |
+| -------------------- | ------------------------------ |
+| jan/2018             | nov/2017 + dez/2017 + jan/2018 |
+| fev/2018             | dez/2017 + jan/2018 + fev/2018 |
+| mar/2018             | jan/2018 + fev/2018 + mar/2018 |
+| abr/2018             | fev/2018 + mar/2018 + abr/2018 |
+
+Aqui aparece um detalhe importante: **os dois primeiros meses pós ainda carregam meses pré-tratamento**. Isso não é erro, mas precisa ser reconhecido.
+
+Por isso, eu faria uma escolha metodológica clara:
+
+### Opção A — considerar o pós a partir do primeiro mês da intervenção
+
+Nesse caso, a janela 3 meses pós seria:
+
+| Janela   | Meses usados        |
+| -------- | ------------------- |
+| 3 meses  | jan, fev, mar       |
+| 6 meses  | jan a jun           |
+| 12 meses | jan a dez           |
+| 24 meses | jan/2018 a dez/2019 |
+
+Mas, como jan e fev carregam meses pré na média móvel, o efeito imediato fica mais amortecido.
+
+### Opção B — considerar o pós “limpo” a partir do terceiro mês após a intervenção
+
+Nesse caso, você começaria a interpretar a partir de março de 2018, porque março é o primeiro ponto cuja janela de 3 meses é totalmente pós-tratamento:
+
+[
+mar/2018 = jan/2018 + fev/2018 + mar/2018
+]
+
+Aí as janelas seriam:
+
+| Janela   | Meses usados        |
+| -------- | ------------------- |
+| 3 meses  | mar, abr, mai       |
+| 6 meses  | mar a ago           |
+| 12 meses | mar/2018 a fev/2019 |
+| 24 meses | mar/2018 a fev/2020 |
+
+Essa opção é mais “limpa”, mas desloca a interpretação: você não está mais medindo o efeito imediatamente a partir da queda, e sim a partir do momento em que a janela móvel está totalmente exposta ao tratamento.
+
+## Minha recomendação
+
+Eu usaria a **Opção B como principal**.
+
+Ou seja:
+
+> transformar as séries em janelas móveis de 3 meses e reportar os efeitos pós-tratamento a partir do primeiro período cuja janela esteja integralmente no pós-tratamento.
+
+Isso evita uma crítica forte: “os primeiros efeitos pós ainda contêm meses pré-tratamento”.
+
+Mas eu mostraria, no apêndice, a Opção A como robustez, porque ela preserva o timing original da intervenção.
+
+## Como interpretar as janelas de 3, 6, 12 e 24 meses
+
+Depois de estimar o caminho observado e sintético, você calcula:
+
+[
+ATT_H = \frac{1}{H} \sum_{h=1}^{H} \left(Y_{T+h}^{obs} - Y_{T+h}^{synth}\right)
+]
+
+Se estiver em log, a leitura aproximada é percentual.
+
+Para suas janelas:
+
+| Janela   | Interpretação                                      |
+| -------- | -------------------------------------------------- |
+| 3 meses  | efeito de curtíssimo prazo                         |
+| 6 meses  | efeito de curto prazo                              |
+| 12 meses | efeito anual pós-remoção                           |
+| 24 meses | persistência, reversão ou acomodação institucional |
+
+Mas, com média móvel de 3 meses, eu definiria o início da contagem assim:
+
+| Horizonte | Períodos incluídos na análise principal |
+| --------- | --------------------------------------- |
+| 3 meses   | meses 3 a 5 após a intervenção          |
+| 6 meses   | meses 3 a 8 após a intervenção          |
+| 12 meses  | meses 3 a 14 após a intervenção         |
+| 24 meses  | meses 3 a 26 após a intervenção         |
+
+Porque os meses 1 e 2 ainda misturam pré e pós.
+
+## Para ICMS, isso é ainda mais importante
+
+Como o ICMS seria acumulado móvel de 3 meses, o primeiro ponto pós contém parte do pré.
+
+Exemplo:
+
+[
+icms_3m_{jan} = icms_{nov} + icms_{dez} + icms_{jan}
+]
+
+Então, se você interpretar janeiro como “efeito pós”, estará misturando dois meses antes da intervenção com um mês depois. Melhor começar a leitura substantiva quando a janela estiver totalmente pós.
+
+## Então a resposta direta é
+
+Você não volta para mensal cru no pós.
+
+Você faz:
+
+1. mensal cru → transforma em janela móvel de 3 meses;
+2. roda AugSCM nessa série transformada;
+3. calcula efeitos médios nas janelas de 3, 6, 12 e 24 meses;
+4. como principal, começa as janelas no primeiro ponto totalmente pós-tratamento.
+
+A estrutura ficaria assim:
+
+| Etapa                         | Pré                              | Pós                                   |
+| ----------------------------- | -------------------------------- | ------------------------------------- |
+| Série usada no modelo         | média/acumulado móvel de 3 meses | média/acumulado móvel de 3 meses      |
+| Unidade temporal da estimação | mensal transformada              | mensal transformada                   |
+| Interpretação principal       | ajuste pré da série suavizada    | efeitos médios em 3, 6, 12 e 24 meses |
+| Mensal cru                    | diagnóstico/apêndice             | diagnóstico/apêndice                  |
+
+## Como eu escreveria no artigo
+
+> Como as séries mensais de varejo e ICMS apresentam elevada volatilidade, a análise principal utiliza transformações móveis de três meses: média móvel para o índice de volume do varejo e arrecadação real per capita acumulada em três meses para o ICMS. O modelo é estimado sobre essas séries transformadas. No pós-tratamento, os efeitos não são interpretados mês a mês, mas como efeitos médios nas janelas de 3, 6, 12 e 24 meses. Para evitar contaminação entre pré e pós-tratamento nas janelas móveis, a análise principal considera como primeiro período pós interpretável o primeiro mês cuja janela de três meses esteja integralmente exposta ao tratamento.
+
+Em termos práticos: **série suavizada no pré e no pós; inferência por janelas; não voltar ao mensal cru como resultado principal.**
+
+
+____________________________________________________
+
+Sim — essa ideia é **muito boa** e pode virar a espinha dorsal interpretativa do artigo. Ela resolve um problema importante: em vez de tratar cada variável isoladamente, você cria uma **escala de intensidade do choque econômico**.
+
+Eu só faria dois ajustes:
+
+1. trocar “atinge” por **“apresenta efeito consistente”**;
+2. separar **intensidade** de **persistência**.
+
+A classificação poderia ficar assim:
+
+| Categoria                        | Evidência empírica                                       | Interpretação                                                                                        |
+| -------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Efeito nulo**                  | Nenhuma das três variáveis apresenta efeito consistente  | A remoção não gerou ruptura econômica detectável                                                     |
+| **Efeito fraco**                 | Efeito apenas em `retail_volume_index`                   | Há impacto na atividade corrente/consumo, mas sem transmissão clara para arrecadação ou emprego      |
+| **Efeito moderado/considerável** | Efeito em `retail_volume_index` e `icms_revenue_real_pc` | A queda da atividade também aparece na base econômica tributável                                     |
+| **Efeito forte**                 | Efeito em varejo, ICMS e emprego formal                  | O choque se transmite da atividade corrente para a arrecadação tributável e para decisões das firmas |
+| **Efeito forte e persistente**   | Efeito nas três variáveis em janelas de 12 ou 24 meses   | O choque não é apenas transitório; há persistência econômica pós-remoção                             |
+
+Eu preferiria chamar a categoria 3 de **efeito moderado** ou **efeito economicamente relevante**, em vez de “considerável”. “Considerável” é bom intuitivamente, mas “moderado” conversa melhor com classificação acadêmica.
+
+## A lógica causal fica excelente
+
+A escada interpretativa seria:
+
+### 1. `retail_volume_index`
+
+Primeiro sinal de impacto sobre atividade corrente.
+
+Se só o varejo reage, você pode dizer:
+
+> A remoção produziu perturbação econômica de baixa intensidade, observável no consumo/varejo, mas sem evidência de transmissão para a base tributária estadual ou para o mercado de trabalho formal.
+
+### 2. `icms_revenue_real_pc`
+
+Segundo sinal: a atividade afetada foi forte o suficiente para aparecer na arrecadação associada à circulação econômica.
+
+Se varejo e ICMS reagem juntos:
+
+> A evidência sugere efeito econômico mais amplo, pois a retração não aparece apenas na pesquisa de varejo, mas também na atividade econômica tributável capturada pelo ICMS real per capita.
+
+### 3. Emprego formal
+
+Terceiro sinal: o choque chegou às decisões das firmas.
+
+Se as três reagem:
+
+> A remoção gerou um efeito econômico forte, com transmissão da atividade corrente para a arrecadação tributável e para o mercado de trabalho formal.
+
+Essa lógica é muito boa porque cria uma espécie de **teste de propagação do choque**.
+
+## Eu tomaria cuidado com a palavra “só”
+
+A frase “só atinge retail” pode ser lida como menor importância. Mas um efeito só no varejo pode ser relevante, principalmente em curto prazo.
+
+Então eu escreveria assim:
+
+> O efeito é classificado como fraco quando aparece apenas na medida direta de atividade corrente, sem evidência de propagação para ICMS ou emprego formal.
+
+Fica mais técnico e menos depreciativo.
+
+## O ponto mais importante: definir o que é “atingir”
+
+Você precisa definir uma regra antes de olhar caso a caso. Eu usaria três critérios juntos:
+
+1. **sinal coerente com a hipótese**;
+2. **magnitude economicamente relevante**;
+3. **persistência mínima em uma janela pós-tratamento**.
+
+Por exemplo:
+
+| Janela   | Uso             |
+| -------- | --------------- |
+| 3 meses  | efeito imediato |
+| 6 meses  | curto prazo     |
+| 12 meses | efeito anual    |
+| 24 meses | persistência    |
+
+Uma variável “atingida” poderia ser aquela que apresenta efeito médio negativo relevante em pelo menos uma janela principal, especialmente 6 ou 12 meses.
+
+Exemplo de regra:
+
+> Considera-se que uma variável foi afetada quando o efeito médio estimado na janela de 6 ou 12 meses apresenta sinal esperado, magnitude econômica substantiva e desempenho superior ao observado nos placebos.
+
+Assim você evita dizer que um mês isolado “atingiu” a variável.
+
+## A classificação final poderia ser esta
+
+Eu usaria no paper algo assim:
+
+| Grau do efeito              | Retail | ICMS | Emprego | Interpretação                                                  |
+| --------------------------- | -----: | ---: | ------: | -------------------------------------------------------------- |
+| **0 — Nulo**                |    Não |  Não |     Não | Sem evidência de impacto econômico detectável                  |
+| **1 — Fraco**               |    Sim |  Não |     Não | Perturbação restrita à atividade corrente                      |
+| **2 — Moderado**            |    Sim |  Sim |     Não | Efeito sobre atividade corrente e atividade tributável         |
+| **3 — Forte**               |    Sim |  Sim |     Sim | Transmissão para o mercado de trabalho formal                  |
+| **4 — Forte e persistente** |    Sim |  Sim |     Sim | Efeito forte em janelas longas, especialmente 12 e/ou 24 meses |
+
+Mas talvez você nem precise do grau 4 como categoria separada. Pode tratar persistência como uma dimensão adicional:
+
+| Intensidade | Persistência               |
+| ----------- | -------------------------- |
+| Nulo        | —                          |
+| Fraco       | transitório ou persistente |
+| Moderado    | transitório ou persistente |
+| Forte       | transitório ou persistente |
+
+Isso evita misturar duas coisas diferentes. Um efeito pode ser **moderado e persistente** ou **forte e transitório**.
+
+## Minha sugestão mais elegante
+
+Eu faria uma classificação em duas dimensões:
+
+### Dimensão 1 — Alcance do choque
+
+| Alcance   | Definição                |
+| --------- | ------------------------ |
+| Nulo      | nenhuma variável afetada |
+| Restrito  | apenas varejo            |
+| Ampliado  | varejo + ICMS            |
+| Propagado | varejo + ICMS + emprego  |
+
+### Dimensão 2 — Duração do choque
+
+| Duração     | Definição                       |
+| ----------- | ------------------------------- |
+| Transitório | efeito apenas em 3 ou 6 meses   |
+| Persistente | efeito também em 12 ou 24 meses |
+
+Aí você consegue frases como:
+
+> O caso de X apresenta efeito **restrito e transitório**.
+
+> O caso de Y apresenta efeito **ampliado e persistente**.
+
+> O caso de Z apresenta efeito **propagado e persistente**.
+
+Isso fica muito mais rico do que uma escala única.
+
+## Minha recomendação final
+
+A ideia é ótima. Eu só organizaria assim:
+
+**Variáveis principais da escala:**
+
+1. `retail_volume_index` — atividade corrente;
+2. `icms_revenue_real_pc` — atividade econômica tributável;
+3. emprego formal — transmissão para decisões das firmas.
+
+**Categorias:**
+
+1. **Nulo:** nenhuma variável reage.
+2. **Restrito/fraco:** apenas varejo reage.
+3. **Ampliado/moderado:** varejo e ICMS reagem.
+4. **Propagado/forte:** varejo, ICMS e emprego reagem.
+5. **Persistente:** qualificador adicional quando o efeito aparece em 12 ou 24 meses.
+
+Eu evitaria escrever “efeito forte e persistente = atinge tudo” como categoria única, porque “forte” é alcance e “persistente” é duração. Melhor dizer:
+
+> **forte** quando atinge as três variáveis;
+> **persistente** quando permanece nas janelas de 12 ou 24 meses.
+
+Essa classificação pode virar uma das contribuições mais interessantes do artigo: você não apenas estima efeitos, mas propõe uma **tipologia de intensidade e propagação econômica de rupturas governamentais subnacionais**.
