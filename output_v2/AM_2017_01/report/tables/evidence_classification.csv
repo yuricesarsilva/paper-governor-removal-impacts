@@ -1,0 +1,4 @@
+outcome,short,channel,transform,gap_post,effect_label,mag_sd,persistence,pre_trend_p,pre_fit_corr,pre_fit_r2,poor_fit,inspace_rank,inspace_n_units,inspace_p,loo_rank,loo_p,loo_frac,tier,considerable
+retail_ma6_log,Varejo MA6 (log),consumption,log,-0.022170994875051232,+0.3%,0.3015639713703963,0.631578947368421,0.42335623577932047,0.9981599243151891,0.9963948923453808,FALSE,20/25,25,0.8,2/25,0.08,0.75,weak,FALSE
+formal_hiring_6m_per1k,Emprego formal 6m (per 1k),labor,level,-0.04432521423129129,-0.1,0.022087401583167743,0.5263157894736842,0.5052672181722342,0.9694065649894817,0.9381798321870214,FALSE,23/25,25,0.92,3/25,0.12,0.16666666666666666,weak,FALSE
+icms_conf6m_pc_log,ICMS CONFAZ 6m pc (log),fiscal,log,0.051792531345386104,+9.6%,1.1625872340834575,0.8421052631578947,0.3673507781269404,0.9392540935337852,0.8840358092119571,FALSE,12/25,25,0.48,3/25,0.12,1,weak,FALSE

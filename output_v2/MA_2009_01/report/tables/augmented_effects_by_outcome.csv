@@ -1,0 +1,3 @@
+Channel,Outcome,Mean gap (w6m),RMSPE pre,Donors
+Household consumption,"Retail volume, MA6 trailing, log",-0.04,0.00,23
+State public finances,"ICMS CONFAZ per capita, 6m sum, log BRL/resident",-0.10,0.01,23

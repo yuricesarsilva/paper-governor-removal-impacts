@@ -1,0 +1,16 @@
+Event,Alcance,Duracao,Retail,ICMS,Hiring
+PI_2001_01,Restrito,Persistente,TRUE,FALSE,NA (CAGED indisponivel)
+RR_2004_01,Nulo,Transitorio,FALSE,FALSE,NA (CAGED indisponivel)
+PB_2009_01,Nulo,Transitorio,FALSE,FALSE,NA (CAGED indisponivel)
+MA_2009_01,Restrito,Persistente,FALSE,TRUE,NA (CAGED indisponivel)
+TO_2009_01,Restrito,Persistente,TRUE,FALSE,NA (CAGED indisponivel)
+DF_2010_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+RJ_2014_01,Restrito,Transitorio,FALSE,TRUE,FALSE
+AM_2017_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+TO_2018_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+RR_2018_01,Restrito,Persistente,FALSE,FALSE,TRUE
+RJ_2020_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+SC_2020_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+SC_2021_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+TO_2021_01,Nulo,Transitorio,FALSE,FALSE,FALSE
+AL_2022_01,Restrito,Persistente,FALSE,TRUE,FALSE

@@ -1,0 +1,41 @@
+Event,Outcome,SCM puro (w6m),AugSCM (w6m),SCM puro (w12m),AugSCM (w12m),Mesmo sinal (w6m),Mesmo sinal (w12m)
+PI_2001_01,Varejo MA6 (log),+9.6%,+8.5%,+12.6%,+11.4%,sim,sim
+PI_2001_01,ICMS CONFAZ 6m pc (log),-13.4%,-6.2%,-15.2%,-7.2%,sim,sim
+RR_2004_01,Varejo MA6 (log),-36.6%,-25.2%,-35.9%,-25.9%,sim,sim
+RR_2004_01,ICMS CONFAZ 6m pc (log),+1.2%,+15.9%,-0.1%,+12.9%,sim,nao
+PB_2009_01,Varejo MA6 (log),-11.5%,-7.0%,-10.8%,-5.1%,sim,sim
+PB_2009_01,ICMS CONFAZ 6m pc (log),-8.5%,-3.2%,-8.3%,-3.3%,sim,sim
+MA_2009_01,Varejo MA6 (log),-9.0%,-3.5%,-8.1%,-2.7%,sim,sim
+MA_2009_01,ICMS CONFAZ 6m pc (log),-22.8%,-9.1%,-25.0%,-12.6%,sim,sim
+TO_2009_01,Varejo MA6 (log),+1.5%,+19.6%,+10.9%,+30.2%,sim,sim
+TO_2009_01,ICMS CONFAZ 6m pc (log),-17.7%,-4.7%,-17.9%,-9.3%,sim,sim
+DF_2010_01,Varejo MA6 (log),+17.5%,+1.5%,+16.3%,+1.4%,sim,sim
+DF_2010_01,Emprego formal 6m (per 1k),-2.1,-2.1,-1.9,-2.1,sim,sim
+DF_2010_01,ICMS CONFAZ 6m pc (log),-1.7%,-4.4%,-3.7%,-6.5%,sim,sim
+RJ_2014_01,Varejo MA6 (log),+4.9%,+4.5%,+4.5%,+3.5%,sim,sim
+RJ_2014_01,Emprego formal 6m (per 1k),-0.2,-0.2,-0.4,-0.2,sim,sim
+RJ_2014_01,ICMS CONFAZ 6m pc (log),-6.4%,-13.3%,-7.3%,-13.7%,sim,sim
+AM_2017_01,Varejo MA6 (log),+1.5%,+0.3%,+0.9%,-0.9%,sim,nao
+AM_2017_01,Emprego formal 6m (per 1k),+0.1,-0.1,-0.0,-0.1,nao,sim
+AM_2017_01,ICMS CONFAZ 6m pc (log),+6.7%,+9.6%,+7.1%,+7.4%,sim,sim
+TO_2018_01,Varejo MA6 (log),+4.9%,+3.1%,+5.9%,+3.9%,sim,sim
+TO_2018_01,Emprego formal 6m (per 1k),-0.1,-0.0,-0.2,-0.2,sim,sim
+TO_2018_01,ICMS CONFAZ 6m pc (log),+0.6%,-0.2%,+1.0%,+1.1%,nao,sim
+RR_2018_01,Varejo MA6 (log),-9.4%,-0.8%,-9.6%,-6.9%,sim,sim
+RR_2018_01,Emprego formal 6m (per 1k),+1.0,+1.4,+2.0,+2.1,sim,sim
+RR_2018_01,ICMS CONFAZ 6m pc (log),+21.0%,+18.9%,+15.2%,+10.6%,sim,sim
+RJ_2020_01,Varejo MA6 (log),+4.0%,+3.5%,+3.8%,+3.5%,sim,sim
+RJ_2020_01,Emprego formal 6m (per 1k),-2.9,-2.8,-2.1,-2.0,sim,sim
+RJ_2020_01,ICMS CONFAZ 6m pc (log),-1.5%,+4.1%,-4.3%,+1.4%,nao,nao
+SC_2020_01,Varejo MA6 (log),+5.1%,+5.0%,+4.6%,+2.4%,sim,sim
+SC_2020_01,Emprego formal 6m (per 1k),+6.2,+4.8,+4.7,+3.1,sim,sim
+SC_2020_01,ICMS CONFAZ 6m pc (log),+9.1%,-2.3%,+7.8%,-4.4%,nao,nao
+SC_2021_01,Varejo MA6 (log),+3.4%,-4.1%,+2.0%,-3.9%,nao,nao
+SC_2021_01,Emprego formal 6m (per 1k),+3.7,+2.2,+2.8,+1.6,sim,sim
+SC_2021_01,ICMS CONFAZ 6m pc (log),+5.7%,-6.8%,+8.3%,-4.2%,nao,nao
+TO_2021_01,Varejo MA6 (log),+0.5%,+1.8%,+0.7%,+1.2%,sim,sim
+TO_2021_01,Emprego formal 6m (per 1k),-0.5,-0.5,+0.2,+0.3,sim,sim
+TO_2021_01,ICMS CONFAZ 6m pc (log),-4.0%,+1.7%,-2.8%,+4.9%,nao,nao
+AL_2022_01,Varejo MA6 (log),+1.5%,+1.4%,+1.7%,+1.6%,sim,sim
+AL_2022_01,Emprego formal 6m (per 1k),-1.8,+0.9,+0.4,+0.8,nao,sim
+AL_2022_01,ICMS CONFAZ 6m pc (log),-4.6%,+8.6%,-3.9%,+9.5%,nao,nao

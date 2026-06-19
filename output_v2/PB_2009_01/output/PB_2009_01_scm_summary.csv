@@ -1,0 +1,3 @@
+outcome,is_main,status,skip_reason,donor_count,rmspe_pre,att_mean_w3m,att_mean_w6m,att_mean_w12m,att_mean_w24m,n_periods_w3m,n_periods_w6m,n_periods_w12m,n_periods_w24m,sign_consistent_w3m,sign_consistent_w6m,sign_consistent_w12m,sign_consistent_w24m,loo_frac_w3m,loo_frac_w6m,loo_frac_w12m,loo_frac_w24m
+retail_ma6_log,TRUE,estimated,,23,0.0065071852382037046,-0.06262229471139828,-0.07226853834303393,-0.05219478540390695,-0.006251823580922589,3,6,12,19,TRUE,TRUE,TRUE,TRUE,1,1,1,1
+icms_conf6m_pc_log,TRUE,estimated,,23,0.006971421796659643,-0.026132982610717132,-0.03298410241696607,-0.03340196229011605,-0.037374286112463156,3,6,12,19,TRUE,TRUE,TRUE,TRUE,1,1,1,1

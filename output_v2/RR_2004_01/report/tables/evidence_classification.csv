@@ -1,0 +1,3 @@
+outcome,short,channel,transform,gap_post,effect_label,mag_sd,persistence,pre_trend_p,pre_fit_corr,pre_fit_r2,poor_fit,inspace_rank,inspace_n_units,inspace_p,loo_rank,loo_p,loo_frac,tier,considerable
+retail_ma6_log,Varejo MA6 (log),consumption,log,-0.29066926667485304,-25.2%,3.0032657816861494,1,0.17244973977799302,0.979893909622009,0.9534211457219731,FALSE,16/26,26,0.6153846153846154,26/26,0.038,1,weak,FALSE
+icms_conf6m_pc_log,ICMS CONFAZ 6m pc (log),fiscal,log,0.13984297399920917,+15.9%,3.2662992749402977,1,0.9018661111306712,0.8021932123194507,0.4568578413327187,FALSE,10/26,26,0.38461538461538464,26/26,0.038,0.92,weak,FALSE

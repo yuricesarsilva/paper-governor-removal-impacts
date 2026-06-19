@@ -1,0 +1,23 @@
+# Panorama dos 15 eventos (tabela condensada para o corpo do texto)
+
+Marcadores de tier seguem o placebo in-space (teste padrao da literatura, Abadie-Diamond-Hainmueller): ***forte p<=0.05, **moderado p<=0.10, *sugestivo p<=0.15. Rodado para os 15 eventos.
+
+O placebo LOO por exclusao de doador e reportado separadamente, por evento, como checagem de robustez (estabilidade ao doador) -- nao alimenta os marcadores abaixo. Ver `placebo_rank_inspace.csv` e a secao Robustez de cada evento para o detalhe por outcome.
+
+| Evento | Amostra | Mecanismo | Varejo | ICMS | Emp. formal | Alcance | Duracao |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| PI_2001_01 | main | TSE_final_decision | +8.5%*** | -6.2% | -- | Restrito | Persistente |
+| RR_2004_01 | main | TSE_final_decision | -25.2% | +15.9% | -- | Nulo | Transitorio |
+| PB_2009_01 | main | TSE_final_decision | -7.0% | -3.2% | -- | Nulo | Transitorio |
+| MA_2009_01 | main | TSE_final_decision | -3.5% | -9.1%*** | -- | Restrito | Persistente |
+| TO_2009_01 | main | TSE_final_decision | +19.6%*** | -4.7% | -- | Restrito | Persistente |
+| DF_2010_01 | extended | STJ_pretrial_detention_and_judicial_removal_pressure | +1.5% | -4.4% | -2.1 | Nulo | Transitorio |
+| RJ_2014_01 | borderline | formal_resignation_before_election | +4.5% | -13.3%** | -0.2 | Restrito | Transitorio |
+| AM_2017_01 | main | TSE_final_decision | +0.3% | +9.6% | -0.1 | Nulo | Transitorio |
+| TO_2018_01 | main | TSE_final_decision | +3.1% | -0.2% | -0.0 | Nulo | Transitorio |
+| RR_2018_01 | extended | presidential_decree_ratified_by_congress | -0.8% | +18.9% | +1.4* | Restrito | Persistente |
+| RJ_2020_01 | main | STJ_cautelar_followed_by_mixed_court_impeachment | +3.5% | +4.1% | -2.8 | Nulo | Transitorio |
+| SC_2020_01 | extended | tribunal_especial_accepts_denuncia | +5.0% | -2.3% | +4.8 | Nulo | Transitorio |
+| SC_2021_01 | extended | tribunal_especial_accepts_denuncia | -4.1% | -6.8% | +2.2 | Nulo | Transitorio |
+| TO_2021_01 | main | STJ_cautelar_180_days | +1.8% | +1.7% | -0.5 | Nulo | Transitorio |
+| AL_2022_01 | extended | STJ_cautelar_180_days | +1.4% | +8.6%* | +0.9 | Restrito | Persistente |

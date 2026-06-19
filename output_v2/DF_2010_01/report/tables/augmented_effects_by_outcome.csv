@@ -1,0 +1,4 @@
+Channel,Outcome,Mean gap (w6m),RMSPE pre,Donors
+Household consumption,"Retail volume, MA6 trailing, log", 0.01,0.01,23
+Formal labor market,"Net formal hiring, 6m sum, per 1,000 residents",-2.09,1.45,23
+State public finances,"ICMS CONFAZ per capita, 6m sum, log BRL/resident",-0.04,0.01,23

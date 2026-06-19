@@ -1,0 +1,4 @@
+Outcome,n,Avg effect,t p,Wilcoxon p,Pooled placebo p,n events w/ placebo,neg
+Emprego formal 6m (per 1k),10,+0.25,0.571,0.846,0.741,10,5
+ICMS CONFAZ 6m pc (log),15,-0.4%,0.85,0.847,0.481,15,7
+Varejo MA6 (log),15,+1.4%,0.658,0.454,0.185,15,7

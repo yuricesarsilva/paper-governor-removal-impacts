@@ -1,0 +1,8 @@
+Covariate,Treated,Varejo MA6 (log),Emprego formal 6m (per 1k),ICMS CONFAZ 6m pc (log)
+Unemployment rate,    0.112,    0.099,    0.097,    0.100
+Formalization rate,    0.646,    0.598,    0.630,    0.612
+Labor income (real),"3,655.680","3,085.535","3,262.506","3,103.005"
+Transfer dependency ratio,    0.029,    0.060,    0.070,    0.082
+Health expenditure pc,   84.448,  115.576,  113.322,  118.085
+Education expenditure pc,   96.298,  139.350,  108.593,  117.765
+Public security expenditure pc,  140.290,  114.396,  105.259,  117.606

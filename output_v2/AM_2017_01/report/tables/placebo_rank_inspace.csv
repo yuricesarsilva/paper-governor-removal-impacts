@@ -1,0 +1,4 @@
+outcome,treated_ratio,n_placebo,rank,n_units,classic_p
+retail_ma6_log,9.398660222378446,24,20,25,0.8
+formal_hiring_6m_per1k,0.995584892958889,24,23,25,0.92
+icms_conf6m_pc_log,4.352169755548465,24,12,25,0.48
